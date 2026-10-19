@@ -1,0 +1,174 @@
+body.radious-4 .header-one.header-relative:not(.sticky) {
+  position: absolute;
+  inset: 0 0 auto;
+  background: transparent;
+  border-bottom: 0;
+  z-index: 1050;
+}
+
+body.radious-4 .header-one.header-relative:not(.sticky) .logo-area img {
+  filter: none;
+}
+
+body.radious-4 .header-one.header-relative:not(.sticky) .logo-area a {
+  padding: 3px 5px;
+  background: #fff;
+}
+
+body.radious-4 .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav > a {
+  color: #fff !important;
+}
+
+body.radious-4 .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav:hover > a,
+body.radious-4 .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.has-dropdown > a::after {
+  color: #B89B69 !important;
+}
+
+body.radious-4 .header-one.header-relative:not(.sticky) .btn-employer-login {
+  color: #fff;
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+body.radious-4 .header-one.header-relative:not(.sticky) .btn-employer-login i {
+  color: #fff;
+}
+
+body.radious-4 .header-one.header-relative:not(.sticky) .btn-book-now {
+  background: #B89B69;
+  border-color: #B89B69;
+  color: #fff;
+}
+
+body.radious-4 .header-one.header-relative:not(.sticky) .menu-btn-toggle.khil-toggle svg rect {
+  fill: #fff;
+}
+
+body.radious-4 .rts-banner-area-three.bg_image-three-banner {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  height: auto;
+  padding: 105px 0 26px;
+  overflow: hidden;
+  background-image: url("../img/bannerimg.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+body.radious-4 .rts-banner-area-three.bg_image-three-banner::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: linear-gradient(90deg, rgba(18, 15, 13, 0.76) 0%, rgba(18, 15, 13, 0.48) 54%, rgba(18, 15, 13, 0.24) 100%);
+}
+
+body.radious-4 .rts-banner-area-three.bg_image-three-banner > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+body.radious-4 .rts-banner-area-three.bg_image-three-banner > .container > .row:first-child {
+  flex: 1;
+  align-items: center;
+}
+
+body.radious-4 .rts-banner-area-three .rts-banner-content-three {
+  max-width: 700px;
+  padding: 38px 0;
+}
+
+body.radious-4 .rts-banner-area-three .rts-banner-content-three h1 {
+  color: #fff;
+  margin-bottom: 22px;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.3);
+}
+
+body.radious-4 .rts-banner-area-three .rts-banner-content-three .pre-badge {
+  color: #E1C99F;
+}
+
+body.radious-4 .rts-banner-area-three .rts-banner-content-three p.disc {
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 580px;
+}
+
+body.radious-4 .rts-banner-area-three .rts-banner-content-three .button-group {
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+body.radious-4 .rts-banner-area-three .khil-hero-btn.primary {
+  background: #B89B69;
+  border-color: #B89B69;
+  color: #fff;
+}
+
+body.radious-4 .rts-banner-area-three .khil-hero-btn.primary:hover {
+  background: #9E804D;
+  border-color: #9E804D;
+}
+
+body.radious-4 .rts-banner-area-three .khil-hero-btn.secondary {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff !important;
+}
+
+body.radious-4 .rts-banner-area-three .khil-hero-btn.secondary i {
+  color: #fff !important;
+}
+
+body.radious-4 .rts-banner-area-three .khil-hero-image-wrapper {
+  display: none;
+}
+
+body.radious-4 .rts-banner-area-three .khil-marquee-ribbon {
+  margin-top: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 0;
+  background: rgba(18, 15, 13, 0.38);
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+  body.radious-4 .rts-banner-area-three.bg_image-three-banner {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 86px 0 22px;
+    background-position: 58% center;
+  }
+
+  body.radious-4 .rts-banner-area-three.bg_image-three-banner::before {
+    background: linear-gradient(90deg, rgba(18, 15, 13, 0.78), rgba(18, 15, 13, 0.4));
+  }
+}
+
+@media (max-width: 575px) {
+  body.radious-4 .rts-banner-area-three.bg_image-three-banner {
+    padding-top: 78px;
+    padding-bottom: 16px;
+    background-position: 58% center;
+  }
+
+  body.radious-4 .rts-banner-area-three .rts-banner-content-three {
+    padding: 28px 0;
+  }
+
+  body.radious-4 .rts-banner-area-three .rts-banner-content-three h1 {
+    font-size: clamp(38px, 11vw, 52px);
+  }
+
+  body.radious-4 .rts-banner-area-three .rts-banner-content-three .button-group {
+    gap: 10px;
+  }
+}
