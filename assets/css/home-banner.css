@@ -14,33 +14,141 @@ body.radious-4 .header-one.header-relative:not(.sticky) .logo-area a {
   padding: 3px 5px;
 }
 
-body.radious-4 .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav > a {
-  color: #fff !important;
+body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav > a {
+  color: #252525 !important;
 }
 
-body.radious-4 .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav:hover > a,
-body.radious-4 .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.has-dropdown > a::after {
-  color: #B89B69 !important;
+body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav:hover > a,
+body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.has-dropdown > a::after {
+  color: #641820 !important;
 }
 
-body.radious-4 .header-one.header-relative:not(.sticky) .btn-employer-login {
-  color: #fff;
+body.home-three-page .header-one.header-relative:not(.sticky) .btn-employer-login {
+  color: #252525;
   background: transparent;
-  border-color: rgba(255, 255, 255, 0.45);
+  border-color: rgba(37, 37, 37, 0.35);
 }
 
-body.radious-4 .header-one.header-relative:not(.sticky) .btn-employer-login i {
-  color: #fff;
+body.home-three-page .header-one.header-relative:not(.sticky) .btn-employer-login i {
+  color: #252525;
 }
 
 body.radious-4 .header-one.header-relative:not(.sticky) .btn-book-now {
-  background: #B89B69;
-  border-color: #B89B69;
-  color: #fff;
+    background: #000000;
+    border-color: #000000;
+    color: #fff;
 }
 
-body.radious-4 .header-one.header-relative:not(.sticky) .menu-btn-toggle.khil-toggle svg rect {
-  fill: #fff;
+body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle.khil-toggle svg rect {
+  fill: #252525;
+}
+
+body.home-three-page .loader-wrapper {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #252525;
+  transform: none;
+}
+
+body.home-three-page .loader-wrapper::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(ellipse at 50% 46%, rgba(143, 32, 43, 0.36), transparent 46%),
+    linear-gradient(145deg, #252525, #35191c 56%, #252525);
+}
+
+body.home-three-page .loader-wrapper .loader-section {
+  display: none;
+}
+
+body.home-three-page .loader-wrapper .loader {
+  position: relative;
+  top: auto;
+  left: auto;
+  display: flex;
+  width: auto;
+  height: auto;
+  transform: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-align: center;
+  opacity: 1;
+}
+
+body.home-three-page .loader-wrapper .loader::after {
+  display: none;
+}
+
+body.home-three-page .loader-emblem {
+  position: relative;
+  display: block;
+  width: 68px;
+  height: 68px;
+  border: 1px solid rgba(184, 155, 105, 0.42);
+  border-radius: 50%;
+  animation: khil-loader-orbit 2.4s linear infinite;
+}
+
+body.home-three-page .loader-emblem::before,
+body.home-three-page .loader-emblem::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+}
+
+body.home-three-page .loader-emblem::before {
+  inset: 7px;
+  border: 2px solid transparent;
+  border-top-color: #B89B69;
+  border-right-color: #B89B69;
+  animation: khil-loader-orbit 1.4s linear infinite reverse;
+}
+
+body.home-three-page .loader-emblem::after {
+  inset: 23px;
+  background: #8F202B;
+  box-shadow: 0 0 22px rgba(184, 155, 105, 0.52);
+  animation: khil-loader-pulse 1.8s ease-in-out infinite;
+}
+
+body.home-three-page .loader-brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  letter-spacing: 0.04em;
+}
+
+body.home-three-page .loader-caption {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@keyframes khil-loader-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes khil-loader-pulse {
+  50% {
+    transform: scale(0.72);
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.home-three-page .loader-emblem,
+  body.home-three-page .loader-emblem::before,
+  body.home-three-page .loader-emblem::after {
+    animation: none;
+  }
 }
 
 body.radious-4 .rts-banner-area-three.bg_image-three-banner {
@@ -54,7 +162,7 @@ body.radious-4 .rts-banner-area-three.bg_image-three-banner {
   height: auto;
   padding: 105px 0 26px;
   overflow: hidden;
-  background-image: url("../../bannervideo.jfif");
+  background-image: url("../../bannervideo.jpeg");
   background-size: cover;
   background-position: center;
 }
@@ -92,23 +200,18 @@ body.radious-4 .rts-banner-area-three .rts-banner-content-three {
   transform: translateY(8vh);
 }
 
-body.radious-4 .rts-banner-area-three .rts-banner-content-three h1 {
+body.home-three-page .rts-banner-area-three .rts-banner-content-three h1 {
   max-width: 100%;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(56px, 6vw, 86px);
-  font-weight: 400;
-  line-height: 1.08;
-  color: #fff;
-  margin-bottom: 24px;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.38);
+  color: #252525;
+  text-shadow: none;
 }
 
-body.radious-4 .rts-banner-area-three .rts-banner-content-three .pre-badge {
-  color: #E1C99F;
+body.home-three-page .rts-banner-area-three .rts-banner-content-three .pre-badge {
+  color: #6B6560;
 }
 
-body.radious-4 .rts-banner-area-three .rts-banner-content-three p.disc {
-  color: rgba(255, 255, 255, 0.88);
+body.home-three-page .rts-banner-area-three .rts-banner-content-three p.disc {
+  color: #252525;
   max-width: 690px;
 }
 
@@ -128,13 +231,13 @@ body.radious-4 .rts-banner-area-three .khil-hero-btn.primary:hover {
   border-color: #9E804D;
 }
 
-body.radious-4 .rts-banner-area-three .khil-hero-btn.secondary {
-  border-color: rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.08);
+body.home-three-page .rts-banner-area-three .khil-hero-btn.secondary {
+  border-color: #000;
+  background: #000;
   color: #fff !important;
 }
 
-body.radious-4 .rts-banner-area-three .khil-hero-btn.secondary i {
+body.home-three-page .rts-banner-area-three .khil-hero-btn.secondary i {
   color: #fff !important;
 }
 
@@ -150,11 +253,11 @@ body.radious-4 .rts-banner-area-three .khil-marquee-ribbon {
   box-shadow: none;
 }
 
-body.radious-4 .rts-banner-area-three .khil-marquee-ribbon .marquee-track span {
+body.home-three-page .rts-banner-area-three .khil-marquee-ribbon .marquee-track span {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 1.5px;
-  color: rgba(255, 255, 255, 0.78);
+  color: #fff;
 }
 
 @media (max-width: 991px) {
@@ -188,8 +291,7 @@ body.radious-4 .rts-banner-area-three .khil-marquee-ribbon .marquee-track span {
   }
 
   body.radious-4 .rts-banner-area-three .rts-banner-content-three h1 {
-    font-size: clamp(38px, 11vw, 52px);
-    margin-bottom: 18px;
+    color: #252525;
   }
 
   body.radious-4 .rts-banner-area-three .rts-banner-content-three .button-group {
