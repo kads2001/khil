@@ -299,10 +299,15 @@
   box-shadow: 0 14px 32px rgba(100, 24, 32, 0.12);
 }
 
+.careers-opening-card.job-posting-card .careers-opening-top {
+  justify-content: center;
+}
+
 .job-card-logo {
- 
+  height: 85%;
   object-fit: contain;
   display: block;
+  margin: 0 auto;
 }
 
 .job-card-unit {

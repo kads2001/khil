@@ -179,8 +179,8 @@
 
 .features-dashboard-wrapper {
   background: linear-gradient(145deg, #8F202B 0%, #641820 45%, #641820 100%);
-  border-radius: 36px;
-  padding: 75px 45px 80px;
+  border-radius: 26px;
+  padding: 44px 34px 48px;
   color: #ffffff;
   box-shadow: 0 25px 60px -15px rgba(100, 24, 32, 0.45);
   position: relative;
@@ -225,8 +225,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 45px;
+  gap: 24px;
+  margin-bottom: 26px;
   flex-wrap: wrap;
 }
 
@@ -268,21 +268,23 @@
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 16px;
   align-items: stretch;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .feature-col-card {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 24px;
-  padding: 18px;
+  border-radius: 18px;
+  padding: 13px;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 18px;
+  gap: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -364,7 +366,7 @@
 
 /* Incident Response (Bottom Left) */
 .feature-content-box {
-  padding: 16px 12px 10px;
+  padding: 6px 6px 4px;
   margin-top: auto;
 }
 
@@ -425,7 +427,7 @@
 .feature-col-card.card-reversed .feature-content-box {
   margin-top: 0;
   margin-bottom: auto;
-  padding: 4px 10px 14px;
+  padding: 2px 6px 8px;
 }
 
 .feature-col-card.card-reversed .dashboard-stat-card {
@@ -435,8 +437,8 @@
 /* Blog Media & Content Styles */
 .blog-stat-card {
   background: #ffffff !important;
-  border-radius: 18px !important;
-  padding: 12px !important;
+  border-radius: 14px !important;
+  padding: 8px !important;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08) !important;
   display: flex !important;
   flex-direction: column !important;
@@ -445,8 +447,8 @@
 
 .blog-card-media {
   width: 100%;
-  height: 220px;
-  border-radius: 12px;
+  height: 160px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   background: #f1f5f9;
@@ -468,19 +470,19 @@
 
 .blog-source-tag {
   display: inline-block;
-  font-size: 13.5px;
+  font-size: 12px;
   font-weight: 700;
   color: #B89B69;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   letter-spacing: 0.3px;
 }
 
 .feature-box-title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.35;
-  margin: 0 0 10px;
-  min-height: 54px;
+  margin: 0 0 6px;
+  min-height: 42px;
 }
 
 .feature-box-title a {
@@ -494,34 +496,34 @@
 }
 
 .feature-box-desc {
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.72) !important;
   margin: 0;
-  min-height: 68px;
+  min-height: 56px;
 }
 
 .blog-read-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13.5px;
+  gap: 7px;
+  font-size: 12.5px;
   font-weight: 600;
   color: #ffffff !important;
-  margin-top: 14px;
+  margin-top: 10px;
   text-decoration: none;
   transition: gap 0.25s ease, color 0.25s ease;
   width: fit-content;
 }
 
 .blog-read-btn i {
-  font-size: 11px;
+  font-size: 10.5px;
   transition: transform 0.25s ease;
 }
 
 .blog-read-btn:hover {
   color: #B89B69 !important;
-  gap: 12px;
+  gap: 10px;
 }
 
 .blog-read-btn:hover i {
@@ -609,8 +611,8 @@
 
 @media (max-width: 991px) {
   .features-dashboard-wrapper {
-    padding: 55px 26px;
-    border-radius: 28px;
+    padding: 36px 20px 40px;
+    border-radius: 22px;
   }
 }
 
@@ -624,8 +626,8 @@
   }
 
   .features-dashboard-wrapper {
-    padding: 40px 18px;
-    border-radius: 22px;
+    padding: 28px 16px 32px;
+    border-radius: 18px;
   }
 
   .features-main-title {
@@ -637,6 +639,6 @@
   }
 
   .feature-box-title {
-    font-size: 19px;
+    font-size: 16px;
   }
 }
