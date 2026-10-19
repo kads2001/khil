@@ -112,7 +112,7 @@ body.home-three-page .loader-emblem::before {
 body.home-three-page .loader-emblem::after {
   inset: 23px;
   background: #8F202B;
-  box-shadow: 0 0 22px rgba(184, 155, 105, 0.52);
+  /* box-shadow: 0 0 22px rgba(184, 155, 105, 0.52); */
   animation: khil-loader-pulse 1.8s ease-in-out infinite;
 }
 
@@ -149,6 +149,10 @@ body.home-three-page .loader-caption {
   body.home-three-page .loader-emblem::after {
     animation: none;
   }
+}
+
+body.home-three-page .container {
+  max-width: 1600px;
 }
 
 body.radious-4 .rts-banner-area-three.bg_image-three-banner {
@@ -220,11 +224,11 @@ body.radious-4 .rts-banner-area-three .rts-banner-content-three .button-group {
   flex-wrap: wrap;
 }
 
-body.radious-4 .rts-banner-area-three .khil-hero-btn.primary {
+/* body.radious-4 .rts-banner-area-three .khil-hero-btn.primary {
   background: #B89B69;
   border-color: #B89B69;
   color: #fff;
-}
+} */
 
 body.radious-4 .rts-banner-area-three .khil-hero-btn.primary:hover {
   background: #9E804D;

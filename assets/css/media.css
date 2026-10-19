@@ -140,7 +140,7 @@
   border: 1px solid rgba(231, 225, 218, 0.8);
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 5px 16px rgba(37, 37, 37, 0.045);
+  /* box-shadow: 0 5px 16px rgba(37, 37, 37, 0.045); */
 }
 
 .media-card[hidden] {

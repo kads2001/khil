@@ -36,7 +36,7 @@
   border-radius: 16px;
   padding: 24px 18px 26px 22px;
   min-height: 145px;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.2) inset;
+  /* box-shadow: 0 0 0 1px rgba(255,255,255,0.2) inset; */
 }
 
 .contact-card-item .contact-card-icon {
@@ -135,7 +135,7 @@
 .contact-form-main-wrapper-contact textarea:focus,
 .contact-form-main-wrapper-contact select:focus {
   border-color: #8F202B;
-  box-shadow: 0 0 0 2px rgba(143,32,43,0.08);
+  /* box-shadow: 0 0 0 2px rgba(143,32,43,0.08); */
   outline: none;
 }
 
@@ -233,7 +233,7 @@
   border: 1px solid rgba(231, 225, 218, 0.8);
   border-radius: 18px;
   background: #F7F4F0;
-  box-shadow: 0 12px 32px rgba(16, 24, 40, 0.08);
+  /* box-shadow: 0 12px 32px rgba(16, 24, 40, 0.08); */
 }
 
 .contact-map-frame iframe {
@@ -310,9 +310,9 @@
 body.contact-page *,
 body.contact-page *::before,
 body.contact-page *::after {
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
+  /* -webkit-box-shadow: none !important; */
+  /* box-shadow: none !important; */
+  /* text-shadow: none !important; */
 }
 
 @media (max-width: 991px) {
