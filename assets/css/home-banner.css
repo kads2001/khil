@@ -12,7 +12,6 @@ body.radious-4 .header-one.header-relative:not(.sticky) .logo-area img {
 
 body.radious-4 .header-one.header-relative:not(.sticky) .logo-area a {
   padding: 3px 5px;
-  background: #fff;
 }
 
 body.radious-4 .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav > a {
@@ -60,13 +59,13 @@ body.radious-4 .rts-banner-area-three.bg_image-three-banner {
   background-position: center;
 }
 
-body.radious-4 .rts-banner-area-three.bg_image-three-banner::before {
+/* body.radious-4 .rts-banner-area-three.bg_image-three-banner::before {
   position: absolute;
   z-index: -1;
   inset: 0;
   content: "";
   background: linear-gradient(90deg, rgba(18, 15, 13, 0.76) 0%, rgba(18, 15, 13, 0.48) 54%, rgba(18, 15, 13, 0.24) 100%);
-}
+} */
 
 body.radious-4 .rts-banner-area-three.bg_image-three-banner > .container {
   display: flex;
