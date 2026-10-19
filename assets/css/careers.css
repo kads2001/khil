@@ -299,6 +299,12 @@
   box-shadow: 0 14px 32px rgba(100, 24, 32, 0.12);
 }
 
+.job-card-logo {
+ 
+  object-fit: contain;
+  display: block;
+}
+
 .job-card-unit {
   display: inline-flex;
   align-items: center;
