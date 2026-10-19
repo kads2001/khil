@@ -1,0 +1,88 @@
+/* ==========================================================================
+   KAMAT HOTELS (INDIA) LTD. (KHIL) - CUSTOM STYLES
+   IRA by Orchid Hotels Banner (using assets/images/about/irabann.jpg)
+   ========================================================================== */
+
+.banner-bg-attach-agency {
+  position: relative;
+  background-image: url("../images/about/irabann.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  min-height: 580px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+
+.banner-bg-attach-agency .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.banner-bg-attach-agency .hero-title {
+  font-size: clamp(28px, 3.8vw, 48px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #121826;
+  margin-bottom: 20px;
+  max-width: 620px;
+  letter-spacing: -0.5px;
+}
+
+.banner-bg-attach-agency .hero-desc {
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: #2c3647;
+  max-width: 580px;
+  margin: 0;
+  white-space: pre-line;
+  font-weight: 400;
+}
+
+.banner-bg-attach-agency .hero-desc a {
+  display: inline-block;
+  margin-top: 14px;
+  color: #7d007d;
+  font-weight: 700;
+  font-size: 16.5px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.25s ease;
+}
+
+.banner-bg-attach-agency .hero-desc a:hover {
+  color: #c59b27;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .banner-bg-attach-agency {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.88)),
+      url("../images/about/irabann.jpg");
+    background-position: center center;
+    padding: 60px 0;
+    min-height: auto;
+  }
+
+  .banner-bg-attach-agency .hero-title,
+  .banner-bg-attach-agency .hero-desc {
+    max-width: 100%;
+  }
+
+  .banner-bg-attach-agency .hero-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .banner-bg-attach-agency .hero-desc {
+    font-size: 15.5px;
+    line-height: 1.75;
+  }
+}
