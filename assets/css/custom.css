@@ -238,6 +238,7 @@
   -webkit-backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 18px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -371,6 +372,101 @@
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.72) !important;
   margin: 0;
+}
+
+/* Swapped Top/Bottom Card (Middle Card) */
+.feature-col-card.card-reversed {
+  justify-content: space-between;
+}
+
+.feature-col-card.card-reversed .feature-content-box {
+  margin-top: 0;
+  margin-bottom: auto;
+  padding: 6px 12px 14px;
+}
+
+.feature-col-card.card-reversed .dashboard-stat-card {
+  margin-top: auto;
+}
+
+/* Blog Media & Content Styles */
+.blog-stat-card {
+  padding: 16px 18px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card-media {
+  width: 100%;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 8px 0 10px;
+  position: relative;
+  background: #f1f5f9;
+}
+
+.blog-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.feature-col-card:hover .blog-card-img {
+  transform: scale(1.05);
+}
+
+.blog-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 10px;
+}
+
+.blog-date-badge i {
+  color: #B89B69;
+  font-size: 11px;
+}
+
+.feature-box-title a {
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.feature-box-title a:hover {
+  color: #B89B69 !important;
+}
+
+.blog-read-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #ffffff !important;
+  margin-top: 14px;
+  text-decoration: none;
+  transition: gap 0.25s ease, color 0.25s ease;
+}
+
+.blog-read-btn i {
+  font-size: 11px;
+  transition: transform 0.25s ease;
+}
+
+.blog-read-btn:hover {
+  color: #B89B69 !important;
+  gap: 12px;
+}
+
+.blog-read-btn:hover i {
+  transform: translateX(3px);
 }
 
 /* Donut Chart (Middle) */
