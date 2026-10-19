@@ -93,7 +93,7 @@
     .right-rating-area {
         width: 505px;
         height: 200px;
-        background: #050D20;
+        background: #252525;
         position: absolute;
         right: 0;
         bottom: 0;
@@ -315,7 +315,7 @@
                 left: 71%;
             }
             * {
-                color: #050D20;
+                color: #252525;
             }
 
             svg {
@@ -323,17 +323,17 @@
                 max-width: 150px;
                 padding: 10px;
                 animation: spin 10s linear 0s infinite;
-                color: #050D20;
+                color: #252525;
 
                 text textPath {
-                    color: #050D20;
-                    fill: #050D20;
+                    color: #252525;
+                    fill: #252525;
                     letter-spacing: 1px;
                     font-size: 14px;
                 }
 
                 path {
-                    fill: #050D20;
+                    fill: #252525;
                 }
             }
 
@@ -343,7 +343,7 @@
                 top: 50%;
                 transform: translate(-50%, -50%) rotate(-45deg);
                 font-size: 24px;
-                color: #050D20;
+                color: #252525;
             }
         }
     }
@@ -376,7 +376,7 @@
             font-weight: 500;
             color: var(--color-white);
             margin-bottom: 35px;
-            color: #050D20;
+            color: #252525;
             line-height: 1.1;
             @media #{$smlg-device} {
                 font-size: 60px;
@@ -392,7 +392,7 @@
         p.disc {
             font-size: 16px;
             font-weight: 400;
-            color: #717383;
+            color: #6B6560;
             max-width: 508px;
         }
 
@@ -411,7 +411,7 @@
                 .info {
                     max-width: 191px;
                     font-weight: 400;
-                    color: #050D20;
+                    color: #252525;
                     font-size: 16px;
                 }
             }
@@ -450,7 +450,7 @@
             display: block;
             font-size: 16px;
             font-weight: 500;
-            color: #050D20;
+            color: #252525;
             text-align: center;
         }
     }
@@ -553,7 +553,7 @@
                 left: 15px;
                 height: 10px;
                 width: 200px;
-                background: #0C1018;
+                background: #252525;
                 top: 50%;
                 transform: translateY(-50%);
                 @media #{$large-mobile} {
@@ -562,7 +562,7 @@
                     left: 0px;
                     height: 5px;
                     width: 160px;
-                    background: #0C1018;
+                    background: #252525;
                     top: 50%;
                     transform: translateY(-50%);
                 }
@@ -734,7 +734,7 @@
         border-radius: 20px;
         height: 252px;
         width: 211px;
-        background: #050D20;
+        background: #252525;
     }
     .thumbnail{
         margin-right: -263px;
@@ -837,8 +837,8 @@
     .title-left-wrapper span.pre, .title-center-wrapper span.pre {
         display: inline-block;
         padding: 2px 13px;
-        border: 1px solid #DBE7FF;
-        color: #050D20;
+        border: 1px solid #E7E1DA;
+        color: #252525;
         font-size: 14px;
         font-weight: 500;
         border-radius: 33px;
@@ -846,7 +846,7 @@
 }
 
 .demo-machine-learning{
-    --color-primary: #615EFC
+    --color-primary: #8F202B
 }
 
 .rts-banner-area-start-machine{
@@ -867,7 +867,7 @@
 .machine-learning-content-banner{
     max-width: 678px;
     span.pre{
-        color: #050D20;
+        color: #252525;
         padding: 5px 15px;
         background: var(--color-primary);
         font-size: 20px;
@@ -928,7 +928,7 @@
             right: unset;
             top: unset;
             bottom: unset;
-            border: 1px solid #0C1018;
+            border: 1px solid #252525;
             display: block;
             width: 54px;
             height: 54px;
@@ -1131,7 +1131,7 @@
 }
 
 .rts-banner-saas-landing{
-    background: linear-gradient(180deg, #615EFC 0%, #3A3896 100%);
+    background: linear-gradient(180deg, #8F202B 0%, #3A3896 100%);
     height: 930px;
     padding-top: 160px;
     position: relative;
@@ -1141,7 +1141,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            border: 1px solid rgba(#EAF0FF, $alpha: .1);
+            border: 1px solid rgba(#F7F4F0, $alpha: .1);
             color: var(--color-white);
             max-width: max-content;
             margin: auto;
@@ -1157,14 +1157,14 @@
         .desc{
             max-width: 535px;
             margin: auto;
-            color: #F2F2F7;
+            color: #F7F4F0;
         }
         .button-area{
             .rts-btn{
                 margin: auto;
                 margin-top: 30px;
                 background: var(--color-white);
-                color: #050D20;
+                color: #252525;
             }
         }
     }

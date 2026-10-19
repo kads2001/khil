@@ -4,7 +4,7 @@
         align-self: center;
         justify-content: space-between;
         padding: 20px 0;
-        border-bottom: 1px solid #DFDBF9;
+        border-bottom: 1px solid #F7F4F0;
         @media #{$large-mobile} {
             flex-wrap: wrap;
             gap: 30px;
@@ -12,7 +12,7 @@
         p{
             font-weight: 500;
             font-size: 16px;
-            color: #0C1018;
+            color: #252525;
             margin: 0;
         }
     }
@@ -23,7 +23,7 @@
         a.btn-line{
             list-style: none;
             padding: 7px 18px;
-            border: 1px solid #DFDBF9;
+            border: 1px solid #F7F4F0;
             border-radius: 100px;
             &::after{
                 display: none;

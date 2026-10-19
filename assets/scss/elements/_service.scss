@@ -6,14 +6,14 @@
     a {
         .title {
             font-size: 24px;
-            color: #050D20;
+            color: #252525;
             font-weight: 600;
         }
     }
 }
 
 .bg_dark {
-    background: #050D20;
+    background: #252525;
 
     .title-center-wrapper {
         * {
@@ -47,7 +47,7 @@
 .single-feature-area-three {
     padding: 30px 8px 30px 20px;
     border-radius: 20px;
-    border: 1px solid #EAF0FF;
+    border: 1px solid #F7F4F0;
     transition: all 0.3s ease;
     .icon {
         margin-bottom: 30px;
@@ -55,12 +55,12 @@
     .content {
         .title {
             font-size: 23px;
-            color: #050D20;
+            color: #252525;
             margin-bottom: 18px;
         }
         p.disc {
             font-size: 16px;
-            color: #717383;
+            color: #6B6560;
             margin-bottom: 30px;
         }
     }
@@ -69,13 +69,13 @@
         transform: scale(1.02) translateY(-2px);
     }
     &.data-science{
-        background: #F9FAFF;
-        border: 1px solid #E5EAFF;
+        background: #F7F4F0;
+        border: 1px solid #F7F4F0;
         .content{
             .round-btn{
                 max-width: max-content;
                 width: 100%;
-                border: 1px solid #E5EAFF;
+                border: 1px solid #F7F4F0;
                 border-radius: 4px;
                 display: flex;
                 align-items: center;
@@ -144,12 +144,12 @@
 
             li {
                 i {
-                    color: #050D20;
+                    color: #252525;
                 }
 
                 a {
                     font-size: 16px;
-                    color: #050D20;
+                    color: #252525;
                     font-weight: 500;
 
                     &.active {
@@ -162,7 +162,7 @@
         h1 {
             font-size: 56px;
             font-weight: 500;
-            color: #050D20;
+            color: #252525;
             line-height: 1.25;
             margin-bottom: 0px;
             @media #{$sm-layout} {
@@ -186,7 +186,7 @@
 
 .single-working-process-area {
     padding: 40px;
-    border: 1px solid #EAF0FF;
+    border: 1px solid #F7F4F0;
     border-radius: 10px;
     margin-bottom: 25px;
     transition: all 0.3s ease;
@@ -216,8 +216,8 @@
             flex-wrap: wrap;
         }
         .tag-area {
-            border: 1px solid #EAF0FF;
-            color: #717383;
+            border: 1px solid #F7F4F0;
+            color: #6B6560;
             padding: 3px 10px;
             border-radius: 33px;
             transition: .3s;
@@ -284,7 +284,7 @@
     align-items: center;
     padding: 34px 0;
     transition: .4s;
-    border-bottom: 1px solid #DFDBF9;
+    border-bottom: 1px solid #F7F4F0;
     @media #{$sm-layout} {
         flex-wrap: wrap;
         gap: 15px;
@@ -352,7 +352,7 @@
             align-items: center;
             gap: 30px;
             span{
-                border: 1px solid #DFDBF9;
+                border: 1px solid #F7F4F0;
                 padding: 2px 15px;
                 display: block;
                 border-radius: 33px;
@@ -386,7 +386,7 @@
                 .single-tags{
                     display: block;
                     padding: 1px 12px;
-                    border: 1px solid #DFDBF9;
+                    border: 1px solid #F7F4F0;
                     border-radius: 33px;
                     transition: .4s;
                 }
@@ -397,7 +397,7 @@
                 transition: .4s;
                 height: 44px;
                 width: 44px;
-                border-color: #0C1018 !important;
+                border-color: #252525 !important;
                 &:hover{
                     border-color: var(--color-primary) !important;
                     color: var(--color-primary) !important;
@@ -417,7 +417,7 @@
 .single-service-style-four{
     position: relative;
     z-index: 1;
-    border: 1px solid #D2DAFF;
+    border: 1px solid #E7E1DA;
     border-radius: 10px;
     padding: 30px;
     overflow: hidden;
@@ -491,7 +491,7 @@
         height: 100%;
         right: 0;
         top: 0;
-        background: rgba( #050D20, $alpha: .4);
+        background: rgba( #252525, $alpha: .4);
         z-index: -1;
         transition: all .4s;
     }
@@ -513,7 +513,7 @@
                 transform: rotate(45deg);
             }
             &::after{
-                background: #050D20;
+                background: #252525;
             }
         }
         .round{
@@ -556,9 +556,9 @@
 .single-service-security{
     padding: 50px 40px;
     border-radius: 30px;
-    border: 1px solid #E5EAFF;
+    border: 1px solid #F7F4F0;
     height: 100%;
-    background: #F9FAFF;
+    background: #F7F4F0;
     .icon{
         margin-bottom: 30px;
     }
@@ -571,7 +571,7 @@
         margin-bottom: 40px;
     }
     .rts-btn{
-        border-color: #EAF0FF !important;
+        border-color: #F7F4F0 !important;
         padding: 13px 22px;
         display: flex;
         align-items: center;
@@ -583,7 +583,7 @@
     max-width: 1760px;
     margin: auto;
     padding: 0 15px;
-    background: #091533;
+    background: #252525;
     border-radius: 30px;
     .title-center-wrapper{
         .pre{
@@ -627,7 +627,7 @@
         bottom: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(360deg, #0C1018 0%, rgba(8, 11, 16, 0) 103.57%);
+        background: linear-gradient(360deg, #252525 0%, rgba(8, 11, 16, 0) 103.57%);
         z-index: 0;
         pointer-events: none;
     }
@@ -669,7 +669,7 @@
                     text-align: center;
                     line-height: 50px;
                     border-radius: 28px;
-                    border: 1px solid #DEE4FF;
+                    border: 1px solid #F7F4F0;
                     color: var(--color-heading-1);
                     margin: 0;
                     background: transparent;
@@ -690,7 +690,7 @@
 .single-feature-area-four {
     padding: 34px 22px 34px 34px;
     border-radius: 20px;
-    border: 1px solid #EAF0FF;
+    border: 1px solid #F7F4F0;
     transition: all 0.3s ease;
     .icon {
         margin-bottom: 23px;
@@ -700,7 +700,7 @@
         border-radius: 50%;
         text-align: center;
         display: block;
-        background: #EAF0FF;
+        background: #F7F4F0;
     }
     .content {
         .title {
@@ -711,7 +711,7 @@
         }
         p.disc {
             font-size: 16px;
-            color: #717383;
+            color: #6B6560;
             margin-bottom: 23px;
         }
     }
@@ -725,7 +725,7 @@
     padding: 34px;
     border-radius: 10px;
     transition: all 0.3s ease;
-    background: #EAF0FF;
+    background: #F7F4F0;
     .icon {
         height: 50px;
     }
@@ -733,14 +733,14 @@
         margin-top: 110px;
         .title {
             font-size: 20px;
-            color: #050D20;
+            color: #252525;
             font-weight: 600;
             margin-bottom: 18px;
             line-height: 1.2;
         }
         p.disc {
             font-size: 16px;
-            color: #717383;
+            color: #6B6560;
             margin-bottom: 0;
         }
     }

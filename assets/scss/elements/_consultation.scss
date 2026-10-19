@@ -8,7 +8,7 @@
         left: 60.2%;
         width: 4px;
         height: 100%;
-        background: #EAF0FF;
+        background: #F7F4F0;
 
         @media #{$sm-layout} {
             left: 0;
@@ -51,7 +51,7 @@
         }
 
         &::after {
-            border: 5px solid #EAF0FF;
+            border: 5px solid #F7F4F0;
             background: #fff;
             z-index: 0;
             width: 20px;

@@ -64,7 +64,7 @@
     display: block;
     z-index: 1111;
     width: 100%;
-    background: #071431;
+    background: #252525;
     box-shadow: 0px 7px 18px rgba(24, 16, 16, 0.0509803922);
 }
 
@@ -73,10 +73,10 @@
 
     .nav-area {
         * {
-            color: #071431;
+            color: #252525;
 
             &::after {
-                color: #071431;
+                color: #252525;
             }
         }
     }
@@ -170,7 +170,7 @@ header.header-one.header-relative {
                 border: none;
                 font-size: 16px;
                 background-image: none;
-                color: #071431;
+                color: #252525;
 
                 &:focus {
                     outline: none;
@@ -181,7 +181,7 @@ header.header-one.header-relative {
         }
         svg{
             rect{
-                fill: #071431;
+                fill: #252525;
             }
         }
     }
@@ -222,7 +222,7 @@ header.header-one.header-relative {
     .select-area.language{
         .has-dropdown{
             >a{
-                color: #071431;
+                color: #252525;
             }
         }
     }
@@ -236,7 +236,7 @@ header.header-digital{
         gap: 0;
         .logo-area{
             padding: 9px 23px 7px;
-            border: 1px solid #DFDBF9;
+            border: 1px solid #F7F4F0;
             border-radius: 33px;
             a{
                 display: block;
@@ -245,7 +245,7 @@ header.header-digital{
         }
         .nav-area{
             padding: 0 23px;
-            border: 1px solid #DFDBF9;
+            border: 1px solid #F7F4F0;
             border-radius: 33px;
             ul{
                 li{
@@ -264,7 +264,7 @@ header.header-digital{
         cursor: pointer;
         height: 50px;
         width: 50px;
-        border: 1px solid #DFDBF9;
+        border: 1px solid #F7F4F0;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -272,13 +272,13 @@ header.header-digital{
     }
 }
 .demo-app-development{
-    --color-primary: #615EFC;
+    --color-primary: #8F202B;
     .header-wrapper-main{
         .rts-btn.btn-primary{
             background: #fff;
             color: var(--color-primary);
             &::after{
-                background: #0C1018;
+                background: #252525;
             }
             &:hover{
                 color: #fff;
@@ -292,14 +292,14 @@ header.header-digital{
 
 header.inner-header-app-development{
     .main-nav > a{
-        color: #0C1018;
+        color: #252525;
         &::after{
-            color: #0C1018;
+            color: #252525;
         }
         
     }
     .has-dropdown::after{
-        color: #0C1018;
+        color: #252525;
     }
     .button-wrapper-flex{
         .rts-btn{
@@ -351,6 +351,6 @@ header.header-one.header-saas{
     }
     &.sticky{
         position: fixed !important;
-        background: linear-gradient(119.98deg, #615EFC 0.75%, #0C1018 99.25%);
+        background: linear-gradient(119.98deg, #8F202B 0.75%, #252525 99.25%);
     }
 }

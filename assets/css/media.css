@@ -1,9 +1,9 @@
 .media-page {
-  --media-ink: #1d2624;
-  --media-muted: #68726f;
-  --media-green: #163d36;
-  --media-pale: #f3f5f2;
-  background: #eaf3e5;
+  --media-ink: #252525;
+  --media-muted: #6B6560;
+  --media-green: #8F202B;
+  --media-pale: #F7F4F0;
+  background: #F7F4F0;
   color: var(--media-ink);
 }
 
@@ -21,7 +21,7 @@
   justify-content: center;
   padding: 40px 24px;
   border-radius: 0 0 4px 4px;
-  background: radial-gradient(ellipse at 50% 110%, #315c50 0%, transparent 55%), #183a34;
+  background: radial-gradient(ellipse at 50% 110%, #8F202B 0%, transparent 55%), #641820;
   color: #fff;
   text-align: center;
 }
@@ -57,7 +57,7 @@
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 999px;
   background: #fff;
-  color: #18221f;
+  color: #252525;
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
@@ -71,8 +71,8 @@
 
 .media-hero-actions a:hover,
 .media-hero-actions a:last-child:hover {
-  background: #d7eadc;
-  color: #173b33;
+  background: #F7F4F0;
+  color: #641820;
 }
 
 .media-content {
@@ -81,7 +81,7 @@
   gap: 30px;
   padding-top: 34px;
   padding-bottom: 70px;
-  background: #fafbf9;
+  background: #FFFFFF;
 }
 
 .media-sidebar {
@@ -110,7 +110,7 @@
   border: 0;
   border-radius: 7px;
   background: transparent;
-  color: #535a57;
+  color: #6B6560;
   font: inherit;
   font-size: 13px;
   line-height: 1.35;
@@ -123,8 +123,8 @@
 .media-sidebar button:hover,
 .media-sidebar a:hover,
 .media-sidebar button[aria-pressed="true"] {
-  background: #edf2ec;
-  color: #173b33;
+  background: #F7F4F0;
+  color: #641820;
 }
 
 .media-news-grid {
@@ -137,10 +137,10 @@
 .media-card {
   min-width: 0;
   overflow: hidden;
-  border: 1px solid rgba(28, 48, 40, 0.08);
+  border: 1px solid rgba(231, 225, 218, 0.8);
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 5px 16px rgba(25, 47, 39, 0.045);
+  box-shadow: 0 5px 16px rgba(37, 37, 37, 0.045);
 }
 
 .media-card[hidden] {
@@ -151,7 +151,7 @@
   position: relative;
   height: 148px;
   overflow: hidden;
-  background: #e6ebe6;
+  background: #F7F4F0;
 }
 
 .media-card-image img {
@@ -172,15 +172,15 @@
   left: 9px;
   padding: 4px 8px;
   border-radius: 999px;
-  background: #e1f3df;
-  color: #28503a;
+  background: #F7F4F0;
+  color: #641820;
   font-size: 10px;
   font-weight: 600;
 }
 
 .media-card[data-category="in-the-news"] .media-card-tag {
-  background: #eee6ff;
-  color: #583b8c;
+  background: #F7F4F0;
+  color: #641820;
 }
 
 .media-card-body {
@@ -189,13 +189,13 @@
 
 .media-card-meta {
   margin: 0 0 8px;
-  color: #7a817e;
+  color: #6B6560;
   font-size: 10px;
 }
 
 .media-card h3 {
   margin: 0 0 7px;
-  color: #202724;
+  color: #252525;
   font-size: 15px;
   font-weight: 650;
   line-height: 1.35;
@@ -203,7 +203,7 @@
 
 .media-card-description {
   margin: 0 0 10px;
-  color: #68716d;
+  color: #6B6560;
   font-size: 12px;
   line-height: 1.5;
 }
@@ -216,7 +216,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #203e33;
+  color: #8F202B;
   cursor: pointer;
   font-size: 12px;
   font-weight: 600;
@@ -239,8 +239,8 @@
 .media-card-details {
   margin: 10px 0 0;
   padding-top: 10px;
-  border-top: 1px solid #edf0ed;
-  color: #68716d;
+  border-top: 1px solid #E7E1DA;
+  color: #6B6560;
   font-size: 12px;
   line-height: 1.55;
 }
@@ -257,9 +257,9 @@
 .media-resource-card {
   min-height: 145px;
   padding: 18px;
-  border: 1px solid rgba(28, 48, 40, 0.09);
+  border: 1px solid rgba(231, 225, 218, 0.8);
   border-radius: 10px;
-  background: #f3f5f2;
+  background: #F7F4F0;
   scroll-margin-top: 30px;
 }
 
@@ -272,7 +272,7 @@
   margin-bottom: 15px;
   border-radius: 9px;
   background: #fff;
-  color: #245242;
+  color: #8F202B;
 }
 
 .media-resource-card h2 {
@@ -283,13 +283,13 @@
 
 .media-resource-card p {
   margin: 0;
-  color: #68716d;
+  color: #6B6560;
   font-size: 12px;
   line-height: 1.5;
 }
 
 .media-resource-card a {
-  color: #1e4d3b;
+  color: #8F202B;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -351,7 +351,7 @@
     width: auto;
     flex: 0 0 auto;
     padding: 8px 11px;
-    border: 1px solid #e7ebe6;
+    border: 1px solid #E7E1DA;
     background: #fff;
     white-space: nowrap;
   }

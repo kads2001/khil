@@ -26,7 +26,7 @@
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 24px;
-                color: #050D20;
+                color: #252525;
             }
         }
 
@@ -89,7 +89,7 @@
         p.disc {
             margin-bottom: 0;
             font-weight: 500;
-            color: #050D20;
+            color: #252525;
             line-height: 1.25;
         }
     }
@@ -174,7 +174,7 @@
                         align-items: center;
                         border-width: 0 1px;
                         border-style: solid;
-                        border-color: #0C1B40;
+                        border-color: #252525;
                         gap: 20px;
                         &:first-child{
                             padding-left: 0;
@@ -340,12 +340,12 @@
         li {
             i {
                 font-size: 14px;
-                color: #050D20;
+                color: #252525;
             }
 
             a {
                 font-size: 16px;
-                color: #050D20;
+                color: #252525;
                 font-weight: 500;
                 text-decoration: none;
             }
@@ -361,7 +361,7 @@
     h1 {
         font-size: 56px;
         font-weight: 500;
-        color: #050D20;
+        color: #252525;
         line-height: 1.25;
         @media #{$smlg-device} {
             font-size: 44px;
@@ -483,7 +483,7 @@
     align-items: flex-start;
     gap: 12px;
     padding: 33px 16px 33px 30px;
-    border: 1px solid #EAF0FF;
+    border: 1px solid #F7F4F0;
     border-radius: 10px;
 
     .icon {
@@ -499,7 +499,7 @@
         h3.title {
             font-size: 20px;
             font-weight: 500;
-            color: #050D20;
+            color: #252525;
             line-height: 1.25;
             margin-bottom: 10px;
         }
@@ -537,7 +537,7 @@
             h2.counter {
                 font-size: 38px;
                 font-weight: 600;
-                color: #050D20;
+                color: #252525;
                 line-height: 1.25;
                 margin-bottom: 0;
             }
@@ -545,7 +545,7 @@
             p.disc2 {
                 font-size: 16px;
                 margin: 0;
-                color: #050D20;
+                color: #252525;
             }
         }
     }
@@ -555,14 +555,14 @@
     padding: 8px 12px;
     font-size: 16px;
     border-radius:  33px;
-    border: 1px solid #DFDBF9;
-    color: #0C1018;
+    border: 1px solid #F7F4F0;
+    color: #252525;
 }
 .about-content-wrapper-agency{
     p.disc{
         font-size: 34px;
         font-weight: 500;
-        color: #0C1018;
+        color: #252525;
         line-height: 1.4;
         @media #{$mdsm-layout} {
             margin-top: 30px;
@@ -597,7 +597,7 @@
     .product-wrapper .inner{
         background: var(--color-primary) !important;
         &.two{
-            background: #4B47FF !important;
+            background: #8F202B !important;
         }
     }
 }
@@ -633,9 +633,9 @@
     margin: auto;
     text-align: center;
     .pre{
-        color: #050D20;
+        color: #252525;
         padding: 5px 20px;
-        border: 1px solid #DEE4FF;
+        border: 1px solid #F7F4F0;
         border-radius: 100px;
     }
     .title{
@@ -646,7 +646,7 @@
 
 .about-our-company-area-cyber{
     padding: 80px 100px;
-    background: #091533;
+    background: #252525;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -671,7 +671,7 @@
             align-items: flex-start;
             margin-bottom: 20px;
             gap: 15px;
-            background: #222D48;
+            background: #252525;
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             .icons{
@@ -689,7 +689,7 @@
 }
 .rts-story-area.demo-4{
     .section-inner.bottom{
-        border-bottom: 1px solid #DFDBF9;
+        border-bottom: 1px solid #F7F4F0;
     }
     .funfacts-area-counter-up-mission{
         padding-top: 0;

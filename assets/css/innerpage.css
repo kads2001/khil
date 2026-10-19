@@ -1,5 +1,5 @@
 .rts-contact-us-strip {
-  background: #f2f2f2;
+  background: #F7F4F0;
   padding: 48px 0 40px;
 }
 
@@ -7,7 +7,7 @@
   font-size: clamp(2.8rem, 4vw, 4.5rem);
   font-weight: 700;
   line-height: 1.08;
-  color: #0f1220;
+  color: #252525;
   margin: 0 0 18px;
 }
 
@@ -32,7 +32,7 @@
 
 .contact-card-item {
   background: rgba(255,255,255,0.2);
-  border: 1px solid rgba(41, 56, 90, 0.14);
+  border: 1px solid rgba(231, 225, 218, 0.8);
   border-radius: 16px;
   padding: 24px 18px 26px 22px;
   min-height: 145px;
@@ -43,8 +43,8 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  border: 2px solid #0d6efd;
-  color: #0d6efd;
+  border: 2px solid #8F202B;
+  color: #8F202B;
   background: transparent;
   display: inline-flex;
   align-items: center;
@@ -55,7 +55,7 @@
 
 .contact-card-item h3 {
   margin: 0 0 12px;
-  color: #101828;
+  color: #252525;
   font-size: 24px;
   line-height: 1.2;
   font-weight: 600;
@@ -64,7 +64,7 @@
 .contact-card-item p,
 .contact-card-item a {
   margin: 0;
-  color: #1b1d24;
+  color: #252525;
   font-size: 16px;
   line-height: 1.6;
   text-decoration: none;
@@ -73,7 +73,7 @@
 .contact-card-item a {
   display: inline-block;
   margin-top: 2px;
-  color: #1f2937;
+  color: #252525;
 }
 
 .contact-right-column {
@@ -84,7 +84,7 @@
 .contact-form-main-wrapper-contact {
   width: 100%;
   background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(41, 56, 90, 0.14);
+  border: 1px solid rgba(231, 225, 218, 0.8);
   border-radius: 18px;
   padding: 26px 24px 20px;
   box-shadow: none;
@@ -103,7 +103,7 @@
 .contact-form-main-wrapper-contact label {
   display: block;
   margin-bottom: 10px;
-  color: rgba(15,18,32,0.9);
+  color: rgba(37,37,37,0.9);
   font-size: 15px;
   font-weight: 500;
 }
@@ -113,10 +113,10 @@
 .contact-form-main-wrapper-contact select {
   width: 100%;
   height: 48px;
-  border: 1px solid rgba(41, 56, 90, 0.18);
+  border: 1px solid rgba(231, 225, 218, 0.8);
   background: rgba(255,255,255,0.35);
   border-radius: 8px;
-  color: #111827;
+  color: #252525;
   padding: 10px 12px;
   font-size: 15px;
 }
@@ -128,14 +128,14 @@
 
 .contact-form-main-wrapper-contact input::placeholder,
 .contact-form-main-wrapper-contact textarea::placeholder {
-  color: #8b8f99;
+  color: #6B6560;
 }
 
 .contact-form-main-wrapper-contact input:focus,
 .contact-form-main-wrapper-contact textarea:focus,
 .contact-form-main-wrapper-contact select:focus {
-  border-color: #0d6efd;
-  box-shadow: 0 0 0 2px rgba(13,110,253,0.08);
+  border-color: #8F202B;
+  box-shadow: 0 0 0 2px rgba(143,32,43,0.08);
   outline: none;
 }
 
@@ -167,23 +167,23 @@
 .contact-form-main-wrapper-contact .with-checkbox input {
   width: 18px;
   height: 18px;
-  accent-color: #0d6efd;
+  accent-color: #8F202B;
 }
 
 .contact-form-main-wrapper-contact .with-checkbox label {
   margin: 0;
   font-size: 15px;
-  color: rgba(15,18,32,0.8);
+  color: rgba(37,37,37,0.8);
 }
 
 .contact-form-main-wrapper-contact .with-checkbox label a {
-  color: #0d6efd;
+  color: #8F202B;
   text-decoration: none;
 }
 
 .custom-submit-btn {
   width: 100%;
-  background: linear-gradient(180deg, #1d7fff 0%, #0c5de5 100%);
+  background: linear-gradient(180deg, #8F202B 0%, #641820 100%);
   color: #fff;
   border: none;
   border-radius: 999px;
@@ -207,7 +207,7 @@
 .contact-map-eyebrow {
   display: block;
   margin-bottom: 8px;
-  color: #0d6efd;
+  color: #8F202B;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -216,23 +216,23 @@
 
 .contact-map-heading h2 {
   margin: 0 0 10px;
-  color: #101828;
+  color: #252525;
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 700;
 }
 
 .contact-map-heading p {
   margin: 0;
-  color: #667085;
+  color: #6B6560;
   font-size: 16px;
 }
 
 .contact-map-frame {
   min-height: 360px;
   overflow: hidden;
-  border: 1px solid rgba(41, 56, 90, 0.14);
+  border: 1px solid rgba(231, 225, 218, 0.8);
   border-radius: 18px;
-  background: #f2f2f2;
+  background: #F7F4F0;
   box-shadow: 0 12px 32px rgba(16, 24, 40, 0.08);
 }
 
@@ -244,7 +244,7 @@
 }
 
 .khil-footer {
-  background: #1c1a1d;
+  background: #252525;
   color: #fff;
   padding-top: 56px;
 }

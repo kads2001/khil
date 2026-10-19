@@ -34,14 +34,14 @@
             .title {
                 font-size: 40px;
                 font-weight: 600;
-                color: #050D20;
+                color: #252525;
                 margin-bottom: 0;
             }
 
             .disc {
                 font-size: 16px;
                 font-weight: 600;
-                color: #717383;
+                color: #6B6560;
                 line-height: 1;
                 margin: 0;
                 margin-bottom: 0px;
@@ -74,21 +74,21 @@
                 li {
                     font-size: 16px;
                     font-weight: 500;
-                    color: #050D20;
+                    color: #252525;
                     margin: 14px 0;
                     i {
                         font-size: 16px;
-                        color: #050D20;
+                        color: #252525;
                         margin-right: 4px;
                     }
 
                     &.disabled {
                         i {
-                            color: #717383;
+                            color: #6B6560;
                         }
 
                         span {
-                            color: #717383;
+                            color: #6B6560;
                         }
                     }
                 }
@@ -109,7 +109,7 @@
         position: absolute;
         left: 0;
         border-radius: 0;
-        background: #615EFC;
+        background: #8F202B;
         color: #fff;
         .title{
             font-size: 14px;
@@ -127,7 +127,7 @@
         .top-area{
             background: #fff;
             *{
-                color: #050D20;
+                color: #252525;
             }
         }
         .price-area{
@@ -168,7 +168,7 @@
 
 .demo-digital-agency{
     .bg_light {
-    background: #FAFAFF;
+    background: #F7F4F0;
     }
     .rts-mega-menu.sm-mega-70 {
         width: 70%;
@@ -253,7 +253,7 @@
     }
     .bottom-clients-area{
         padding: 19px 24px;
-        background: #0C1018;
+        background: #252525;
         display: flex;
         align-items: center;
         gap: 9px;
@@ -274,7 +274,7 @@
         border: 1px solid var(--color-border);
         background: var(--color-white);
         border-radius: 10px;
-        border: 1px solid #DFDBF9;
+        border: 1px solid #F7F4F0;
         text-align: center;
         position: relative;
         z-index: 1;
@@ -302,7 +302,7 @@
                     border-radius: 6px;
                     background: transparent;
                     height: max-content;
-                    border: 1px solid #DFDBF9;
+                    border: 1px solid #F7F4F0;
                 }
             }
             .bottom{
@@ -333,7 +333,7 @@
             }
         } 
         &.active{
-            background: #F6F8FF;
+            background: #F7F4F0;
             .pricing-top-area{
                 .top{
                     .tag{
@@ -398,7 +398,7 @@
         min-width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: #EAF0FF;
+        background: #F7F4F0;
         transition: .3s
     }
     .pricing-wrapper-four .pricing-top-area .title {
@@ -505,14 +505,14 @@
   width: 75px;
   margin: 0 auto;
   height: 35px;
-  border: 1px solid #CEDEFF;
+  border: 1px solid #E7E1DA;
   border-radius: 25px;
-  background: #EAF0FF;
+  background: #F7F4F0;
   position: relative;
 }
 
 .bg_dark-blue{
-    background: #091533;
+    background: #252525;
     .title-left-wrapper{
         *{
             color: #fff !important;
@@ -564,7 +564,7 @@
         top: -5px;
         left: 60px;
         padding: 5px 15px;
-        background: #091533;
+        background: #252525;
         font-size: 16px;
         font-weight: 500;
         color: #fff;
@@ -624,13 +624,13 @@
 
 .pricing-cyber-page{
     .single-pricing-list-area{
-        border: 1px solid #E5EAFF;
+        border: 1px solid #F7F4F0;
         .package{
             background: #FFFFFF;
-            color: #050D20;
+            color: #252525;
         }
         *{
-            color: #050D20 !important;
+            color: #252525 !important;
         }
         &.active,
         &:hover{
@@ -639,7 +639,7 @@
             }
             .package{
                 background: #FFFFFF;
-                color: #050D20 !important;
+                color: #252525 !important;
             }
         }
     }
@@ -664,7 +664,7 @@
     position: relative;
     border: 1px solid rgba(#000000, $alpha: .2);
     &.active{
-        background: #132A64;
+        background: #641820;
         .top-area{
             *{
                 color: #fff;
@@ -706,7 +706,7 @@
             }
         }
         p{
-            color: #0C1018;
+            color: #252525;
             font-size: 14px;
             margin-bottom: 20px;
         }
@@ -733,7 +733,7 @@
                 gap: 15px;
                 margin-bottom: 10px;
                 p{
-                    color: #0C1018;
+                    color: #252525;
                     font-size: 16px;
                     font-weight: 400;
                 }
@@ -745,10 +745,10 @@
     background: #fff;
     padding: 50px 35px;
     position: relative;
-    border: 1px solid #EAF0FF;
+    border: 1px solid #F7F4F0;
     border-radius: 20px;
     &.active{
-        background: #132A64;
+        background: #641820;
         .top-area{
             *{
                 color: #fff;

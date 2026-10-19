@@ -1,6 +1,6 @@
 .single-testimonails-style-one {
     padding: 30px;
-    border: 1px solid #DBE7FF;
+    border: 1px solid #E7E1DA;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
     position: relative;
 
@@ -124,7 +124,7 @@
                 .disc {
                     font-size: 24px;
                     font-weight: 600;
-                    color: #050D20;
+                    color: #252525;
                     margin-bottom: 30px;
                     line-height: 1.4;
                     @media #{$large-mobile} {
@@ -146,7 +146,7 @@
             span {
                 font-size: 16px;
                 font-weight: 400;
-                color: #717383;
+                color: #6B6560;
             }
         }
     }
@@ -170,7 +170,7 @@
         font-size: 16px;
         font-weight: 600;
         cursor: pointer;
-        border: 1px solid #DBE7FF;
+        border: 1px solid #E7E1DA;
         transition: all 0.3s ease;
 
         &::after {
@@ -241,7 +241,7 @@
             align-items: center;
             gap: 14px;
             padding-top: 26px;
-            border-top: 1px solid #7472FF;
+            border-top: 1px solid #8F202B;
             .info{
                 .title{
                     font-size: 20px;
@@ -312,7 +312,7 @@
             .body{
                 p.disc{
                     font-size: 24px;
-                    color: #0C1018;
+                    color: #252525;
                     line-height: 1.4;
                     font-weight: 500;
                     padding-bottom: 40px;
@@ -334,7 +334,7 @@
                             }
                             p{
                                 margin: 0;
-                                color: #050D20;
+                                color: #252525;
                             }
                         }
                     }
@@ -351,7 +351,7 @@
                 max-width: 668px;
                 .top-head{
                     span{
-                        border: 1px solid #EAF0FF;
+                        border: 1px solid #F7F4F0;
                         border-radius: 20px;
                         color: var(--color-primary);
                         display: block;

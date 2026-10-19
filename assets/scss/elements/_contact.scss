@@ -1,7 +1,7 @@
 .contact-form-style-one {
     padding: 41px 47px;
-    background: #F8FBFF;
-    border: 1px solid #DBE7FF;
+    background: #F7F4F0;
+    border: 1px solid #E7E1DA;
     @media #{$large-mobile} {
         padding: 22px;
     }
@@ -19,7 +19,7 @@
         input {
             height: 56px;
             border-radius: 0;
-            border: 1px solid #DBE7FF;
+            border: 1px solid #E7E1DA;
 
             &:focus {
                 border-color: var(--color-primary);
@@ -30,7 +30,7 @@
     input {
         height: 56px;
         border-radius: 0;
-        border: 1px solid #DBE7FF;
+        border: 1px solid #E7E1DA;
 
         &:focus {
             border-color: var(--color-primary);
@@ -40,7 +40,7 @@
     textarea {
         height: 97px;
         border-radius: 0;
-        border: 1px solid #DBE7FF;
+        border: 1px solid #E7E1DA;
 
         &:focus {
             border-color: var(--color-primary);
@@ -132,7 +132,7 @@ button {
 .contact-form-content-left-wrapper {
     .signle-contact-card {
         background: #FFFFFF;
-        border: 1px solid #EAF0FF;
+        border: 1px solid #F7F4F0;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
         border-radius: 10px;
         padding: 40px 44px;
@@ -176,7 +176,7 @@ button {
 .contact-form-main-wrapper-contact {
     padding: 66px 60px;
     background: #FFFFFF;
-    border: 1px solid #EAF0FF;
+    border: 1px solid #F7F4F0;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
     border-radius: 10px;
     @media #{$large-mobile} {
@@ -200,7 +200,7 @@ button {
     }
 
     input {
-        height: #DFDBF9;
+        height: #F7F4F0;
         height: 50px;
         border-radius: 4px;
     }
@@ -208,7 +208,7 @@ button {
     textarea {
         height: 154px;
         background: #FFFFFF;
-        border: 1px solid #DFDBF9;
+        border: 1px solid #F7F4F0;
         border-radius: 4px;
         padding: 10px;
         &:focus {
@@ -269,8 +269,8 @@ button {
 .cyber-secyrity-contact{
     padding: 60px;
     border-radius: 30px;
-    border: 1px solid #E5EAFF;
-    background: #F9FAFF;
+    border: 1px solid #F7F4F0;
+    background: #F7F4F0;
     .title{
         font-size: 36px;
     }
@@ -278,7 +278,7 @@ button {
         margin-bottom: 40px;
         input{
             border: none;
-            border-bottom: 1px solid #E5EAFF;
+            border-bottom: 1px solid #F7F4F0;
             border-radius: 0;
             padding: 0;
             padding-bottom: 10px;
@@ -290,7 +290,7 @@ button {
             padding: 0;
             padding-bottom: 10px;
             border: none;
-            border-bottom: 1px solid #E5EAFF;
+            border-bottom: 1px solid #F7F4F0;
             border-radius: 0;
              &:focus{
                 border-color: var(--color-primary);

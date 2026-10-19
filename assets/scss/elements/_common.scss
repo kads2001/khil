@@ -3,7 +3,7 @@
     span.pre {
         display: inline-block;
         padding: 5px 13px;
-        border: 1px solid #DBE7FF;
+        border: 1px solid #E7E1DA;
         color: var(--color-primary);
         font-size: 14px;
         font-weight: 400;
@@ -44,7 +44,7 @@
 }
 
 .bg_light {
-    background: #F9FAFF;
+    background: #F7F4F0;
 }
 
 .title-center-wrapper {
@@ -114,7 +114,7 @@ a {
     .title-center-wrapper span.pre {
         display: inline-block;
         padding: 2px 13px;
-        border: 1px solid #DBE7FF;
+        border: 1px solid #E7E1DA;
         color: var(--color-primary);
         font-size: 14px;
         font-weight: 400;
@@ -135,7 +135,7 @@ a {
             transform: rotate(45deg);
         }
     }
-    --color-primary: #615EFC;
+    --color-primary: #8F202B;
 }
 
 body.demo-app-development{
@@ -161,7 +161,7 @@ body.demo-app-development{
     }
 }
 .demo-machine-learning{
-    --color-primary: #615EFC;
+    --color-primary: #8F202B;
 }
 
 // preloader for this template
@@ -272,7 +272,7 @@ body.demo-app-development{
 }
 
 .marketing-onepage{
-    --color-primary: #132A64;
+    --color-primary: #641820;
     .rts-btn{
         border-radius: 6px;
         &.with-arrow{
@@ -288,7 +288,7 @@ body.demo-app-development{
         border-radius: 20px;
         line-height: 1;
         font-weight: 500;
-        border: 1px solid #EAF0FF;
+        border: 1px solid #F7F4F0;
         padding: 9px 16px;
     }
     .title-left-wrapper .title, .title-center-wrapper .title{
@@ -297,7 +297,7 @@ body.demo-app-development{
     }
 }
 .saas-onepage{
-    --color-primary: #615EFC;
+    --color-primary: #8F202B;
     .rts-btn{
         border-radius: 6px;
         &.with-arrow{
@@ -313,11 +313,11 @@ body.demo-app-development{
         border-radius: 4px;
         line-height: 1;
         font-weight: 500;
-        border: 1px solid #EAF0FF;
+        border: 1px solid #F7F4F0;
         padding: 9px 16px;
         display: flex;
         align-items: center;
-        color: #050D20;
+        color: #252525;
         gap: 10px;
         max-width: max-content;
         font-size: 16px;

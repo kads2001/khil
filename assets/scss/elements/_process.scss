@@ -127,7 +127,7 @@
 }
 
 .working-process-three-main{
-    border-top: 2px dashed #DBD6FF;
+    border-top: 2px dashed #E7E1DA;
     .working-process-wrapper-three{
         padding-top: 40px;
         position: relative;
@@ -167,7 +167,7 @@
 }
 
 .working-process-digital-agency-left{
-    background: #FAFAFF;
+    background: #F7F4F0;
     padding: 50px 40px;
     @media #{$large-mobile} {
         padding: 30px;
@@ -177,7 +177,7 @@
         p.disc{
             font-size: 20px;
             font-weight: 500;
-            color: #0C1018;
+            color: #252525;
             text-align: center;
             line-height: 26px;
             text-transform: capitalize;
@@ -202,19 +202,19 @@
                 &.color-two{
                     span{
                         background: #FFD9D9;
-                        color: #0C1018;
+                        color: #252525;
                     }
                 }
                 &.color-three{
                     span{
                         background: #FADAFF;
-                        color: #0C1018;
+                        color: #252525;
                     }
                 }
                 &.color-four{
                     span{
-                        background: #CED3FF;
-                        color: #0C1018;
+                        background: #E7E1DA;
+                        color: #252525;
                     }
                 }
             }
@@ -238,7 +238,7 @@
                 .done{
                     font-size: 16px;
                     font-weight: 400;
-                    color: #0C1018;
+                    color: #252525;
                 }
             }
         }

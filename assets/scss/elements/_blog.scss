@@ -1,6 +1,6 @@
 .single-blog-style-one.with-light-bg {
-    background: #F9FAFF;
-    border: 1px solid #E3EDFF;
+    background: #F7F4F0;
+    border: 1px solid #F7F4F0;
     border-radius: 10px;
     box-shadow: none;
 
@@ -26,7 +26,7 @@
                 color: var(--color-primary);
 
                 &.date {
-                    color: #717383;
+                    color: #6B6560;
                     position: relative;
 
                     &::after {
@@ -36,7 +36,7 @@
                         left: -23px;
                         width: 5px;
                         height: 5px;
-                        background: #717383;
+                        background: #6B6560;
                         border-radius: 50%;
                     }
                 }
@@ -46,7 +46,7 @@
         .title {
             font-size: 24px;
             font-weight: 500;
-            color: #050D20;
+            color: #252525;
             text-align: center;
         }
     }
@@ -160,7 +160,7 @@
     }
 
     &.contact {
-        background: #1C2539;
+        background: #252525;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -325,7 +325,7 @@
             .title {
                 margin-bottom: 0;
                 font-size: 16px;
-                color: #1C2539;
+                color: #252525;
                 line-height: 26px;
                 margin-top: 5px;
                 transition: .3s;
@@ -419,7 +419,7 @@
             border-radius: 0;
             margin-right: 10px;
             margin-bottom: 10px;
-            color: #1C2539;
+            color: #252525;
             font-size: 14px;
             font-weight: 500;
             transition: .5s;
@@ -466,13 +466,13 @@
 
         .quote-area {
             padding: 35px 75px;
-            border: 1px solid #DFDBF9;
+            border: 1px solid #F7F4F0;
             border-radius: 10px;
             text-align: center;
             margin-bottom: 35px;
 
             p.quote {
-                color: #050D20;
+                color: #252525;
                 font-size: 20px;
                 font-weight: 500;
                 font-style: italic;
@@ -481,7 +481,7 @@
             }
 
             .name {
-                color: #0F62FE;
+                color: #8F202B;
                 font-weight: 600;
             }
         }
@@ -517,13 +517,13 @@
             gap: 0;
             margin-bottom: 26px;
             padding-bottom: 26px;
-            border-bottom: 1px solid #DFDBF9;
+            border-bottom: 1px solid #F7F4F0;
             .single{
                 display: block;
                 padding: 3px 12px;
-                border: 1px solid #DFDBF9;
+                border: 1px solid #F7F4F0;
                 border-radius: 100px;
-                color: #0C1018;
+                color: #252525;
                 font-size: 16px;
                 font-weight: 500;
             }
@@ -532,7 +532,7 @@
             font-weight: 500;
             font-size: 24px;
             margin: 0;
-            color: #0C1018;
+            color: #252525;
             transition: .4s;
         }
 
@@ -551,7 +551,7 @@
 
 .single-blog-style-one.in-cyber-security{
     background: transparent;
-    border: 1px solid #E5EAFF;
+    border: 1px solid #F7F4F0;
     border-radius: 30px;
     box-shadow: none;
     .thumbnail-blog{
@@ -583,7 +583,7 @@
                 padding: 3px 15px;
                 border-radius: 33px;
                 border: 1px solid #CFCFCF;
-                color: #0C1018;
+                color: #252525;
             }
         }
         a{

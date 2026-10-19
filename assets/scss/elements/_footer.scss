@@ -30,7 +30,7 @@
     p,
     a,
     input {
-        color: #717383;
+        color: #6B6560;
     }
 
     .left-wiget {
@@ -59,7 +59,7 @@
             li{
                 list-style: none;
                 a{
-                    color: #BCBFDB;
+                    color: rgba(255, 255, 255, 0.75);
                     transition: all .3s;
                     &:hover{
                         color: var(--color-primary);
@@ -70,7 +70,7 @@
     }
 
     .copyright-area {
-        border-top: 1px solid #DBE7FF;
+        border-top: 1px solid #E7E1DA;
         padding: 20px 0;
 
         .copyright-1 {
@@ -119,9 +119,14 @@
         }
 
         .copyright-area {
-            border-color: #08122B;
+            border-color: rgba(231, 225, 218, 0.2);
         }
     }
+}
+
+.rts-footer-one.bg_dark p,
+.rts-footer-one.bg_dark a {
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .call-to-action-area-top-footer-three {
@@ -129,7 +134,7 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 50px;
-    border-bottom: 1px solid #08122B;
+    border-bottom: 1px solid #E7E1DA;
     margin-bottom: 50px;
     @media #{$mdsm-layout} {
         display: none;
@@ -154,7 +159,7 @@
                 height: 50px;
                 border-radius: 4px;
                 margin-bottom: 0;
-                border: 1px solid #08122B;
+                border: 1px solid #252525;
                 width: 398px;
 
                 &:focus {
@@ -252,7 +257,7 @@
             ul{
                 li{
                     a{
-                        color: #0C1018;
+                        color: #252525;
                         transition: .3s;
                         &:hover{
                             color: var(--color-primary);
@@ -286,7 +291,7 @@
 }
 
 .copyright-area-agency{
-    border-top: 1px solid #EAE7FB;
+    border-top: 1px solid #F7F4F0;
 }
 .copyright-area-digital-agency{
     display: flex;
@@ -300,7 +305,7 @@
     }
     p.disc{
         font-size: 16px;
-        color: #0C1018;
+        color: #252525;
         margin: 0;
     }
     ul{
@@ -314,7 +319,7 @@
             margin: 0;
             padding: 0;
             a{
-                color: #0C1018;
+                color: #252525;
                 font-size: 16px;
             }
         }
