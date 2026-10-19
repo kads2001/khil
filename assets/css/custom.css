@@ -164,6 +164,12 @@
   font-size: 12px;
 }
 
+body.demo-cybersecurity .rts-btn,
+body.demo-cybersecurity a.btn-line,
+body.demo-cybersecurity .custom-submit-btn {
+  border-radius: 999px !important;
+}
+
 @media (max-width: 991px) {
   .mission-top-header-area {
     margin-bottom: 30px;
@@ -1289,5 +1295,3 @@ body.home-three-page .blog-news-grid .blog-read-btn {
         line-height: 1.6;
     }
 }
-
-

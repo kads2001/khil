@@ -19381,6 +19381,17 @@ button {
   display: block;
 }
 
+.khil-shared-footer .left-wiget .khil-footer-logo {
+  display: block;
+  width: 100px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.khil-shared-footer .left-wiget form .rts-btn {
+  border-radius: 999px;
+}
+
 .rts-footer-one .left-wiget p.disc {
   margin-bottom: 27px;
 }
