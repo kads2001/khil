@@ -987,3 +987,307 @@ body.home-three-page .blog-news-grid .blog-read-btn {
     font-size: 16px;
   }
 }
+
+/* ==========================================================================
+   VISION & CORE PRINCIPLES SECTION
+   ========================================================================== */
+
+.rts-vision-principles-area {
+    width: 100%;
+    padding: 45px 0 20px;
+    background: #f5f7fa;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container matching header container width (1320px) */
+.rts-vision-principles-area .container,
+.rts-vision-principles-area .container-fluid {
+    max-width: 1320px !important;
+    width: 100%;
+    margin: 0 auto !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Card */
+.khil-vision-card {
+    height: 100%;
+    min-height: auto;
+    padding: 24px 28px;
+    background: #ffffff;
+    border: 1px solid #e4e9ef;
+    border-radius: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.khil-vision-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(20, 40, 70, 0.08);
+}
+
+/* Card Header */
+.vision-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.vision-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    background: #edf3f8;
+    color: #183b56;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.vision-card-badge i {
+    font-size: 13px;
+}
+
+.vision-card-num {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #8a98a7;
+}
+
+/* Title */
+.vision-card-title {
+    margin: 0 0 8px;
+    color: #16344a;
+    font-size: 44px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+/* Description */
+.vision-card-text {
+    margin: 0;
+    color: #5e6b78;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+/* Principles List */
+.vision-principles-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vision-principles-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    color: #5e6b78;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.vision-principles-list li i {
+    flex-shrink: 0;
+    margin-top: 4px;
+    color: #21835b;
+    font-size: 15px;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .rts-vision-principles-area {
+        padding: 35px 0;
+    }
+
+    .khil-vision-card {
+        min-height: auto;
+        padding: 20px 22px;
+    }
+
+    .vision-card-header {
+        margin-bottom: 12px;
+    }
+
+    .vision-card-title {
+        font-size: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .rts-vision-principles-area {
+        padding: 28px 0;
+    }
+
+    .rts-vision-principles-area .container,
+    .rts-vision-principles-area .container-fluid {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .khil-vision-card {
+        min-height: auto;
+        padding: 18px 16px;
+        border-radius: 12px;
+    }
+
+    .vision-card-header {
+        margin-bottom: 10px;
+    }
+
+    .vision-card-badge {
+        padding: 5px 10px;
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .vision-card-num {
+        font-size: 12px;
+    }
+
+    .vision-card-title {
+        font-size: 19px;
+        margin-bottom: 6px;
+    }
+
+    .vision-card-text {
+        font-size: 13.5px;
+        line-height: 1.55;
+    }
+
+    .vision-principles-list {
+        gap: 8px;
+    }
+
+    .vision-principles-list li {
+        font-size: 13px;
+        gap: 8px;
+    }
+}
+
+/* ==========================================================================
+   CORPORATE PHILOSOPHY SECTION - PERFECTLY ALIGNED
+   ========================================================================== */
+
+.corporate-philosophy-section {
+    width: 100%;
+    background: #f5f7fa;
+    padding: 0 0 50px;
+    position: relative;
+}
+
+.corporate-philosophy-section .container-fluid,
+.corporate-philosophy-section .container {
+    max-width: 1320px !important;
+    width: 100%;
+    margin: 0 auto !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.corporate-philosophy-box {
+    background: #ffffff;
+    border: 1px solid #e4e9ef;
+    border-radius: 14px;
+    padding: 26px 28px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.corporate-philosophy-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(20, 40, 70, 0.08);
+}
+
+.corporate-philosophy-box .section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.corporate-philosophy-box .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    background: #edf3f8;
+    color: #183b56;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.corporate-philosophy-box .section-title,
+.corporate-philosophy-section h1.section-title,
+.corporate-philosophy-section h2.section-title {
+    margin: 0;
+    color: #16344a;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.corporate-philosophy-box .philosophy-text,
+.corporate-philosophy-section .philosophy-text {
+    margin: 0;
+    color: #5e6b78;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+@media (max-width: 991px) {
+    .corporate-philosophy-box {
+        padding: 20px 22px;
+    }
+
+    .corporate-philosophy-box .section-title,
+    .corporate-philosophy-section h1.section-title,
+    .corporate-philosophy-section h2.section-title {
+        font-size: 21px;
+    }
+
+    .corporate-philosophy-box .philosophy-text,
+    .corporate-philosophy-section .philosophy-text {
+        font-size: 14.5px;
+        line-height: 1.65;
+    }
+}
+
+@media (max-width: 575px) {
+    .corporate-philosophy-section {
+        padding: 0 0 35px;
+    }
+
+    .corporate-philosophy-box {
+        padding: 18px 16px;
+        border-radius: 12px;
+    }
+
+    .corporate-philosophy-box .section-title,
+    .corporate-philosophy-section h1.section-title,
+    .corporate-philosophy-section h2.section-title {
+        font-size: 19px;
+    }
+
+    .corporate-philosophy-box .philosophy-text,
+    .corporate-philosophy-section .philosophy-text {
+        font-size: 13.5px;
+        line-height: 1.6;
+    }
+}
+
+
