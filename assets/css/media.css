@@ -3,7 +3,7 @@
   --media-muted: #6B6560;
   --media-green: #8F202B;
   --media-pale: #F7F4F0;
-  /* background: #F7F4F0; */
+  background: #fff;
   color: var(--media-ink);
 }
 
