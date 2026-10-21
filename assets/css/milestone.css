@@ -9,12 +9,12 @@
   --color-card-bg: #FFFFFF;
   --color-text-main: #252525;
   --color-text-muted: #555555;
-  --color-text-light: #777777;
-  --color-border: #E8E2DA;
-  --color-border-hover: #B89B69;
+  --color-text-light: #7E7870;
+  --color-border: #E8DED1;
+  --color-border-hover: #B8945A;
   --color-plum: #7d007d;
-  --color-gold: #B89B69;
-  --color-gold-light: #F4EFE6;
+  --color-gold: #B8945A;
+  --color-gold-light: #F7F3ED;
   --color-green: #008060;
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -49,14 +49,14 @@ body.milestone-page {
 .hospitality-overlay {
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(rgba(184, 155, 105, 0.08) 1px, transparent 0);
+  background-image: radial-gradient(rgba(184, 148, 90, 0.09) 1px, transparent 0);
   background-size: 28px 28px;
   pointer-events: none;
   opacity: 0.6;
   z-index: 0;
 }
 
-/* ── Header (Matching Home Page Banner / Brand Style) ── */
+/* ── Header ── */
 .milestone-header {
   position: relative;
   z-index: 10;
@@ -74,13 +74,13 @@ body.milestone-page {
   gap: 0.75rem;
   color: var(--color-plum);
   background: rgba(125, 0, 125, 0.07);
-  border: 1px solid rgba(125, 0, 125, 0.22);
+  border: 1px solid rgba(125, 0, 125, 0.2);
   border-radius: 50px;
   padding: 6px 20px;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   margin-bottom: 1rem;
 }
 
@@ -134,7 +134,7 @@ body.milestone-page {
   padding: 0.45rem 1.15rem;
   border-radius: 50px;
   background: #FFFFFF;
-  border: 1px solid #DFD7CC;
+  border: 1px solid var(--color-border);
   color: #4b5563;
   font-family: var(--font-sans);
   font-size: 0.82rem;
@@ -148,23 +148,23 @@ body.milestone-page {
   background: var(--color-plum);
   color: #FFFFFF;
   border-color: var(--color-plum);
-  box-shadow: 0 4px 14px rgba(125, 0, 125, 0.22);
+  box-shadow: 0 4px 14px rgba(125, 0, 125, 0.2);
 }
 
 /* ── Main Layout ── */
 .milestone-main {
   position: relative;
   z-index: 10;
-  max-width: 1240px;
+  max-width: 1430px;
   margin: 0 auto;
-  padding: 3.5rem 1.5rem;
+  padding: 3rem 1.5rem;
 }
 
-/* ── Desktop Snake Timeline (Tight Pipeline, Not from Edges) ── */
+/* ── Desktop Snake Timeline ── */
 .desktop-snake-container {
   display: none;
   position: relative;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 @media (min-width: 1024px) {
@@ -183,13 +183,13 @@ body.milestone-page {
 }
 
 .pipeline-glow {
-  filter: drop-shadow(0 2px 8px rgba(125, 0, 125, 0.28));
+  filter: drop-shadow(0 2px 8px rgba(125, 0, 125, 0.22));
 }
 
 .milestone-rows {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 7rem;
   position: relative;
   z-index: 10;
 }
@@ -197,8 +197,9 @@ body.milestone-page {
 .milestone-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  align-items: flex-end;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-items: center;
   position: relative;
 }
 
@@ -212,126 +213,174 @@ body.milestone-page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   position: relative;
+  width: 190px;
 }
 
 .timeline-step.terminus-step {
-  width: 100%;
-  max-width: 280px;
+  width: 190px;
+  max-width: 190px;
 }
 
-/* ── Square Milestone Cards (White Luxury Hospitality Style) ── */
+/* ── Milestone Cards: Approximately 190px × 190px on Desktop ── */
 .milestone-card {
   position: relative;
-  width: 100%;
-  max-width: 230px;
-  aspect-ratio: 1 / 1;
+  width: 190px;
+  height: 190px;
+  min-width: 190px;
+  max-width: 190px;
+  min-height: 190px;
+  max-height: 190px;
+  box-sizing: border-box;
   margin: 0 auto;
   background: var(--color-card-bg);
   border: 1.5px solid var(--color-border);
-  border-radius: 16px;
-  padding: 1.1rem;
+  border-radius: 14px;
+  padding: 12px 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
-  transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1), 
-              border-color 0.35s ease, 
-              box-shadow 0.35s ease,
-              background-color 0.35s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s ease, 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .timeline-step:hover .milestone-card {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   border-color: var(--color-gold);
-  box-shadow: 0 12px 32px rgba(184, 155, 105, 0.2);
+  box-shadow: 0 10px 24px rgba(184, 148, 90, 0.18);
 }
 
 .milestone-card.card-active {
   border-color: var(--color-plum) !important;
-  box-shadow: 0 8px 26px rgba(125, 0, 125, 0.16) !important;
-  transform: translateY(-4px);
+  box-shadow: 0 6px 22px rgba(125, 0, 125, 0.16) !important;
+  transform: translateY(-3px);
 }
 
 .milestone-card.card-terminus {
   border-color: var(--color-gold);
-  box-shadow: 0 4px 18px rgba(184, 155, 105, 0.12);
+  box-shadow: 0 4px 16px rgba(184, 148, 90, 0.14);
 }
 
 .timeline-step:hover .milestone-card.card-terminus {
   border-color: var(--color-plum);
-  box-shadow: 0 12px 32px rgba(125, 0, 125, 0.22);
+  box-shadow: 0 10px 26px rgba(125, 0, 125, 0.2);
 }
 
 .milestone-card.ring-active {
-  box-shadow: 0 0 0 4px var(--color-gold), 0 12px 32px rgba(184, 155, 105, 0.35) !important;
+  box-shadow: 0 0 0 4px var(--color-gold), 0 10px 28px rgba(184, 148, 90, 0.3) !important;
   border-color: var(--color-gold) !important;
-  transform: translateY(-6px) scale(1.02);
+  transform: translateY(-5px) scale(1.02);
 }
 
+/* ── Card Pointer: Precisely Aligned Triangular Notch ── */
 .milestone-card-pointer {
   position: absolute;
-  bottom: -8px;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 7px;
+  pointer-events: none;
+}
+
+.milestone-card-pointer::before {
+  content: "";
+  position: absolute;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 8px solid var(--color-card-bg);
-  filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.06));
+  border-top: 7px solid var(--color-border);
+  transition: border-top-color 0.3s ease;
 }
 
+.milestone-card-pointer::after {
+  content: "";
+  position: absolute;
+  top: -1.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--color-card-bg);
+}
+
+.timeline-step:hover .milestone-card-pointer::before {
+  border-top-color: var(--color-gold);
+}
+
+.milestone-card.card-active .milestone-card-pointer::before {
+  border-top-color: var(--color-plum);
+}
+
+/* ── Typography Inside Cards ── */
 .milestone-badge {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-plum);
-  background: rgba(125, 0, 125, 0.07);
-  padding: 2.5px 10px;
-  border-radius: 50px;
-  border: 1px solid rgba(125, 0, 125, 0.2);
-  margin-bottom: 8px;
+  background: rgba(125, 0, 125, 0.06);
+  padding: 2.5px 9px;
+  border-radius: 20px;
+  border: 1px solid rgba(125, 0, 125, 0.18);
+  margin-bottom: 6px;
   display: inline-block;
+  line-height: 1.2;
 }
 
 .milestone-badge.badge-genesis {
   color: var(--color-green);
-  background: rgba(0, 128, 96, 0.08);
-  border-color: rgba(0, 128, 96, 0.25);
+  background: rgba(0, 128, 96, 0.07);
+  border-color: rgba(0, 128, 96, 0.22);
 }
 
 .milestone-badge.badge-future {
-  color: #8c6d37;
-  background: rgba(184, 155, 105, 0.14);
-  border-color: rgba(184, 155, 105, 0.35);
+  color: #8C6830;
+  background: rgba(184, 148, 90, 0.12);
+  border-color: rgba(184, 148, 90, 0.3);
 }
 
 .milestone-title {
   font-weight: 700;
   color: var(--color-text-main);
-  font-size: 14.5px;
-  line-height: 1.3;
-  margin: 0 0 6px 0;
+  font-size: 15px;
+  line-height: 1.22;
+  margin: 0 0 5px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .milestone-desc {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--color-text-muted);
-  line-height: 1.55;
+  line-height: 1.42;
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* ── Connector Stem & Numbered Node Circles ── */
+/* ── Vertical Connector Stem ── */
 .milestone-stem {
   width: 2px;
-  height: 24px;
-  background: #E0D7CC;
-  margin: 4px 0;
+  height: 26px;
+  background: var(--color-border);
+  margin: 3px 0;
   transition: background-color 0.3s ease;
 }
 
@@ -339,42 +388,40 @@ body.milestone-page {
   background-color: var(--color-gold);
 }
 
-.milestone-stem.stem-terminus {
-  background: rgba(184, 155, 105, 0.5);
-}
-
 .timeline-step:hover .milestone-stem.stem-terminus {
   background-color: var(--color-plum);
 }
 
+/* ── Numbered Circles: Approximately 54px with Clean Double Border & Subtle Glow ── */
 .node-circle {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  border: 3.5px solid var(--color-gold);
+  border: 2px solid var(--color-gold);
   background: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(184, 155, 105, 0.22);
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), 
+  box-shadow: 0 0 0 3px #FAF8F5, 0 0 0 4.5px var(--color-border), 0 3px 12px rgba(184, 148, 90, 0.16);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
               box-shadow 0.35s ease, 
-              border-color 0.35s ease,
+              border-color 0.35s ease, 
               background-color 0.35s ease;
   cursor: pointer;
   z-index: 10;
 }
 
 .timeline-step:hover .node-circle {
-  transform: scale(1.1);
+  transform: scale(1.08);
   border-color: var(--color-plum);
+  box-shadow: 0 0 0 3px #FAF8F5, 0 0 0 4.5px rgba(125, 0, 125, 0.3), 0 4px 16px rgba(125, 0, 125, 0.2);
 }
 
 .node-circle.node-active {
-  box-shadow: 0 0 22px rgba(125, 0, 125, 0.35), inset 0 0 8px rgba(184, 155, 105, 0.25) !important;
   border-color: var(--color-plum) !important;
-  transform: scale(1.12);
+  box-shadow: 0 0 0 3px #FAF8F5, 0 0 0 4.5px rgba(125, 0, 125, 0.35), 0 0 16px rgba(125, 0, 125, 0.28) !important;
+  transform: scale(1.08);
 }
 
 .node-number {
@@ -384,37 +431,44 @@ body.milestone-page {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(184, 155, 105, 0.3);
+  border: 1px solid rgba(184, 148, 90, 0.25);
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
   color: var(--color-plum);
   background: #FAF8F5;
+  transition: all 0.3s ease;
+}
+
+.node-circle.node-active .node-number {
+  border-color: rgba(125, 0, 125, 0.3);
+  color: var(--color-plum);
 }
 
 .node-circle.terminus-circle {
-  box-shadow: 0 0 0 4px rgba(184, 155, 105, 0.25);
+  box-shadow: 0 0 0 3px #FAF8F5, 0 0 0 4.5px var(--color-gold), 0 0 18px rgba(184, 148, 90, 0.25);
   animation: pulse-subtle 3.5s ease-in-out infinite;
 }
 
 @keyframes pulse-subtle {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.06); opacity: 0.9; }
+  50% { transform: scale(1.05); opacity: 0.92; }
 }
 
-/* ── Responsive Mobile / Tablet View ── */
+/* ── Responsive Mobile / Tablet View: Clean Vertical Timeline ── */
 .mobile-timeline {
   display: block;
   position: relative;
-  padding-left: 2rem;
-  border-left: 2px solid #E2D9CE;
-  margin: 1.5rem 1rem 1.5rem 1.5rem;
+  padding-left: 2.75rem;
+  border-left: 2px solid var(--color-border);
+  margin: 1.5rem 1rem 2rem 2rem;
+  max-width: 480px;
 }
 
 @media (min-width: 640px) {
   .mobile-timeline {
-    padding-left: 2.5rem;
-    margin-left: 2rem;
+    padding-left: 3.25rem;
+    margin: 2rem auto;
   }
 }
 
@@ -428,75 +482,81 @@ body.milestone-page {
   position: relative;
   margin-bottom: 2rem;
   opacity: 0;
-  transform: translateX(-16px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .mobile-step.mobile-visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .mobile-node {
   position: absolute;
-  left: -2.75rem;
-  top: 6px;
-  width: 38px;
-  height: 38px;
+  left: calc(-2.75rem - 21px);
+  top: 14px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   border: 2px solid var(--color-gold);
   background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(184, 155, 105, 0.25);
+  box-shadow: 0 0 0 3px #FAF8F5, 0 0 0 4.5px var(--color-border), 0 2px 8px rgba(184, 148, 90, 0.15);
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--color-plum);
+  z-index: 2;
 }
 
 @media (min-width: 640px) {
   .mobile-node {
-    left: -3.25rem;
-    width: 42px;
-    height: 42px;
-    font-size: 15px;
+    left: calc(-3.25rem - 21px);
   }
 }
 
 .mobile-card {
   background: var(--color-card-bg);
   border: 1.5px solid var(--color-border);
-  border-radius: 0.75rem;
-  padding: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .mobile-card.card-terminus {
   border-color: var(--color-gold);
+  box-shadow: 0 3px 14px rgba(184, 148, 90, 0.12);
 }
 
 .mobile-title {
   font-size: 15px;
   font-weight: 700;
   color: var(--color-text-main);
-  margin: 4px 0;
+  line-height: 1.3;
+  margin: 5px 0 4px;
 }
 
 .mobile-desc {
   font-size: 12px;
   color: var(--color-text-muted);
-  margin: 4px 0 0;
-  line-height: 1.5;
+  line-height: 1.45;
+  margin: 0;
 }
 
-/* ── Footer & Brand Bar ── */
+/* ── Footer ── */
 .milestone-footer {
   position: relative;
   z-index: 10;
   border-top: 1px solid var(--color-border);
-  background: #F4EFEA;
+  background: #F7F3ED;
   padding: 2rem 1rem;
   margin-top: 3.5rem;
   text-align: center;
@@ -559,4 +619,20 @@ body.milestone-page {
 .footer-copy {
   color: var(--color-text-light);
   margin: 0;
+}
+
+/* ── Prefers Reduced Motion Support ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+  .node-circle.terminus-circle {
+    animation: none !important;
+  }
 }
