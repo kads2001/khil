@@ -660,6 +660,24 @@
         requestAnimationFrame(smoothRenderLoop);
       }
 
+
+
+
+      // Smooth vertical U-turn between two rows
+function addSmoothTurn(d, fromX, fromY, toX, toY, side) {
+  const radius = Math.abs(toY - fromY) / 2;
+  const direction = side === "right" ? 1 : -1;
+  const curveReach = Math.min(radius, 100);
+
+  return (
+    d +
+    ` L ${fromX} ${fromY}` +
+    ` C ${fromX + direction * curveReach} ${fromY},` +
+    ` ${fromX + direction * curveReach} ${toY},` +
+    ` ${fromX} ${toY}`
+  );
+}
+
       // Event listeners
       window.addEventListener('scroll', updateScrollProgress, { passive: true });
       window.addEventListener('resize', () => {
