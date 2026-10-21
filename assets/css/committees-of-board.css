@@ -268,7 +268,7 @@ body.committees-page ::selection {
 .cob-card {
   background: var(--khil-white);
   border: 1px solid var(--khil-border);
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -454,7 +454,7 @@ body.committees-page ::selection {
 
 /* 5. GOVERNANCE MANDATE CALLOUT */
 .cob-governance-card {
-  border-radius: 16px;
+  border-radius: 0;
   background: radial-gradient(ellipse at 80% 20%, var(--khil-plum) 0%, transparent 60%), var(--khil-plum-dark);
   color: var(--khil-white);
   padding: 34px 32px;
