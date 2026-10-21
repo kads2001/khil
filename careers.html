@@ -411,8 +411,8 @@
                 <!-- Job Filters Sidebar -->
                 <aside class="filters" aria-label="Job Filters">
                     <div class="filter-header-row" style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; border-bottom: 1px solid #ede8e1;">
-                        <span style="font-size: 14px; font-weight: 700; color: #252525; text-transform: uppercase; letter-spacing: 0.05em;"><i class="fa-solid fa-sliders" style="color: #8F202B; margin-right: 6px;"></i> Filters</span>
-                        <button type="button" id="resetFiltersBtn" style="background:none;border:none;color:#8F202B;font-size:12px;font-weight:600;cursor:pointer;padding:0;">Clear All</button>
+                        <span style="font-size: 14px; font-weight: 700; color: #252525; text-transform: uppercase; letter-spacing: 0.05em;"><i class="fa-solid fa-sliders" style="color: #7d007d; margin-right: 6px;"></i> Filters</span>
+                        <button type="button" id="resetFiltersBtn" style="background:none;border:none;color:#7d007d;font-size:12px;font-weight:600;cursor:pointer;padding:0;">Clear All</button>
                     </div>
 
                     <!-- LOCATION -->
@@ -992,7 +992,7 @@
                         emptyNotice = document.createElement('div');
                         emptyNotice.id = 'careersNoJobsNotice';
                         emptyNotice.style.cssText = 'grid-column: 1 / -1; padding: 48px 20px; text-align: center; background: #ffffff; border-radius: 14px; border: 1px dashed #d1c7bc; color: #6B6560;';
-                        emptyNotice.innerHTML = '<i class="fa-regular fa-folder-open" style="font-size: 32px; color: #8F202B; margin-bottom: 12px; display: block;"></i><h4 style="margin: 0 0 6px; font-size: 16px; color: #252525;">No openings matched your filters</h4><p style="margin: 0; font-size: 13px;">Try clearing filters or checking other departments or locations.</p>';
+                        emptyNotice.innerHTML = '<i class="fa-regular fa-folder-open" style="font-size: 32px; color: #7d007d; margin-bottom: 12px; display: block;"></i><h4 style="margin: 0 0 6px; font-size: 16px; color: #252525;">No openings matched your filters</h4><p style="margin: 0; font-size: 13px;">Try clearing filters or checking other departments or locations.</p>';
                         grid.appendChild(emptyNotice);
                     } else if (emptyNotice) {
                         emptyNotice.style.display = '';

@@ -272,7 +272,7 @@ header.header-digital{
     }
 }
 .demo-app-development{
-    --color-primary: #8F202B;
+    --color-primary: #7d007d;
     .header-wrapper-main{
         .rts-btn.btn-primary{
             background: #fff;
@@ -351,6 +351,6 @@ header.header-one.header-saas{
     }
     &.sticky{
         position: fixed !important;
-        background: linear-gradient(119.98deg, #8F202B 0.75%, #252525 99.25%);
+        background: linear-gradient(119.98deg, #7d007d 0.75%, #252525 99.25%);
     }
 }

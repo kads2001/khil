@@ -106,7 +106,7 @@
                 display: block;
                 padding: 5px 10px;
                 border-radius: 22px;
-                border: 1px solid #8F202B;
+                border: 1px solid #7d007d;
                 color: var(--color-primary);
                 transition: .3s;
             }
@@ -167,7 +167,7 @@
     }
 }
 .ai-platform-wrapper{
-    background: #641820;
+    background: #4d004d;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -192,7 +192,7 @@
             left: 0;
             height: 100%;
             width: 300px;
-            background: linear-gradient(270deg, #641820 25.5%, rgba(20, 41, 95, 0) 93%);
+            background: linear-gradient(270deg, #4d004d 25.5%, rgba(20, 41, 95, 0) 93%);
             transform: matrix(-1, 0, 0, 1, 0, 0);
 
         }
@@ -202,13 +202,13 @@
             right: 0;
             height: 100%;
             width: 300px;
-            background: linear-gradient(270deg, #641820 25.5%, rgba(20, 41, 95, 0) 93%);
+            background: linear-gradient(270deg, #4d004d 25.5%, rgba(20, 41, 95, 0) 93%);
         }
     }
 }
 
 .ai-platform-single-card{
-    background: #641820;
+    background: #4d004d;
     padding: 60px 54px;
     &.primary{
         background: var(--color-primary);
@@ -216,7 +216,7 @@
             background: #fff;
             color: var(--color-primary);
             &::after{
-                background: #641820;
+                background: #4d004d;
             }
             &:hover{
                 color: #fff;

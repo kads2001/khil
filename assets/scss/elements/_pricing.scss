@@ -109,7 +109,7 @@
         position: absolute;
         left: 0;
         border-radius: 0;
-        background: #8F202B;
+        background: #7d007d;
         color: #fff;
         .title{
             font-size: 14px;
@@ -664,7 +664,7 @@
     position: relative;
     border: 1px solid rgba(#000000, $alpha: .2);
     &.active{
-        background: #641820;
+        background: #4d004d;
         .top-area{
             *{
                 color: #fff;
@@ -748,7 +748,7 @@
     border: 1px solid #F7F4F0;
     border-radius: 20px;
     &.active{
-        background: #641820;
+        background: #4d004d;
         .top-area{
             *{
                 color: #fff;
