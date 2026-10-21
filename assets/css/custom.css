@@ -1295,3 +1295,198 @@ body.home-three-page .blog-news-grid .blog-read-btn {
         line-height: 1.6;
     }
 }
+
+/* ==========================================================================
+   Founder's Legacy Section (about.html)
+   ========================================================================== */
+.khil-legacy-hero-section {
+  padding: 80px 0 75px;
+  background: #F7F4F0;
+  border-bottom: 1px solid rgba(231, 225, 218, 0.9);
+}
+
+.khil-legacy-photo-card {
+  background: #ffffff;
+  border-radius: 20px;
+
+  border: 1px solid rgba(184, 155, 105, 0.35);
+
+  position: sticky;
+  top: 100px;
+}
+
+.legacy-photo-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 4px solid #ffffff;
+
+  background: #252525;
+}
+
+.legacy-photo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.khil-legacy-photo-card:hover .legacy-photo-img {
+  transform: scale(1.02);
+}
+
+.legacy-photo-seal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #8F202B;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+ 
+}
+
+.legacy-photo-caption {
+  padding-top: 18px;
+  text-align: center;
+}
+
+.legacy-photo-caption h4 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #252525;
+  margin: 0 0 4px;
+}
+
+.legacy-photo-caption .founder-role {
+  font-size: 13px;
+  color: #6B6560;
+  margin: 0 0 14px;
+  font-weight: 500;
+}
+
+.legacy-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.legacy-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: #8F202B;
+  background: rgba(143, 32, 43, 0.08);
+  border: 1px solid rgba(143, 32, 43, 0.18);
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.khil-legacy-content {
+  padding-left: 10px;
+}
+
+.legacy-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8F202B;
+  background: rgba(184, 155, 105, 0.18);
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.legacy-main-title {
+  font-size: clamp(2.3rem, 3.8vw, 3.6rem);
+  font-weight: 700;
+  color: #252525;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin: 0 0 24px;
+}
+
+.legacy-quote-box {
+  background: #ffffff;
+  border-left: 4px solid #8F202B;
+  border-radius: 0 14px 14px 0;
+  padding: 22px 26px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 18px rgba(37, 37, 37, 0.04);
+}
+
+.legacy-quote-box .quote-icon {
+  color: #8F202B;
+  font-size: 24px;
+  opacity: 0.4;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.legacy-quote-box .quote-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #252525;
+  line-height: 1.55;
+  font-style: italic;
+  margin: 0;
+}
+
+.legacy-body-narrative p {
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: #4a4540;
+  margin-bottom: 20px;
+}
+
+.legacy-body-narrative strong {
+  color: #252525;
+  font-weight: 600;
+}
+
+.legacy-conclusion-highlight {
+  border: 1px solid rgba(184, 155, 105, 0.4);
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin-top: 28px;
+  background: linear-gradient(135deg, #ffffff 0%, #FAF7F2 100%);
+ 
+}
+
+.legacy-conclusion-highlight p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8F202B;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .khil-legacy-hero-section {
+    padding: 50px 0;
+  }
+  .khil-legacy-photo-card {
+    position: static;
+    max-width: 480px;
+    margin: 0 auto 30px;
+  }
+  .khil-legacy-content {
+    padding-left: 0;
+  }
+}
+
