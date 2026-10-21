@@ -24,18 +24,18 @@ body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .btn-employer-login {
-  color: #1843fe;
+  color: #000;
   background: transparent;
-  border-color: rgba(24, 67, 254, 0.45);
+  border-color: #000;
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .btn-employer-login i {
-  color: #1843fe;
+  color: #000;
 }
 
 body.radious-4 .header-one.header-relative:not(.sticky) .btn-book-now {
-    background: #1843fe;
-    border-color: #1843fe;
+    background: #000;
+    border-color: #000;
     color: #fff;
 }
 
@@ -154,9 +154,10 @@ body.radious-4 .rts-banner-area-three.bg_image-three-banner {
   display: flex;
   align-items: stretch;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
-  height: auto;
+  height: 80vh;
+  height: 80svh;
+  min-height: 80vh;
+  min-height: 80svh;
   padding: 105px 0 26px;
   overflow: hidden;
   background-image: url("../../bannerimg.png");
@@ -226,8 +227,8 @@ body.radious-4 .rts-banner-area-three .rts-banner-content-three .button-group {
 } */
 
 body.radious-4 .rts-banner-area-three .khil-hero-btn.primary:hover {
-  background: #1843fe;
-  border-color: #1843fe;
+  background: #000;
+  border-color: #000;
   color: #fff !important;
 }
 
@@ -236,8 +237,8 @@ body.radious-4 .rts-banner-area-three .khil-hero-btn.primary:hover > i:last-chil
 }
 
 body.home-three-page .rts-banner-area-three .khil-hero-btn.secondary {
-  border-color: #1843fe;
-  background: #1843fe;
+  border-color: #000;
+  background: #000;
   color: #fff !important;
 }
 
@@ -264,16 +265,23 @@ body.home-three-page .rts-banner-area-three .khil-marquee-ribbon .marquee-track 
   color: #000;
 }
 .bg_image-three-banner .rts-banner-content-three h1{
-  Font-size: 100px;
+  font-size: clamp(44px, 6.2vw, 74px);
   color: #fff !important;
+  line-height: 1.1;
+}
+
+.bg_image-three-banner .rts-banner-content-three h1 .hero-heading-accent {
+  color: #000;
 }
 .bg_image-three-banner .rts-banner-content-three p.disc{
   color: #fff !important;
 }
 @media (max-width: 991px) {
   body.radious-4 .rts-banner-area-three.bg_image-three-banner {
-    min-height: 100vh;
-    min-height: 100svh;
+    height: 80vh;
+    height: 80svh;
+    min-height: 80vh;
+    min-height: 80svh;
     padding: 86px 0 22px;
     background-position: 58% center;
   }
