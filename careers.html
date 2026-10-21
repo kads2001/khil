@@ -375,51 +375,25 @@
         </div>
     </header>
 
-    <main>
-        <section class="container careers-intro" aria-labelledby="careers-title">
-            <h1 id="careers-title">Join our team and <span>reshape the future</span></h1>
-            <p>Work with talented people who care about hospitality, challenge the status quo, and help shape memorable guest experiences.</p>
-        </section>
+    <main><search id="jobSearchForm" onsubmit="return false;" class="hero-search-box">
+                <div class="search-field">
+                    <input type="text" id="searchKeyword" placeholder="Job title (e.g. Front Desk)">
+                </div>
 
-        <div class="container">
-            <div class="careers-hero-image">
-                <img src="assets/images/career/02.webp" alt="Colleagues working together around a table">
-            </div>
-        </div>
+                <div class="search-field">
+                    <input type="text" id="searchLocation" placeholder="Location (e.g. Mumbai, Pune)">
+                </div>
 
-        <section class="container careers-section careers-values" aria-labelledby="careers-values-title">
-            <div class="careers-section-heading">
-                <span class="eyebrow"><i class="fa-solid fa-house"></i> Our culture</span>
-                <h2 id="careers-values-title">Working with us</h2>
-                <p>Discover a workplace where skills are recognised, ideas are valued, and your contribution helps shape the future of hospitality.</p>
-            </div>
+                <button type="button" class="search-btn" onclick="filterJobs()">
+                    Search
+                </button>
+            </form>
+       
 
-            <div class="careers-values-grid">
-                <article class="careers-value-card">
-                    <span class="careers-value-icon"><i class="fa-regular fa-heart"></i></span>
-                    <h3>Culture</h3>
-                    <p>A welcoming environment where collaboration and respect shape every guest and colleague experience.</p>
-                </article>
-                <article class="careers-value-card">
-                    <span class="careers-value-icon"><i class="fa-regular fa-chart-line"></i></span>
-                    <h3>Growth</h3>
-                    <p>Build your skills, learn from experienced teams, and explore opportunities across our hospitality business.</p>
-                </article>
-                <article class="careers-value-card">
-                    <span class="careers-value-icon"><i class="fa-regular fa-lightbulb"></i></span>
-                    <h3>Impact</h3>
-                    <p>Bring thoughtful ideas to work that creates meaningful experiences for guests and communities.</p>
-                </article>
-                <article class="careers-value-card">
-                    <span class="careers-value-icon"><i class="fa-regular fa-compass"></i></span>
-                    <h3>Purpose</h3>
-                    <p>Be part of a hospitality group with a long-standing commitment to responsible, conscious hospitality.</p>
-                </article>
-            </div>
-        </section>
+     
+
 
       
-
         <section class="container careers-section careers-openings" id="careers-paths" aria-labelledby="careers-openings-title">
             <div class="careers-openings-heading">
                 <div class="careers-section-heading">
