@@ -1,7 +1,7 @@
 .careers-page {
   --career-ink: #252525;
   --career-muted: #6B6560;
-  --career-blue: #7d007d;
+  --career-blue: #1843fe;
   background: #F7F4F0;
   color: var(--career-ink);
 }
@@ -194,7 +194,7 @@
 .careers-button:hover,
 .careers-button:focus-visible {
   transform: translateY(-2px);
-  background: #4d004d;
+  background: #1236cc;
   color: #fff;
 }
 
@@ -367,7 +367,7 @@
   gap: 8px !important;
   margin-top: auto !important;
   padding: 10px 18px !important;
-  background: #7d007d !important;
+  background: #1843fe !important;
   color: #ffffff !important;
   font-size: 13px !important;
   font-weight: 600 !important;
@@ -377,7 +377,7 @@
 }
 
 .careers-job-btn:hover {
-  background: #4d004d !important;
+  background: #1236cc !important;
   gap: 12px !important;
 }
 
@@ -526,7 +526,7 @@
 
 .hero-search-box .search-btn {
   padding: 12px 26px;
-  background: #7d007d;
+  background: #1843fe;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -537,7 +537,7 @@
 }
 
 .hero-search-box .search-btn:hover {
-  background: #4d004d;
+  background: #1236cc;
 }
 
 /* Job Filters */
