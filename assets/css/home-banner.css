@@ -7,7 +7,7 @@ body.radious-4 .header-one.header-relative:not(.sticky) {
 }
 
 body.radious-4 .header-one.header-relative:not(.sticky) .logo-area img {
-  filter: none;
+  filter: brightness(0) invert(1);
 }
 
 body.radious-4 .header-one.header-relative:not(.sticky) .logo-area a {
@@ -49,6 +49,15 @@ body.home-three-page .loader-wrapper {
   overflow: hidden;
   background: #fff;
   transform: none;
+}
+
+body.loaded.home-three-page .loader-wrapper {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease, transform 0.3s 1s ease, visibility 0s 1s;
 }
 
 body.home-three-page .loader-wrapper::before {
@@ -161,7 +170,7 @@ body.radious-4 .rts-banner-area-three.bg_image-three-banner::before {
   inset: 0;
   content: "";
   pointer-events: none;
-  background: linear-gradient(90deg, rgba(24, 67, 254, 0.5) 0%, rgba(24, 67, 254, 0.5) 25%, rgba(24, 67, 254, 0) 50%, rgba(24, 67, 254, 0) 100%);
+  background: linear-gradient(90deg, rgb(0 0 0 / 34%) 0%, rgb(0 0 0 / 45%) 25%, rgba(24, 67, 254, 0) 50%, rgba(24, 67, 254, 0) 100%);
 }
 
 body.radious-4 .rts-banner-area-three.bg_image-three-banner > .container {

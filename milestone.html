@@ -115,8 +115,15 @@
     }
   </style>
 <!-- END: Custom Visual Styling -->
+<link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+<link rel="stylesheet" href="assets/css/plugins/metismenu.css">
+<link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/khil-header.css">
+<link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body class="bg-infographic-pattern text-slate-100 font-sans min-h-screen overflow-x-hidden relative selection:bg-brand-accentMint selection:text-brand-navy">
+<script src="components/header.js"></script>
 <!-- Architectural Background Texture -->
 <div class="fixed inset-0 hospitality-overlay pointer-events-none opacity-40 z-0"></div>
 <!-- BEGIN: MainHeader -->
@@ -616,7 +623,7 @@
 <!-- END: InteractiveSnakeTimelineSection -->
 
 <!-- BEGIN: Interactive Legend & Brand Bar -->
-<footer class="relative z-10 border-t border-teal-500/20 bg-[#0e1c22]/90 backdrop-blur py-8 px-4 mt-12 text-center text-xs text-slate-400">
+<section class="relative z-10 border-t border-teal-500/20 bg-[#0e1c22]/90 backdrop-blur py-8 px-4 mt-12 text-center text-xs text-slate-400">
   <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
     <div class="flex items-center space-x-2">
       <span class="w-3 h-3 rounded-full bg-brand-goldOrange inline-block glow-orange"></span>
@@ -629,7 +636,8 @@
     </div>
     <p class="text-slate-500">© Kamat Hotels (India) Limited (KHIL). All Rights Reserved.</p>
   </div>
-</footer>
+</section>
+<script src="components/footer.js"></script>
 <!-- END: Interactive Legend & Brand Bar -->
 
 <!-- Interactive JavaScript helper -->
@@ -844,4 +852,5 @@
     requestAnimationFrame(smoothRenderLoop);
   })();
 </script>
+<script defer src="assets/js/shared-layout.js"></script>
 </body></html>
