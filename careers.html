@@ -375,7 +375,9 @@
         </div>
     </header>
 
-    <main><search id="jobSearchForm" onsubmit="return false;" class="hero-search-box">
+    <main>
+        <div class="container mt-4">
+            <form id="jobSearchForm" onsubmit="return false;" class="hero-search-box">
                 <div class="search-field">
                     <input type="text" id="searchKeyword" placeholder="Job title (e.g. Front Desk)">
                 </div>
@@ -388,7 +390,7 @@
                     Search
                 </button>
             </form>
-       
+        </div>
 
      
 
@@ -404,194 +406,207 @@
                 <a class="careers-button" href="contact.html">Contact HR <i class="fa-regular fa-arrow-right"></i></a>
             </div>
 
-            <!-- Active Vacancies Grid -->
-            <div class="careers-opening-grid">
-                <!-- Job 1: FRONT OFFICE EXECUTIVE -->
-                <article class="careers-opening-card job-posting-card">
-                    <div class="careers-opening-top">
-                    
-                        <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
+            <!-- Filter & Openings Layout -->
+            <div class="careers-filter-layout">
+                <!-- Job Filters Sidebar -->
+                <aside class="filters" aria-label="Job Filters">
+                    <div class="filter-header-row" style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; border-bottom: 1px solid #ede8e1;">
+                        <span style="font-size: 14px; font-weight: 700; color: #252525; text-transform: uppercase; letter-spacing: 0.05em;"><i class="fa-solid fa-sliders" style="color: #8F202B; margin-right: 6px;"></i> Filters</span>
+                        <button type="button" id="resetFiltersBtn" style="background:none;border:none;color:#8F202B;font-size:12px;font-weight:600;cursor:pointer;padding:0;">Clear All</button>
                     </div>
-                    <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> IRA BY ORCHID - AYODHYA</div>
-                    <h3>FRONT OFFICE EXECUTIVE</h3>
-                    <div class="job-details-meta">
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-location-dot"></i>
-                            <span><strong>Location:</strong> Ayodhya (Makha Pur)</span>
-                        </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-sitemap"></i>
-                            <span><strong>Department:</strong> Front Office</span>
-                        </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-briefcase"></i>
-                            <span><strong>Job Type:</strong> Full Time</span>
-                        </div>
-                    </div>
-                    <a href="https://khil.com/search-resulttest.php?req=REQ3757" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
-                </article>
 
-                <!-- Job 2: COMMIS I (REQ3795) -->
-                <article class="careers-opening-card job-posting-card">
-                    <div class="careers-opening-top">
-                  
-                        <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
+                    <!-- LOCATION -->
+                    <div class="filter-item">
+                        <h4>Search by Location</h4>
+                        <label><input type="checkbox" class="filter-location" value="AYODHYA"> AYODHYA</label>
+                        <label><input type="checkbox" class="filter-location" value="CHANDIGARH"> CHANDIGARH</label>
+                        <label><input type="checkbox" class="filter-location" value="GOA"> GOA</label>
+                        <label><input type="checkbox" class="filter-location" value="HYDERABAD"> HYDERABAD</label>
+                        <label><input type="checkbox" class="filter-location" value="MUMBAI"> MUMBAI</label>
+                        <label><input type="checkbox" class="filter-location" value="SHIMLA"> SHIMLA</label>
+                        <label><input type="checkbox" class="filter-location" value="UTTARAKHAND"> UTTARAKHAND</label>
                     </div>
-                    <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> IRA BY ORCHID - AYODHYA</div>
-                    <h3>COMMIS I</h3>
-                    <div class="job-details-meta">
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-location-dot"></i>
-                            <span><strong>Location:</strong> Ayodhya (Makha Pur)</span>
-                        </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-sitemap"></i>
-                            <span><strong>Department:</strong> F and B - Production</span>
-                        </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-briefcase"></i>
-                            <span><strong>Job Type:</strong> Full Time</span>
-                        </div>
-                    </div>
-                    <a href="https://khil.com/search-resulttest.php?req=REQ3795" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
-                </article>
 
-                <!-- Job 3: COMMIS I (REQ3829) -->
-                <article class="careers-opening-card job-posting-card">
-                    <div class="careers-opening-top">
-                  
-                        <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
+                    <!-- SUB LOCATION -->
+                    <div class="filter-item">
+                        <h4>Search by Sub Location</h4>
+                        <label><input type="checkbox" class="filter-sublocation" value="HITECH CITY"> HITECH CITY</label>
+                        <label><input type="checkbox" class="filter-sublocation" value="MAKHA PUR"> MAKHA PUR</label>
+                        <label><input type="checkbox" class="filter-sublocation" value="PORVORIM"> PORVORIM</label>
+                        <label><input type="checkbox" class="filter-sublocation" value="RISHIKESH"> RISHIKESH</label>
+                        <label><input type="checkbox" class="filter-sublocation" value="SANJAULI"> SANJAULI</label>
+                        <label><input type="checkbox" class="filter-sublocation" value="VILE PARLE"> VILE PARLE</label>
+                        <label><input type="checkbox" class="filter-sublocation" value="ZIRAKPUR"> ZIRAKPUR</label>
                     </div>
-                    <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> IRA BY ORCHID - AYODHYA</div>
-                    <h3>COMMIS I</h3>
-                    <div class="job-details-meta">
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-location-dot"></i>
-                            <span><strong>Location:</strong> Ayodhya (Makha Pur)</span>
-                        </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-sitemap"></i>
-                            <span><strong>Department:</strong> F and B - Production</span>
-                        </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-briefcase"></i>
-                            <span><strong>Job Type:</strong> Full Time</span>
-                        </div>
-                    </div>
-                    <a href="https://khil.com/search-resulttest.php?req=REQ3829" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
-                </article>
 
-                <!-- Job 4: ASSISTANT STEWARD (REQ3820) -->
-                <article class="careers-opening-card job-posting-card">
-                    <div class="careers-opening-top">
-                  
-                        <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
+                    <!-- DEPARTMENT -->
+                    <div class="filter-item">
+                        <h4>Search by Department</h4>
+                        <label><input type="checkbox" class="filter-department" value="ACCOUNTS"> ACCOUNTS</label>
+                        <label><input type="checkbox" class="filter-department" value="ENGINEERING And MAINTENANCE"> ENGINEERING And MAINTENANCE</label>
+                        <label><input type="checkbox" class="filter-department" value="F AND B - PRODUCTION"> F AND B - PRODUCTION</label>
+                        <label><input type="checkbox" class="filter-department" value="F AND B - SERVICE"> F AND B - SERVICE</label>
+                        <label><input type="checkbox" class="filter-department" value="FRONT OFFICE"> FRONT OFFICE</label>
+                        <label><input type="checkbox" class="filter-department" value="HOUSEKEEPING"> HOUSEKEEPING</label>
                     </div>
-                    <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> IRA BY ORCHID - AYODHYA</div>
-                    <h3>ASSISTANT STEWARD</h3>
-                    <div class="job-details-meta">
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-location-dot"></i>
-                            <span><strong>Location:</strong> Ayodhya (Makha Pur)</span>
-                        </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-sitemap"></i>
-                            <span><strong>Department:</strong> F and B - Service</span>
-                        </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-briefcase"></i>
-                            <span><strong>Job Type:</strong> Full Time</span>
-                        </div>
-                    </div>
-                    <a href="https://khil.com/search-resulttest.php?req=REQ3820" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
-                </article>
 
-                <!-- Job 5: HOUSEKEEPING MANAGER (REQ3778) -->
-                <article class="careers-opening-card job-posting-card">
-                    <div class="careers-opening-top">
-                        <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
+                    <!-- EMPLOYMENT -->
+                    <div class="filter-item">
+                        <h4>Search by Employment Type</h4>
+                        <label><input type="checkbox" class="filter-type" value="Full Time"> Full Time</label>
                     </div>
-                    <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> IRA BY ORCHID HYDERABAD</div>
-                    <h3>HOUSEKEEPING MANAGER</h3>
-                    <div class="job-details-meta">
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-location-dot"></i>
-                            <span><strong>Location:</strong> Hyderabad (Hitech City)</span>
-                        </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-sitemap"></i>
-                            <span><strong>Department:</strong> Housekeeping</span>
-                        </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-briefcase"></i>
-                            <span><strong>Job Type:</strong> Full Time</span>
-                        </div>
-                    </div>
-                    <a href="https://khil.com/search-resulttest.php?req=REQ3778" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
-                </article>
+                </aside>
 
-                <!-- Job 6: ENGINEERING AND MAINTAINENCE SUPERVISOR (REQ3821) -->
-                <article class="careers-opening-card job-posting-card">
-                    <div class="careers-opening-top">
-                  
-                        <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
-                    </div>
-                    <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> THE ORCHID RISHIKESH</div>
-                    <h3>ENGINEERING AND MAINTENANCE SUPERVISOR</h3>
-                    <div class="job-details-meta">
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-location-dot"></i>
-                            <span><strong>Location:</strong> Uttarakhand (Rishikesh)</span>
+                <!-- Active Vacancies Grid -->
+                <div class="careers-opening-grid">
+                    <!-- Job 1: FRONT OFFICE EXECUTIVE -->
+                    <article class="careers-opening-card job-posting-card" data-title="FRONT OFFICE EXECUTIVE" data-location="AYODHYA" data-sublocation="MAKHA PUR" data-department="FRONT OFFICE" data-type="FULL TIME">
+                        <div class="careers-opening-top">
+                            <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
                         </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-sitemap"></i>
-                            <span><strong>Department:</strong> Engineering and Maintenance</span>
+                        <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> IRA BY ORCHID - AYODHYA</div>
+                        <h3>FRONT OFFICE EXECUTIVE</h3>
+                        <div class="job-details-meta">
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-location-dot"></i>
+                                <span><strong>Location:</strong> Ayodhya (Makha Pur)</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-sitemap"></i>
+                                <span><strong>Department:</strong> Front Office</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-briefcase"></i>
+                                <span><strong>Job Type:</strong> Full Time</span>
+                            </div>
                         </div>
-                        <div class="job-meta-item">
-                            <i class="fa-regular fa-briefcase"></i>
-                            <span><strong>Job Type:</strong> Full Time</span>
+                        <a href="https://khil.com/search-resulttest.php?req=REQ3757" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
+                    </article>
+
+                    <!-- Job 2: COMMIS I (REQ3795) -->
+                    <article class="careers-opening-card job-posting-card" data-title="COMMIS I" data-location="AYODHYA" data-sublocation="MAKHA PUR" data-department="F AND B - PRODUCTION" data-type="FULL TIME">
+                        <div class="careers-opening-top">
+                            <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
                         </div>
-                    </div>
-                    <a href="https://khil.com/search-resulttest.php?req=REQ3821" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
-                </article>
+                        <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> IRA BY ORCHID - AYODHYA</div>
+                        <h3>COMMIS I</h3>
+                        <div class="job-details-meta">
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-location-dot"></i>
+                                <span><strong>Location:</strong> Ayodhya (Makha Pur)</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-sitemap"></i>
+                                <span><strong>Department:</strong> F and B - Production</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-briefcase"></i>
+                                <span><strong>Job Type:</strong> Full Time</span>
+                            </div>
+                        </div>
+                        <a href="https://khil.com/search-resulttest.php?req=REQ3795" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
+                    </article>
+
+                    <!-- Job 3: COMMIS I (REQ3829) -->
+                    <article class="careers-opening-card job-posting-card" data-title="COMMIS I" data-location="AYODHYA" data-sublocation="MAKHA PUR" data-department="F AND B - PRODUCTION" data-type="FULL TIME">
+                        <div class="careers-opening-top">
+                            <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
+                        </div>
+                        <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> IRA BY ORCHID - AYODHYA</div>
+                        <h3>COMMIS I</h3>
+                        <div class="job-details-meta">
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-location-dot"></i>
+                                <span><strong>Location:</strong> Ayodhya (Makha Pur)</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-sitemap"></i>
+                                <span><strong>Department:</strong> F and B - Production</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-briefcase"></i>
+                                <span><strong>Job Type:</strong> Full Time</span>
+                            </div>
+                        </div>
+                        <a href="https://khil.com/search-resulttest.php?req=REQ3829" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
+                    </article>
+
+                    <!-- Job 4: ASSISTANT STEWARD (REQ3820) -->
+                    <article class="careers-opening-card job-posting-card" data-title="ASSISTANT STEWARD" data-location="AYODHYA" data-sublocation="MAKHA PUR" data-department="F AND B - SERVICE" data-type="FULL TIME">
+                        <div class="careers-opening-top">
+                            <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
+                        </div>
+                        <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> IRA BY ORCHID - AYODHYA</div>
+                        <h3>ASSISTANT STEWARD</h3>
+                        <div class="job-details-meta">
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-location-dot"></i>
+                                <span><strong>Location:</strong> Ayodhya (Makha Pur)</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-sitemap"></i>
+                                <span><strong>Department:</strong> F and B - Service</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-briefcase"></i>
+                                <span><strong>Job Type:</strong> Full Time</span>
+                            </div>
+                        </div>
+                        <a href="https://khil.com/search-resulttest.php?req=REQ3820" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
+                    </article>
+
+                    <!-- Job 5: HOUSEKEEPING MANAGER (REQ3778) -->
+                    <article class="careers-opening-card job-posting-card" data-title="HOUSEKEEPING MANAGER" data-location="HYDERABAD" data-sublocation="HITECH CITY" data-department="HOUSEKEEPING" data-type="FULL TIME">
+                        <div class="careers-opening-top">
+                            <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
+                        </div>
+                        <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> IRA BY ORCHID HYDERABAD</div>
+                        <h3>HOUSEKEEPING MANAGER</h3>
+                        <div class="job-details-meta">
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-location-dot"></i>
+                                <span><strong>Location:</strong> Hyderabad (Hitech City)</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-sitemap"></i>
+                                <span><strong>Department:</strong> Housekeeping</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-briefcase"></i>
+                                <span><strong>Job Type:</strong> Full Time</span>
+                            </div>
+                        </div>
+                        <a href="https://khil.com/search-resulttest.php?req=REQ3778" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
+                    </article>
+
+                    <!-- Job 6: ENGINEERING AND MAINTAINENCE SUPERVISOR (REQ3821) -->
+                    <article class="careers-opening-card job-posting-card" data-title="ENGINEERING AND MAINTENANCE SUPERVISOR" data-location="UTTARAKHAND" data-sublocation="RISHIKESH" data-department="ENGINEERING AND MAINTENANCE" data-type="FULL TIME">
+                        <div class="careers-opening-top">
+                            <img src="assets/images/Hotels/ORCHID.png" alt="The Orchid Hotels" class="job-card-logo">
+                        </div>
+                        <div class="job-card-unit"><i class="fa-solid fa-hotel"></i> THE ORCHID RISHIKESH</div>
+                        <h3>ENGINEERING AND MAINTENANCE SUPERVISOR</h3>
+                        <div class="job-details-meta">
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-location-dot"></i>
+                                <span><strong>Location:</strong> Uttarakhand (Rishikesh)</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-sitemap"></i>
+                                <span><strong>Department:</strong> Engineering and Maintenance</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fa-regular fa-briefcase"></i>
+                                <span><strong>Job Type:</strong> Full Time</span>
+                            </div>
+                        </div>
+                        <a href="https://khil.com/search-resulttest.php?req=REQ3821" target="_blank" rel="noopener noreferrer" class="careers-job-btn">View Details <i class="fa-regular fa-arrow-right"></i></a>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section class="container careers-section careers-faq" aria-labelledby="careers-faq-title">
-            <div class="careers-section-heading">
-                <span class="eyebrow">Helpful information</span>
-                <h2 id="careers-faq-title">Community FAQ's</h2>
-                <p>Learn more about exploring a career with Kamat Hotels and what to expect when you get in touch.</p>
-                <a href="contact.html">Contact our team <i class="fa-regular fa-arrow-right"></i></a>
-            </div>
-            <div class="careers-faq-list">
-                <details>
-                    <summary>What kinds of career paths are available?</summary>
-                    <p>Our hotels and corporate teams work across guest experience, food and beverage, operations, sales, engineering, sustainability, and support functions.</p>
-                </details>
-                <details>
-                    <summary>How can I ask about current opportunities?</summary>
-                    <p>Use the contact page to reach our team and share the type of role or department you are interested in.</p>
-                </details>
-                <details>
-                    <summary>Can I enquire about opportunities at a specific hotel?</summary>
-                    <p>Yes. Mention the property or location that interests you when you contact us.</p>
-                </details>
-                <details>
-                    <summary>What should I include in my enquiry?</summary>
-                    <p>Tell us a little about your experience, the type of work you are seeking, and how best to reach you.</p>
-                </details>
-                <details>
-                    <summary>Do you welcome early-career applicants?</summary>
-                    <p>We welcome people at different stages of their hospitality journey. Contact us to ask about suitable opportunities.</p>
-                </details>
-                <details>
-                    <summary>Where can I learn more about Kamat Hotels?</summary>
-                    <p>Visit the <a href="about.html">About Us</a> page to learn about our company, hotels, and hospitality values.</p>
-                </details>
-            </div>
-        </section>
-
+      
        
     </main>
 
@@ -932,6 +947,79 @@
                     if (e.target.closest('a')) return;
                     this.classList.toggle('is-flipped');
                 });
+            });
+
+            // Careers Job Filtering Engine
+            function filterJobs() {
+                const keyword = (document.getElementById('searchKeyword')?.value || '').toLowerCase().trim();
+                const locInput = (document.getElementById('searchLocation')?.value || '').toLowerCase().trim();
+
+                const locChecked = Array.from(document.querySelectorAll('.filter-location:checked')).map(cb => cb.value.toUpperCase());
+                const sublocChecked = Array.from(document.querySelectorAll('.filter-sublocation:checked')).map(cb => cb.value.toUpperCase());
+                const deptChecked = Array.from(document.querySelectorAll('.filter-department:checked')).map(cb => cb.value.toUpperCase());
+                const typeChecked = Array.from(document.querySelectorAll('.filter-type:checked')).map(cb => cb.value.toUpperCase());
+
+                const cards = document.querySelectorAll('.job-posting-card');
+                let matchCount = 0;
+
+                cards.forEach(card => {
+                    const title = (card.getAttribute('data-title') || card.querySelector('h3')?.textContent || '').toUpperCase();
+                    const loc = (card.getAttribute('data-location') || '').toUpperCase();
+                    const subloc = (card.getAttribute('data-sublocation') || '').toUpperCase();
+                    const dept = (card.getAttribute('data-department') || '').toUpperCase();
+                    const type = (card.getAttribute('data-type') || '').toUpperCase();
+                    const fullText = card.textContent.toLowerCase();
+
+                    const matchKeyword = !keyword || fullText.includes(keyword);
+                    const matchLocInput = !locInput || fullText.includes(locInput);
+                    const matchLocation = locChecked.length === 0 || locChecked.some(l => loc.includes(l) || fullText.includes(l.toLowerCase()));
+                    const matchSublocation = sublocChecked.length === 0 || sublocChecked.some(sl => subloc.includes(sl) || fullText.includes(sl.toLowerCase()));
+                    const matchDept = deptChecked.length === 0 || deptChecked.some(d => dept.includes(d) || fullText.includes(d.toLowerCase()));
+                    const matchType = typeChecked.length === 0 || typeChecked.some(t => type.includes(t) || fullText.includes(t.toLowerCase()));
+
+                    if (matchKeyword && matchLocInput && matchLocation && matchSublocation && matchDept && matchType) {
+                        card.style.display = '';
+                        matchCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                let emptyNotice = document.getElementById('careersNoJobsNotice');
+                const grid = document.querySelector('.careers-opening-grid');
+                if (matchCount === 0) {
+                    if (!emptyNotice && grid) {
+                        emptyNotice = document.createElement('div');
+                        emptyNotice.id = 'careersNoJobsNotice';
+                        emptyNotice.style.cssText = 'grid-column: 1 / -1; padding: 48px 20px; text-align: center; background: #ffffff; border-radius: 14px; border: 1px dashed #d1c7bc; color: #6B6560;';
+                        emptyNotice.innerHTML = '<i class="fa-regular fa-folder-open" style="font-size: 32px; color: #8F202B; margin-bottom: 12px; display: block;"></i><h4 style="margin: 0 0 6px; font-size: 16px; color: #252525;">No openings matched your filters</h4><p style="margin: 0; font-size: 13px;">Try clearing filters or checking other departments or locations.</p>';
+                        grid.appendChild(emptyNotice);
+                    } else if (emptyNotice) {
+                        emptyNotice.style.display = '';
+                    }
+                } else if (emptyNotice) {
+                    emptyNotice.style.display = 'none';
+                }
+            }
+            window.filterJobs = filterJobs;
+
+            document.querySelectorAll('#searchKeyword, #searchLocation').forEach(el => {
+                el.addEventListener('input', filterJobs);
+            });
+
+            document.querySelectorAll('.filter-location, .filter-sublocation, .filter-department, .filter-type').forEach(el => {
+                el.addEventListener('change', filterJobs);
+            });
+
+            document.getElementById('resetFiltersBtn')?.addEventListener('click', function () {
+                document.querySelectorAll('.filter-location, .filter-sublocation, .filter-department, .filter-type').forEach(cb => {
+                    cb.checked = false;
+                });
+                const sk = document.getElementById('searchKeyword');
+                if (sk) sk.value = '';
+                const sl = document.getElementById('searchLocation');
+                if (sl) sl.value = '';
+                filterJobs();
             });
         });
     </script>
