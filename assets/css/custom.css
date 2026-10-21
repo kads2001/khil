@@ -7,7 +7,7 @@
    -------------------------------------------------------------------------- */
 .banner-bg-attach-agency {
   position: relative;
-  background-image: url("../images/about/irabann.jpg");
+  background-image: url("C:\Users\Admin\Downloads\New folder\khil\assets\img\irfaback.jpegg");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -67,7 +67,7 @@
   .banner-bg-attach-agency {
     background-image: 
       linear-gradient(rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.88)),
-      url("../images/about/irabann.jpg");
+      url("../img/irfaback.jpeg");
     background-position: center center;
     padding: 60px 0;
     min-height: auto;
