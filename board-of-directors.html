@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Board of Directors | Kamat Hotels (India) Limited</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              emerald: '#144234',
+              emeraldDark: '#0A241C',
+              emeraldDeep: '#0D2C22',
+              emeraldLight: '#1d5746',
+              gold: '#C5A059',
+              goldLight: '#E8D3A7',
+              goldDark: '#9E7A36',
+              goldAccent: '#D4AF37',
+              cream: '#FAF8F5',
+              sand: '#F4EFE6',
+              sandMuted: '#EFE9DE',
+              charcoal: '#1A231F',
+              muted: '#627068'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'serif'],
+            cormorant: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    
+    .director-card {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .director-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 45px -12px rgba(20, 66, 52, 0.12), 0 8px 16px -4px rgba(197, 160, 89, 0.08);
+    }
+    .portrait-frame {
+      box-shadow: inset 0 0 0 1px rgba(197, 160, 89, 0.3);
+    }
+    .gold-foil-line {
+      background: linear-gradient(90deg, rgba(197,160,89,0) 0%, rgba(197,160,89,0.7) 50%, rgba(197,160,89,0) 100%);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #DFBE78 0%, #C5A059 50%, #9E7A36 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF8F5] text-brand-charcoal font-sans antialiased selection:bg-brand-emerald selection:text-white">
+<!-- TOP UTILITY BAR -->
+<div class="bg-brand-emeraldDark text-xs text-[#d3dcd6] border-b border-white/10 py-2 px-6 lg:px-16">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-6">
+<span class="inline-flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="font-medium text-white/95">BSE: 526668 | NSE: KAMATHOTEL</span>
+<span class="text-brand-goldLight text-[11px] font-semibold tracking-wide">₹284.50 (+1.85%)</span>
+</span>
+<span class="hidden md:inline-block text-white/30">|</span>
+<span class="hidden md:inline-flex items-center gap-1.5 text-white/80">
+<svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Pioneers in Eco-Hospitality (Asia's First Ecotel Certification)
+        </span>
+</div>
+<div class="flex items-center gap-5 text-[11px] tracking-wide text-white/70">
+<a class="hover:text-brand-gold transition-colors" href="#csr">CSR</a>
+<a class="hover:text-brand-gold transition-colors" href="#media">Media</a>
+<a class="hover:text-brand-gold transition-colors" href="#careers">Careers</a>
+<a class="hover:text-brand-gold transition-colors" href="#contact">Contact</a>
+<span class="text-white/30">|</span>
+<a class="hover:text-white font-medium text-brand-goldLight flex items-center gap-1" href="#login">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Employer Login
+        </a>
+</div>
+</div>
+</div>
+<!-- PRIMARY NAVIGATION HEADER -->
+<header class="sticky top-0 z-50 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E8E2D8] transition-shadow">
+<div class="max-w-7xl mx-auto px-6 lg:px-16 h-24 flex items-center justify-between">
+<!-- Logo Branding -->
+<a class="flex items-center gap-3.5 group" href="#">
+<div class="w-12 h-12 rounded-full border border-brand-gold/40 flex items-center justify-center p-1 bg-white shadow-sm group-hover:border-brand-gold transition-colors">
+<img alt="Kamat Hotels Logo" class="w-full h-full object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQJhJdVvxZ7PUxTiRx3XY5Mngoj3uTCylZdtw2t_-HQzVRMPtgSHrUN2e8KTY35vnQ3mTZwAno0ArOt3QncZPl3brRAtkogbCeV9SkcsLt3IuJvjwHfR37PIwtNnf1MK5buoxje6mFj5EFpyXn6GW_tMO56hRPFB14YXLGy57z8shwEJngasjl1cXfPQZ7sxW0wUVZckAVxjYi8RM4BWLU_OD8SQ2cR7R6VrMK1-DN3cIUG-PKWzsDDg"/>
+</div>
+<div>
+<span class="font-serif text-2xl font-bold tracking-wider text-brand-emerald block leading-tight">KAMAT HOTELS</span>
+<span class="text-[10px] uppercase tracking-[0.25em] text-brand-goldDark font-semibold block">(INDIA) LIMITED</span>
+</div>
+</a>
+<!-- Main Navigation Menu -->
+<nav class="hidden xl:flex items-center gap-8 text-sm font-medium tracking-wide">
+<a class="text-brand-charcoal hover:text-brand-emerald transition-colors" href="#home">Home</a>
+<!-- Active dropdown context -->
+<div class="relative group py-2">
+<a class="text-brand-emerald font-semibold flex items-center gap-1 border-b-2 border-brand-gold pb-0.5" href="#whoweare">
+            Who We Are
+            <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+<div class="absolute left-0 top-full hidden group-hover:block w-56 bg-white rounded-md shadow-xl border border-brand-sand py-2 z-50">
+<a class="block px-4 py-2 text-xs text-brand-charcoal hover:bg-brand-cream hover:text-brand-emerald" href="#overview">Company Overview</a>
+<a class="block px-4 py-2 text-xs text-brand-charcoal hover:bg-brand-cream hover:text-brand-emerald" href="#milestones">Milestones &amp; Legacy</a>
+<a class="block px-4 py-2 text-xs font-semibold text-brand-emerald bg-brand-cream/60" href="#board">Board of Directors</a>
+<a class="block px-4 py-2 text-xs text-brand-charcoal hover:bg-brand-cream hover:text-brand-emerald" href="#leadership">Senior Management</a>
+</div>
+</div>
+<a class="text-brand-charcoal hover:text-brand-emerald transition-colors" href="#brands">Our Brands</a>
+<a class="text-brand-charcoal hover:text-brand-emerald transition-colors" href="#investors">Investors</a>
+<a class="text-brand-charcoal hover:text-brand-emerald transition-colors" href="#csr">CSR</a>
+<a class="text-brand-charcoal hover:text-brand-emerald transition-colors" href="#media">Media</a>
+<a class="text-brand-charcoal hover:text-brand-emerald transition-colors" href="#contact">Contact</a>
+</nav>
+<!-- Action Button -->
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-brand-emerald hover:text-brand-emeraldLight px-3 py-2 border border-brand-emerald/20 rounded hover:border-brand-emerald transition-all" href="#investor-portal">
+<svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Investor Portal
+        </a>
+<a class="inline-flex items-center justify-center bg-brand-emerald hover:bg-brand-emeraldDark text-white px-6 py-2.5 rounded text-xs font-semibold uppercase tracking-widest transition-all shadow-md hover:shadow-lg border border-brand-gold/30" href="#booknow">
+          Book Now
+        </a>
+</div>
+</div>
+</header>
+<!-- BREADCRUMBS & SECTION BANNER -->
+<section class="bg-gradient-to-r from-brand-emeraldDark via-brand-emerald to-[#154737] text-white py-16 px-6 lg:px-16 relative overflow-hidden">
+<div class="absolute inset-0 opacity-15 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:20px_20px]"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-xs text-brand-goldLight tracking-wider uppercase mb-4">
+<a class="hover:text-white transition-colors" href="#home">Home</a>
+<span>/</span>
+<a class="hover:text-white transition-colors" href="#whoweare">Who We Are</a>
+<span>/</span>
+<span class="text-white font-medium">Board of Directors</span>
+</nav>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+<div>
+<span class="inline-flex items-center gap-2 px-3.5 py-1 bg-brand-gold/20 border border-brand-gold/40 text-brand-goldLight text-[11px] font-semibold uppercase tracking-widest rounded-full mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+            Corporate Governance &amp; Strategic Stewardship
+          </span>
+<h1 class="font-serif text-4xl lg:text-5xl font-bold tracking-tight text-white mb-3">
+            Board of Directors
+          </h1>
+<p class="text-sm lg:text-base text-gray-200 max-w-2xl font-light leading-relaxed">
+            Distinguished leaders, environmental pioneers, and industry visionaries steering Kamat Hotels (India) Limited towards sustainable hospitality, ethical leadership, and lasting stakeholder value.
+          </p>
+</div>
+<!-- Quick Governance Stats -->
+<div class="grid grid-cols-3 gap-6 border-t lg:border-t-0 lg:border-l border-white/20 pt-4 lg:pt-0 lg:pl-8">
+<div>
+<div class="font-serif text-3xl font-bold text-brand-gold">10</div>
+<div class="text-[11px] text-gray-300 uppercase tracking-wider mt-0.5">Board Members</div>
+</div>
+<div>
+<div class="font-serif text-3xl font-bold text-brand-gold">50%</div>
+<div class="text-[11px] text-gray-300 uppercase tracking-wider mt-0.5">Independent</div>
+</div>
+<div>
+<div class="font-serif text-3xl font-bold text-brand-gold">20%</div>
+<div class="text-[11px] text-gray-300 uppercase tracking-wider mt-0.5">Women Leaders</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FILTER & SEARCH BAR -->
+<section class="border-b border-[#E8E2D8] bg-white sticky top-24 z-40 shadow-xs">
+<div class="max-w-7xl mx-auto px-6 lg:px-16 py-3.5 flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-2">
+<span class="text-xs font-semibold text-brand-muted uppercase tracking-wider mr-2">Filter:</span>
+<button class="px-4 py-1.5 rounded-full text-xs font-medium bg-brand-emerald text-white shadow-xs">All Directors (10)</button>
+<button class="px-4 py-1.5 rounded-full text-xs font-medium text-brand-charcoal hover:bg-brand-sand transition-colors">Executive (2)</button>
+<button class="px-4 py-1.5 rounded-full text-xs font-medium text-brand-charcoal hover:bg-brand-sand transition-colors">Independent (5)</button>
+<button class="px-4 py-1.5 rounded-full text-xs font-medium text-brand-charcoal hover:bg-brand-sand transition-colors">Non-Executive (3)</button>
+</div>
+<!-- Committee quick links -->
+<div class="flex items-center gap-4 text-xs">
+<a class="text-brand-emerald hover:text-brand-goldDark font-semibold flex items-center gap-1.5" href="#governance-matrices">
+<svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          Board Committees Matrix
+        </a>
+</div>
+</div>
+</section>
+<!-- MAIN DIRECTORS DIRECTORY -->
+<main class="max-w-7xl mx-auto px-6 lg:px-16 py-14">
+<!-- PROMOTERS & EXECUTIVE LEADERSHIP SPOTLIGHT (EDITORIAL SPLIT CARDS) -->
+<div class="mb-20">
+<div class="flex items-center justify-between mb-8 pb-3 border-b border-[#E5DFD5]">
+<div>
+<span class="text-xs uppercase tracking-[0.2em] text-brand-goldDark font-bold block">Key Promoters &amp; Stewardship</span>
+<h2 class="font-serif text-2xl lg:text-3xl font-bold text-brand-emerald">Executive &amp; Managing Leadership</h2>
+</div>
+<span class="hidden sm:inline-flex items-center gap-2 text-xs text-brand-muted bg-white px-3 py-1.5 rounded-full border border-brand-sand">
+<span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+          Statutory Key Managerial Personnel
+        </span>
+</div>
+<div class="space-y-10">
+<!-- Dr. Vithal Venkatesh Kamat: Full-height Editorial Split Card -->
+<article class="director-card bg-white rounded-2xl border border-[#E3DBD0] overflow-hidden shadow-sm hover:shadow-xl transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Portrait Column -->
+<div class="lg:col-span-5 relative bg-brand-emeraldDeep min-h-[380px] lg:min-h-full overflow-hidden flex items-center justify-center p-3">
+<div class="relative w-full h-full min-h-[380px] rounded-xl overflow-hidden border border-brand-gold/30">
+<img alt="Dr. Vithal Venkatesh Kamat - Chairman and Managing Director" class="w-full h-full object-cover object-top filter brightness-[0.98]" src="C:\Users\Admin\Downloads\New folder\khil\assets\images\about\founder2.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-brand-emeraldDark/90 via-transparent to-transparent lg:hidden"></div>
+<!-- Subtle Gold Emblem -->
+<div class="absolute top-4 left-4 bg-brand-emeraldDark/80 backdrop-blur-md px-3 py-1 rounded-full border border-brand-gold/40 text-[10px] uppercase font-semibold text-brand-goldLight tracking-widest">
+                  Promoter &amp; Founder
+                </div>
+</div>
+</div>
+<!-- Content Column -->
+<div class="lg:col-span-7 p-8 lg:p-10 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+<span class="inline-block px-3 py-1 rounded bg-[#EAF2ED] text-brand-emerald text-xs font-semibold tracking-wider uppercase border border-emerald-900/10">
+                    Chairman and Managing Director
+                  </span>
+<span class="text-xs font-mono font-medium text-brand-muted">DIN: 00196211</span>
+</div>
+<h3 class="font-serif text-3xl lg:text-4xl font-bold text-brand-emerald tracking-tight mb-1">
+                  Dr. Vithal Venkatesh Kamat
+                </h3>
+<p class="text-xs uppercase tracking-widest text-brand-goldDark font-semibold mb-5">
+                  Founder, Environmentalist &amp; Visionary Pioneer
+                </p>
+<!-- Editorial Quote Callout -->
+<blockquote class="border-l-2 border-brand-gold pl-4 italic text-sm text-brand-muted font-cormorant text-[16px] leading-relaxed mb-5 bg-[#FAF7F1] py-2 pr-3 rounded-r">
+                  "Sustainable hospitality is not an option; it is our sacred responsibility toward future generations and planet Earth."
+                </blockquote>
+<p class="text-sm text-gray-700 leading-relaxed font-normal mb-6">
+                  Dr. Vithal Venkatesh Kamat, a second-generation restaurateur, a pioneer in green hotels, an environmentalist, an entrepreneur, an educationalist, an antiquarian, an ornithologist, an author, a globetrotter, and a black belt holder in karate, is a versatile personality. Having begun his journey in a small, family-owned vegetarian restaurant, Dr. Vithal Kamat today is Chairman and Managing Director of Kamat Hotels (India) Limited, pioneering Asia's First Ecotel Certification.
+                </p>
+<!-- Credentials Badges -->
+<div class="flex flex-wrap gap-2 pt-4 border-t border-[#F0EBE1]">
+<span class="inline-flex items-center gap-1.5 text-xs text-brand-charcoal bg-[#F6F4EE] px-3 py-1.5 rounded-full border border-brand-sand">
+                    🌱 Pioneer in Green Ecotels
+                  </span>
+<span class="inline-flex items-center gap-1.5 text-xs text-brand-charcoal bg-[#F6F4EE] px-3 py-1.5 rounded-full border border-brand-sand">
+                    📚 Renowned Author &amp; Antiquarian
+                  </span>
+<span class="inline-flex items-center gap-1.5 text-xs text-brand-charcoal bg-[#F6F4EE] px-3 py-1.5 rounded-full border border-brand-sand">
+                    🥋 Karate Black Belt
+                  </span>
+<span class="inline-flex items-center gap-1.5 text-xs text-brand-charcoal bg-[#F6F4EE] px-3 py-1.5 rounded-full border border-brand-sand">
+                    🦅 Ornithologist &amp; Educationalist
+                  </span>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-[#EAE3D6] flex flex-wrap items-center justify-between text-xs text-brand-muted">
+<span class="font-medium text-brand-emerald">Executive Promoter Director</span>
+<span class="text-brand-goldDark font-semibold">Leadership Tenure: 35+ Years</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Mr. Vishal Vithal Kamat: Full-height Editorial Split Card -->
+<article class="director-card bg-white rounded-2xl border border-[#E3DBD0] overflow-hidden shadow-sm hover:shadow-xl transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Portrait Column -->
+<div class="lg:col-span-5 relative bg-brand-emeraldDeep min-h-[380px] lg:min-h-full overflow-hidden flex items-center justify-center p-3 order-1 lg:order-2">
+<div class="relative w-full h-full min-h-[380px] rounded-xl overflow-hidden border border-brand-gold/30">
+<img alt="Mr. Vishal Vithal Kamat - Executive Director" class="w-full h-full object-cover object-top filter brightness-[0.98]" src="C:\Users\Admin\Downloads\New folder\khil\assets\images\about\founder1.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-brand-emeraldDark/90 via-transparent to-transparent lg:hidden"></div>
+<div class="absolute top-4 right-4 bg-brand-emeraldDark/80 backdrop-blur-md px-3 py-1 rounded-full border border-brand-gold/40 text-[10px] uppercase font-semibold text-brand-goldLight tracking-widest">
+                  Executive Operations
+                </div>
+</div>
+</div>
+<!-- Content Column -->
+<div class="lg:col-span-7 p-8 lg:p-10 flex flex-col justify-between order-2 lg:order-1">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+<span class="inline-block px-3 py-1 rounded bg-[#EAF2ED] text-brand-emerald text-xs font-semibold tracking-wider uppercase border border-emerald-900/10">
+                    Executive Director
+                  </span>
+<span class="text-xs font-semibold text-brand-goldDark bg-brand-sand px-2.5 py-0.5 rounded">
+                    Inducted w.e.f. 27th May, 2023
+                  </span>
+</div>
+<h3 class="font-serif text-3xl lg:text-4xl font-bold text-brand-emerald tracking-tight mb-1">
+                  Mr. Vishal Vithal Kamat
+                </h3>
+<p class="text-xs uppercase tracking-widest text-brand-goldDark font-semibold mb-5">
+                  Operations Leadership &amp; Business Modernization
+                </p>
+<!-- Quote / Focus callout -->
+<blockquote class="border-l-2 border-brand-gold pl-4 italic text-sm text-brand-muted font-cormorant text-[16px] leading-relaxed mb-5 bg-[#FAF7F1] py-2 pr-3 rounded-r">
+                  "Blending heritage Indian warmth with agile, contemporary hospitality systems and eco-forward guest experiences."
+                </blockquote>
+<p class="text-sm text-gray-700 leading-relaxed font-normal mb-6">
+                  Mr. Vishal Vithal Kamat has been inducted on the Board w.e.f. 27th May, 2023. Mr. Vishal Vithal Kamat is a science graduate (BSc) with specialisation in Hotel Management from the premier Institute of Hotel Management and Catering Technology and Applied Nutrition (IHMCTAN), Mumbai. He has extensive experience in the Hotel Industry and has been closely associated with the operations and brand expansion of the Company.
+                </p>
+<!-- Credentials Badges -->
+<div class="flex flex-wrap gap-2 pt-4 border-t border-[#F0EBE1]">
+<span class="inline-flex items-center gap-1.5 text-xs text-brand-charcoal bg-[#F6F4EE] px-3 py-1.5 rounded-full border border-brand-sand">
+                    🎓 B.Sc Hotel Management (IHMCTAN Mumbai)
+                  </span>
+<span class="inline-flex items-center gap-1.5 text-xs text-brand-charcoal bg-[#F6F4EE] px-3 py-1.5 rounded-full border border-brand-sand">
+                    🏨 Hospitality Operations &amp; Expansion
+                  </span>
+<span class="inline-flex items-center gap-1.5 text-xs text-brand-charcoal bg-[#F6F4EE] px-3 py-1.5 rounded-full border border-brand-sand">
+                    📈 Strategic Brand Transformation
+                  </span>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-[#EAE3D6] flex flex-wrap items-center justify-between text-xs text-brand-muted">
+<span class="font-medium text-brand-emerald">Executive Board Member</span>
+<span class="text-brand-goldDark font-semibold">Focus: Portfolio Growth &amp; Scalability</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- INDEPENDENT & NON-EXECUTIVE DIRECTORS GRID -->
+<div class="mb-20">
+<div class="flex items-center justify-between mb-8 pb-3 border-b border-[#E5DFD5]">
+<div>
+<span class="text-xs uppercase tracking-[0.2em] text-brand-goldDark font-bold block">Fiduciary Excellence</span>
+<h2 class="font-serif text-2xl lg:text-3xl font-bold text-brand-emerald">Independent &amp; Non-Executive Directors</h2>
+</div>
+<span class="text-xs text-brand-muted hidden sm:inline-block">8 Distinguished Leaders</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+<!-- Miss Vidita Vithal Kamat (Featuring Image 6) -->
+<article class="director-card bg-white rounded-xl border border-[#E3DBD0] overflow-hidden shadow-sm flex flex-col justify-between">
+<div>
+<div class="h-64 overflow-hidden relative bg-brand-sand">
+<img alt="Miss. Vidita Vithal Kamat - Director" class="w-full h-full object-cover object-center filter brightness-[0.98]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJnBRBgNkR75PQ8mgAysecKXzfD_FmxcZE7ygUvJ1XICWadyEeicLTh1Rb6xP77SDGdCHdXx0NlkFHmdlM-939OINjPXGs4MM5X602BrUAXvUqpiuB4gnWAW8AE6wtXSLUhm2gDf7yHllf3AQJ68GruwwrFe3AlumxQMoIhNDzgUG8clSQPRDN1UyIDjgHLii0hyhpOdSy0kP-LfB-Go0LnrznlweOTj1erIduLji3Mhs6-YZaOpXzmg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs">
+<span class="px-2.5 py-0.5 rounded bg-brand-emerald/90 backdrop-blur-sm text-[11px] font-medium border border-white/20">
+                  Inducted Sept 2020
+                </span>
+<span class="text-[11px] text-brand-goldLight font-semibold">10+ Yrs Experience</span>
+</div>
+</div>
+<div class="p-6">
+<span class="px-2.5 py-1 rounded text-[10px] font-semibold uppercase tracking-wider bg-[#F5EFE6] text-brand-goldDark border border-brand-gold/20 inline-block mb-3">
+                Non-Executive Non-Independent
+              </span>
+<h3 class="font-serif text-2xl font-bold text-brand-emerald mb-1">
+                Miss. Vidita Vithal Kamat
+              </h3>
+<p class="text-xs text-brand-muted mb-4 font-medium uppercase tracking-wider">Director • Bakery &amp; Confectionery</p>
+<p class="text-xs text-gray-700 leading-relaxed mb-4">
+                Miss. Vidita Vithal Kamat has been inducted on the Board w.e.f. 29th September 2020. She has a B.Com graduate from Mumbai University and Diploma in Craft Course. She brings an extensive experience of about 10 years in the Bakery and Confectionery industry.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-5 pt-3 border-t border-[#F2ECE2] text-[11px] text-brand-muted flex items-center justify-between bg-brand-cream/60">
+<span>B.Com, Mumbai University</span>
+<span class="text-brand-emerald font-semibold">F&amp;B Specialist</span>
+</div>
+</article>
+<!-- Mr. Sanjeev Rajgarhia (Featuring Image 5) -->
+<article class="director-card bg-white rounded-xl border border-[#E3DBD0] overflow-hidden shadow-sm flex flex-col justify-between">
+<div>
+<div class="h-64 overflow-hidden relative bg-brand-sand">
+<img alt="Mr. Sanjeev Rajgarhia - Independent Director" class="w-full h-full object-cover object-center filter brightness-[0.98]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjNGI2fCf3cKeILqrBoniGbAg5yFdXYla6jmlmXgLBPFAnCcfqk0lmTu0BIh1ehqoOhP9Xtomy1x5GutjIVb98NH-QKBn_684cto6wklYHKY05B38LlKwZlbBJBKcjZYbx5taWTosi7DoljF2IAHsoV4JDtSRaXvfRTWNCcqTK0giQS1f1TK1n5vV8n5j8_OAwx0T-dFUIsz1D4BNHp2Bw3Vyprq_I1sraE479JoGo4BdMvCeEqXos2A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs">
+<span class="px-2.5 py-0.5 rounded bg-brand-emerald/90 backdrop-blur-sm text-[11px] font-medium border border-white/20">
+                  Inducted Aug 2020
+                </span>
+<span class="text-[11px] text-brand-goldLight font-semibold">37+ Yrs Experience</span>
+</div>
+</div>
+<div class="p-6">
+<span class="px-2.5 py-1 rounded text-[10px] font-semibold uppercase tracking-wider bg-[#EAF2ED] text-brand-emerald border border-emerald-800/10 inline-block mb-3">
+                Independent Director
+              </span>
+<h3 class="font-serif text-2xl font-bold text-brand-emerald mb-1">
+                Mr. Sanjeev Rajgarhia
+              </h3>
+<p class="text-xs text-brand-muted mb-4 font-medium uppercase tracking-wider">Independent Director • IPR &amp; Pharma</p>
+<p class="text-xs text-gray-700 leading-relaxed mb-4">
+                Mr. Sanjeev Badriprasad Rajgarhia was inducted w.e.f. 28th August 2020. He holds a B.Com from Mumbai University, Diplomas in Pharmaceutical Business Management, Shipping Management, and Patents Law &amp; IPR Laws. Engaged in Pharmaceuticals Active Ingredient Supply Business since 1983.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-5 pt-3 border-t border-[#F2ECE2] text-[11px] text-brand-muted flex items-center justify-between bg-brand-cream/60">
+<span>IPR, Pharma &amp; Shipping</span>
+<span class="text-brand-emerald font-semibold">Supply Chain Expert</span>
+</div>
+</article>
+<!-- Mrs. Harinder Pal Kaur -->
+<article class="director-card bg-white rounded-xl border border-[#E3DBD0] p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div class="w-14 h-14 rounded-full bg-brand-sand border border-brand-gold/40 flex items-center justify-center text-brand-emerald font-serif text-xl font-bold">
+                HK
+              </div>
+<div class="text-right">
+<span class="px-2.5 py-1 rounded text-[10px] font-semibold uppercase tracking-wider bg-[#EAF2ED] text-brand-emerald border border-emerald-800/10 block mb-1">
+                  Independent Director
+                </span>
+<span class="text-[10px] text-brand-muted font-medium">Hospitality &amp; ESG</span>
+</div>
+</div>
+<h3 class="font-serif text-2xl font-bold text-brand-emerald mb-1">
+              Mrs. Harinder Pal Kaur
+            </h3>
+<p class="text-xs text-brand-muted mb-4 font-medium uppercase tracking-wider">Independent Director</p>
+<p class="text-xs text-gray-700 leading-relaxed mb-4">
+              Mrs. Harinder Pal Kaur completed M.A (Economics) from Mumbai University. She has experience over two decades in coordinating hospitality projects for environmentally sustainable design and operational practices. Currently pioneering holistic healing and nutritionally dense produce natural practices in Punjab.
+            </p>
+</div>
+<div class="pt-4 border-t border-[#F2ECE2] text-[11px] text-brand-muted flex items-center justify-between">
+<span>M.A. (Economics)</span>
+<span class="text-brand-emerald font-semibold">20+ Yrs ESG Exp.</span>
+</div>
+</article>
+<!-- Mr. Vilas Ramchandra Koranne -->
+<article class="director-card bg-white rounded-xl border border-[#E3DBD0] p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div class="w-14 h-14 rounded-full bg-brand-sand border border-brand-gold/40 flex items-center justify-center text-brand-emerald font-serif text-xl font-bold">
+                VK
+              </div>
+<div class="text-right">
+<span class="px-2.5 py-1 rounded text-[10px] font-semibold uppercase tracking-wider bg-[#EAF2ED] text-brand-emerald border border-emerald-800/10 block mb-1">
+                  Independent Director
+                </span>
+<span class="text-[10px] text-brand-muted font-medium">Since June 2021</span>
+</div>
+</div>
+<h3 class="font-serif text-2xl font-bold text-brand-emerald mb-1">
+              Mr. Vilas R. Koranne
+            </h3>
+<p class="text-xs text-brand-muted mb-4 font-medium uppercase tracking-wider">Civil &amp; Infrastructure Engineering</p>
+<p class="text-xs text-gray-700 leading-relaxed mb-4">
+              Mr. Koranne holds a B.E. (Civil) from Bombay University (1976). He served in Municipal Corporation of Greater Mumbai (M.C.G.M.) as Sub Engineer, Assistant Engineer, and Deputy Chief Engineer over a legendary 33-year career before joining KHIL board w.e.f. 29th June 2021.
+            </p>
+</div>
+<div class="pt-4 border-t border-[#F2ECE2] text-[11px] text-brand-muted flex items-center justify-between">
+<span>B.E. Civil (M.C.G.M. Veteran)</span>
+<span class="text-brand-emerald font-semibold">33+ Yrs Exp.</span>
+</div>
+</article>
+<!-- Mr. Ajit Naik -->
+<article class="director-card bg-white rounded-xl border border-[#E3DBD0] p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div class="w-14 h-14 rounded-full bg-brand-sand border border-brand-gold/40 flex items-center justify-center text-brand-emerald font-serif text-xl font-bold">
+                AN
+              </div>
+<div class="text-right">
+<span class="px-2.5 py-1 rounded text-[10px] font-semibold uppercase tracking-wider bg-[#EAF2ED] text-brand-emerald border border-emerald-800/10 block mb-1">
+                  Independent Director
+                </span>
+<span class="text-[10px] text-brand-muted font-medium">Since May 2023</span>
+</div>
+</div>
+<h3 class="font-serif text-2xl font-bold text-brand-emerald mb-1">
+              Mr. Ajit Naik
+            </h3>
+<p class="text-xs text-brand-muted mb-4 font-medium uppercase tracking-wider">Strategy &amp; Financial Planning</p>
+<p class="text-xs text-gray-700 leading-relaxed mb-4">
+              Brings 25 years across leading financial conglomerates including ICICI Bank, Aditya Birla Financial Services / Birla Sun Life, and Gramophone Co, and 5 years as MD of Entity Developers Pvt Ltd. Holds MBA from University of Pune, specializing in customer lifecycle, strategy, and corporate advisory.
+            </p>
+</div>
+<div class="pt-4 border-t border-[#F2ECE2] text-[11px] text-brand-muted flex items-center justify-between">
+<span>MBA (Univ of Pune)</span>
+<span class="text-brand-emerald font-semibold">30+ Yrs Fin &amp; Realty</span>
+</div>
+</article>
+<!-- Mr. Tej Mayur Contractor -->
+<article class="director-card bg-white rounded-xl border border-[#E3DBD0] p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div class="w-14 h-14 rounded-full bg-brand-sand border border-brand-gold/40 flex items-center justify-center text-brand-emerald font-serif text-xl font-bold">
+                TC
+              </div>
+<div class="text-right">
+<span class="px-2.5 py-1 rounded text-[10px] font-semibold uppercase tracking-wider bg-[#EAF2ED] text-brand-emerald border border-emerald-800/10 block mb-1">
+                  Independent Director
+                </span>
+<span class="text-[10px] text-brand-muted font-medium">Since May 2023</span>
+</div>
+</div>
+<h3 class="font-serif text-2xl font-bold text-brand-emerald mb-1">
+              Mr. Tej Mayur Contractor
+            </h3>
+<p class="text-xs text-brand-muted mb-4 font-medium uppercase tracking-wider">Global Logistics &amp; IT Legal Advisory</p>
+<p class="text-xs text-gray-700 leading-relaxed mb-4">
+              B.Com (H.R. College), MBA (SP Jain). Chairman of Advisory Body IT &amp; Legal Matters at FIATA Geneva. President of Indian Institute of Freight Forwarders (FFFAI) and Shipping Line Committee Chairman of Brihanmumbai Customs Brokers Association.
+            </p>
+</div>
+<div class="pt-4 border-t border-[#F2ECE2] text-[11px] text-brand-muted flex items-center justify-between">
+<span>FIATA Geneva Advisory</span>
+<span class="text-brand-emerald font-semibold">Global Logistics</span>
+</div>
+</article>
+<!-- Mr. Ramnath P. Sarang -->
+<article class="director-card bg-white rounded-xl border border-[#E3DBD0] p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div class="w-14 h-14 rounded-full bg-brand-sand border border-brand-gold/40 flex items-center justify-center text-brand-emerald font-serif text-xl font-bold">
+                RS
+              </div>
+<div class="text-right">
+<span class="px-2.5 py-1 rounded text-[10px] font-semibold uppercase tracking-wider bg-[#EAF2ED] text-brand-emerald border border-emerald-800/10 block mb-1">
+                  Independent Director
+                </span>
+<span class="text-[10px] text-brand-muted font-medium">Since May 2019</span>
+</div>
+</div>
+<h3 class="font-serif text-2xl font-bold text-brand-emerald mb-1">
+              Mr. Ramnath P. Sarang
+            </h3>
+<p class="text-xs text-brand-muted mb-4 font-medium uppercase tracking-wider">Hospitality Operations Veteran</p>
+<p class="text-xs text-gray-700 leading-relaxed mb-4">
+              B.Com Graduate (Hons) with varied and rich professional hospitality management background spanning over 25 years. Appointed Non-Executive Independent Director w.e.f. 27th May, 2019, providing operational guidance and industry benchmarking.
+            </p>
+</div>
+<div class="pt-4 border-t border-[#F2ECE2] text-[11px] text-brand-muted flex items-center justify-between">
+<span>B.Com (Hons)</span>
+<span class="text-brand-emerald font-semibold">25+ Yrs Hosp. Exp.</span>
+</div>
+</article>
+<!-- Mr. Kaushal K. Biyani (AIR-22 Chartered Accountant) -->
+<article class="director-card bg-white rounded-xl border border-[#E3DBD0] p-6 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div class="w-14 h-14 rounded-full bg-brand-sand border border-brand-gold/40 flex items-center justify-center text-brand-emerald font-serif text-xl font-bold">
+                KB
+              </div>
+<div class="text-right">
+<span class="px-2.5 py-1 rounded text-[10px] font-semibold uppercase tracking-wider bg-[#F5EFE6] text-brand-goldDark border border-brand-gold/20 block mb-1">
+                  Non-Executive Non-Independent
+                </span>
+<span class="text-[10px] text-brand-emerald font-bold">CA (AIR-22)</span>
+</div>
+</div>
+<h3 class="font-serif text-2xl font-bold text-brand-emerald mb-1">
+              Mr. Kaushal K. Biyani
+            </h3>
+<p class="text-xs text-brand-muted mb-4 font-medium uppercase tracking-wider">Structured Credit &amp; Audit Committee</p>
+<p class="text-xs text-gray-700 leading-relaxed mb-4">
+              Chartered Accountant earning All India Rank 22 (AIR-22) and B.Com from Narsee Monjee College. Over 16 years of distinguished leadership in structured credit and corporate finance; previously associated with Ernst &amp; Young (EY) and Essar Group.
+            </p>
+</div>
+<div class="pt-4 border-t border-[#F2ECE2] text-[11px] text-brand-muted flex items-center justify-between">
+<span>CA (AIR-22), Ex-EY</span>
+<span class="text-brand-emerald font-semibold">16+ Yrs Finance</span>
+</div>
+</article>
+<!-- Governance Assurance / SEBI Compliance Card -->
+<div class="rounded-xl bg-gradient-to-br from-brand-emeraldDeep via-brand-emerald to-brand-emeraldDark text-white p-7 flex flex-col justify-between shadow-md border border-brand-gold/40 relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-brand-gold/10 pointer-events-none"></div>
+<div>
+<div class="w-12 h-12 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold mb-5 border border-brand-gold/30">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="font-serif text-2xl font-bold text-white mb-2">Corporate Governance Commitment</h3>
+<p class="text-xs text-gray-200 leading-relaxed font-light mb-4">
+              Kamat Hotels (India) Limited adheres strictly to SEBI (LODR) Regulations 2015, upholding absolute fiduciary independence, transparent disclosures, and proactive environmental accountability.
+            </p>
+</div>
+<div>
+<a class="inline-flex items-center gap-2 text-xs font-semibold text-brand-goldLight hover:text-white transition-colors" href="#reports">
+<span>Download Governance Charters</span>
+<svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- BOARD COMMITTEES & GOVERNANCE MATRIX SECTION -->
+</main>
+<!-- FULL MULTI-COLUMN LUXURY FOOTER (WITH REAL BRAND HIERARCHY) -->
+<footer class="bg-brand-emeraldDark text-white pt-16 pb-12 border-t border-brand-emerald/40">
+<div class="max-w-7xl mx-auto px-6 lg:px-16">
+<!-- Brand Heritage Intro -->
+<div class="pb-12 border-b border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-white p-1 border border-brand-gold/40 flex items-center justify-center shrink-0">
+<img alt="Kamat Hotels Logo" class="w-full h-full object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQJhJdVvxZ7PUxTiRx3XY5Mngoj3uTCylZdtw2t_-HQzVRMPtgSHrUN2e8KTY35vnQ3mTZwAno0ArOt3QncZPl3brRAtkogbCeV9SkcsLt3IuJvjwHfR37PIwtNnf1MK5buoxje6mFj5EFpyXn6GW_tMO56hRPFB14YXLGy57z8shwEJngasjl1cXfPQZ7sxW0wUVZckAVxjYi8RM4BWLU_OD8SQ2cR7R6VrMK1-DN3cIUG-PKWzsDDg"/>
+</div>
+<div>
+<span class="font-serif text-2xl font-bold tracking-wider text-white">KAMAT HOTELS (INDIA) LIMITED</span>
+<p class="text-xs text-brand-goldLight tracking-widest uppercase">Asia's Pioneer in Environmentally Friendly Eco-Luxury Hospitality</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<a class="bg-brand-gold hover:bg-brand-goldDark text-brand-emeraldDark font-semibold px-6 py-2.5 rounded text-xs uppercase tracking-widest transition-all" href="#booknow">
+            Book Your Stay
+          </a>
+<a class="border border-white/20 hover:border-brand-gold px-5 py-2.5 rounded text-xs uppercase tracking-wider text-white transition-all" href="#investors">
+            Investor Relations
+          </a>
+</div>
+</div>
+<!-- Footer Links Columns -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 py-12 text-xs">
+<!-- Col 1: Who We Are -->
+<div>
+<h4 class="font-serif text-sm font-semibold text-brand-goldLight uppercase tracking-wider mb-4">Who We Are</h4>
+<ul class="space-y-2.5 text-gray-300">
+<li><a class="hover:text-white transition-colors" href="#whoweare">Overview</a></li>
+<li><a class="hover:text-white transition-colors" href="#milestones">Milestones</a></li>
+<li><a class="text-brand-gold font-medium" href="#board">Board of Directors</a></li>
+<li><a class="hover:text-white transition-colors" href="#careers">Careers</a></li>
+<li><a class="hover:text-white transition-colors" href="#contact">Contact Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#csr">CSR &amp; ESG</a></li>
+</ul>
+</div>
+<!-- Col 2: Brands Orchid -->
+<div>
+<h4 class="font-serif text-sm font-semibold text-brand-goldLight uppercase tracking-wider mb-4">Brands Orchid</h4>
+<ul class="space-y-2 text-gray-300">
+<li><a class="hover:text-white transition-colors" href="#">The Orchid Mumbai</a></li>
+<li><a class="hover:text-white transition-colors" href="#">The Orchid Lonavala</a></li>
+<li><a class="hover:text-white transition-colors" href="#">The Orchid Pune</a></li>
+<li><a class="hover:text-white transition-colors" href="#">The Orchid Shimla</a></li>
+<li><a class="hover:text-white transition-colors" href="#">The Orchid Manali</a></li>
+<li><a class="hover:text-white transition-colors" href="#">The Orchid Jamnagar</a></li>
+<li><a class="hover:text-white transition-colors" href="#">The Orchid Chandigarh</a></li>
+<li><a class="hover:text-white transition-colors" href="#">The Orchid Rishikesh</a></li>
+<li><a class="hover:text-white transition-colors" href="#">The Orchid Panchgani</a></li>
+</ul>
+</div>
+<!-- Col 3: Heritage & Leisure -->
+<div>
+<h4 class="font-serif text-sm font-semibold text-brand-goldLight uppercase tracking-wider mb-4">Heritage &amp; Leisure</h4>
+<div class="mb-4">
+<span class="text-[10px] uppercase font-semibold text-brand-gold tracking-widest block mb-1">Heritage Collection</span>
+<ul class="space-y-1.5 text-gray-300">
+<li><a class="hover:text-white transition-colors" href="#">Fort JadhavGADH</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Mahodadhi Palace</a></li>
+</ul>
+</div>
+<div>
+<span class="text-[10px] uppercase font-semibold text-brand-gold tracking-widest block mb-1">Leisure Hotels</span>
+<ul class="space-y-1.5 text-gray-300">
+<li><a class="hover:text-white transition-colors" href="#">Lotus Eco Resort Konark</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Lotus Eco Resort Murud</a></li>
+<li><a class="hover:text-white transition-colors" href="#">The Orchid Passaros - Benaulim</a></li>
+</ul>
+</div>
+</div>
+<!-- Col 4: IRA Hotels & Wellness -->
+<div>
+<h4 class="font-serif text-sm font-semibold text-brand-goldLight uppercase tracking-wider mb-4">IRA Hotels &amp; Wellness</h4>
+<div class="mb-4">
+<span class="text-[10px] uppercase font-semibold text-brand-gold tracking-widest block mb-1">IRA By Orchid</span>
+<ul class="space-y-1.5 text-gray-300">
+<li><a class="hover:text-white transition-colors" href="#">IRA Mumbai</a></li>
+<li><a class="hover:text-white transition-colors" href="#">IRA Bhubaneswar</a></li>
+<li><a class="hover:text-white transition-colors" href="#">IRA Nashik</a></li>
+<li><a class="hover:text-white transition-colors" href="#">IRA Sambhaji Nagar</a></li>
+<li><a class="hover:text-white transition-colors" href="#">IRA Ayodhya</a></li>
+<li><a class="hover:text-white transition-colors" href="#">IRA Noida</a></li>
+<li><a class="hover:text-white transition-colors" href="#">IRA Goa</a></li>
+<li><a class="hover:text-white transition-colors" href="#">IRA Hyderabad</a></li>
+</ul>
+</div>
+<div>
+<span class="text-[10px] uppercase font-semibold text-brand-gold tracking-widest block mb-1">Wellness</span>
+<ul class="space-y-1.5 text-gray-300">
+<li><a class="hover:text-white transition-colors" href="#">Toyam By Orchid</a></li>
+</ul>
+</div>
+</div>
+<!-- Col 5: Investors & Press -->
+<div>
+<h4 class="font-serif text-sm font-semibold text-brand-goldLight uppercase tracking-wider mb-4">Investors &amp; Press</h4>
+<ul class="space-y-2 text-gray-300">
+<li><a class="hover:text-white transition-colors" href="#reports">View Financial Reports</a></li>
+<li><a class="hover:text-white transition-colors" href="#annual-reports">Annual Reports</a></li>
+<li><a class="hover:text-white transition-colors" href="#quarterly">Quarterly Results</a></li>
+<li><a class="hover:text-white transition-colors" href="#shareholding">Shareholding Pattern</a></li>
+<li><a class="hover:text-white transition-colors" href="#corp-gov">Corporate Governance</a></li>
+<li><a class="hover:text-white transition-colors" href="#press">Press Room</a></li>
+<li><a class="hover:text-white transition-colors" href="#awards">Awards &amp; Honours</a></li>
+</ul>
+</div>
+<!-- Col 6: Corporate Office -->
+<div>
+<h4 class="font-serif text-sm font-semibold text-brand-goldLight uppercase tracking-wider mb-4">Registered Office</h4>
+<address class="not-italic text-gray-300 space-y-2 text-[11px] leading-relaxed">
+<p><strong class="text-white">Kamat Hotels (India) Limited</strong></p>
+<p>70-C, Nehru Road, Near Santacruz Airport, Vile Parle (East), Mumbai - 400099, Maharashtra, India.</p>
+<p class="pt-2"><strong class="text-brand-goldLight">CIN:</strong> L55101MH1986PLC039307</p>
+<p><strong class="text-brand-goldLight">Email:</strong> cs@khil.com</p>
+</address>
+</div>
+</div>
+<!-- Bottom Copyright & Compliance -->
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-gray-400">
+<p>Copyright © 2026 Kamat Hotels (India) Limited. All rights reserved. Powered by 10 Dumbs Inc.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-white transition-colors" href="#privacy">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#terms">Terms of Use</a>
+<a class="hover:text-white transition-colors" href="#disclaimer">Disclaimer</a>
+<a class="hover:text-white transition-colors" href="#sitemap">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
