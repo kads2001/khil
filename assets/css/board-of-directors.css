@@ -1,0 +1,1115 @@
+/* ==========================================================================
+   KAMAT HOTELS (INDIA) LIMITED - BOARD OF DIRECTORS STYLESHEET
+   Clean, Vanilla CSS - No external utility framework required
+   ========================================================================== */
+
+:root {
+  --bod-emerald: #144234;
+  --bod-emerald-dark: #0A241C;
+  --bod-emerald-deep: #0D2C22;
+  --bod-emerald-light: #1d5746;
+  --bod-emerald-soft: #EAF2ED;
+  --bod-gold: #C5A059;
+  --bod-gold-light: #E8D3A7;
+  --bod-gold-dark: #9E7A36;
+  --bod-gold-soft: #F5EFE6;
+  --bod-cream: #FAF8F5;
+  --bod-sand: #F4EFE6;
+  --bod-sand-muted: #EFE9DE;
+  --bod-charcoal: #1A231F;
+  --bod-muted: #627068;
+  --bod-border: #E3DBD0;
+  --bod-border-light: #F0EBE1;
+  --bod-white: #FFFFFF;
+  --bod-font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --bod-font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --bod-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --bod-radius-sm: 6px;
+  --bod-radius-md: 12px;
+  --bod-radius-lg: 18px;
+  --bod-shadow-sm: 0 2px 6px rgba(10, 36, 28, 0.05);
+  --bod-shadow-md: 0 8px 24px rgba(10, 36, 28, 0.08);
+  --bod-shadow-lg: 0 16px 36px rgba(10, 36, 28, 0.12);
+  --bod-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Page Root */
+body.board-directors-page {
+  background-color: var(--bod-cream);
+  color: var(--bod-charcoal);
+  font-family: var(--bod-font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bod-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 1024px) {
+  .bod-container {
+    padding: 0 48px;
+  }
+}
+
+/* ==========================================================================
+   1. TOP UTILITY BAR
+   ========================================================================== */
+.bod-top-bar {
+  background-color: var(--bod-emerald-dark);
+  color: #d3dcd6;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 0;
+}
+
+.bod-top-bar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bod-ticker-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bod-ticker-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #34d399;
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+  animation: bodPulse 2s infinite;
+}
+
+@keyframes bodPulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+
+.bod-ticker-badge {
+  color: var(--bod-gold-light);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.bod-top-bar-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.bod-top-bar-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: var(--bod-transition);
+}
+
+.bod-top-bar-links a:hover {
+  color: var(--bod-gold);
+}
+
+.bod-top-bar-divider {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================================
+   2. HERO BANNER & GOVERNANCE STATS
+   ========================================================================== */
+.bod-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--bod-emerald-dark) 0%, var(--bod-emerald) 60%, #154737 100%);
+  color: var(--bod-white);
+  padding: 56px 0 64px;
+  overflow: hidden;
+}
+
+.bod-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image: radial-gradient(var(--bod-gold) 1px, transparent 1px);
+  background-size: 22px 22px;
+  pointer-events: none;
+}
+
+.bod-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.bod-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bod-gold-light);
+  margin-bottom: 18px;
+}
+
+.bod-breadcrumbs a {
+  color: var(--bod-gold-light);
+  text-decoration: none;
+  transition: var(--bod-transition);
+}
+
+.bod-breadcrumbs a:hover {
+  color: var(--bod-white);
+}
+
+.bod-breadcrumbs span.active {
+  color: var(--bod-white);
+  font-weight: 500;
+}
+
+.bod-hero-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+@media (min-width: 992px) {
+  .bod-hero-layout {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.bod-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  background: rgba(197, 160, 89, 0.18);
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  color: var(--bod-gold-light);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+}
+
+.bod-hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--bod-gold);
+}
+
+.bod-hero-title {
+  font-family: var(--bod-font-serif);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--bod-white);
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+
+@media (min-width: 768px) {
+  .bod-hero-title {
+    font-size: 44px;
+  }
+}
+
+.bod-hero-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 620px;
+  margin: 0;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .bod-hero-desc {
+    font-size: 15px;
+  }
+}
+
+.bod-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (min-width: 992px) {
+  .bod-hero-stats {
+    padding-top: 0;
+    padding-left: 36px;
+    border-top: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+    min-width: 380px;
+  }
+}
+
+.bod-stat-num {
+  font-family: var(--bod-font-serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--bod-gold);
+  line-height: 1;
+}
+
+.bod-stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   3. STICKY FILTER & MATRIX JUMP BAR
+   ========================================================================== */
+.bod-filter-bar {
+  background: var(--bod-white);
+  border-bottom: 1px solid var(--bod-border);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 4px 14px rgba(10, 36, 28, 0.04);
+}
+
+.bod-filter-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 0;
+}
+
+.bod-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.bod-filter-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--bod-muted);
+  margin-right: 6px;
+}
+
+.bod-filter-btn {
+  padding: 7px 16px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--bod-font-sans);
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--bod-charcoal);
+  cursor: pointer;
+  transition: var(--bod-transition);
+}
+
+.bod-filter-btn:hover {
+  background-color: var(--bod-sand);
+  color: var(--bod-emerald);
+}
+
+.bod-filter-btn.active {
+  background-color: var(--bod-emerald);
+  color: var(--bod-white);
+  box-shadow: var(--bod-shadow-sm);
+}
+
+.bod-matrix-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--bod-emerald);
+  text-decoration: none;
+  transition: var(--bod-transition);
+}
+
+.bod-matrix-link:hover {
+  color: var(--bod-gold-dark);
+}
+
+.bod-matrix-link svg {
+  width: 16px;
+  height: 16px;
+  color: var(--bod-gold);
+}
+
+/* ==========================================================================
+   4. MAIN DIRECTORY LAYOUT & SECTION HEADINGS
+   ========================================================================== */
+.bod-main {
+  padding: 56px 0 80px;
+}
+
+.bod-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--bod-border);
+  padding-bottom: 14px;
+  margin-bottom: 32px;
+}
+
+.bod-section-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--bod-gold-dark);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.bod-section-title {
+  font-family: var(--bod-font-serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--bod-emerald);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .bod-section-title {
+    font-size: 30px;
+  }
+}
+
+.bod-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--bod-muted);
+  background: var(--bod-white);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--bod-border);
+}
+
+.bod-tag-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--bod-gold);
+}
+
+/* ==========================================================================
+   5. EXECUTIVE LEADERSHIP (SPLIT CARDS)
+   ========================================================================== */
+.bod-executive-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-bottom: 64px;
+}
+
+.bod-executive-card {
+  background: var(--bod-white);
+  border-radius: var(--bod-radius-lg);
+  border: 1px solid var(--bod-border);
+  overflow: hidden;
+  box-shadow: var(--bod-shadow-sm);
+  transition: var(--bod-transition);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+  .bod-executive-card {
+    grid-template-columns: 5fr 7fr;
+  }
+
+  .bod-executive-card.reverse {
+    grid-template-columns: 7fr 5fr;
+  }
+
+  .bod-executive-card.reverse .bod-executive-portrait-wrap {
+    order: 2;
+  }
+
+  .bod-executive-card.reverse .bod-executive-info {
+    order: 1;
+  }
+}
+
+.bod-executive-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bod-shadow-lg);
+}
+
+/* Portrait side */
+.bod-executive-portrait-wrap {
+  position: relative;
+  background-color: var(--bod-emerald-deep);
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.bod-executive-portrait {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border-radius: var(--bod-radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+.bod-executive-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.bod-executive-card:hover .bod-executive-portrait img {
+  transform: scale(1.03);
+}
+
+.bod-portrait-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(10, 36, 28, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--bod-gold-light);
+  letter-spacing: 0.1em;
+}
+
+.bod-portrait-badge.right {
+  left: auto;
+  right: 14px;
+}
+
+/* Info side */
+.bod-executive-info {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .bod-executive-info {
+    padding: 40px;
+  }
+}
+
+.bod-role-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.bod-pill-role {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--bod-radius-sm);
+  background-color: var(--bod-emerald-soft);
+  color: var(--bod-emerald);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid rgba(20, 66, 52, 0.15);
+}
+
+.bod-din-label {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--bod-muted);
+  font-weight: 500;
+}
+
+.bod-date-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--bod-gold-dark);
+  background-color: var(--bod-sand);
+  padding: 4px 10px;
+  border-radius: var(--bod-radius-sm);
+}
+
+.bod-executive-name {
+  font-family: var(--bod-font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--bod-emerald);
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .bod-executive-name {
+    font-size: 34px;
+  }
+}
+
+.bod-executive-tagline {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--bod-gold-dark);
+  font-weight: 600;
+  margin: 0 0 18px;
+}
+
+.bod-quote {
+  border-left: 3px solid var(--bod-gold);
+  padding: 10px 16px;
+  font-style: italic;
+  font-family: var(--bod-font-cormorant);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--bod-muted);
+  background: #FAF7F1;
+  border-radius: 0 var(--bod-radius-sm) var(--bod-radius-sm) 0;
+  margin: 0 0 18px;
+}
+
+.bod-bio-text {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #3b4540;
+  margin: 0 0 20px;
+}
+
+.bod-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--bod-border-light);
+}
+
+.bod-cred-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: var(--bod-charcoal);
+  background-color: #F6F4EE;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: 1px solid var(--bod-border-light);
+}
+
+.bod-executive-footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--bod-border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.bod-footer-role {
+  font-weight: 600;
+  color: var(--bod-emerald);
+}
+
+.bod-footer-tenure {
+  font-weight: 600;
+  color: var(--bod-gold-dark);
+}
+
+/* ==========================================================================
+   6. INDEPENDENT & NON-EXECUTIVE DIRECTORS GRID
+   ========================================================================== */
+.bod-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  margin-bottom: 64px;
+}
+
+@media (min-width: 680px) {
+  .bod-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bod-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bod-card {
+  background: var(--bod-white);
+  border-radius: var(--bod-radius-md);
+  border: 1px solid var(--bod-border);
+  overflow: hidden;
+  box-shadow: var(--bod-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--bod-transition);
+}
+
+.bod-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 36px -8px rgba(20, 66, 52, 0.12), 0 6px 14px -4px rgba(197, 160, 89, 0.08);
+}
+
+/* Photo card portrait container */
+.bod-card-photo-wrap {
+  height: 250px;
+  position: relative;
+  background-color: var(--bod-sand);
+  overflow: hidden;
+}
+
+.bod-card-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.bod-card:hover .bod-card-photo-wrap img {
+  transform: scale(1.04);
+}
+
+.bod-card-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 36, 28, 0.75) 100%);
+}
+
+.bod-card-photo-meta {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--bod-white);
+  font-size: 11px;
+}
+
+.bod-card-photo-pill {
+  padding: 3px 10px;
+  border-radius: var(--bod-radius-sm);
+  background: rgba(20, 66, 52, 0.85);
+  backdrop-filter: blur(4px);
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bod-card-photo-exp {
+  color: var(--bod-gold-light);
+  font-weight: 600;
+}
+
+/* Card body */
+.bod-card-body {
+  padding: 24px;
+  flex-grow: 1;
+}
+
+/* Monogram Avatar header */
+.bod-card-avatar-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.bod-card-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: var(--bod-sand);
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--bod-font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--bod-emerald);
+  flex-shrink: 0;
+}
+
+.bod-card-avatar-meta {
+  text-align: right;
+}
+
+.bod-badge-independent {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--bod-radius-sm);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background-color: var(--bod-emerald-soft);
+  color: var(--bod-emerald);
+  border: 1px solid rgba(20, 66, 52, 0.12);
+  margin-bottom: 4px;
+}
+
+.bod-badge-non-ind {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--bod-radius-sm);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background-color: var(--bod-gold-soft);
+  color: var(--bod-gold-dark);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  margin-bottom: 4px;
+}
+
+.bod-card-subtag {
+  display: block;
+  font-size: 10.5px;
+  color: var(--bod-muted);
+  font-weight: 500;
+}
+
+.bod-card-name {
+  font-family: var(--bod-font-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--bod-emerald);
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.bod-card-role-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--bod-muted);
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+.bod-card-bio {
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: #4a544f;
+  margin: 0;
+}
+
+.bod-card-footer {
+  padding: 12px 24px;
+  border-top: 1px solid var(--bod-border-light);
+  font-size: 11px;
+  color: var(--bod-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(250, 248, 245, 0.8);
+}
+
+.bod-card-footer strong {
+  color: var(--bod-emerald);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   7. CORPORATE GOVERNANCE CALLOUT CARD (IN GRID)
+   ========================================================================== */
+.bod-governance-card {
+  border-radius: var(--bod-radius-md);
+  background: linear-gradient(135deg, var(--bod-emerald-deep) 0%, var(--bod-emerald) 60%, var(--bod-emerald-dark) 100%);
+  color: var(--bod-white);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--bod-shadow-md);
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.bod-governance-card::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(197, 160, 89, 0.1);
+  pointer-events: none;
+}
+
+.bod-gov-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(197, 160, 89, 0.18);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bod-gold);
+  margin-bottom: 20px;
+}
+
+.bod-gov-icon-wrap svg {
+  width: 24px;
+  height: 24px;
+}
+
+.bod-gov-title {
+  font-family: var(--bod-font-serif);
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--bod-white);
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+
+.bod-gov-desc {
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+.bod-gov-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--bod-gold-light);
+  text-decoration: none;
+  transition: var(--bod-transition);
+}
+
+.bod-gov-link:hover {
+  color: var(--bod-white);
+}
+
+.bod-gov-link svg {
+  width: 14px;
+  height: 14px;
+  color: var(--bod-gold);
+  transition: transform 0.2s ease;
+}
+
+.bod-gov-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   8. BOARD COMMITTEES MATRIX OVERVIEW SECTION
+   ========================================================================== */
+.bod-matrix-section {
+  background: var(--bod-white);
+  border: 1px solid var(--bod-border);
+  border-radius: var(--bod-radius-lg);
+  padding: 36px 28px;
+  box-shadow: var(--bod-shadow-sm);
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .bod-matrix-section {
+    padding: 44px 40px;
+  }
+}
+
+.bod-matrix-header {
+  margin-bottom: 28px;
+}
+
+.bod-matrix-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .bod-matrix-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bod-committee-box {
+  background: var(--bod-cream);
+  border: 1px solid var(--bod-border);
+  border-radius: var(--bod-radius-md);
+  padding: 22px;
+  transition: var(--bod-transition);
+}
+
+.bod-committee-box:hover {
+  border-color: var(--bod-gold);
+  box-shadow: var(--bod-shadow-sm);
+  background: #FFFDF9;
+}
+
+.bod-committee-box-title {
+  font-family: var(--bod-font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--bod-emerald);
+  margin: 0 0 10px;
+}
+
+.bod-committee-members {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  font-size: 12.5px;
+  color: #3b4540;
+}
+
+.bod-committee-members li {
+  padding: 4px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  border-bottom: 1px dashed var(--bod-border-light);
+}
+
+.bod-committee-members li:last-child {
+  border-bottom: none;
+}
+
+.bod-role-tag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.bod-role-chair {
+  background: var(--bod-gold-soft);
+  color: var(--bod-gold-dark);
+}
+
+.bod-role-member {
+  background: var(--bod-emerald-soft);
+  color: var(--bod-emerald);
+}
+
+.bod-matrix-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--bod-border);
+  margin-top: 16px;
+}
+
+.bod-matrix-cta-text {
+  font-size: 13px;
+  color: var(--bod-muted);
+  margin: 0;
+}
+
+.bod-btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bod-gold);
+  color: var(--bod-emerald-dark);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 10px 22px;
+  border-radius: var(--bod-radius-sm);
+  text-decoration: none;
+  transition: var(--bod-transition);
+}
+
+.bod-btn-gold:hover {
+  background: var(--bod-gold-dark);
+  color: var(--bod-white);
+}
+
+/* ==========================================================================
+   9. ACCESSIBILITY & ANIMATION UTILITIES
+   ========================================================================== */
+.bod-hidden {
+  display: none !important;
+}
+
+.fade-in-entry {
+  animation: bodFadeIn 0.35s ease forwards;
+}
+
+@keyframes bodFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bod-executive-card,
+  .bod-card,
+  .bod-filter-btn,
+  .bod-ticker-pulse {
+    animation: none !important;
+    transition: none !important;
+  }
+}

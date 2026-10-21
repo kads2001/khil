@@ -140,7 +140,7 @@ body.milestone-page {
   font-size: 0.82rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+ 
   transition: all 0.22s ease;
 }
 
@@ -148,7 +148,7 @@ body.milestone-page {
   background: var(--color-plum);
   color: #FFFFFF;
   border-color: var(--color-plum);
-  box-shadow: 0 4px 14px rgba(125, 0, 125, 0.2);
+  
 }
 
 /* ── Main Layout ── */
@@ -182,9 +182,7 @@ body.milestone-page {
   z-index: 0;
 }
 
-.pipeline-glow {
-  filter: drop-shadow(0 2px 8px rgba(125, 0, 125, 0.22));
-}
+
 
 .milestone-rows {
   display: flex;
@@ -243,8 +241,7 @@ body.milestone-page {
   justify-content: center;
   text-align: center;
   align-items: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
               border-color 0.3s ease, 
               box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
@@ -253,27 +250,27 @@ body.milestone-page {
 .timeline-step:hover .milestone-card {
   transform: translateY(-5px);
   border-color: var(--color-gold);
-  box-shadow: 0 10px 24px rgba(184, 148, 90, 0.18);
+  
 }
 
 .milestone-card.card-active {
   border-color: var(--color-plum) !important;
-  box-shadow: 0 6px 22px rgba(125, 0, 125, 0.16) !important;
+
   transform: translateY(-3px);
 }
 
 .milestone-card.card-terminus {
   border-color: var(--color-gold);
-  box-shadow: 0 4px 16px rgba(184, 148, 90, 0.14);
+
 }
 
 .timeline-step:hover .milestone-card.card-terminus {
   border-color: var(--color-plum);
-  box-shadow: 0 10px 26px rgba(125, 0, 125, 0.2);
+ 
 }
 
 .milestone-card.ring-active {
-  box-shadow: 0 0 0 4px var(--color-gold), 0 10px 28px rgba(184, 148, 90, 0.3) !important;
+
   border-color: var(--color-gold) !important;
   transform: translateY(-5px) scale(1.02);
 }
@@ -522,7 +519,7 @@ body.milestone-page {
   border: 1.5px solid var(--color-border);
   border-radius: 14px;
   padding: 16px;
-  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.03);
+ 
   width: 100%;
   max-width: 320px;
   box-sizing: border-box;
@@ -533,8 +530,7 @@ body.milestone-page {
 
 .mobile-card.card-terminus {
   border-color: var(--color-gold);
-  box-shadow: 0 3px 14px rgba(184, 148, 90, 0.12);
-}
+ 
 
 .mobile-title {
   font-size: 15px;
@@ -591,7 +587,7 @@ body.milestone-page {
   border-radius: 50%;
   background: var(--color-plum);
   display: inline-block;
-  box-shadow: 0 0 10px rgba(125, 0, 125, 0.4);
+ 
 }
 
 .footer-badges {
