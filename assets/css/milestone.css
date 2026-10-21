@@ -551,31 +551,28 @@ body.milestone-page {
   margin: 0;
 }
 
-/* ── Footer ── */
-.milestone-footer {
+/* ── Legend Summary Bar ── */
+.milestone-footer,
+.milestone-legend-bar {
   position: relative;
   z-index: 10;
-  border-top: 1px solid var(--color-border);
+  border: 1px solid var(--color-border);
   background: #F7F3ED;
-  padding: 2rem 1rem;
+  padding: 1.25rem 1.5rem;
   margin-top: 3.5rem;
-  text-align: center;
-  font-size: 12.5px;
-  color: var(--color-text-muted);
-}
-
-.milestone-footer .footer-container {
-  max-width: 64rem;
-  margin: 0 auto;
+  border-radius: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  font-size: 12.5px;
+  color: var(--color-text-muted);
 }
 
 @media (min-width: 768px) {
-  .milestone-footer .footer-container {
+  .milestone-footer,
+  .milestone-legend-bar {
     flex-direction: row;
   }
 }

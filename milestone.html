@@ -4,6 +4,16 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Kamat Hotels (India) Ltd - The Legacy Timeline</title>
+   
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+  <!-- Core Icons & Vendor Styles for KHIL Header & Footer -->
+  <link rel="stylesheet preload" href="assets/css/plugins/fontawesome.css" as="style">
+  <link rel="stylesheet preload" href="assets/css/plugins/metismenu.css" as="style">
+  <link rel="stylesheet preload" href="assets/css/vendor/bootstrap.min.css" as="style">
+  <link rel="stylesheet preload" href="assets/css/style.css" as="style">
+  <link rel="stylesheet preload" href="assets/css/khil-header.css" as="style">
+  <link rel="stylesheet preload" href="assets/css/custom.css" as="style">
 
   <!-- Google Fonts: Cormorant Garamond for luxury titles & Outfit for sleek readability -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -13,44 +23,24 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Shared site styles -->
-  <link rel="stylesheet" href="assets/css/plugins/fontawesome.css"/>
-  <link rel="stylesheet" href="assets/css/plugins/metismenu.css"/>
-  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css"/>
-  <link rel="stylesheet" href="assets/css/style.css"/>
-  <link rel="stylesheet" href="assets/css/khil-header.css"/>
-  <link rel="stylesheet" href="assets/css/custom.css"/>
   <!-- Dedicated Timeline Stylesheet (No inline CSS) -->
   <link rel="stylesheet" href="assets/css/milestone.css"/>
 </head>
-<body class="milestone-page">
+<body class="radious-4 demo-default milestone-page">
   <script src="components/header.js"></script>
   <!-- Architectural Background Texture -->
   <div class="hospitality-overlay"></div>
 
   <!-- Header -->
   <header class="milestone-header">
-    <div class="milestone-banner-tag">
-      <span class="arrows">»»»»</span>
-      <span>16 MILESTONES OF EXTRAORDINARY HOSPITALITY</span>
-      <span class="arrows">««««</span>
-    </div>
+    <h2>Our Journey</h2>
 
-    <h1 class="milestone-main-title">The Legacy of Excellence</h1>
-    <p class="milestone-subtitle">
-      Kamat Hotels (India) Limited • Journey from Satkar to Asia's Green Hospitality Leader
-    </p>
+    <h1 class="milestone-main-title">
+Explore the Milestones</h1>
+   
 
     <!-- Quick Jump Bar -->
-    <div class="milestone-nav">
-      <span class="milestone-nav-label">
-        <i class="w-3.5 h-3.5" data-lucide="compass"></i> Eras:
-      </span>
-      <button class="milestone-nav-btn" onclick="scrollToCard(1)">1950s: The Genesis (1-4)</button>
-      <button class="milestone-nav-btn" onclick="scrollToCard(5)">1990s: IPO &amp; Orchid Ecotel (5-8)</button>
-      <button class="milestone-nav-btn" onclick="scrollToCard(9)">2000s: Forts &amp; Foothills (9-12)</button>
-      <button class="milestone-nav-btn" onclick="scrollToCard(13)">2023–2026: IRA Expansion (13-16)</button>
-    </div>
+   
   </header>
 
   <!-- Main Timeline Container -->
@@ -477,25 +467,13 @@
         </div>
       </div>
     </div>
-    <!-- END: RESPONSIVE MOBILE VIEW -->
+    <!-- Legend Summary Bar -->
+ 
   </main>
   <!-- END: InteractiveSnakeTimelineSection -->
 
-  <!-- Legend & Brand Footer -->
-  <footer class="milestone-footer">
-    <div class="footer-container">
-      <div class="footer-brand-title">
-        <span class="footer-dot"></span>
-        <span>16 Decades &amp; Epochs of Pioneering Hospitality</span>
-      </div>
-      <div class="footer-badges">
-        <span class="footer-badge-item"><i data-lucide="leaf"></i> Ecotel Pioneers</span>
-        <span class="footer-badge-item"><i data-lucide="castle"></i> Heritage Preservation</span>
-        <span class="footer-badge-item"><i data-lucide="trending-up"></i> Pan-India Presence</span>
-      </div>
-      <p class="footer-copy">© Kamat Hotels (India) Limited (KHIL). All Rights Reserved.</p>
-    </div>
-  </footer>
+  <!-- Shared KHIL Footer -->
+  <script src="components/footer.js"></script>
 
   <!-- Interactive JavaScript helper -->
   <script data-purpose="timeline-navigation">
@@ -724,7 +702,11 @@ function addSmoothTurn(d, fromX, fromY, toX, toY, side) {
       requestAnimationFrame(smoothRenderLoop);
     })();
   </script>
-  <script src="components/footer.js"></script>
-  <script defer src="assets/js/shared-layout.js"></script>
+
+  <!-- Shared KHIL Layout Scripts -->
+  <script defer src="assets/js/plugins/jquery.js"></script>
+  <script defer src="assets/js/plugins/metismenu.js"></script>
+  <script defer src="assets/js/vendor/bootstrap.min.js"></script>
+  <script defer src="assets/js/shared-layout.js" data-main="true"></script>
 </body>
 </html>
