@@ -1,856 +1,712 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Kamat Hotels (India) Ltd - The Legacy Timeline</title>
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Kamat Hotels (India) Ltd - The Legacy Timeline</title>
-<!-- Tailwind CSS v3 with plugins -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Google Fonts: Cormorant Garamond for luxury titles & Outfit for sleek readability -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Lucide Icons -->
-<script src="https://unpkg.com/lucide@latest"></script>
-<!-- Tailwind Configuration for custom palette mimicking the infographic -->
-<script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              navy: '#0e1d24',
-              tealDark: '#1a333c',
-              slateTeal: '#24454f',
-              accentMint: '#42e2b8',
-              cyanGlass: '#1de9b6',
-              goldOrange: '#e58e38',
-              lightOrange: '#fca34d',
-              warmAmber: '#d97706'
-            }
-          },
-          fontFamily: {
-            serif: ['"Cormorant Garamond"', 'serif'],
-            sans: ['Outfit', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-<!-- BEGIN: Custom Visual Styling -->
-<style data-purpose="custom-theme-effects">
-    /* Subtle background grid and radial vignette reflecting the reference aesthetic */
-    .bg-infographic-pattern {
-      background-color: #172d36;
-      background-image: 
-        radial-gradient(circle at 50% 15%, rgba(66, 226, 184, 0.08) 0%, transparent 60%),
-        radial-gradient(circle at 80% 80%, rgba(229, 142, 56, 0.07) 0%, transparent 50%),
-        linear-gradient(to bottom, #11232b 0%, #172e37 40%, #1a323c 70%, #102128 100%);
-    }
+  <!-- Google Fonts: Cormorant Garamond for luxury titles & Outfit for sleek readability -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
-    /* Ambient noise & architectural overlay */
-    .hospitality-overlay {
-      background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
-      background-size: 24px 24px;
-    }
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-    /* Glow utilities */
-    .glow-orange {
-      box-shadow: 0 0 25px rgba(229, 142, 56, 0.55), inset 0 0 10px rgba(255, 255, 255, 0.4);
-    }
-    .glow-orange-node {
-      filter: drop-shadow(0 0 12px rgba(229, 142, 56, 0.6));
-    }
-    .glow-mint-card {
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    .glow-mint-card:hover {
-      box-shadow: 0 12px 40px -8px rgba(66, 226, 184, 0.35);
-      border-color: rgba(66, 226, 184, 0.7);
-    }
-
-    /* Reference image SVG Snake Path drawing */
-    .pipeline-glow {
-      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.75)) drop-shadow(0 0 16px rgba(66, 226, 184, 0.4));
-    }
-  </style>
-<style data-purpose="animations">
-    @keyframes pulse-subtle {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.06); opacity: 0.9; }
-    }
-    .animate-pulse-node {
-      animation: pulse-subtle 3.5s ease-in-out infinite;
-    }
-
-    /* Strictly square cards with smooth micro-interactions */
-    .milestone-card {
-      aspect-ratio: 1 / 1;
-      transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1), 
-                  border-color 0.35s ease, 
-                  box-shadow 0.35s ease,
-                  background-color 0.35s ease;
-    }
-    .milestone-card.card-active {
-      border-color: rgba(66, 226, 184, 0.95) !important;
-      box-shadow: 0 10px 32px -4px rgba(66, 226, 184, 0.4) !important;
-      background-color: rgba(30, 57, 67, 0.98) !important;
-      transform: translateY(-4px);
-    }
-    .node-circle {
-      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), 
-                  box-shadow 0.35s ease, 
-                  border-color 0.35s ease,
-                  background-color 0.35s ease;
-    }
-    .node-circle.node-active {
-      box-shadow: 0 0 28px rgba(229, 142, 56, 0.9), inset 0 0 12px rgba(255, 255, 255, 0.6) !important;
-      border-color: #fca34d !important;
-      transform: scale(1.12);
-    }
-    .pipeline-glow {
-      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.85)) drop-shadow(0 0 20px rgba(66, 226, 184, 0.5));
-    }
-  </style>
-<!-- END: Custom Visual Styling -->
-<link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
-<link rel="stylesheet" href="assets/css/plugins/metismenu.css">
-<link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/khil-header.css">
-<link rel="stylesheet" href="assets/css/custom.css">
+  <!-- Shared site styles -->
+  <link rel="stylesheet" href="assets/css/plugins/fontawesome.css"/>
+  <link rel="stylesheet" href="assets/css/plugins/metismenu.css"/>
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/khil-header.css"/>
+  <link rel="stylesheet" href="assets/css/custom.css"/>
+  <!-- Dedicated Timeline Stylesheet (No inline CSS) -->
+  <link rel="stylesheet" href="assets/css/milestone.css"/>
 </head>
-<body class="bg-infographic-pattern text-slate-100 font-sans min-h-screen overflow-x-hidden relative selection:bg-brand-accentMint selection:text-brand-navy">
-<script src="components/header.js"></script>
-<!-- Architectural Background Texture -->
-<div class="fixed inset-0 hospitality-overlay pointer-events-none opacity-40 z-0"></div>
-<!-- BEGIN: MainHeader -->
-<header class="relative z-10 pt-10 pb-8 px-4 text-center border-b border-teal-500/20 max-w-7xl mx-auto">
-<!-- Top Infographic Arrows Banner (Direct homage to reference header) -->
-<div class="inline-flex items-center justify-center gap-3 text-brand-goldOrange font-semibold tracking-[0.3em] uppercase text-xs md:text-sm mb-3">
-<span class="tracking-tighter text-base font-black">»»»»</span>
-<span>16 MILESTONES OF EXTRAORDINARY HOSPITALITY</span>
-<span class="tracking-tighter text-base font-black">««««</span>
-</div>
-<!-- Main Title matching reference typography style -->
-<h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl text-slate-100 font-normal tracking-wide leading-tight">
-      The Legacy of Excellence
-    </h1>
-<p class="font-sans text-brand-accentMint/90 tracking-widest text-xs sm:text-sm uppercase font-semibold mt-2">
+<body class="milestone-page">
+  <script src="components/header.js"></script>
+  <!-- Architectural Background Texture -->
+  <div class="hospitality-overlay"></div>
+
+  <!-- Header -->
+  <header class="milestone-header">
+    <div class="milestone-banner-tag">
+      <span class="arrows">»»»»</span>
+      <span>16 MILESTONES OF EXTRAORDINARY HOSPITALITY</span>
+      <span class="arrows">««««</span>
+    </div>
+
+    <h1 class="milestone-main-title">The Legacy of Excellence</h1>
+    <p class="milestone-subtitle">
       Kamat Hotels (India) Limited • Journey from Satkar to Asia's Green Hospitality Leader
     </p>
-<!-- Interactive Navigation / Quick Jump Bar -->
-<div class="mt-8 flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-xs">
-<span class="text-slate-400 font-medium mr-1 flex items-center gap-1">
-<i class="w-3.5 h-3.5 text-brand-goldOrange" data-lucide="compass"></i> Eras:
+
+    <!-- Quick Jump Bar -->
+    <div class="milestone-nav">
+      <span class="milestone-nav-label">
+        <i class="w-3.5 h-3.5" data-lucide="compass"></i> Eras:
       </span>
-<button class="px-3 py-1.5 rounded-full bg-slate-800/80 border border-teal-500/30 text-teal-200 hover:bg-brand-goldOrange hover:text-brand-navy transition duration-200" onclick="scrollToCard(1)">
-        1950s: The Genesis (1-4)
-      </button>
-<button class="px-3 py-1.5 rounded-full bg-slate-800/80 border border-teal-500/30 text-teal-200 hover:bg-brand-goldOrange hover:text-brand-navy transition duration-200" onclick="scrollToCard(5)">
-        1990s: IPO &amp; Orchid Ecotel (5-8)
-      </button>
-<button class="px-3 py-1.5 rounded-full bg-slate-800/80 border border-teal-500/30 text-teal-200 hover:bg-brand-goldOrange hover:text-brand-navy transition duration-200" onclick="scrollToCard(9)">
-        2000s: Forts &amp; Foothills (9-12)
-      </button>
-<button class="px-3 py-1.5 rounded-full bg-slate-800/80 border border-teal-500/30 text-teal-200 hover:bg-brand-goldOrange hover:text-brand-navy transition duration-200" onclick="scrollToCard(13)">
-        2023–2026: IRA Expansion (13-16)
-      </button>
-</div>
-</header>
-<!-- END: MainHeader -->
-<!-- BEGIN: InteractiveSnakeTimelineSection -->
-<!-- BEGIN: InteractiveSnakeTimelineSection -->
-<main class="relative z-10 max-w-[1320px] mx-auto px-4 py-12 sm:px-6 lg:px-8">
-  <!-- DESKTOP SNAKE TIMELINE (Hidden on mobile/tablet, shown on lg+) -->
-  <div class="hidden lg:block relative py-6" id="desktopSnakeContainer">
-    
-    <!-- ================= Dynamic SVG Pipeline Snake Layer ================= -->
-    <svg id="pipelineSvg" class="absolute inset-0 w-full h-full pointer-events-none z-0 pipeline-glow" fill="none">
-      <defs>
-        <linearGradient id="pipeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"></stop>
-          <stop offset="50%" stop-color="#42e2b8" stop-opacity="0.9"></stop>
-          <stop offset="100%" stop-color="#ffffff" stop-opacity="0.95"></stop>
-        </linearGradient>
-      </defs>
-      <!-- Base pipeline guide track -->
-      <path id="trackPath" stroke="rgba(66, 226, 184, 0.22)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
-      <!-- Active animated glowing progress pipeline -->
-      <path id="activeSnakePath" stroke="url(#pipeGradient)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
-      <!-- Dynamic entrance chevrons -->
-      <g id="startChevrons" fill="#e58e38"></g>
-    </svg>
-    <!-- ================= End SVG Pipeline Snake Layer ================= -->
+      <button class="milestone-nav-btn" onclick="scrollToCard(1)">1950s: The Genesis (1-4)</button>
+      <button class="milestone-nav-btn" onclick="scrollToCard(5)">1990s: IPO &amp; Orchid Ecotel (5-8)</button>
+      <button class="milestone-nav-btn" onclick="scrollToCard(9)">2000s: Forts &amp; Foothills (9-12)</button>
+      <button class="milestone-nav-btn" onclick="scrollToCard(13)">2023–2026: IRA Expansion (13-16)</button>
+    </div>
+  </header>
 
-    <!-- ================= 6 SNAKE ROWS (3 items each, Row 6 Centered) ================= -->
-    <div class="space-y-24 relative z-10">
+  <!-- Main Timeline Container -->
+  <main class="milestone-main">
 
-      <!-- ROW 1: 1 → 2 → 3 (L→R) -->
-      <div class="grid grid-cols-3 gap-8 xl:gap-12 items-end relative">
-        <!-- Node 1 -->
-        <div class="flex flex-col items-center group timeline-step" id="step-1" data-step="1">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-teal-300 bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">The Genesis</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">The Beginning</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Late Shri Venkatesh Kamat started Satkar Hotel in Mumbai at Churchgate.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
+    <!-- DESKTOP SNAKE TIMELINE (Hidden on mobile/tablet, shown on lg+) -->
+    <div class="desktop-snake-container" id="desktopSnakeContainer">
+      
+      <!-- Dynamic SVG Pipeline Snake Layer -->
+      <svg id="pipelineSvg" class="pipeline-glow" fill="none">
+        <defs>
+          <linearGradient id="pipeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7d007d"></stop>
+            <stop offset="50%" stop-color="#B89B69"></stop>
+            <stop offset="100%" stop-color="#7d007d"></stop>
+          </linearGradient>
+        </defs>
+        <!-- Base pipeline guide track -->
+        <path id="trackPath" stroke="#E4DDD3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+        <!-- Active animated progress pipeline -->
+        <path id="activeSnakePath" stroke="url(#pipeGradient)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+        <!-- Dynamic entrance chevrons -->
+        <g id="startChevrons" fill="#7d007d"></g>
+      </svg>
+
+      <!-- 6 SNAKE ROWS (3 items each, Row 6 Centered) -->
+      <div class="milestone-rows">
+
+        <!-- ROW 1: 1 → 2 → 3 (L→R) -->
+        <div class="milestone-grid">
+          <!-- Node 1 -->
+          <div class="timeline-step" id="step-1" data-step="1">
+            <div class="milestone-card">
+              <span class="milestone-badge badge-genesis">The Genesis</span>
+              <h3 class="milestone-title">The Beginning</h3>
+              <p class="milestone-desc">Late Shri Venkatesh Kamat started Satkar Hotel in Mumbai at Churchgate.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-1">
+              <div class="node-number">1</div>
+            </div>
           </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-1">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">1</div>
+
+          <!-- Node 2 -->
+          <div class="timeline-step" id="step-2" data-step="2">
+            <div class="milestone-card">
+              <span class="milestone-badge">1970 – 1985</span>
+              <h3 class="milestone-title">Iconic Restaurants</h3>
+              <p class="milestone-desc">Opened various iconic restaurants including Samrat at Churchgate, Status at Nariman Point, Santoor and many more.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-2">
+              <div class="node-number">2</div>
+            </div>
+          </div>
+
+          <!-- Node 3 -->
+          <div class="timeline-step" id="step-3" data-step="3">
+            <div class="milestone-card">
+              <span class="milestone-badge">1986</span>
+              <h3 class="milestone-title">Incorporation of KHIL</h3>
+              <p class="milestone-desc">Kamat Hotels (India) Limited (KHIL) incorporated on 21st March 1986. Opened multi-hotels under Kamat brand at Silvassa, Ankleshwar, Vapi and Goa.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-3">
+              <div class="node-number">3</div>
+            </div>
           </div>
         </div>
+        <!-- END ROW 1 -->
 
-        <!-- Node 2 -->
-        <div class="flex flex-col items-center group timeline-step" id="step-2" data-step="2">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">1970 – 1985</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">Iconic Restaurants</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Opened various iconic restaurants including Samrat at Churchgate, Status at Nariman Point, Santoor and many more.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
+        <!-- ROW 2: 6 ← 5 ← 4 (R→L Snake Return) -->
+        <div class="milestone-grid">
+          <!-- Node 6 (Col 1 on screen) -->
+          <div class="timeline-step" id="step-6" data-step="6">
+            <div class="milestone-card">
+              <span class="milestone-badge">1997</span>
+              <h3 class="milestone-title">Asia's First Ecotel</h3>
+              <p class="milestone-desc">The Orchid Mumbai opened on 27th September 1997, pioneering Asia's first certified Eco-Friendly 5-star hotel.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-6">
+              <div class="node-number">6</div>
+            </div>
           </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-2">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">2</div>
+
+          <!-- Node 5 (Col 2 on screen) -->
+          <div class="timeline-step" id="step-5" data-step="5">
+            <div class="milestone-card">
+              <span class="milestone-badge">1994</span>
+              <h3 class="milestone-title">Public Listing</h3>
+              <p class="milestone-desc">KHIL went public through a successful Initial Public Offering (IPO), fueling national hospitality ambitions.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-5">
+              <div class="node-number">5</div>
+            </div>
+          </div>
+
+          <!-- Node 4 (Col 3 on screen) -->
+          <div class="timeline-step" id="step-4" data-step="4">
+            <div class="milestone-card">
+              <span class="milestone-badge">1990</span>
+              <h3 class="milestone-title">Kamat Plaza &amp; Disco</h3>
+              <p class="milestone-desc">Purchased 4-star property 'Kamat Plaza Hotel' near Mumbai Airport. Upgraded and launched the iconic 'Go Bananas'.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-4">
+              <div class="node-number">4</div>
+            </div>
           </div>
         </div>
+        <!-- END ROW 2 -->
 
-        <!-- Node 3 -->
-        <div class="flex flex-col items-center group timeline-step" id="step-3" data-step="3">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">1986</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">Incorporation of KHIL</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Kamat Hotels (India) Limited (KHIL) incorporated on 21st March 1986. Opened multi-hotels under Kamat brand at Silvassa, Ankleshwar, Vapi and Goa.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
+        <!-- ROW 3: 7 → 8 → 9 (L→R) -->
+        <div class="milestone-grid">
+          <!-- Node 7 -->
+          <div class="timeline-step" id="step-7" data-step="7">
+            <div class="milestone-card">
+              <span class="milestone-badge">1997</span>
+              <h3 class="milestone-title">The Orchid Mumbai</h3>
+              <p class="milestone-desc">Solidified landmark green hospitality status with international sustainable luxury standards.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-7">
+              <div class="node-number">7</div>
+            </div>
           </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-3">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">3</div>
+
+          <!-- Node 8 -->
+          <div class="timeline-step" id="step-8" data-step="8">
+            <div class="milestone-card">
+              <span class="milestone-badge">2007</span>
+              <h3 class="milestone-title">Fort JadhavGADH</h3>
+              <p class="milestone-desc">Opened the first and only heritage fort hotel of Maharashtra, preserving glorious 300-year Maratha history.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-8">
+              <div class="node-number">8</div>
+            </div>
+          </div>
+
+          <!-- Node 9 -->
+          <div class="timeline-step" id="step-9" data-step="9">
+            <div class="milestone-card">
+              <span class="milestone-badge">2007</span>
+              <h3 class="milestone-title">The Orchid Pune</h3>
+              <p class="milestone-desc">Extended The Orchid luxury eco-hospitality brand into Pune with benchmark environmental architecture.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-9">
+              <div class="node-number">9</div>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- END ROW 1 -->
+        <!-- END ROW 3 -->
 
-      <!-- ROW 2: 6 ← 5 ← 4 (R→L Snake Return) -->
-      <div class="grid grid-cols-3 gap-8 xl:gap-12 items-end relative">
-        <!-- Node 6 (Col 1 on screen) -->
-        <div class="flex flex-col items-center group timeline-step" id="step-6" data-step="6">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">1997</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">Asia's First Ecotel</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">The Orchid Mumbai opened on 27th September 1997, pioneering Asia's first certified Eco-Friendly 5-star hotel.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
+        <!-- ROW 4: 12 ← 11 ← 10 (R→L Snake Return) -->
+        <div class="milestone-grid">
+          <!-- Node 12 (Col 1 on screen) -->
+          <div class="timeline-step" id="step-12" data-step="12">
+            <div class="milestone-card">
+              <span class="milestone-badge">2021</span>
+              <h3 class="milestone-title">Himalayan Foothills</h3>
+              <p class="milestone-desc">Opened eco-friendly Ecotel Hotels in Shimla and Manali, bringing sustainable hospitality to the north.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-12">
+              <div class="node-number">12</div>
+            </div>
           </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-6">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">6</div>
+
+          <!-- Node 11 (Col 2 on screen) -->
+          <div class="timeline-step" id="step-11" data-step="11">
+            <div class="milestone-card">
+              <span class="milestone-badge">2020</span>
+              <h3 class="milestone-title">The Orchid Lonavala</h3>
+              <p class="milestone-desc">Launched company's 3rd signature Ecotel hotel nestled in scenic Lonavala hills.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-11">
+              <div class="node-number">11</div>
+            </div>
+          </div>
+
+          <!-- Node 10 (Col 3 on screen) -->
+          <div class="timeline-step" id="step-10" data-step="10">
+            <div class="milestone-card">
+              <span class="milestone-badge">2007 – 2008</span>
+              <h3 class="milestone-title">Balewadi &amp; Eastern Exp.</h3>
+              <p class="milestone-desc">Opened The Orchid Pune Balewadi and expanded into Orissa with Bhubaneswar, Lotus Konark &amp; Mahabodhi Palace.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-10">
+              <div class="node-number">10</div>
+            </div>
           </div>
         </div>
+        <!-- END ROW 4 -->
 
-        <!-- Node 5 (Col 2 on screen) -->
-        <div class="flex flex-col items-center group timeline-step" id="step-5" data-step="5">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">1994</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">Public Listing</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">KHIL went public through a successful Initial Public Offering (IPO), fueling national hospitality ambitions.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
+        <!-- ROW 5: 13 → 14 → 15 (L→R) -->
+        <div class="milestone-grid">
+          <!-- Node 13 -->
+          <div class="timeline-step" id="step-13" data-step="13">
+            <div class="milestone-card">
+              <span class="milestone-badge">2023</span>
+              <h3 class="milestone-title">IRA Launch &amp; Growth</h3>
+              <p class="milestone-desc">Expanded with The Orchid Hotel Jamnagar, and launched 'IRA by Orchid Hotels' in Sambhajinagar, Bhubaneswar, and Nashik.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-13">
+              <div class="node-number">13</div>
+            </div>
           </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-5">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">5</div>
+
+          <!-- Node 14 -->
+          <div class="timeline-step" id="step-14" data-step="14">
+            <div class="milestone-card">
+              <span class="milestone-badge">2024</span>
+              <h3 class="milestone-title">Ayodhya, Noida &amp; Toyam</h3>
+              <p class="milestone-desc">Added IRA by Orchid Hotels in Ayodhya and Noida, along with the luxury brand Toyam by Orchid.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-14">
+              <div class="node-number">14</div>
+            </div>
+          </div>
+
+          <!-- Node 15 -->
+          <div class="timeline-step" id="step-15" data-step="15">
+            <div class="milestone-card">
+              <span class="milestone-badge">2025</span>
+              <h3 class="milestone-title">Multi-City Milestone</h3>
+              <p class="milestone-desc">Opened The Orchid Hotels in Passaros, Chandigarh, Rishikesh, and Panchgani, plus IRA in Hyderabad, Dwarka, and Goa–Porvorim.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem"></div>
+            <div class="node-circle" id="circle-15">
+              <div class="node-number">15</div>
+            </div>
           </div>
         </div>
+        <!-- END ROW 5 -->
 
-        <!-- Node 4 (Col 3 on screen) -->
-        <div class="flex flex-col items-center group timeline-step" id="step-4" data-step="4">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">1990</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">Kamat Plaza &amp; Disco</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Purchased 4-star property 'Kamat Plaza Hotel' near Mumbai Airport. Upgraded and launched the iconic 'Go Bananas'.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
-          </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-4">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">4</div>
+        <!-- ROW 6: 16 Centered (Snake Terminus) -->
+        <div class="milestone-terminus-row">
+          <div class="timeline-step terminus-step" id="step-16" data-step="16">
+            <div class="milestone-card card-terminus">
+              <span class="milestone-badge badge-future">2026 Future</span>
+              <h3 class="milestone-title">Continuing The Legacy</h3>
+              <p class="milestone-desc">Expanded the IRA by Orchid Hotels portfolio with the grand opening of Bhavnagar.</p>
+              <div class="milestone-card-pointer"></div>
+            </div>
+            <div class="milestone-stem stem-terminus"></div>
+            <div class="node-circle terminus-circle" id="circle-16">
+              <div class="node-number">16</div>
+            </div>
           </div>
         </div>
+        <!-- END ROW 6 -->
+
       </div>
-      <!-- END ROW 2 -->
+    </div>
+    <!-- END: DESKTOP SNAKE TIMELINE -->
 
-      <!-- ROW 3: 7 → 8 → 9 (L→R) -->
-      <div class="grid grid-cols-3 gap-8 xl:gap-12 items-end relative">
-        <!-- Node 7 -->
-        <div class="flex flex-col items-center group timeline-step" id="step-7" data-step="7">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">1997</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">The Orchid Mumbai</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Solidified landmark green hospitality status with international sustainable luxury standards.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
-          </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-7">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">7</div>
-          </div>
-        </div>
-
-        <!-- Node 8 -->
-        <div class="flex flex-col items-center group timeline-step" id="step-8" data-step="8">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">2007</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">Fort JadhavGADH</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Opened the first and only heritage fort hotel of Maharashtra, preserving glorious 300-year Maratha history.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
-          </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-8">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">8</div>
-          </div>
-        </div>
-
-        <!-- Node 9 -->
-        <div class="flex flex-col items-center group timeline-step" id="step-9" data-step="9">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">2007</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">The Orchid Pune</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Extended The Orchid luxury eco-hospitality brand into Pune with benchmark environmental architecture.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
-          </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-9">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">9</div>
-          </div>
+    <!-- RESPONSIVE MOBILE / TABLET VIEW (Clean Vertical Timeline) -->
+    <div class="mobile-timeline">
+      <!-- 1 -->
+      <div class="mobile-step">
+        <div class="mobile-node">1</div>
+        <div class="mobile-card">
+          <span class="milestone-badge badge-genesis">The Genesis</span>
+          <h3 class="mobile-title">The Beginning</h3>
+          <p class="mobile-desc">Late Shri Venkatesh Kamat started Satkar Hotel in Mumbai at Churchgate.</p>
         </div>
       </div>
-      <!-- END ROW 3 -->
-
-      <!-- ROW 4: 12 ← 11 ← 10 (R→L Snake Return) -->
-      <div class="grid grid-cols-3 gap-8 xl:gap-12 items-end relative">
-        <!-- Node 12 (Col 1 on screen) -->
-        <div class="flex flex-col items-center group timeline-step" id="step-12" data-step="12">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">2021</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">Himalayan Foothills</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Opened eco-friendly Ecotel Hotels in Shimla and Manali, bringing sustainable hospitality to the north.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
-          </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-12">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">12</div>
-          </div>
-        </div>
-
-        <!-- Node 11 (Col 2 on screen) -->
-        <div class="flex flex-col items-center group timeline-step" id="step-11" data-step="11">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">2020</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">The Orchid Lonavala</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Launched company's 3rd signature Ecotel hotel nestled in scenic Lonavala hills.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
-          </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-11">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">11</div>
-          </div>
-        </div>
-
-        <!-- Node 10 (Col 3 on screen) -->
-        <div class="flex flex-col items-center group timeline-step" id="step-10" data-step="10">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">2007 – 2008</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">Balewadi &amp; Eastern Exp.</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Opened The Orchid Pune Balewadi and expanded into Orissa with Bhubaneswar, Lotus Konark &amp; Mahabodhi Palace.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
-          </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-10">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">10</div>
-          </div>
+      <!-- 2 -->
+      <div class="mobile-step">
+        <div class="mobile-node">2</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">1970 – 1985</span>
+          <h3 class="mobile-title">Iconic Restaurants Expansion</h3>
+          <p class="mobile-desc">Opened various iconic restaurants including Samrat at Churchgate, Status at Nariman Point, Santoor and many more, marking 50 years of excellence.</p>
         </div>
       </div>
-      <!-- END ROW 4 -->
-
-      <!-- ROW 5: 13 → 14 → 15 (L→R) -->
-      <div class="grid grid-cols-3 gap-8 xl:gap-12 items-end relative">
-        <!-- Node 13 -->
-        <div class="flex flex-col items-center group timeline-step" id="step-13" data-step="13">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">2023</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">IRA Launch &amp; Growth</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Expanded with The Orchid Hotel Jamnagar, and launched 'IRA by Orchid Hotels' in Sambhajinagar, Bhubaneswar, and Nashik.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
-          </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-13">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">13</div>
-          </div>
-        </div>
-
-        <!-- Node 14 -->
-        <div class="flex flex-col items-center group timeline-step" id="step-14" data-step="14">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">2024</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">Ayodhya, Noida &amp; Toyam</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Added IRA by Orchid Hotels in Ayodhya and Noida, along with the luxury brand Toyam by Orchid.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
-          </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-14">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">14</div>
-          </div>
-        </div>
-
-        <!-- Node 15 -->
-        <div class="flex flex-col items-center group timeline-step" id="step-15" data-step="15">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#3fe0b5] group-hover:shadow-[0_0_25px_rgba(66,226,184,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-accentMint bg-[#142830] px-2.5 py-0.5 rounded-full border border-teal-500/30 mb-2">2025</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">Multi-City Milestone</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Opened The Orchid Hotels in Passaros, Chandigarh, Rishikesh, and Panchgani, plus IRA in Hyderabad, Dwarka, and Goa–Porvorim.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
-          </div>
-          <div class="w-0.5 h-6 bg-teal-500/40 my-1 transition-colors duration-300 group-hover:bg-[#3fe0b5]"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10" id="circle-15">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">15</div>
-          </div>
+      <!-- 3 -->
+      <div class="mobile-step">
+        <div class="mobile-node">3</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">1986</span>
+          <h3 class="mobile-title">Incorporation of KHIL</h3>
+          <p class="mobile-desc">Kamat Hotels (India) Limited (KHIL) incorporated on 21st March 1986. Opened multi-hotels under Kamat brand at Silvassa, Ankleshwar, Vapi and Goa.</p>
         </div>
       </div>
-      <!-- END ROW 5 -->
-
-      <!-- ROW 6: 16 Centered (Snake Terminus) -->
-      <div class="flex justify-center relative">
-        <div class="flex flex-col items-center group timeline-step w-full max-w-[280px]" id="step-16" data-step="16">
-          <div class="milestone-card relative w-full max-w-[230px] aspect-square mx-auto bg-[#1e3943]/90 border border-brand-goldOrange/70 rounded-2xl p-4 flex flex-col justify-center text-center items-center glow-mint-card ring-1 ring-brand-goldOrange/30 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-brand-goldOrange group-hover:shadow-[0_0_25px_rgba(229,142,56,0.35)]">
-            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-goldOrange bg-[#142830] px-2.5 py-0.5 rounded-full border border-amber-500/30 mb-2">2026 Future</span>
-            <h3 class="font-bold text-white text-sm sm:text-base leading-snug mb-1.5">Continuing The Legacy</h3>
-            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">Expanded the IRA by Orchid Hotels portfolio with the grand opening of Bhavnagar.</p>
-            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-[#1e3943]"></div>
-          </div>
-          <div class="w-0.5 h-6 bg-amber-500/40 my-1 transition-colors duration-300 group-hover:bg-brand-goldOrange"></div>
-          <div class="node-circle relative flex items-center justify-center w-14 h-14 rounded-full border-4 border-brand-goldOrange bg-[#182f37] glow-orange-node transition-all duration-300 group-hover:scale-110 cursor-pointer shadow-lg z-10 ring-4 ring-brand-goldOrange/30 animate-pulse-node" id="circle-16">
-            <div class="w-9 h-9 rounded-full border border-brand-goldOrange/60 flex items-center justify-center font-bold text-lg text-brand-goldOrange font-serif">16</div>
-          </div>
+      <!-- 4 -->
+      <div class="mobile-step">
+        <div class="mobile-node">4</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">1990</span>
+          <h3 class="mobile-title">Kamat Plaza &amp; 'Go Bananas'</h3>
+          <p class="mobile-desc">Purchased 4-star property 'Kamat Plaza Hotel' near Mumbai Domestic Airport. Upgraded to Kamat Plaza and launched the popular disco 'Go Bananas'.</p>
         </div>
       </div>
-      <!-- END ROW 6 -->
+      <!-- 5 -->
+      <div class="mobile-step">
+        <div class="mobile-node">5</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">1994</span>
+          <h3 class="mobile-title">Public Listing</h3>
+          <p class="mobile-desc">KHIL went public through a successful Initial Public Offering (IPO), fueling national hospitality ambitions.</p>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="mobile-step">
+        <div class="mobile-node">6</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">1997</span>
+          <h3 class="mobile-title">Asia's First Ecotel Hotel</h3>
+          <p class="mobile-desc">The Orchid Mumbai opened on 27th September 1997, pioneering Asia's first certified Eco-Friendly 5-star hotel.</p>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="mobile-step">
+        <div class="mobile-node">7</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">1997</span>
+          <h3 class="mobile-title">The Orchid Mumbai</h3>
+          <p class="mobile-desc">Solidified landmark green hospitality status with international sustainable luxury standards.</p>
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="mobile-step">
+        <div class="mobile-node">8</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">2007</span>
+          <h3 class="mobile-title">Heritage: Fort JadhavGADH</h3>
+          <p class="mobile-desc">Opened the first and only heritage fort hotel of Maharashtra, 'Fort JadhavGADH'.</p>
+        </div>
+      </div>
+      <!-- 9 -->
+      <div class="mobile-step">
+        <div class="mobile-node">9</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">2007</span>
+          <h3 class="mobile-title">The Orchid Pune</h3>
+          <p class="mobile-desc">Extended The Orchid luxury eco-hospitality brand into Pune.</p>
+        </div>
+      </div>
+      <!-- 10 -->
+      <div class="mobile-step">
+        <div class="mobile-node">10</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">2007-2008</span>
+          <h3 class="mobile-title">Balewadi &amp; Eastern Expansion</h3>
+          <p class="mobile-desc">Opened The Orchid Pune Balewadi and expanded into Orissa with Bhubaneswar, Lotus Konark &amp; Mahabodhi Palace.</p>
+        </div>
+      </div>
+      <!-- 11 -->
+      <div class="mobile-step">
+        <div class="mobile-node">11</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">2020</span>
+          <h3 class="mobile-title">The Orchid Lonavala</h3>
+          <p class="mobile-desc">Launched company's 3rd signature Ecotel hotel nestled in scenic Lonavala.</p>
+        </div>
+      </div>
+      <!-- 12 -->
+      <div class="mobile-step">
+        <div class="mobile-node">12</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">2021</span>
+          <h3 class="mobile-title">Himalayan Foothills Expansion</h3>
+          <p class="mobile-desc">Opened eco-friendly Ecotel Hotels in Shimla and Manali.</p>
+        </div>
+      </div>
+      <!-- 13 -->
+      <div class="mobile-step">
+        <div class="mobile-node">13</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">2023</span>
+          <h3 class="mobile-title">IRA by Orchid Launch</h3>
+          <p class="mobile-desc">Expanded with The Orchid Hotel Jamnagar, and launched 'IRA by Orchid Hotels' in Sambhajinagar, Bhubaneswar, and Nashik.</p>
+        </div>
+      </div>
+      <!-- 14 -->
+      <div class="mobile-step">
+        <div class="mobile-node">14</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">2024</span>
+          <h3 class="mobile-title">Ayodhya, Noida &amp; Toyam</h3>
+          <p class="mobile-desc">Added IRA by Orchid Hotels in Ayodhya and Noida, along with the luxury brand Toyam by Orchid.</p>
+        </div>
+      </div>
+      <!-- 15 -->
+      <div class="mobile-step">
+        <div class="mobile-node">15</div>
+        <div class="mobile-card">
+          <span class="milestone-badge">2025</span>
+          <h3 class="mobile-title">Multi-City Milestone</h3>
+          <p class="mobile-desc">Opened The Orchid Hotels in Passaros, Chandigarh, Rishikesh, and Panchgani, plus IRA in Hyderabad, Dwarka, and Goa–Porvorim.</p>
+        </div>
+      </div>
+      <!-- 16 -->
+      <div class="mobile-step">
+        <div class="mobile-node">16</div>
+        <div class="mobile-card card-terminus">
+          <span class="milestone-badge badge-future">2026 Future</span>
+          <h3 class="mobile-title">Continuing The Legacy</h3>
+          <p class="mobile-desc">Expanded the IRA by Orchid Hotels portfolio with the grand opening of Bhavnagar.</p>
+        </div>
+      </div>
+    </div>
+    <!-- END: RESPONSIVE MOBILE VIEW -->
+  </main>
+  <!-- END: InteractiveSnakeTimelineSection -->
 
+  <!-- Legend & Brand Footer -->
+  <footer class="milestone-footer">
+    <div class="footer-container">
+      <div class="footer-brand-title">
+        <span class="footer-dot"></span>
+        <span>16 Decades &amp; Epochs of Pioneering Hospitality</span>
+      </div>
+      <div class="footer-badges">
+        <span class="footer-badge-item"><i data-lucide="leaf"></i> Ecotel Pioneers</span>
+        <span class="footer-badge-item"><i data-lucide="castle"></i> Heritage Preservation</span>
+        <span class="footer-badge-item"><i data-lucide="trending-up"></i> Pan-India Presence</span>
+      </div>
+      <p class="footer-copy">© Kamat Hotels (India) Limited (KHIL). All Rights Reserved.</p>
     </div>
-  </div>
-  <!-- END: DESKTOP SNAKE TIMELINE -->
+  </footer>
 
-  <!-- ================= RESPONSIVE MOBILE / TABLET VIEW (Clean Vertical Timeline) ================= -->
-  <div class="block lg:hidden relative pl-6 sm:pl-10 space-y-8 border-l-2 border-brand-accentMint/40 ml-4 sm:ml-8 my-6">
-    <!-- 1 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">1</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">The Genesis</span>
-        <h3 class="text-base font-bold text-white mt-1">The Beginning</h3>
-        <p class="text-xs text-slate-300 mt-1">Late Shri Venkatesh Kamat started Satkar Hotel in Mumbai at Churchgate.</p>
-      </div>
-    </div>
-    <!-- 2 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">2</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">1970 – 1985</span>
-        <h3 class="text-base font-bold text-white mt-1">Iconic Restaurants Expansion</h3>
-        <p class="text-xs text-slate-300 mt-1">Opened various iconic restaurants including Samrat at Churchgate, Status at Nariman Point, Santoor and many more, marking 50 years of excellence.</p>
-      </div>
-    </div>
-    <!-- 3 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">3</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">1986</span>
-        <h3 class="text-base font-bold text-white mt-1">Incorporation of KHIL</h3>
-        <p class="text-xs text-slate-300 mt-1">Kamat Hotels (India) Limited (KHIL) incorporated on 21st March 1986. Opened multi-hotels under Kamat brand at Silvassa, Ankleshwar, Vapi and Goa.</p>
-      </div>
-    </div>
-    <!-- 4 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">4</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">1990</span>
-        <h3 class="text-base font-bold text-white mt-1">Kamat Plaza &amp; 'Go Bananas'</h3>
-        <p class="text-xs text-slate-300 mt-1">Purchased 4-star property 'Kamat Plaza Hotel' near Mumbai Domestic Airport. Upgraded to Kamat Plaza and launched the popular disco 'Go Bananas'.</p>
-      </div>
-    </div>
-    <!-- 5 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">5</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">1994</span>
-        <h3 class="text-base font-bold text-white mt-1">Public Listing</h3>
-        <p class="text-xs text-slate-300 mt-1">KHIL went public through a successful Initial Public Offering (IPO), fueling national hospitality ambitions.</p>
-      </div>
-    </div>
-    <!-- 6 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">6</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">1997</span>
-        <h3 class="text-base font-bold text-white mt-1">Asia's First Ecotel Hotel</h3>
-        <p class="text-xs text-slate-300 mt-1">The Orchid Mumbai opened on 27th September 1997, pioneering Asia's first certified Eco-Friendly 5-star hotel.</p>
-      </div>
-    </div>
-    <!-- 7 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">7</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">1997</span>
-        <h3 class="text-base font-bold text-white mt-1">The Orchid Mumbai</h3>
-        <p class="text-xs text-slate-300 mt-1">Solidified landmark green hospitality status with international sustainable luxury standards.</p>
-      </div>
-    </div>
-    <!-- 8 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">8</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">2007</span>
-        <h3 class="text-base font-bold text-white mt-1">Heritage: Fort JadhavGADH</h3>
-        <p class="text-xs text-slate-300 mt-1">Opened the first and only heritage fort hotel of Maharashtra, 'Fort JadhavGADH'.</p>
-      </div>
-    </div>
-    <!-- 9 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">9</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">2007</span>
-        <h3 class="text-base font-bold text-white mt-1">The Orchid Pune</h3>
-        <p class="text-xs text-slate-300 mt-1">Extended The Orchid luxury eco-hospitality brand into Pune.</p>
-      </div>
-    </div>
-    <!-- 10 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">10</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">2007-2008</span>
-        <h3 class="text-base font-bold text-white mt-1">Balewadi &amp; Eastern Expansion</h3>
-        <p class="text-xs text-slate-300 mt-1">Opened The Orchid Pune Balewadi and expanded into Orissa with Bhubaneswar, Lotus Konark &amp; Mahabodhi Palace.</p>
-      </div>
-    </div>
-    <!-- 11 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">11</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">2020</span>
-        <h3 class="text-base font-bold text-white mt-1">The Orchid Lonavala</h3>
-        <p class="text-xs text-slate-300 mt-1">Launched company's 3rd signature Ecotel hotel nestled in scenic Lonavala.</p>
-      </div>
-    </div>
-    <!-- 12 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">12</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">2021</span>
-        <h3 class="text-base font-bold text-white mt-1">Himalayan Foothills Expansion</h3>
-        <p class="text-xs text-slate-300 mt-1">Opened eco-friendly Ecotel Hotels in Shimla and Manali.</p>
-      </div>
-    </div>
-    <!-- 13 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">13</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">2023</span>
-        <h3 class="text-base font-bold text-white mt-1">IRA by Orchid Launch</h3>
-        <p class="text-xs text-slate-300 mt-1">Expanded with The Orchid Hotel Jamnagar, and launched 'IRA by Orchid Hotels' in Sambhajinagar, Bhubaneswar, and Nashik.</p>
-      </div>
-    </div>
-    <!-- 14 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">14</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">2024</span>
-        <h3 class="text-base font-bold text-white mt-1">Ayodhya, Noida &amp; Toyam</h3>
-        <p class="text-xs text-slate-300 mt-1">Added IRA by Orchid Hotels in Ayodhya and Noida, along with the luxury brand Toyam by Orchid.</p>
-      </div>
-    </div>
-    <!-- 15 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">15</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-[#3fe0b5]/50 rounded-xl p-4 glow-mint-card">
-        <span class="text-[10px] font-bold uppercase text-brand-accentMint bg-[#142830] px-2 py-0.5 rounded border border-teal-500/30">2025</span>
-        <h3 class="text-base font-bold text-white mt-1">Multi-City Milestone</h3>
-        <p class="text-xs text-slate-300 mt-1">Opened The Orchid Hotels in Passaros, Chandigarh, Rishikesh, and Panchgani, plus IRA in Hyderabad, Dwarka, and Goa–Porvorim.</p>
-      </div>
-    </div>
-    <!-- 16 -->
-    <div class="relative group">
-      <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-10 h-10 rounded-full border-2 border-brand-goldOrange bg-[#182f37] flex items-center justify-center glow-orange-node">
-        <span class="font-serif font-bold text-brand-goldOrange text-sm">16</span>
-      </div>
-      <div class="bg-[#1e3943]/90 border border-brand-goldOrange/70 rounded-xl p-4 glow-mint-card ring-1 ring-brand-goldOrange/30">
-        <span class="text-[10px] font-bold uppercase text-brand-goldOrange bg-[#142830] px-2 py-0.5 rounded border border-amber-500/30">2026 Future</span>
-        <h3 class="text-base font-bold text-white mt-1">Continuing The Legacy</h3>
-        <p class="text-xs text-slate-300 mt-1">Expanded the IRA by Orchid Hotels portfolio with the grand opening of Bhavnagar.</p>
-      </div>
-    </div>
-  </div>
-  <!-- END: RESPONSIVE MOBILE VIEW -->
-</main>
-<!-- END: InteractiveSnakeTimelineSection -->
-
-<!-- BEGIN: Interactive Legend & Brand Bar -->
-<section class="relative z-10 border-t border-teal-500/20 bg-[#0e1c22]/90 backdrop-blur py-8 px-4 mt-12 text-center text-xs text-slate-400">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <div class="flex items-center space-x-2">
-      <span class="w-3 h-3 rounded-full bg-brand-goldOrange inline-block glow-orange"></span>
-      <span class="text-slate-300 font-medium">16 Decades &amp; Epochs of Pioneering Hospitality</span>
-    </div>
-    <div class="flex items-center gap-6 text-slate-400">
-      <span class="flex items-center gap-1.5"><i class="w-4 h-4 text-brand-accentMint" data-lucide="leaf"></i> Ecotel Pioneers</span>
-      <span class="flex items-center gap-1.5"><i class="w-4 h-4 text-brand-goldOrange" data-lucide="castle"></i> Heritage Preservation</span>
-      <span class="flex items-center gap-1.5"><i class="w-4 h-4 text-teal-300" data-lucide="trending-up"></i> Pan-India Presence</span>
-    </div>
-    <p class="text-slate-500">© Kamat Hotels (India) Limited (KHIL). All Rights Reserved.</p>
-  </div>
-</section>
-<script src="components/footer.js"></script>
-<!-- END: Interactive Legend & Brand Bar -->
-
-<!-- Interactive JavaScript helper -->
-<script data-purpose="timeline-navigation">
-  // Initialize Lucide Icons
-  if (window.lucide) {
-    lucide.createIcons();
-  }
-
-  // Smooth scroll helper to step cards
-  function scrollToCard(stepNumber) {
-    const el = document.getElementById('step-' + stepNumber);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      const card = el.querySelector('.milestone-card');
-      if (card) {
-        card.classList.add('ring-4', 'ring-brand-goldOrange');
-        setTimeout(() => card.classList.remove('ring-4', 'ring-brand-goldOrange'), 1800);
-      }
-    }
-  }
-
-  // ── Bulletproof Dynamic Pipeline & Smooth Scroll Loop ──
-  (function initSmoothTimeline() {
-    const container = document.getElementById('desktopSnakeContainer');
-    const svg = document.getElementById('pipelineSvg');
-    const trackPath = document.getElementById('trackPath');
-    const activePath = document.getElementById('activeSnakePath');
-    const chevronsG = document.getElementById('startChevrons');
-
-    let totalPathLength = 0;
-    let targetProgress = 0;
-    let currentProgress = 0;
-    let isDrawing = false;
-
-    // Helper: calculate center of any circle element relative to container
-    function getCircleCenter(num) {
-      const el = document.getElementById('circle-' + num);
-      if (!el) return null;
-      const cRect = container.getBoundingClientRect();
-      const r = el.getBoundingClientRect();
-      return {
-        x: r.left + r.width / 2 - cRect.left,
-        y: r.top + r.height / 2 - cRect.top
-      };
+  <!-- Interactive JavaScript helper -->
+  <script data-purpose="timeline-navigation">
+    // Initialize Lucide Icons
+    if (window.lucide) {
+      lucide.createIcons();
     }
 
-    // Generate precision SVG path mathematically passing through every node center
-    function buildDynamicPipeline() {
-      if (!container || !svg || window.innerWidth < 1024) return;
-
-      const cRect = container.getBoundingClientRect();
-      svg.setAttribute('viewBox', `0 0 ${cRect.width} ${cRect.height}`);
-      svg.setAttribute('width', cRect.width);
-      svg.setAttribute('height', cRect.height);
-
-      const pts = {};
-      for (let i = 1; i <= 16; i++) {
-        pts[i] = getCircleCenter(i);
-        if (!pts[i]) return; // wait if DOM is not ready
-      }
-
-      // Column widths for turn radii
-      const rightColOffset = Math.min(90, Math.max(50, (pts[3].x - pts[2].x) * 0.42));
-      const leftColOffset = Math.min(90, Math.max(50, (pts[5].x - pts[6].x) * 0.42));
-      const turnRightX = Math.min(cRect.width - 24, pts[3].x + rightColOffset);
-      const turnLeftX = Math.max(24, pts[6].x - leftColOffset);
-      const startX = Math.max(16, pts[1].x - 110);
-
-      // Path Assembly:
-      // Row 1 (1 -> 2 -> 3)
-      let d = `M ${startX} ${pts[1].y} L ${pts[3].x} ${pts[1].y} `;
-
-      // Turn 1 (Row 1 to Row 2: 3 -> 4)
-      const r1 = (pts[4].y - pts[1].y) / 2;
-      d += `L ${turnRightX} ${pts[1].y} `;
-      d += `C ${turnRightX + r1 * 0.85} ${pts[1].y}, ${turnRightX + r1 * 0.85} ${pts[4].y}, ${turnRightX} ${pts[4].y} `;
-      d += `L ${pts[6].x} ${pts[4].y} `;
-
-      // Turn 2 (Row 2 to Row 3: 6 -> 7)
-      const r2 = (pts[7].y - pts[4].y) / 2;
-      d += `L ${turnLeftX} ${pts[4].y} `;
-      d += `C ${turnLeftX - r2 * 0.85} ${pts[4].y}, ${turnLeftX - r2 * 0.85} ${pts[7].y}, ${turnLeftX} ${pts[7].y} `;
-      d += `L ${pts[9].x} ${pts[7].y} `;
-
-      // Turn 3 (Row 3 to Row 4: 9 -> 10)
-      const r3 = (pts[10].y - pts[7].y) / 2;
-      d += `L ${turnRightX} ${pts[7].y} `;
-      d += `C ${turnRightX + r3 * 0.85} ${pts[7].y}, ${turnRightX + r3 * 0.85} ${pts[10].y}, ${turnRightX} ${pts[10].y} `;
-      d += `L ${pts[12].x} ${pts[10].y} `;
-
-      // Turn 4 (Row 4 to Row 5: 12 -> 13)
-      const r4 = (pts[13].y - pts[10].y) / 2;
-      d += `L ${turnLeftX} ${pts[10].y} `;
-      d += `C ${turnLeftX - r4 * 0.85} ${pts[10].y}, ${turnLeftX - r4 * 0.85} ${pts[13].y}, ${turnLeftX} ${pts[13].y} `;
-      d += `L ${pts[15].x} ${pts[13].y} `;
-
-      // Turn 5 (Row 5 to Row 6: 15 -> 16 centered)
-      const r5 = (pts[16].y - pts[13].y) / 2;
-      d += `L ${turnRightX} ${pts[13].y} `;
-      d += `C ${turnRightX + r5 * 0.75} ${pts[13].y}, ${pts[16].x + 90} ${pts[16].y}, ${pts[16].x} ${pts[16].y} `;
-
-      // Apply to background and active paths
-      trackPath.setAttribute('d', d);
-      activePath.setAttribute('d', d);
-
-      // Render start chevrons before node 1
-      if (chevronsG) {
-        const cy = pts[1].y;
-        chevronsG.innerHTML = `
-          <polygon points="${startX-32},${cy-10} ${startX-20},${cy} ${startX-32},${cy+10} ${startX-26},${cy}"></polygon>
-          <polygon points="${startX-20},${cy-10} ${startX-8},${cy} ${startX-20},${cy+10} ${startX-14},${cy}"></polygon>
-          <polygon points="${startX-8},${cy-10} ${startX+4},${cy} ${startX-8},${cy+10} ${startX-2},${cy}"></polygon>
-        `;
-      }
-
-      // Configure dash properties for drawing
-      totalPathLength = activePath.getTotalLength();
-      activePath.style.strokeDasharray = totalPathLength;
-      activePath.style.strokeDashoffset = totalPathLength * (1 - currentProgress);
-    }
-
-    // Scroll calculation with generous viewport activation window
-    function updateScrollProgress() {
-      if (!container || window.innerWidth < 1024) return;
-      const rect = container.getBoundingClientRect();
-      const vh = window.innerHeight;
-
-      // Starts filling when container top enters lower viewport (80% from top)
-      const startOffset = vh * 0.8;
-      // Finishes filling when container reaches node 16 in view
-      const circle16 = document.getElementById('circle-16');
-      const c16Pos = circle16 ? circle16.getBoundingClientRect().top : rect.bottom;
-      const endOffset = vh * 0.55;
-
-      const totalScrollable = (c16Pos - rect.top) + (startOffset - endOffset);
-      const scrolled = startOffset - rect.top;
-
-      targetProgress = Math.max(0, Math.min(1, scrolled / totalScrollable));
-    }
-
-    // Buttery-smooth lerp physics loop via requestAnimationFrame
-    function smoothRenderLoop() {
-      // Lerp with 0.12 factor provides silky, organic responsiveness
-      currentProgress += (targetProgress - currentProgress) * 0.12;
-
-      if (totalPathLength > 0 && activePath) {
-        const offset = totalPathLength * (1 - currentProgress);
-        activePath.style.strokeDashoffset = offset;
-      }
-
-      // Activate nodes and cards dynamically
-      const vh = window.innerHeight;
-      for (let i = 1; i <= 16; i++) {
-        const step = document.getElementById('step-' + i);
-        const circle = document.getElementById('circle-' + i);
-        if (!step || !circle) continue;
-
-        const card = step.querySelector('.milestone-card');
-        const cr = circle.getBoundingClientRect();
-
-        // Illuminate when circle enters active scroll threshold
-        if (cr.top <= vh * 0.75) {
-          circle.classList.add('node-active');
-          if (card) card.classList.add('card-active');
-        } else {
-          circle.classList.remove('node-active');
-          if (card) card.classList.remove('card-active');
+    // Smooth scroll helper to step cards
+    function scrollToCard(stepNumber) {
+      const el = document.getElementById('step-' + stepNumber);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const card = el.querySelector('.milestone-card');
+        if (card) {
+          card.classList.add('ring-active');
+          setTimeout(() => card.classList.remove('ring-active'), 1800);
         }
       }
-
-      requestAnimationFrame(smoothRenderLoop);
     }
 
-    // Event listeners
-    window.addEventListener('scroll', updateScrollProgress, { passive: true });
-    window.addEventListener('resize', () => {
-      buildDynamicPipeline();
-      updateScrollProgress();
-    });
+    // ── Bulletproof Dynamic Pipeline & Smooth Scroll Loop ──
+    (function initSmoothTimeline() {
+      const container = document.getElementById('desktopSnakeContainer');
+      const svg = document.getElementById('pipelineSvg');
+      const trackPath = document.getElementById('trackPath');
+      const activePath = document.getElementById('activeSnakePath');
+      const chevronsG = document.getElementById('startChevrons');
 
-    // Mobile reveal observer for clean vertical timeline
-    const mobileObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100', 'translate-x-0');
-          entry.target.classList.remove('opacity-0', '-translate-x-4');
+      let totalPathLength = 0;
+      let targetProgress = 0;
+      let currentProgress = 0;
+
+      // Helper: calculate center of any circle element relative to container
+      function getCircleCenter(num) {
+        const el = document.getElementById('circle-' + num);
+        if (!el) return null;
+        const cRect = container.getBoundingClientRect();
+        const r = el.getBoundingClientRect();
+        return {
+          x: r.left + r.width / 2 - cRect.left,
+          y: r.top + r.height / 2 - cRect.top
+        };
+      }
+
+      // Generate precision SVG path mathematically passing through every node center
+      function buildDynamicPipeline() {
+        if (!container || !svg || window.innerWidth < 1024) return;
+
+        const cRect = container.getBoundingClientRect();
+        svg.setAttribute('viewBox', `0 0 ${cRect.width} ${cRect.height}`);
+        svg.setAttribute('width', cRect.width);
+        svg.setAttribute('height', cRect.height);
+
+        const pts = {};
+        for (let i = 1; i <= 16; i++) {
+          pts[i] = getCircleCenter(i);
+          if (!pts[i]) return; // wait if DOM is not ready
         }
-      });
-    }, { threshold: 0.15 });
 
-    document.querySelectorAll('.lg\\:hidden .relative.group').forEach(el => {
-      el.classList.add('transition-all', 'duration-500', 'opacity-0', '-translate-x-4');
-      mobileObserver.observe(el);
-    });
+        // Column widths for turn radii
+        const rightColOffset = Math.min(90, Math.max(50, (pts[3].x - pts[2].x) * 0.42));
+        const leftColOffset = Math.min(90, Math.max(50, (pts[5].x - pts[6].x) * 0.42));
+        const turnRightX = Math.min(cRect.width - 24, pts[3].x + rightColOffset);
+        const turnLeftX = Math.max(24, pts[6].x - leftColOffset);
+        const startX = Math.max(16, pts[1].x - 110);
 
-    // Initialize on load and on font ready
-    window.addEventListener('DOMContentLoaded', () => {
-      buildDynamicPipeline();
-      updateScrollProgress();
-    });
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(() => {
+        // Path Assembly:
+        // Row 1 (1 -> 2 -> 3)
+        let d = `M ${startX} ${pts[1].y} L ${pts[3].x} ${pts[1].y} `;
+
+        // Turn 1 (Row 1 to Row 2: 3 -> 4)
+        const r1 = (pts[4].y - pts[1].y) / 2;
+        d += `L ${turnRightX} ${pts[1].y} `;
+        d += `C ${turnRightX + r1 * 0.85} ${pts[1].y}, ${turnRightX + r1 * 0.85} ${pts[4].y}, ${turnRightX} ${pts[4].y} `;
+        d += `L ${pts[6].x} ${pts[4].y} `;
+
+        // Turn 2 (Row 2 to Row 3: 6 -> 7)
+        const r2 = (pts[7].y - pts[4].y) / 2;
+        d += `L ${turnLeftX} ${pts[4].y} `;
+        d += `C ${turnLeftX - r2 * 0.85} ${pts[4].y}, ${turnLeftX - r2 * 0.85} ${pts[7].y}, ${turnLeftX} ${pts[7].y} `;
+        d += `L ${pts[9].x} ${pts[7].y} `;
+
+        // Turn 3 (Row 3 to Row 4: 9 -> 10)
+        const r3 = (pts[10].y - pts[7].y) / 2;
+        d += `L ${turnRightX} ${pts[7].y} `;
+        d += `C ${turnRightX + r3 * 0.85} ${pts[7].y}, ${turnRightX + r3 * 0.85} ${pts[10].y}, ${turnRightX} ${pts[10].y} `;
+        d += `L ${pts[12].x} ${pts[10].y} `;
+
+        // Turn 4 (Row 4 to Row 5: 12 -> 13)
+        const r4 = (pts[13].y - pts[10].y) / 2;
+        d += `L ${turnLeftX} ${pts[10].y} `;
+        d += `C ${turnLeftX - r4 * 0.85} ${pts[10].y}, ${turnLeftX - r4 * 0.85} ${pts[13].y}, ${turnLeftX} ${pts[13].y} `;
+        d += `L ${pts[15].x} ${pts[13].y} `;
+
+        // Turn 5 (Row 5 to Row 6: 15 -> 16 centered)
+        const r5 = (pts[16].y - pts[13].y) / 2;
+        d += `L ${turnRightX} ${pts[13].y} `;
+        d += `C ${turnRightX + r5 * 0.75} ${pts[13].y}, ${pts[16].x + 90} ${pts[16].y}, ${pts[16].x} ${pts[16].y} `;
+
+        // Apply to background and active paths
+        trackPath.setAttribute('d', d);
+        activePath.setAttribute('d', d);
+
+        // Render start chevrons before node 1
+        if (chevronsG) {
+          const cy = pts[1].y;
+          chevronsG.innerHTML = `
+            <polygon points="${startX-32},${cy-10} ${startX-20},${cy} ${startX-32},${cy+10} ${startX-26},${cy}"></polygon>
+            <polygon points="${startX-20},${cy-10} ${startX-8},${cy} ${startX-20},${cy+10} ${startX-14},${cy}"></polygon>
+            <polygon points="${startX-8},${cy-10} ${startX+4},${cy} ${startX-8},${cy+10} ${startX-2},${cy}"></polygon>
+          `;
+        }
+
+        // Configure dash properties for drawing
+        totalPathLength = activePath.getTotalLength();
+        activePath.style.strokeDasharray = totalPathLength;
+        activePath.style.strokeDashoffset = totalPathLength * (1 - currentProgress);
+      }
+
+      // Scroll calculation with generous viewport activation window
+      function updateScrollProgress() {
+        if (!container || window.innerWidth < 1024) return;
+        const rect = container.getBoundingClientRect();
+        const vh = window.innerHeight;
+
+        // Starts filling when container top enters lower viewport (80% from top)
+        const startOffset = vh * 0.8;
+        // Finishes filling when container reaches node 16 in view
+        const circle16 = document.getElementById('circle-16');
+        const c16Pos = circle16 ? circle16.getBoundingClientRect().top : rect.bottom;
+        const endOffset = vh * 0.55;
+
+        const totalScrollable = (c16Pos - rect.top) + (startOffset - endOffset);
+        const scrolled = startOffset - rect.top;
+
+        targetProgress = Math.max(0, Math.min(1, scrolled / totalScrollable));
+      }
+
+      // Buttery-smooth lerp physics loop via requestAnimationFrame
+      function smoothRenderLoop() {
+        // Lerp with 0.12 factor provides silky, organic responsiveness
+        currentProgress += (targetProgress - currentProgress) * 0.12;
+
+        if (totalPathLength > 0 && activePath) {
+          const offset = totalPathLength * (1 - currentProgress);
+          activePath.style.strokeDashoffset = offset;
+        }
+
+        // Activate nodes and cards dynamically
+        const vh = window.innerHeight;
+        for (let i = 1; i <= 16; i++) {
+          const step = document.getElementById('step-' + i);
+          const circle = document.getElementById('circle-' + i);
+          if (!step || !circle) continue;
+
+          const card = step.querySelector('.milestone-card');
+          const cr = circle.getBoundingClientRect();
+
+          // Illuminate when circle enters active scroll threshold
+          if (cr.top <= vh * 0.75) {
+            circle.classList.add('node-active');
+            if (card) card.classList.add('card-active');
+          } else {
+            circle.classList.remove('node-active');
+            if (card) card.classList.remove('card-active');
+          }
+        }
+
+        requestAnimationFrame(smoothRenderLoop);
+      }
+
+      // Event listeners
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+      window.addEventListener('resize', () => {
         buildDynamicPipeline();
         updateScrollProgress();
       });
-    }
-    setTimeout(buildDynamicPipeline, 100);
-    setTimeout(buildDynamicPipeline, 500);
 
-    // Kick off animation loop
-    requestAnimationFrame(smoothRenderLoop);
-  })();
-</script>
-<script defer src="assets/js/shared-layout.js"></script>
-</body></html>
+      // Mobile reveal observer for clean vertical timeline
+      const mobileObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('mobile-visible');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.mobile-step').forEach(el => {
+        mobileObserver.observe(el);
+      });
+
+      // Initialize on load and on font ready
+      window.addEventListener('DOMContentLoaded', () => {
+        buildDynamicPipeline();
+        updateScrollProgress();
+      });
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => {
+          buildDynamicPipeline();
+          updateScrollProgress();
+        });
+      }
+      setTimeout(buildDynamicPipeline, 100);
+      setTimeout(buildDynamicPipeline, 500);
+
+      // Kick off animation loop
+      requestAnimationFrame(smoothRenderLoop);
+    })();
+  </script>
+  <script src="components/footer.js"></script>
+  <script defer src="assets/js/shared-layout.js"></script>
+</body>
+</html>
