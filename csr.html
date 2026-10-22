@@ -33,7 +33,7 @@
 
     <!-- CSR Initiatives Area Start -->
     <div class="rts-csr-area rts-section-gap">
-        <div class="container">
+        <div class="container csr-stack-container-rel">
             <div class="title-center-wrapper">
                 <span class="csr-eyebrow"><i class="fa-solid fa-hands-holding-heart"></i> Our Association</span>
                 <h1 class="title mt--0">Corporate Social Responsibility</h1>
@@ -44,6 +44,28 @@
                     Please visit their websites for more information and to make a donation.
                 </p>
             </div>
+
+            <!-- Left Logo Sidebar (Positioned outside cards, preserving 100% full original card width) -->
+            <aside class="csr-stack-sidebar-col" id="csrStackSidebar">
+                <div class="csr-stack-sidebar-sticky">
+                    <div class="csr-sidebar-logo-box">
+                        <img id="csrDynamicLogoImg" class="csr-dynamic-logo-img" src="assets/images/csr/logo4.png" alt="Jankibai Shikshan Sanstha Logo">
+                    </div>
+                    <div class="csr-sidebar-counter" aria-label="Active Card Counter">
+                        <span class="csr-counter-active" id="csrCounterActive">01</span>
+                        <span class="csr-counter-sep">/</span>
+                        <span class="csr-counter-total">04</span>
+                    </div>
+                    <div class="csr-sidebar-dots" id="csrSidebarDots">
+                        <span class="csr-dot is-active" data-index="0" title="Jankibai Shikshan Sanstha"></span>
+                        <span class="csr-dot" data-index="1" title="Ashakiran Foundation"></span>
+                        <span class="csr-dot" data-index="2" title="Anath Balakashram"></span>
+                        <span class="csr-dot" data-index="3" title="Ambubai Residential School"></span>
+                    </div>
+                    <div class="csr-sidebar-name" id="csrSidebarOrgName">Jankibai Shikshan Sanstha</div>
+                </div>
+            </aside>
+
             <div class="csr-sticky-wrapper-main mt--60">
                 
                 <!-- Card 1: Jankibai Shikshan Sanstha -->
@@ -251,41 +273,127 @@
     <!-- Card Stacking Interactive Scroll Effect (High-Performance 60/120fps rAF) -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const cards = Array.from(document.querySelectorAll('.csr-card, .csr-card-wrapper'));
+            const cards = Array.from(document.querySelectorAll('.csr-sticky-wrapper-main > .csr-card'));
             if (!cards.length) return;
 
             let isTicking = false;
 
+            // Verified 1-to-1 Institution Data & Logo Mapping
+            const csrInstitutions = [
+                {
+                    name: 'Jankibai Shikshan Sanstha',
+                    logo: 'assets/images/csr/logo4.png', // Hearing-impaired special education emblem
+                    step: '01'
+                },
+                {
+                    name: 'ASHAKIRAN FOUNDATION',
+                    logo: 'assets/images/csr/logo1.png', // Explicitly matches "ASHAKIRAN foundation" logo
+                    step: '02'
+                },
+                {
+                    name: 'ANATH BALAKASHRAM',
+                    logo: 'assets/images/csr/logo2.png', // Explicitly matches "Ashirwad Sevadham Trust Anath Balakashram" logo
+                    step: '03'
+                },
+                {
+                    name: 'Mathoshree Ambubai Residential School',
+                    logo: 'assets/images/csr/logo3.png', // Explicitly matches "Smt. Ambubai School" circular emblem
+                    step: '04'
+                }
+            ];
+            let activeOrgIndex = -1;
+
+            function updateSidebar(newIndex, isStackVisible) {
+                const sidebar = document.getElementById('csrStackSidebar');
+                const logoImg = document.getElementById('csrDynamicLogoImg');
+                const counterActive = document.getElementById('csrCounterActive');
+                const orgNameEl = document.getElementById('csrSidebarOrgName');
+                const dots = document.querySelectorAll('#csrSidebarDots .csr-dot');
+                if (!sidebar || !logoImg) return;
+
+                if (!isStackVisible) {
+                    sidebar.style.opacity = '0';
+                    sidebar.style.pointerEvents = 'none';
+                    return;
+                } else {
+                    sidebar.style.opacity = '1';
+                    sidebar.style.pointerEvents = 'auto';
+                }
+
+                if (newIndex === activeOrgIndex) return;
+                activeOrgIndex = newIndex;
+
+                const data = csrInstitutions[newIndex] || csrInstitutions[0];
+
+                // Smooth micro-fade on logo swap
+                if (logoImg.getAttribute('src') !== data.logo) {
+                    logoImg.classList.add('csr-logo-fade');
+                    setTimeout(() => {
+                        logoImg.src = data.logo;
+                        logoImg.alt = data.name + ' Logo';
+                        logoImg.classList.remove('csr-logo-fade');
+                    }, 160);
+                }
+
+                if (counterActive && counterActive.textContent !== data.step) {
+                    counterActive.textContent = data.step;
+                }
+
+                if (orgNameEl && orgNameEl.textContent !== data.name) {
+                    orgNameEl.textContent = data.name;
+                }
+
+                dots.forEach((dot, idx) => {
+                    dot.classList.toggle('is-active', idx === newIndex);
+                });
+            }
+
             function updateCardStack() {
+                const isMobile = window.innerWidth < 992;
+                let activeIndex = 0;
+                const stickyThreshold = 125;
+
                 cards.forEach((card, index) => {
+                    const rect = card.getBoundingClientRect();
+                    if (rect.top <= stickyThreshold) {
+                        activeIndex = index;
+                    }
+
+                    if (isMobile) return; // Flat cards on mobile
+
                     const inner = card.querySelector('.csr-card-inner, .inner');
                     if (!inner) return;
 
                     let targetScale = 1;
                     let targetBrightness = 1;
 
-                    // Compute progressive depth based on all subsequent covering cards
+                    // Subtle progressive depth as subsequent covering cards arrive
                     for (let j = index + 1; j < cards.length; j++) {
                         const nextCard = cards[j];
-                        const cardRect = card.getBoundingClientRect();
                         const nextRect = nextCard.getBoundingClientRect();
 
-                        const totalTravel = Math.max(1, cardRect.bottom - (cardRect.top + 25));
-                        const currentOverlap = Math.max(0, cardRect.bottom - nextRect.top);
+                        const totalTravel = Math.max(1, rect.height || 420);
+                        const currentOverlap = Math.max(0, (rect.top + totalTravel) - nextRect.top);
                         const progress = Math.min(1, Math.max(0, currentOverlap / totalTravel));
 
                         if (progress > 0) {
-                            targetScale -= progress * 0.045;
-                            targetBrightness -= progress * 0.14;
+                            targetScale -= progress * 0.015;     // Ultra-subtle scale down to 0.97 max (no width distortion)
+                            targetBrightness -= progress * 0.06; // Gentle contrast reduction
                         }
                     }
 
-                    targetScale = Math.max(0.86, targetScale);
-                    targetBrightness = Math.max(0.65, targetBrightness);
+                    targetScale = Math.max(0.97, targetScale);
+                    targetBrightness = Math.max(0.86, targetBrightness);
 
                     inner.style.transform = `scale3d(${targetScale.toFixed(4)}, ${targetScale.toFixed(4)}, 1)`;
                     inner.style.filter = `brightness(${targetBrightness.toFixed(3)})`;
                 });
+
+                const firstCardRect = cards[0].getBoundingClientRect();
+                const lastCardRect = cards[cards.length - 1].getBoundingClientRect();
+                const isStackVisible = firstCardRect.top <= 400 && lastCardRect.bottom >= 80;
+
+                updateSidebar(activeIndex, isStackVisible);
 
                 isTicking = false;
             }
@@ -300,7 +408,7 @@
             window.addEventListener('scroll', requestUpdate, { passive: true });
             window.addEventListener('resize', requestUpdate);
             
-            // Initial calculation
+            // Initial sync
             updateCardStack();
         });
 
