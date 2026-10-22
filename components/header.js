@@ -136,21 +136,6 @@
                     <li class="main-nav has-dropdown mega-menu">
                         <a href="#">Investors</a>
                         <div class="khil-mega-dropdown">
-                            <!-- Top Investor Bar: Pulse Status & Instant Search -->
-                            <div class="investor-top-bar">
-                                <div class="investor-status-info">
-                                    <span class="live-pulse-dot"></span>
-                                    <span class="portal-title-tag">KHIL Investor Relations</span>
-                                    <span class="stock-ticker-pill">BSE: <strong>526668</strong></span>
-                                    <span class="stock-ticker-pill">NSE: <strong>KAMATHOTEL</strong></span>
-                                    <span class="stock-ticker-pill d-none d-xxl-inline">ISIN: <strong>INE967C01018</strong></span>
-                                </div>
-                                <div class="investor-search-box">
-                                    <i class="fa-regular fa-magnifying-glass"></i>
-                                    <input type="text" id="investorSearchInput" placeholder="Quick find filings (e.g. AGM, Results, Secretarial)...">
-                                </div>
-                            </div>
-
                             <div class="row g-3 g-xl-4" id="investorMegaGrid">
                                 <!-- Column 1: Financials & Shareholding -->
                                 <div class="col-lg-3">
@@ -278,18 +263,6 @@
                                             <li><a href="others.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Others</span></a></li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Mega Menu Bottom Bar -->
-                            <div class="mega-menu-bottom-bar">
-                                <div class="bottom-info">
-                                    <span class="badge-tag">CIN: L55101MH1986PLC039307</span>
-                                    <span class="text">Head Office: 70-C, Nehru Road, Vile Parle (East), Mumbai 400099</span>
-                                </div>
-                                <div class="bottom-links">
-                                    <a href="investor-contact.html" class="quick-link"><i class="fa-regular fa-envelope"></i> Investor Relations</a>
-                                    <a href="investor-grievance.html" class="quick-link redressal"><i class="fa-regular fa-shield-check"></i> Grievance Redressal</a>
                                 </div>
                             </div>
                         </div>
