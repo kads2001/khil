@@ -104,7 +104,7 @@ body.home-three-page .loader-brand {
   font-weight: 700;
   letter-spacing: 0;
   color: #000;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   position: relative;
   text-align: center;
 }
@@ -227,13 +227,13 @@ body.radious-4 .rts-banner-area-three .rts-banner-content-three .button-group {
 } */
 
 body.radious-4 .rts-banner-area-three .khil-hero-btn.primary:hover {
-  background: #000;
-  border-color: #000;
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
+  filter: brightness(1.18);
   color: #fff !important;
 }
 
 body.radious-4 .rts-banner-area-three .khil-hero-btn.primary:hover > i:last-child {
-  background: #1236cc;
+  background: rgba(255, 255, 255, 0.3) !important;
 }
 
 body.home-three-page .rts-banner-area-three .khil-hero-btn.secondary {

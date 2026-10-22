@@ -43,10 +43,6 @@
 
 ==============================================  */
 /* Default  */
-@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
-
 :root {
   --color-primary: #7d007d;
   --color-secondary: #252525;
@@ -89,11 +85,16 @@
   --s-extra-bold: 800;
   --s-black: 900;
   --transition: 0.3s;
-  --font-primary: "Inter Tight", sans-serif;
-  --font-secondary: "Inter", sans-serif;
+    --khil-font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --khil-font-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-medium: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-secondary: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-3: "fontawesome";
-  --font-4: "Onest", sans-serif;
-  --font-5: "Syne", sans-serif;
+  --font-4: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-5: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-size-b1: 16px;
   --font-size-b2: 16px;
   --font-size-b3: 22px;
@@ -107,6 +108,27 @@
   --h5: 24px;
   --h6: 18px;
 }
+
+/* ==========================================================================
+   GLOBAL SYSTEM FONT ENFORCEMENT
+   ========================================================================== */
+html, body, button, input, select, textarea, optgroup {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+p, span, a, li, ul, ol, blockquote, label, small, b, strong, em, td, th {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Preserve Font Awesome & icon glyphs */
+.fa, .fas, .far, .fab, .fal, .fad, .fat, .fa-solid, .fa-regular, .fa-brands,
+[class^="fa-"], [class*=" fa-"], [class^="unicons-"], [class*=" unicons-"],
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "Font Awesome 6 Pro", "Font Awesome 6 Free", "fontawesome", unicons !important;
+}
+
 
 * {
   box-sizing: border-box;
@@ -126,7 +148,7 @@ body {
   line-height: var(--line-height-b1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Inter Tight", sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: var(--color-body);
   font-weight: var(--p-regular);
   position: relative;
@@ -202,7 +224,7 @@ h6,
 .h5,
 .h6 {
   word-break: break-word;
-  font-family: "Inter Tight", sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.4074;
   color: var(--color-heading-1);
 }
@@ -467,7 +489,7 @@ cite,
 }
 
 var {
-  font-family: "Inter Tight", sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /*---------------------------
@@ -776,7 +798,7 @@ ins {
 }
 
 pre {
-  font-family: "Raleway", sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: var(--font-size-b3);
   margin: 10px 0;
   overflow: auto;
@@ -15968,7 +15990,7 @@ a.btn-line:hover::after {
 }
 
 .about-content-style-one .quote-and-review-area .quote-area p.quote {
-  font-family: "Inter";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: italic;
   font-weight: 500;
   font-size: 16px;
@@ -27859,3 +27881,271 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 }
 
 /*# sourceMappingURL=../maps/style.css.map */
+
+/* ==========================================================================
+   UNIFIED SUB-HEADING TYPOGRAPHY SPECIFICATION (Same Font Size & Weight)
+   ========================================================================== */
+
+/* 1. All Section Sub-Headings / Subtitle Descriptions (Exact Same 15px & 400 Weight) */
+.khil-about-subdesc,
+.khil-bento-desc,
+.khil-gallery-desc,
+.khil-blog-desc,
+.contact-subtitle,
+.section-subheading,
+.section-subtitle,
+.sub-heading-desc,
+.subdesc,
+.bod-hero-desc,
+.cob-hero-desc,
+.dir-hero-desc,
+.milestone-desc,
+.rts-banner-content-three .disc {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  color: #64748b !important;
+  letter-spacing: normal !important;
+}
+
+/* 2. All Card & Content Block Sub-Headings (H3) (Exact Same 20px & 700 Weight) */
+h3,
+.h3,
+.bento-card-title,
+.khil-blog-card-title,
+.contact-card-item h3,
+.contact-info-card h3,
+.sub-heading,
+.subheading,
+.sub-heading-title,
+.card-sub-title,
+.card-subheading {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #111827 !important;
+}
+
+/* 3. All Eyebrow / Pill Badge Sub-Headings (Exact Same 12px & 600 Weight) */
+.khil-about-pill-badge,
+.khil-bento-pill,
+.khil-blog-pill,
+.khil-gallery-status,
+.pre-badge,
+.pre-title,
+.section-pill-badge {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* Responsive Sub-heading Harmonization */
+@media only screen and (max-width: 767px) {
+  .khil-about-subdesc,
+  .khil-bento-desc,
+  .khil-gallery-desc,
+  .khil-blog-desc,
+  .contact-subtitle,
+  .section-subheading,
+  .section-subtitle,
+  .bod-hero-desc,
+  .cob-hero-desc,
+  .dir-hero-desc,
+  .milestone-desc,
+  .rts-banner-content-three .disc {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  h3,
+  .h3,
+  .bento-card-title,
+  .khil-blog-card-title,
+  .contact-card-item h3,
+  .sub-heading,
+  .subheading {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+  }
+
+  .khil-about-pill-badge,
+  .khil-bento-pill,
+  .khil-blog-pill,
+  .khil-gallery-status,
+  .pre-badge,
+  .pre-title {
+    font-size: 11.5px !important;
+  }
+}
+
+
+/* ==========================================================================
+   GLOBAL BUTTON GRADIENT OVERRIDE
+   ========================================================================== */
+.rts-btn.btn-primary,
+.btn-primary,
+.btn-secondary,
+.custom-submit-btn,
+button[type="submit"],
+input[type="submit"],
+button.btn,
+a.btn {
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+.rts-btn.btn-primary::after,
+.rts-btn.btn-primary:hover::after {
+  display: none !important;
+}
+
+
+/* ==========================================================================
+   UNIFIED BUTTON SIZE & SHAPE SPECIFICATION (Exact Same Height & Width)
+   ========================================================================== */
+.btn-book-now,
+.btn-employer-login,
+.khil-hero-btn,
+.khil-hero-btn.primary,
+.khil-hero-btn.secondary,
+.khil-about-btn-primary,
+.khil-bento-btn-primary,
+.khil-blog-view-all,
+.custom-submit-btn,
+button[type="submit"],
+input[type="submit"],
+.rts-btn.btn-primary,
+.rts-btn,
+.careers-button,
+.careers-job-btn,
+.search-btn,
+.csr-btn-donate,
+.csr-btn-read-more,
+.bod-member-btn,
+.btn-primary,
+.btn-secondary,
+.khil-btn {
+  width: 200px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  max-height: 48px !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(160, 10, 168, 0.22);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+/* Ensure all text and icons inside buttons are white */
+.btn-book-now *,
+.btn-employer-login *,
+.khil-hero-btn *,
+.khil-about-btn-primary *,
+.khil-bento-btn-primary *,
+.khil-blog-view-all *,
+.custom-submit-btn *,
+button[type="submit"] *,
+input[type="submit"] *,
+.rts-btn *,
+.careers-button *,
+.careers-job-btn *,
+.search-btn *,
+.csr-btn-donate *,
+.csr-btn-read-more *,
+.bod-member-btn *,
+.btn-primary * {
+  color: #ffffff !important;
+}
+
+/* Inner circle icon adjustments */
+.khil-hero-btn > i:last-child,
+.khil-hero-btn.primary > i:last-child {
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  margin-left: 8px !important;
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+  font-size: 11px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.btn-book-now i,
+.btn-employer-login i {
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  font-size: 11px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  margin-right: 6px !important;
+}
+
+.khil-about-btn-primary i,
+.khil-bento-btn-primary i,
+.khil-blog-view-all i {
+  margin-left: 6px !important;
+  font-size: 12px !important;
+  color: #ffffff !important;
+}
+
+/* Button Hover State */
+.btn-book-now:hover,
+.btn-employer-login:hover,
+.khil-hero-btn:hover,
+.khil-hero-btn.primary:hover,
+.khil-hero-btn.secondary:hover,
+.khil-about-btn-primary:hover,
+.khil-bento-btn-primary:hover,
+.khil-blog-view-all:hover,
+.custom-submit-btn:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover,
+.rts-btn:hover,
+.careers-button:hover,
+.careers-job-btn:hover,
+.search-btn:hover,
+.csr-btn-donate:hover,
+.csr-btn-read-more:hover,
+.bod-member-btn:hover,
+.btn-primary:hover {
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
+  filter: brightness(1.18);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(160, 10, 168, 0.40) !important;
+  color: #ffffff !important;
+}
+
+/* Mobile header book button adjustment */
+@media only screen and (max-width: 575px) {
+  .header-action-buttons .btn-book-now {
+    width: 145px !important;
+    min-width: 145px !important;
+    max-width: 145px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
+    font-size: 12px !important;
+  }
+}

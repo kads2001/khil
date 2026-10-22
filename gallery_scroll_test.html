@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Auto & Scroll Test</title>
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            color: #111827;
+            overflow-x: hidden;
+        }
+
+        .khil-gallery-section {
+            position: relative;
+            background: #ffffff;
+            padding: 85px 0 100px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .khil-gallery-container {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .khil-gallery-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 36px;
+            margin-bottom: 45px;
+            flex-wrap: wrap;
+        }
+
+        .khil-gallery-title {
+            font-size: clamp(34px, 4vw, 48px);
+            font-weight: 400;
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            color: #111827;
+            margin: 0;
+            max-width: 580px;
+        }
+
+        .khil-gallery-header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 390px;
+            padding-bottom: 6px;
+        }
+
+        .khil-gallery-desc {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #64748b;
+            margin: 0 0 12px;
+            font-weight: 400;
+        }
+
+        .khil-gallery-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #111827;
+        }
+
+        .khil-gallery-status .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #0284c7;
+        }
+
+        .khil-gallery-viewport {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            overflow: hidden;
+            padding: 30px 0 45px;
+            cursor: grab;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .khil-gallery-viewport:active {
+            cursor: grabbing;
+        }
+
+        .khil-gallery-track {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            width: max-content;
+            will-change: transform;
+            padding: 0 35vw;
+            transition: transform 0.08s linear;
+        }
+
+        .khil-gallery-card {
+            position: relative;
+            border-radius: 26px;
+            overflow: hidden;
+            background: #f1f5f9;
+            box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+            flex-shrink: 0;
+            will-change: width, height, transform;
+            transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                        width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.35s ease;
+            width: 350px;
+            height: 350px;
+        }
+
+        .khil-gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            pointer-events: none;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .khil-gallery-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .khil-gallery-card.is-center {
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.16);
+        }
+
+        .gallery-tag-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 7px 16px;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 999px;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .khil-gallery-card.is-center .gallery-tag-overlay,
+        .khil-gallery-card:hover .gallery-tag-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="khil-gallery-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="khil-gallery-container">
+            <div class="khil-gallery-header">
+                <h2 class="khil-gallery-title" id="gallery-title">
+                    Hospitality to elevate your<br>journey forward
+                </h2>
+                <div class="khil-gallery-header-right">
+                    <p class="khil-gallery-desc">
+                        Curating iconic eco-conscious luxury, historic fortresses, and royal heritage beach retreats across India.
+                    </p>
+                    <div class="khil-gallery-status">
+                        <span class="status-dot"></span>
+                        <span>exploring five signature hotel brands</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="khil-gallery-viewport" id="galleryViewport">
+            <div class="khil-gallery-track" id="galleryTrack">
+
+                <div class="khil-gallery-card" data-title="The Orchid Hotel, Mumbai">
+                    <img src="assets/img/orchidmumbai.jpg" alt="The Orchid Hotel, Mumbai" loading="lazy">
+                    <span class="gallery-tag-overlay">The Orchid Hotel, Mumbai</span>
+                </div>
+
+                <div class="khil-gallery-card" data-title="Fort JadhavGADH, Pune">
+                    <img src="assets/img/img-4.webp" alt="Fort JadhavGADH, Pune" loading="lazy">
+                    <span class="gallery-tag-overlay">Fort JadhavGADH, Pune</span>
+                </div>
+
+                <div class="khil-gallery-card" data-title="Mahodadhi Palace, Puri">
+                    <img src="assets/img/mahadodhi.jpg" alt="Mahodadhi Palace, Puri" loading="lazy">
+                    <span class="gallery-tag-overlay">Mahodadhi Palace, Puri</span>
+                </div>
+
+                <div class="khil-gallery-card" data-title="Lotus Eco Resort, Konark">
+                    <img src="assets/img/about07.jpeg" alt="Lotus Eco Resort, Konark" loading="lazy">
+                    <span class="gallery-tag-overlay">Lotus Eco Resort, Konark</span>
+                </div>
+
+                <div class="khil-gallery-card" data-title="Toyam by Orchid, Pune">
+                    <img src="assets/img/toyambanner.jpg" alt="Toyam by Orchid, Pune" loading="lazy">
+                    <span class="gallery-tag-overlay">Toyam by Orchid, Pune</span>
+                </div>
+
+                <div class="khil-gallery-card" data-title="IRA by Orchid Hotels">
+                    <img src="assets/images/blogs/image copy 5.png" alt="IRA by Orchid Hotels" loading="lazy">
+                    <span class="gallery-tag-overlay">IRA by Orchid Hotels</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/gallery-scroll.js"></script>
+</body>
+</html>

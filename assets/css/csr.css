@@ -76,7 +76,7 @@ body.csr-page {
 }
 
 .title-center-wrapper .title {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: clamp(32px, 3.8vw, 46px);
   font-weight: 700;
   line-height: 1.25;
@@ -88,7 +88,7 @@ body.csr-page {
 .csr-subheading,
 .title-center-wrapper .csr-subheading,
 .title-center-wrapper h2.csr-subheading {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: clamp(18px, 2vw, 22px);
   font-weight: 600;
   color: #000000 !important;
@@ -213,7 +213,7 @@ body.csr-page {
 .csr-card-content .csr-card-title,
 .csr-card-wrapper .left-content .title {
   color: #000000 !important;
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: clamp(24px, 2.4vw, 32px);
   line-height: 1.25;
   font-weight: 700;
@@ -680,7 +680,7 @@ body.csr-page {
 }
 
 .csr-foundation-title {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: clamp(26px, 2.6vw, 36px);
   font-weight: 700;
   line-height: 1.25;
@@ -786,7 +786,7 @@ body.csr-page {
 
 .csr-gallery-pretitle {
   display: block;
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 13.5px;
   font-weight: 700;
   text-transform: uppercase;
@@ -798,7 +798,7 @@ body.csr-page {
 }
 
 .csr-gallery-title {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: clamp(32px, 3.6vw, 44px);
   font-weight: 700;
   line-height: 1.2;

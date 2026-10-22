@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Gallery Test</title>
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            color: #111827;
+            overflow-x: hidden;
+        }
+
+        .spacer-top {
+            height: 35vh;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 15px;
+        }
+
+        /* ==========================================================================
+           KHIL ULTRA-SMOOTH GALLERY
+           ========================================================================== */
+        .khil-gallery-section {
+            position: relative;
+            background: #ffffff;
+            padding: 85px 0 100px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .khil-gallery-container {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .khil-gallery-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 36px;
+            margin-bottom: 45px;
+            flex-wrap: wrap;
+        }
+
+        .khil-gallery-title {
+            font-size: clamp(34px, 4vw, 48px);
+            font-weight: 400;
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            color: #111827;
+            margin: 0;
+            max-width: 580px;
+        }
+
+        .khil-gallery-header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 390px;
+            padding-bottom: 6px;
+        }
+
+        .khil-gallery-desc {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #64748b;
+            margin: 0 0 12px;
+            font-weight: 400;
+        }
+
+        .khil-gallery-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #111827;
+        }
+
+        .khil-gallery-status .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #0284c7;
+        }
+
+        /* Gallery Viewport */
+        .khil-gallery-viewport {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            overflow: hidden;
+            padding: 20px 0;
+            cursor: grab;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .khil-gallery-viewport:active {
+            cursor: grabbing;
+        }
+
+        .khil-gallery-track {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            will-change: transform;
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* Card Slot (Fixed size to prevent any layout reflow) */
+        .khil-gallery-card {
+            flex-shrink: 0;
+            width: 420px;
+            height: 540px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 16px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Inner Card Container (Smoothly scaled via GPU transform) */
+        .gallery-card-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 26px;
+            overflow: hidden;
+            position: relative;
+            background: #f1f5f9;
+            box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+            transform-origin: center center;
+            will-change: transform, box-shadow;
+            transition: box-shadow 0.25s ease;
+        }
+
+        .gallery-card-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            pointer-events: none;
+        }
+
+        .khil-gallery-card.is-center .gallery-card-inner {
+            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.18);
+        }
+
+        /* Floating property tag */
+        .gallery-tag-overlay {
+            position: absolute;
+            bottom: 22px;
+            left: 22px;
+            padding: 7px 16px;
+            background: rgba(15, 23, 42, 0.78);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 999px;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all 0.25s ease;
+            pointer-events: none;
+        }
+
+        .khil-gallery-card.is-center .gallery-tag-overlay,
+        .khil-gallery-card:hover .gallery-tag-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .spacer-bottom {
+            height: 40vh;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="spacer-top">Scroll down to see the smooth right-to-left glide and center scaling</div>
+
+    <section class="khil-gallery-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="khil-gallery-container">
+            <div class="khil-gallery-header">
+                <h2 class="khil-gallery-title" id="gallery-title">
+                    Hospitality to elevate your<br>journey forward
+                </h2>
+                <div class="khil-gallery-header-right">
+                    <p class="khil-gallery-desc">
+                        Curating iconic eco-conscious luxury, historic fortresses, and royal heritage beach retreats across India.
+                    </p>
+                    <div class="khil-gallery-status">
+                        <span class="status-dot"></span>
+                        <span>exploring five signature hotel brands</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="khil-gallery-viewport" id="galleryViewport">
+            <div class="khil-gallery-track" id="galleryTrack">
+
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/img/orchidmumbai.jpg" alt="The Orchid Hotel, Mumbai" loading="lazy">
+                        <span class="gallery-tag-overlay">The Orchid Hotel, Mumbai</span>
+                    </div>
+                </div>
+
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/img/img-4.webp" alt="Fort JadhavGADH, Pune" loading="lazy" style="object-position: center top;">
+                        <span class="gallery-tag-overlay">Fort JadhavGADH, Pune</span>
+                    </div>
+                </div>
+
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/img/mahadodhi.jpg" alt="Mahodadhi Palace, Puri" loading="lazy">
+                        <span class="gallery-tag-overlay">Mahodadhi Palace, Puri</span>
+                    </div>
+                </div>
+
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/img/about07.jpeg" alt="Lotus Eco Resort, Konark" loading="lazy">
+                        <span class="gallery-tag-overlay">Lotus Eco Resort, Konark</span>
+                    </div>
+                </div>
+
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/img/toyambanner.jpg" alt="Toyam by Orchid, Pune" loading="lazy">
+                        <span class="gallery-tag-overlay">Toyam by Orchid, Pune</span>
+                    </div>
+                </div>
+
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/images/blogs/image copy 5.png" alt="IRA by Orchid Hotels" loading="lazy">
+                        <span class="gallery-tag-overlay">IRA by Orchid Hotels</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="spacer-bottom">Bottom spacer</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const viewport = document.getElementById('galleryViewport');
+            const track = document.getElementById('galleryTrack');
+            const section = document.getElementById('gallery');
+            if (!viewport || !track || !section) return;
+
+            // Clone set twice to ensure an infinite seamless loop in both directions
+            const originalCards = Array.from(track.querySelectorAll('.khil-gallery-card'));
+            const numOriginal = originalCards.length;
+            
+            // Clone set 1
+            originalCards.forEach(c => track.appendChild(c.cloneNode(true)));
+            // Clone set 2
+            originalCards.forEach(c => track.appendChild(c.cloneNode(true)));
+
+            const allCards = Array.from(track.querySelectorAll('.khil-gallery-card'));
+            const allInners = Array.from(track.querySelectorAll('.gallery-card-inner'));
+
+            let cardCenters = [];
+            let loopWidth = 0;
+
+            function measure() {
+                const cardWidth = allCards[0].offsetWidth;
+                loopWidth = cardWidth * numOriginal; // Exact repeat distance
+                cardCenters = allCards.map((c, idx) => (idx + 0.5) * cardWidth);
+            }
+            measure();
+            window.addEventListener('resize', measure);
+
+            let currentX = -loopWidth * 0.5; // Start centered
+            let targetX = currentX;
+            let isDragging = false;
+            let isHovered = false;
+            let startDragX = 0;
+            let dragOriginX = 0;
+            let lastScrollY = window.scrollY;
+
+            const autoSpeed = 0.9; // Butter smooth auto speed
+
+            function updateTransforms() {
+                const viewportCenter = window.innerWidth / 2;
+                const radius = window.innerWidth * 0.38; // Influence radius
+
+                for (let i = 0; i < allCards.length; i++) {
+                    const cardCenter = cardCenters[i] + currentX;
+                    const dist = Math.abs(viewportCenter - cardCenter);
+
+                    let s = 0.67; // Minimum side scale (~360px height)
+                    let z = 1;
+
+                    if (dist < radius) {
+                        const norm = dist / radius;
+                        const intensity = 0.5 + 0.5 * Math.cos(norm * Math.PI);
+                        s = 0.67 + intensity * 0.33; // 0.67 -> 1.0 (exact 540px height!)
+                        z = Math.round(intensity * 10) + 1;
+                    }
+
+                    allInners[i].style.transform = `scale(${s.toFixed(4)})`;
+                    allCards[i].style.zIndex = z;
+
+                    if (s > 0.88) {
+                        allCards[i].classList.add('is-center');
+                    } else {
+                        allCards[i].classList.remove('is-center');
+                    }
+                }
+            }
+
+            function onScroll() {
+                const scrollY = window.scrollY;
+                const delta = scrollY - lastScrollY;
+                lastScrollY = scrollY;
+
+                if (isDragging) return;
+
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    targetX -= delta * 1.4;
+                }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            let lastTime = performance.now();
+
+            function loop(now) {
+                const dt = Math.min((now - lastTime) / 16.666, 2.0); // Normalize to 60fps
+                lastTime = now;
+
+                if (!isDragging && !isHovered) {
+                    targetX -= autoSpeed * dt;
+                }
+
+                // Smooth Lerp (high responsiveness, zero jitter)
+                currentX += (targetX - currentX) * 0.1;
+
+                // Infinite wrapping
+                if (loopWidth > 0) {
+                    while (currentX <= -loopWidth * 1.5) {
+                        currentX += loopWidth;
+                        targetX += loopWidth;
+                    }
+                    while (currentX >= -loopWidth * 0.5) {
+                        currentX -= loopWidth;
+                        targetX -= loopWidth;
+                    }
+                }
+
+                // GPU Transform
+                track.style.transform = `translate3d(${currentX.toFixed(2)}px, 0, 0)`;
+                updateTransforms();
+
+                requestAnimationFrame(loop);
+            }
+            requestAnimationFrame(loop);
+
+            // Hover pause
+            viewport.addEventListener('mouseenter', () => isHovered = true);
+            viewport.addEventListener('mouseleave', () => { isHovered = false; isDragging = false; });
+
+            // Drag
+            viewport.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startDragX = e.pageX;
+                dragOriginX = targetX;
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                targetX = dragOriginX + (e.pageX - startDragX);
+            });
+
+            window.addEventListener('mouseup', () => isDragging = false);
+
+            // Touch
+            viewport.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                startDragX = e.touches[0].pageX;
+                dragOriginX = targetX;
+            }, { passive: true });
+
+            viewport.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                targetX = dragOriginX + (e.touches[0].pageX - startDragX);
+            }, { passive: true });
+
+            viewport.addEventListener('touchend', () => isDragging = false);
+        });
+    </script>
+</body>
+</html>

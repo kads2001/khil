@@ -378,13 +378,13 @@ body.demo-cybersecurity .custom-submit-btn {
 .khil-brand-fort span {
   align-self: flex-start;
   margin-left: 16px;
-  font-family: Georgia, serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 10px;
 }
 
 .khil-brand-fort strong {
   color: #8b7845;
-  font-family: Georgia, serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.8px;
@@ -393,7 +393,7 @@ body.demo-cybersecurity .custom-submit-btn {
 .khil-brand-mahodadhi strong,
 .khil-brand-mahodadhi span {
   color: #7d007d;
-  font-family: Georgia, serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 13px;
   letter-spacing: 0.5px;
 }
@@ -423,7 +423,7 @@ body.demo-cybersecurity .custom-submit-btn {
 
 .khil-brand-toyam strong {
   color: #252525;
-  font-family: Georgia, serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 27px;
   font-weight: 500;
 }
