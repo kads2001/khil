@@ -34,7 +34,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) .btn-employer-logi
 }
 
 body.radious-4 .header-one.header-relative:not(.sticky) .btn-book-now {
-    background: #000;
+    background: #fff;
     border-color: #000;
     color: #fff;
 }
@@ -314,5 +314,190 @@ body.home-three-page .rts-banner-area-three .khil-marquee-ribbon .marquee-track 
 
   body.radious-4 .rts-banner-area-three .rts-banner-content-three .button-group {
     gap: 10px;
+  }
+}
+
+/* Scroll-pinned hotel cards */
+body.home-three-page {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.khil-hotels-section {
+  padding: 72px 0;
+  overflow: visible;
+}
+
+.khil-hotels-intro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.khil-hotels-intro > div:first-child {
+  max-width: 760px;
+}
+
+.khil-hotels-intro .pre {
+  display: block;
+  margin-bottom: 10px;
+  color: #7d007d;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.khil-hotels-intro .hero-title {
+  margin: 0 0 12px;
+  color: #252525;
+  font-size: clamp(34px, 4.2vw, 56px);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.khil-hotels-intro .hero-desc {
+  max-width: 720px;
+  margin: 0;
+  color: #6b6560;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.khil-hotels-intro .hero-actions {
+  flex: 0 0 auto;
+}
+
+.khil-hotels-scroll-track {
+  position: relative;
+}
+
+.khil-hotels-stage {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.khil-hotels-scroll-cue {
+  margin: 0 0 14px;
+  color: #6b6560;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.khil-hotels-scroll-cue i {
+  margin-left: 5px;
+  color: #7d007d;
+}
+
+.khil-hotels-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: center;
+  gap: 16px;
+}
+
+.khil-hotel-card {
+  min-width: 0;
+  position: relative;
+}
+
+.khil-hotel-card .khil-flip-card {
+  height: 410px;
+}
+
+.khil-hotels-scroll-track.is-scroll-animated {
+  height: 235vh;
+}
+
+.khil-hotels-scroll-track.is-scroll-animated .khil-hotels-panel {
+  position: sticky;
+  top: 145px;
+  display: flex;
+  height: min(740px, calc(100vh - 160px));
+  flex-direction: column;
+}
+
+.khil-hotels-scroll-track.is-scroll-animated .khil-hotels-grid {
+  perspective: 1200px;
+}
+
+.khil-hotels-scroll-track.is-scroll-animated .khil-hotel-card {
+  will-change: transform;
+}
+
+@media (max-width: 1199px) {
+  .khil-hotels-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .khil-hotels-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .khil-hotels-scroll-track.is-scroll-animated {
+    height: auto;
+  }
+
+  .khil-hotels-scroll-track.is-scroll-animated .khil-hotels-panel {
+    position: static;
+    height: auto;
+  }
+
+  .khil-hotels-scroll-track.is-scroll-animated .khil-hotel-card {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .khil-hotels-section {
+    padding: 52px 0;
+  }
+
+  .khil-hotels-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .khil-hotel-card .khil-flip-card {
+    height: 390px;
+  }
+}
+
+@media (max-width: 575px) {
+  .khil-hotels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .khil-hotel-card .khil-flip-card {
+    height: 410px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .khil-hotels-scroll-track.is-scroll-animated {
+    height: auto;
+  }
+
+  .khil-hotels-scroll-track.is-scroll-animated .khil-hotels-panel {
+    position: static;
+    height: auto;
+  }
+
+  .khil-hotels-scroll-track.is-scroll-animated .khil-hotel-card {
+    transform: none !important;
+    will-change: auto;
   }
 }
