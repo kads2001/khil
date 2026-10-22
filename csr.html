@@ -169,7 +169,7 @@
                 <div class="csr-foundation-row">
                     <div class="csr-foundation-image-col">
                         <div class="csr-foundation-image-wrapper">
-                            <img src="assets/images/csr/csr1.png" alt="The Indira Venkatesh Foundation - Women Empowerment Initiative" loading="lazy">
+                            <img src="assets/images/csr/csr1.png" alt="The Indira Venkatesh Foundation - Women Empowerment Initiative" loading="lazy" class="nl-image-features-9">
                         </div>
                     </div>
                     <div class="csr-foundation-content-col">
@@ -187,7 +187,7 @@
                 <div class="csr-foundation-row csr-foundation-row-reverse">
                     <div class="csr-foundation-image-col">
                         <div class="csr-foundation-image-wrapper">
-                            <img src="assets/images/csr/csr2.png" alt="Empowering Women and Fostering Change - Education Support" loading="lazy">
+                            <img src="assets/images/csr/csr2.png" alt="Empowering Women and Fostering Change - Education Support" loading="lazy" class="nl-image-features-9">
                         </div>
                     </div>
                     <div class="csr-foundation-content-col">
@@ -303,6 +303,44 @@
             // Initial calculation
             updateCardStack();
         });
+
+        // Up-to-down Image Reveal on Scroll (Dual Trigger: IntersectionObserver + Scroll Fallback)
+        (function () {
+            function checkImageReveal() {
+                var wrappers = document.querySelectorAll('.csr-foundation-image-wrapper:not(.is-revealed)');
+                if (!wrappers.length) return;
+                var viewH = window.innerHeight || document.documentElement.clientHeight;
+                for (var i = 0; i < wrappers.length; i++) {
+                    var rect = wrappers[i].getBoundingClientRect();
+                    if (rect.top <= viewH * 0.90 && rect.bottom >= 0) {
+                        wrappers[i].classList.add('is-revealed');
+                    }
+                }
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-revealed');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+
+                document.querySelectorAll('.csr-foundation-image-wrapper').forEach(function (el) {
+                    observer.observe(el);
+                });
+            }
+
+            window.addEventListener('scroll', checkImageReveal, { passive: true });
+            window.addEventListener('resize', checkImageReveal);
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', checkImageReveal);
+            } else {
+                checkImageReveal();
+            }
+        })();
     </script>
 </body>
 </html>
