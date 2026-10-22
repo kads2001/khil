@@ -425,3 +425,14 @@
     height: 180px;
   }
 }
+
+
+/* ==========================================================================
+   GLOBAL ZERO SHADOW ENFORCEMENT (No shadows on any component site-wide)
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}

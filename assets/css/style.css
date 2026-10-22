@@ -28027,7 +28027,7 @@ input[type="submit"],
   background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
   color: #ffffff !important;
   border: none !important;
-  box-shadow: 0 4px 18px rgba(160, 10, 168, 0.28) !important;
+  box-shadow: none !important;
   transition: all 0.25s ease !important;
   text-decoration: none !important;
 }
@@ -28100,7 +28100,7 @@ input[type="submit"]:hover,
   background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
   filter: brightness(1.16) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 24px rgba(160, 10, 168, 0.42) !important;
+  box-shadow: none !important;
   color: #ffffff !important;
 }
 
@@ -28124,4 +28124,15 @@ input[type="submit"]:hover,
     min-height: 38px !important;
     font-size: 12px !important;
   }
+}
+
+
+/* ==========================================================================
+   GLOBAL ZERO SHADOW ENFORCEMENT (No shadows on any component site-wide)
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
 }

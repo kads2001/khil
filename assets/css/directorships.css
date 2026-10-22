@@ -584,3 +584,14 @@ body.directorships-page ::selection {
     margin-bottom: 16pt;
   }
 }
+
+
+/* ==========================================================================
+   GLOBAL ZERO SHADOW ENFORCEMENT (No shadows on any component site-wide)
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}

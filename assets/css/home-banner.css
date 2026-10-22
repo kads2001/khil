@@ -263,7 +263,7 @@ body.home-three-page .rts-banner-area-three .khil-marquee-ribbon .marquee-track 
   color: #000;
 }
 .bg_image-three-banner .rts-banner-content-three h1{
-  font-size: clamp(32px, 6.2vw, 74px);
+  font-size: clamp(32px, 7vw, 105px);
   color: #fff !important;
   line-height: 1.1;
 }
@@ -503,4 +503,15 @@ body.home-three-page {
     transform: none !important;
     will-change: auto;
   }
+}
+
+
+/* ==========================================================================
+   GLOBAL ZERO SHADOW ENFORCEMENT (No shadows on any component site-wide)
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
