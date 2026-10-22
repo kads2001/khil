@@ -27,7 +27,7 @@ body.csr-page {
   overflow: visible !important;
 }
 
-/* 1. SECTION CONTAINER */
+/* 1. SECTION CONTAINER (MATCHES KHIL HEADER 1680px STANDARD) */
 .rts-csr-area {
   position: relative;
   background-color: #F6F2EB;
@@ -35,11 +35,26 @@ body.csr-page {
 }
 
 .rts-csr-area .container {
-  max-width: 1240px;
+  width: 100%;
+  max-width: 1680px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 28px;
+  padding-right: 28px;
   box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+  .rts-csr-area .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .rts-csr-area .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .rts-section-gap {
@@ -119,7 +134,9 @@ body.csr-page {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%; /* 100% full original card width */
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
   padding-bottom: 350px; /* Generous reading travel for Card 4 before unpinning */
   box-sizing: border-box;
 }
@@ -604,7 +621,7 @@ body.csr-page {
 }
 
 /* ==========================================================================
-   Stack Sidebar & Dynamic Logo Dock (Outside 100% Full-Width Cards)
+   Stack Sidebar & Dynamic Logo Dock (Aligned with KHIL Header Left Margin)
    ========================================================================== */
 .csr-stack-container-rel {
   position: relative;
@@ -614,7 +631,7 @@ body.csr-page {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -220px;
+  left: 28px; /* Aligned with exact 28px padding of KHIL Header */
   width: 180px;
   pointer-events: none;
   z-index: 45;
@@ -709,10 +726,10 @@ body.csr-page {
   letter-spacing: -0.2px;
 }
 
-/* Wide screens (>= 1600px): Generous outer margin */
+/* Wide screens (>= 1600px): Matches exact 28px header padding */
 @media (min-width: 1600px) {
   .csr-stack-sidebar-col {
-    left: -230px;
+    left: 28px;
     width: 190px;
   }
 }
@@ -720,8 +737,8 @@ body.csr-page {
 /* Medium-wide screens (1300px to 1599px) */
 @media (min-width: 1300px) and (max-width: 1599px) {
   .csr-stack-sidebar-col {
-    left: -155px;
-    width: 135px;
+    left: 28px;
+    width: 140px;
   }
   .csr-sidebar-logo-box {
     height: 95px;
