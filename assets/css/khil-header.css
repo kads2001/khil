@@ -71,16 +71,39 @@
   min-height: 76px;
 }
 
+@media only screen and (min-width: 1200px) {
+  .header-wrapper-main {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
+    gap: 16px !important;
+    position: relative !important;
+    min-height: 76px !important;
+  }
+}
+
 /* ==========================================================================
-   LOGO
+   LOGO (Center Positioned on Desktop)
    ========================================================================== */
 .logo-area {
   flex-shrink: 0;
-  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .logo-area {
+    grid-column: 2 !important;
+    padding: 0 16px !important;
+  }
 }
 
 .logo-area a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.2s ease;
 }
 
@@ -89,34 +112,77 @@
 }
 
 .logo-area img {
-  max-height: 200px;
+  max-height: 52px;
   width: auto;
   object-fit: contain;
   display: block;
+  transition: max-height 0.2s ease;
+}
+
+@media only screen and (min-width: 1400px) {
+  .logo-area img {
+    max-height: 100%;
+  }
 }
 
 /* ==========================================================================
-   DESKTOP TOP NAVIGATION
+   DESKTOP TOP NAVIGATION (Left Positioned)
    ========================================================================== */
 .nav-area {
-  flex-grow: 1;
   display: flex;
-  justify-content: end;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav-area {
+    grid-column: 1 !important;
+    justify-self: start !important;
+  }
 }
 
 .nav-area ul.khil-nav {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 24px !important;
+  gap: 16px !important;
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
+  flex-wrap: nowrap !important;
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width: 1200px) and (max-width: 1340px) {
+  .nav-area ul.khil-nav {
+    gap: 11px !important;
+  }
+  .nav-area ul.khil-nav>li.main-nav>a {
+    font-size: 13px !important;
+    padding: 24px 2px !important;
+  }
+  .khil-header-container {
+    padding: 0 16px !important;
+  }
+}
+
+@media only screen and (min-width: 1341px) and (max-width: 1499px) {
   .nav-area ul.khil-nav {
     gap: 16px !important;
+  }
+  .nav-area ul.khil-nav>li.main-nav>a {
+    font-size: 13.5px !important;
+    padding: 24px 3px !important;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .nav-area ul.khil-nav {
+    gap: 15px !important;
+  }
+  .nav-area ul.khil-nav>li.main-nav>a {
+    font-size: 14.5px !important;
+    padding: 26px 4px !important;
   }
 }
 
@@ -1151,14 +1217,31 @@
 }
 
 /* ==========================================================================
-   HEADER ACTION BUTTONS
+   HEADER ACTION BUTTONS (Right Positioned on Desktop)
    ========================================================================== */
 .header-action-buttons {
   display: flex;
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
-  margin-left: 20px;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+  .header-action-buttons {
+    grid-column: 3 !important;
+    justify-self: end !important;
+    justify-content: flex-end !important;
+    margin-left: 0 !important;
+    gap: 10px !important;
+    min-width: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .header-action-buttons {
+    gap: 12px !important;
+  }
 }
 
 .btn-employer-login {
@@ -1265,8 +1348,34 @@
    MOBILE & TABLET RESPONSIVENESS
    ========================================================================== */
 @media only screen and (max-width: 1199px) {
+  .header-wrapper-main {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 66px !important;
+  }
+
   .nav-area {
     display: none !important;
+  }
+
+  .logo-area {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .logo-area img {
+    max-height: 42px !important;
+  }
+
+  .header-action-buttons {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-left: auto !important;
   }
 
   .menu-btn-toggle.khil-toggle {
@@ -1278,8 +1387,8 @@
   }
 
   .btn-book-now {
-    padding: 7px 15px;
-    font-size: 12.5px;
+    padding: 7px 14px !important;
+    font-size: 12.5px !important;
   }
 
   .khil-header-container {
@@ -1289,7 +1398,23 @@
 
 @media only screen and (max-width: 575px) {
   .logo-area img {
-    max-height: 40px;
+    max-height: 38px;
+  }
+
+  .btn-book-now {
+    padding: 6px 11px !important;
+    font-size: 11.5px !important;
+    gap: 5px !important;
+  }
+
+  .btn-book-now i {
+    width: 18px !important;
+    height: 18px !important;
+    font-size: 11px !important;
+  }
+
+  .header-action-buttons {
+    gap: 6px !important;
   }
 
   .btn-book-now span {
@@ -1297,7 +1422,7 @@
   }
 
   .header-wrapper-main {
-    min-height: 66px;
+    min-height: 62px;
   }
 }
 
@@ -2150,5 +2275,563 @@
 
   .khil-marquee-ribbon {
     margin-top: 25px;
+  }
+}
+
+
+/* ==========================================================================
+   NEW KHIL ABOUT US SECTION (Curated Brand Logo Cards + Dual Flanking Metrics)
+   ========================================================================== */
+.khil-about-showcase-section {
+  position: relative;
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(rgba(18, 24, 38, 0.038) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 24, 38, 0.038) 1px, transparent 1px);
+  background-size: 72px 72px;
+  background-position: center top;
+  padding: 100px 0 85px;
+  overflow: hidden;
+}
+
+.khil-about-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 3-Column Top Grid: Left Flank (2 Numbers) | Center Content | Right Flank (2 Numbers) */
+.khil-about-hero-grid {
+  display: grid;
+  grid-template-columns: 210px 1fr 210px;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 45px;
+}
+
+.khil-about-stat-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 34px;
+  padding-top: 15px;
+}
+
+.khil-about-stat-side.left,
+.khil-about-stat-side.right {
+  align-items: center;
+  text-align: center;
+}
+
+.khil-about-stat-side .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.khil-about-stat-side .stat-number {
+  font-size: clamp(48px, 4.8vw, 68px);
+  font-weight: 700;
+  color: #121826;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.khil-about-stat-side .stat-number .stat-plus {
+  color: #7d007d;
+  font-size: 0.65em;
+  margin-left: 2px;
+}
+
+.khil-about-stat-side .stat-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  margin-top: 8px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* Center Content: Pill Badge, Headline, Subdesc, CTA */
+.khil-about-center-content {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.khil-about-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  background: #ffffff;
+  border: 1px solid rgba(125, 0, 125, 0.2);
+  border-radius: 999px;
+  box-shadow: 0 4px 16px rgba(125, 0, 125, 0.08);
+  margin-bottom: 24px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #7d007d;
+  letter-spacing: 0.01em;
+}
+
+.khil-about-pill-badge i {
+  color: #c59b27;
+  font-size: 13px;
+}
+
+.khil-about-headline {
+  font-size: clamp(34px, 4.2vw, 54px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #121826;
+  margin: 0 0 18px;
+}
+
+.khil-about-subdesc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #6b6560;
+  max-width: 660px;
+  margin: 0 auto 28px;
+}
+
+.khil-about-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 34px;
+  background: #7d007d;
+  color: #ffffff !important;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(125, 0, 125, 0.28);
+  transition: all 0.25s ease;
+}
+
+.khil-about-btn-primary:hover {
+  background: #5c005c;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(125, 0, 125, 0.38);
+  color: #ffffff !important;
+}
+
+.khil-about-btn-primary i {
+  transition: transform 0.2s ease;
+}
+
+.khil-about-btn-primary:hover i {
+  transform: translateX(4px);
+}
+
+/* 5-Card Floating Showcase Stage (Brand Logo Cards) */
+.khil-about-cards-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  margin-top: 36px;
+  padding-bottom: 20px;
+}
+
+.khil-showcase-card {
+  position: relative;
+  background: #ffffff !important;
+  border: 1px solid rgba(18, 24, 38, 0.09) !important;
+  box-shadow: 0 14px 36px rgba(18, 24, 38, 0.06) !important;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 18px 20px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.khil-showcase-card:hover {
+  border-color: rgba(125, 0, 125, 0.3) !important;
+  box-shadow: 0 24px 50px rgba(125, 0, 125, 0.14) !important;
+  background: linear-gradient(180deg, #ffffff 0%, #faf5fa 100%) !important;
+}
+
+.khil-showcase-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 20%, rgba(125, 0, 125, 0.04) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.khil-showcase-card:hover::before {
+  opacity: 1;
+}
+
+/* Top category pill tag */
+.khil-showcase-card .card-top-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid rgba(18, 24, 38, 0.06);
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.khil-showcase-card:hover .card-top-pill {
+  background: #ffffff;
+  color: #7d007d;
+  border-color: rgba(125, 0, 125, 0.2);
+  box-shadow: 0 2px 8px rgba(125, 0, 125, 0.08);
+}
+
+.khil-showcase-card .card-top-pill i {
+  color: #c59b27;
+  font-size: 11px;
+}
+
+/* Center logo container */
+.khil-showcase-card .card-logo-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  padding: 12px 6px;
+  z-index: 2;
+}
+
+.khil-showcase-card .card-logo-center img {
+  max-width: 88%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.khil-showcase-card:hover .card-logo-center img {
+  transform: scale(1.06);
+}
+
+/* Wordmarks for brands without standalone image asset */
+.brand-wm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.35s ease;
+}
+
+.khil-showcase-card:hover .brand-wm {
+  transform: scale(1.05);
+}
+
+.brand-wm-fort .wm-pre {
+  font-family: Georgia, serif;
+  font-size: 12px;
+  color: #8b7845;
+  font-style: italic;
+  line-height: 1;
+}
+
+.brand-wm-fort .wm-name {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #8b7845;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 2px 0 3px;
+}
+
+.brand-wm-fort .wm-sub {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #64748b;
+}
+
+.brand-wm-mahodadhi .wm-name {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #7d007d;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+}
+
+.brand-wm-mahodadhi .wm-palace {
+  font-family: Georgia, serif;
+  font-size: 13.5px;
+  color: #7d007d;
+  letter-spacing: 0.18em;
+  line-height: 1.1;
+  margin-top: 1px;
+}
+
+.brand-wm-mahodadhi .wm-sub {
+  font-size: 8.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+.brand-wm-toyam .wm-name {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #121826;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.brand-wm-toyam .wm-sub {
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #7d007d;
+  margin-top: 2px;
+}
+
+/* Bottom footer info */
+.khil-showcase-card .card-bottom-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #94a3b8;
+  transition: color 0.25s ease;
+}
+
+.khil-showcase-card:hover .card-bottom-info {
+  color: #7d007d;
+}
+
+.khil-showcase-card .card-bottom-info i {
+  font-size: 10px;
+  transition: transform 0.25s ease;
+}
+
+.khil-showcase-card:hover .card-bottom-info i {
+  transform: translateX(3px);
+}
+
+/* Specific Card Proportions & Staggered Offsets */
+.khil-showcase-card.card-1,
+.khil-showcase-card.card-5 {
+  width: 195px;
+  height: 205px;
+  transform: translateY(-28px);
+}
+.khil-showcase-card.card-1:hover,
+.khil-showcase-card.card-5:hover {
+  transform: translateY(-36px) scale(1.02);
+}
+
+.khil-showcase-card.card-2,
+.khil-showcase-card.card-4 {
+  width: 200px;
+  height: 240px;
+  transform: translateY(18px);
+}
+.khil-showcase-card.card-2:hover,
+.khil-showcase-card.card-4:hover {
+  transform: translateY(10px) scale(1.02);
+}
+
+.khil-showcase-card.card-3 {
+  width: 380px;
+  height: 240px;
+  border-radius: 26px;
+  transform: translateY(32px);
+  padding: 26px 28px 22px;
+}
+.khil-showcase-card.card-3:hover {
+  transform: translateY(24px) scale(1.02);
+}
+
+/* Tablet Responsiveness */
+@media only screen and (max-width: 1199px) {
+  .khil-about-hero-grid {
+    grid-template-columns: 180px 1fr 180px;
+    gap: 16px;
+  }
+  .khil-about-stat-side {
+    gap: 22px;
+  }
+  .khil-about-stat-side .stat-number {
+    font-size: 42px;
+  }
+  .khil-about-stat-side .stat-label {
+    font-size: 12.5px;
+  }
+
+  .khil-showcase-card.card-1,
+  .khil-showcase-card.card-5 {
+    width: 160px;
+    height: 185px;
+    transform: translateY(-20px);
+  }
+  .khil-showcase-card.card-2,
+  .khil-showcase-card.card-4 {
+    width: 170px;
+    height: 215px;
+    transform: translateY(12px);
+  }
+  .khil-showcase-card.card-3 {
+    width: 310px;
+    height: 215px;
+    transform: translateY(24px);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .khil-about-showcase-section {
+    padding: 75px 0 65px;
+  }
+
+  .khil-about-hero-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 35px;
+  }
+
+  .khil-about-stat-side {
+    padding-top: 0;
+    gap: 20px;
+  }
+
+  .khil-about-stat-side.left {
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .khil-about-stat-side.right {
+    grid-column: 2;
+    grid-row: 1;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .khil-about-center-content {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .khil-about-cards-stage {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 20px 8px 30px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .khil-about-cards-stage::-webkit-scrollbar {
+    display: none;
+  }
+
+  .khil-showcase-card {
+    scroll-snap-align: center;
+    transform: none !important;
+  }
+
+  .khil-showcase-card.card-1,
+  .khil-showcase-card.card-5 {
+    width: 180px;
+    height: 200px;
+  }
+  .khil-showcase-card.card-2,
+  .khil-showcase-card.card-4 {
+    width: 180px;
+    height: 200px;
+  }
+  .khil-showcase-card.card-3 {
+    width: 290px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .khil-about-showcase-section {
+    padding: 60px 0 50px;
+    background-size: 48px 48px;
+  }
+
+  .khil-about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .khil-about-stat-side.left,
+  .khil-about-stat-side.right {
+    grid-column: 1;
+    flex-direction: row;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .khil-about-stat-side.left {
+    grid-row: 1;
+  }
+  .khil-about-stat-side.right {
+    grid-row: 2;
+  }
+  .khil-about-center-content {
+    grid-row: 3;
+  }
+
+  .khil-about-headline {
+    font-size: 28px;
+  }
+
+  .khil-about-subdesc {
+    font-size: 14.5px;
+    margin-bottom: 22px;
+  }
+
+  .khil-about-btn-primary {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+
+  .khil-about-stat-side .stat-number {
+    font-size: 38px;
+  }
+
+  .khil-about-stat-side .stat-label {
+    font-size: 12px;
   }
 }

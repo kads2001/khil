@@ -6,21 +6,21 @@ body.radious-4 .header-one.header-relative:not(.sticky) {
   z-index: 1050;
 }
 
-body.radious-4 .header-one.header-relative:not(.sticky) .logo-area img {
+/* body.radious-4 .header-one.header-relative:not(.sticky) .logo-area img {
   filter: brightness(0) invert(1);
-}
+} */
 
 body.radious-4 .header-one.header-relative:not(.sticky) .logo-area a {
   padding: 3px 5px;
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav > a {
-  color: #252525 !important;
+  color: #fff !important;
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav:hover > a,
 body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.has-dropdown > a::after {
-  color: #4d004d !important;
+  color: #fff !important;
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .btn-employer-login {
@@ -36,7 +36,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) .btn-employer-logi
 body.radious-4 .header-one.header-relative:not(.sticky) .btn-book-now {
     background: #fff;
     border-color: #000;
-    color: #fff;
+    color: #000;
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle.khil-toggle svg rect {
@@ -265,7 +265,7 @@ body.home-three-page .rts-banner-area-three .khil-marquee-ribbon .marquee-track 
   color: #000;
 }
 .bg_image-three-banner .rts-banner-content-three h1{
-  font-size: clamp(44px, 6.2vw, 74px);
+  font-size: clamp(32px, 6.2vw, 74px);
   color: #fff !important;
   line-height: 1.1;
 }
@@ -317,10 +317,15 @@ body.home-three-page .rts-banner-area-three .khil-marquee-ribbon .marquee-track 
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 /* Scroll-pinned hotel cards */
 body.home-three-page {
   overflow-x: clip;
   overflow-y: visible;
+  max-width: 100%;
 }
 
 .khil-hotels-section {
