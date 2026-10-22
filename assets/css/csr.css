@@ -34,26 +34,45 @@ body.csr-page {
   color: #000000;
 }
 
-.rts-csr-area .container {
+.csr-container,
+.csr-page .container {
   width: 100%;
-  max-width: 1680px;
-  margin: 0 auto;
-  padding-left: 28px;
-  padding-right: 28px;
-  box-sizing: border-box;
+  max-width: 1680px !important;
+  margin: 0 auto !important;
+  padding-left: 28px !important;
+  padding-right: 28px !important;
+  box-sizing: border-box !important;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1340px) {
+  .csr-container,
+  .csr-page .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .csr-container,
+  .csr-page .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
 }
 
 @media (max-width: 991px) {
-  .rts-csr-area .container {
-    padding-left: 20px;
-    padding-right: 20px;
+  .csr-container,
+  .csr-page .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 
 @media (max-width: 576px) {
-  .rts-csr-area .container {
-    padding-left: 16px;
-    padding-right: 16px;
+  .csr-container,
+  .csr-page .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
 
@@ -134,10 +153,9 @@ body.csr-page {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 1220px;
   width: 100%;
-  margin: 0 auto;
-  padding-bottom: 350px; /* Generous reading travel for Card 4 before unpinning */
+  margin: 0;
+  padding-bottom: 700px; /* Ample runway so Card 4 stays pinned for reading before unpinning */
   box-sizing: border-box;
 }
 
@@ -146,9 +164,9 @@ body.csr-page {
 .csr-card-wrapper {
   position: -webkit-sticky;
   position: sticky;
-  top: 110px; /* Anchor sticky position aligned with sidebar dock */
-  width: 100%; /* 100% full original card width */
-  margin-bottom: 220px; /* Comfortable reading distance between card arrivals */
+  top: 110px; 
+  width: 100%; 
+  margin-bottom: 220px; 
   will-change: transform;
 }
 
@@ -627,14 +645,23 @@ body.csr-page {
   position: relative;
 }
 
+/* Two-column layout: Sidebar on left (aligned with header left 28px), Cards on right (aligned with header right 28px) */
+.csr-stack-layout-wrap {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+
 .csr-stack-sidebar-col {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 28px; /* Aligned with exact 28px padding of KHIL Header */
-  width: 180px;
-  pointer-events: none;
+  width: 100%;
+  position: relative;
+  height: 100%;
   z-index: 45;
+  pointer-events: none;
 }
 
 .csr-stack-sidebar-sticky {
@@ -726,19 +753,11 @@ body.csr-page {
   letter-spacing: -0.2px;
 }
 
-/* Wide screens (>= 1600px): Matches exact 28px header padding */
-@media (min-width: 1600px) {
-  .csr-stack-sidebar-col {
-    left: 28px;
-    width: 190px;
-  }
-}
-
-/* Medium-wide screens (1300px to 1599px) */
-@media (min-width: 1300px) and (max-width: 1599px) {
-  .csr-stack-sidebar-col {
-    left: 28px;
-    width: 140px;
+/* Medium screens (992px to 1340px): Compact sidebar column */
+@media (min-width: 992px) and (max-width: 1340px) {
+  .csr-stack-layout-wrap {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 28px;
   }
   .csr-sidebar-logo-box {
     height: 95px;
@@ -752,10 +771,34 @@ body.csr-page {
   }
 }
 
-/* Below 1300px: Hide outside sidebar so cards keep 100% full width with zero clipping */
-@media (max-width: 1299px) {
+/* Mobile & Tablet (< 992px): Stack sidebar above cards */
+@media (max-width: 991px) {
+  .csr-stack-layout-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 30px;
+  }
   .csr-stack-sidebar-col {
-    display: none;
+    width: 100%;
+    height: auto;
+  }
+  .csr-stack-sidebar-sticky {
+    position: relative !important;
+    top: auto !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    padding: 0;
+  }
+  .csr-sidebar-logo-box {
+    height: 70px !important;
+    width: auto !important;
+  }
+  .csr-sidebar-name {
+    width: 100%;
+    max-width: 100% !important;
   }
 }
 

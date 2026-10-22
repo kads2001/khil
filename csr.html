@@ -33,7 +33,7 @@
 
     <!-- CSR Initiatives Area Start -->
     <div class="rts-csr-area rts-section-gap">
-        <div class="container csr-stack-container-rel">
+        <div class="csr-container csr-stack-container-rel">
             <div class="title-center-wrapper">
                 <span class="csr-eyebrow"><i class="fa-solid fa-hands-holding-heart"></i> Our Association</span>
                 <h1 class="title mt--0">Corporate Social Responsibility</h1>
@@ -45,28 +45,30 @@
                 </p>
             </div>
 
-            <!-- Left Logo Sidebar (Positioned outside cards, preserving 100% full original card width) -->
-            <aside class="csr-stack-sidebar-col" id="csrStackSidebar">
-                <div class="csr-stack-sidebar-sticky">
-                    <div class="csr-sidebar-logo-box">
-                        <img id="csrDynamicLogoImg" class="csr-dynamic-logo-img" src="assets/images/csr/logo4.png" alt="Jankibai Shikshan Sanstha Logo">
+            <!-- Two-column grid matching header margins: Sidebar on left (28px), Cards on right (28px) -->
+            <div class="csr-stack-layout-wrap">
+                <!-- Left Logo Sidebar -->
+                <aside class="csr-stack-sidebar-col" id="csrStackSidebar">
+                    <div class="csr-stack-sidebar-sticky">
+                        <div class="csr-sidebar-logo-box">
+                            <img id="csrDynamicLogoImg" class="csr-dynamic-logo-img" src="assets/images/csr/logo4.png" alt="Jankibai Shikshan Sanstha Logo">
+                        </div>
+                        <div class="csr-sidebar-counter" aria-label="Active Card Counter">
+                            <span class="csr-counter-active" id="csrCounterActive">01</span>
+                            <span class="csr-counter-sep">/</span>
+                            <span class="csr-counter-total">04</span>
+                        </div>
+                        <div class="csr-sidebar-dots" id="csrSidebarDots">
+                            <span class="csr-dot is-active" data-index="0" title="Jankibai Shikshan Sanstha"></span>
+                            <span class="csr-dot" data-index="1" title="Ashakiran Foundation"></span>
+                            <span class="csr-dot" data-index="2" title="Anath Balakashram"></span>
+                            <span class="csr-dot" data-index="3" title="Ambubai Residential School"></span>
+                        </div>
+                        <div class="csr-sidebar-name" id="csrSidebarOrgName">Jankibai Shikshan Sanstha</div>
                     </div>
-                    <div class="csr-sidebar-counter" aria-label="Active Card Counter">
-                        <span class="csr-counter-active" id="csrCounterActive">01</span>
-                        <span class="csr-counter-sep">/</span>
-                        <span class="csr-counter-total">04</span>
-                    </div>
-                    <div class="csr-sidebar-dots" id="csrSidebarDots">
-                        <span class="csr-dot is-active" data-index="0" title="Jankibai Shikshan Sanstha"></span>
-                        <span class="csr-dot" data-index="1" title="Ashakiran Foundation"></span>
-                        <span class="csr-dot" data-index="2" title="Anath Balakashram"></span>
-                        <span class="csr-dot" data-index="3" title="Ambubai Residential School"></span>
-                    </div>
-                    <div class="csr-sidebar-name" id="csrSidebarOrgName">Jankibai Shikshan Sanstha</div>
-                </div>
-            </aside>
+                </aside>
 
-            <div class="csr-sticky-wrapper-main mt--60">
+                <div class="csr-sticky-wrapper-main">
                 
                 <!-- Card 1: Jankibai Shikshan Sanstha -->
                 <div class="csr-card csr-card-wrapper">
@@ -177,6 +179,7 @@
                 </div>
                 <!-- Card 4 end -->
 
+                </div>
             </div>
         </div>
     </div>
@@ -184,7 +187,7 @@
 
     <!-- The Indira Venkatesh Foundation Section -->
     <section class="csr-foundation-section">
-        <div class="container">
+        <div class="csr-container">
             <div class="csr-foundation-block">
                 
                 <!-- Foundation Row 1: Story & Mission -->
@@ -229,7 +232,7 @@
 
     <!-- CSR Showcase Horizontal Continuous Marquee Gallery -->
     <section class="csr-gallery-marquee-section">
-        <div class="container">
+        <div class="csr-container">
             <div class="csr-gallery-header-row">
                 <div class="csr-gallery-header-left">
                     <span class="csr-gallery-pretitle">Mathoshree Ambubai Residential School for<br> Blind Girls</span>
@@ -351,7 +354,7 @@
             function updateCardStack() {
                 const isMobile = window.innerWidth < 992;
                 let activeIndex = 0;
-                const stickyThreshold = 125;
+                const stickyThreshold = Math.min(180, window.innerHeight * 0.32);
 
                 cards.forEach((card, index) => {
                     const rect = card.getBoundingClientRect();
@@ -391,7 +394,7 @@
 
                 const firstCardRect = cards[0].getBoundingClientRect();
                 const lastCardRect = cards[cards.length - 1].getBoundingClientRect();
-                const isStackVisible = firstCardRect.top <= 400 && lastCardRect.bottom >= 80;
+                const isStackVisible = firstCardRect.top <= 450 && lastCardRect.bottom >= 80;
 
                 updateSidebar(activeIndex, isStackVisible);
 
