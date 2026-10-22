@@ -7,12 +7,16 @@
    CRITICAL FOR POSITION: STICKY & SMOOTH SCROLL TO WORK
    ========================================================================== */
 html {
-  overflow-x: clip !important;
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
   scroll-behavior: smooth;
 }
 
+body,
 body.csr-page {
-  overflow-x: clip !important;
+  overflow: visible !important;
+  overflow-x: visible !important;
   overflow-y: visible !important;
   background-color: #F6F2EB !important;
   color: black;
@@ -23,6 +27,8 @@ body.csr-page {
 .csr-page main,
 .rts-csr-area,
 .rts-csr-area .container,
+.csr-container,
+.csr-stack-container-rel,
 .csr-sticky-wrapper-main {
   overflow: visible !important;
 }
@@ -148,52 +154,51 @@ body.csr-page {
   margin-top: 50px;
 }
 
-/* 3. STICKY STACKING WRAPPER */
+/* CSR stack container */
 .csr-sticky-wrapper-main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-  padding-bottom: 700px; /* Ample runway so Card 4 stays pinned for reading before unpinning */
-  box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 100vh;
+    box-sizing: border-box;
 }
 
-/* 4. STICKY CSR CARDS (THE STACK EFFECT) */
-.csr-card,
-.csr-card-wrapper {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 110px; 
-  width: 100%; 
-  margin-bottom: 220px; 
-  will-change: transform;
+/* Each card sticks at a slightly different position */
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(1) {
+    position: sticky;
+    top: 120px;
+    z-index: 1;
 }
 
-/* Ascending stacking order: subsequent cards slide over previous cards */
-.csr-card:nth-child(1),
-.csr-card-wrapper:nth-child(1) {
-  z-index: 10;
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(2) {
+    position: sticky;
+    top: 145px;
+    z-index: 2;
 }
 
-.csr-card:nth-child(2),
-.csr-card-wrapper:nth-child(2) {
-  z-index: 20;
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(3) {
+    position: sticky;
+    top: 170px;
+    z-index: 3;
 }
 
-.csr-card:nth-child(3),
-.csr-card-wrapper:nth-child(3) {
-  z-index: 30;
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(4) {
+    position: sticky;
+    top: 195px;
+    z-index: 4;
 }
 
-.csr-card:nth-child(4),
-.csr-card-wrapper:nth-child(4) {
-  z-index: 40;
+/* Preserve card dimensions */
+.csr-sticky-wrapper-main > .csr-card-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
 }
 
-.csr-card:last-child,
-.csr-card-wrapper:last-child {
-  margin-bottom: 0;
+.csr-sticky-wrapper-main > .csr-card-wrapper:last-child {
+    margin-bottom: 0;
 }
 
 /* Card Inner Surface */
@@ -202,13 +207,13 @@ body.csr-page {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 48px;
-  padding: 44px 52px 48px 52px;
+  gap: 40px;
+  padding: 30px 42px 32px 42px; /* Proportional padding ensuring entire card fits viewport */
   border-radius: 20px;
   position: relative;
   background: #b1b1b1;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+ 
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   transform: translate3d(0, 0, 0);
@@ -249,10 +254,10 @@ body.csr-page {
 .csr-card-wrapper .left-content .title {
   color: #000000 !important;
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(24px, 2.4vw, 32px);
+  font-size: clamp(20px, 2.1vw, 26px);
   line-height: 1.25;
   font-weight: 700;
-  margin: 0 0 14px 0;
+  margin: 0 0 10px 0;
   letter-spacing: -0.3px;
 }
 
@@ -260,10 +265,10 @@ body.csr-page {
 .csr-card-content .csr-card-disc,
 .csr-card-wrapper .left-content p.disc {
   color: #1a1612 !important;
-  font-size: 14.5px;
-  line-height: 1.65;
+  font-size: 14px;
+  line-height: 1.55;
   font-weight: 400;
-  margin: 0 0 22px 0;
+  margin: 0 0 14px 0;
 }
 
 /* Highlights / Impact List (Replaces generic product feature-list) */
@@ -273,7 +278,7 @@ body.csr-page {
 .csr-card-wrapper .left-content .feature-list {
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 8px;
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -506,39 +511,28 @@ body.csr-page {
   }
 
   .csr-sticky-wrapper-main {
-    padding-bottom: 80px;
+    padding-bottom: 0 !important;
   }
 
   .csr-card,
   .csr-card-wrapper {
-    margin-bottom: 40px;
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 28px !important;
   }
 
-  .csr-card:nth-child(1),
-  .csr-card-wrapper:nth-child(1) {
-    top: 80px;
-  }
-
-  .csr-card:nth-child(2),
-  .csr-card-wrapper:nth-child(2) {
-    top: 100px;
-  }
-
-  .csr-card:nth-child(3),
-  .csr-card-wrapper:nth-child(3) {
-    top: 120px;
-  }
-
-  .csr-card:nth-child(4),
-  .csr-card-wrapper:nth-child(4) {
-    top: 140px;
+  .csr-card:last-child,
+  .csr-card-wrapper:last-child {
+    margin-bottom: 0 !important;
   }
 
   .csr-card-inner,
   .csr-card-wrapper .inner {
     flex-direction: column;
-    padding: 32px 24px;
-    gap: 26px;
+    padding: 28px 22px;
+    gap: 24px;
+    transform: none !important;
+    filter: none !important;
   }
 
   .csr-card-content,
@@ -556,7 +550,7 @@ body.csr-page {
   .csr-card-image img,
   .csr-card-wrapper .image-area img {
     max-width: 100%;
-    height: 250px;
+    height: 240px;
   }
 }
 
@@ -579,35 +573,6 @@ body.csr-page {
 
   .csr-intro-disc {
     font-size: 13.5px;
-  }
-
-  .csr-sticky-wrapper-main {
-    padding-bottom: 40px;
-  }
-
-  .csr-card,
-  .csr-card-wrapper {
-    margin-bottom: 24px;
-  }
-
-  .csr-card:nth-child(1),
-  .csr-card-wrapper:nth-child(1) {
-    top: 70px;
-  }
-
-  .csr-card:nth-child(2),
-  .csr-card-wrapper:nth-child(2) {
-    top: 88px;
-  }
-
-  .csr-card:nth-child(3),
-  .csr-card-wrapper:nth-child(3) {
-    top: 106px;
-  }
-
-  .csr-card:nth-child(4),
-  .csr-card-wrapper:nth-child(4) {
-    top: 124px;
   }
 
   .csr-card-inner,
@@ -639,185 +604,67 @@ body.csr-page {
 }
 
 /* ==========================================================================
-   Stack Sidebar & Dynamic Logo Dock (Aligned with KHIL Header Left Margin)
+   Stack Stage & Separate Left Logo Dock (Symmetrically Balanced)
+   ========================================================================== */
+/* ==========================================================================
+   CSR stack: logo positioned outside the cards
    ========================================================================== */
 .csr-stack-container-rel {
-  position: relative;
+    position: relative;
 }
 
-/* Two-column layout: Sidebar on left (aligned with header left 28px), Cards on right (aligned with header right 28px) */
-.csr-stack-layout-wrap {
-  display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
-  gap: 40px;
-  align-items: start;
-  width: 100%;
-  position: relative;
-  margin-top: 50px;
+.csr-dynamic-logo-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
+    float: left;
+    left: 0;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    margin-right: -150px;
+    margin-bottom: -150px;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
 }
 
-.csr-stack-sidebar-col {
-  width: 100%;
-  position: relative;
-  height: 100%;
-  z-index: 45;
-  pointer-events: none;
-}
-
-.csr-stack-sidebar-sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 110px; /* Perfectly aligned with top: 110px of active card */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 16px;
-  padding: 12px 0;
-  pointer-events: auto;
-  transition: opacity 0.3s ease;
-}
-
-.csr-sidebar-logo-box {
-  width: 100%;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.csr-dynamic-logo-card {
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.25s ease;
 }
 
 .csr-dynamic-logo-img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  opacity: 1;
-  transform: scale(1);
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
-  transition: opacity 0.2s ease, transform 0.2s ease;
+    display: block;
+    width: 100%;
+    max-width: 130px;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.2s ease;
 }
 
 .csr-dynamic-logo-img.csr-logo-fade {
-  opacity: 0;
-  transform: scale(0.94);
+    opacity: 0;
 }
 
-.csr-sidebar-counter {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.35);
-  letter-spacing: 1px;
-}
-
-.csr-sidebar-counter .csr-counter-active {
-  font-size: 24px;
-  color: #000000;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.csr-sidebar-dots {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.csr-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  display: inline-block;
-}
-
-.csr-dot.is-active {
-  width: 26px;
-  border-radius: 8px;
-  background: #000000;
-}
-
-.csr-sidebar-name {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #222222;
-  line-height: 1.4;
-  max-width: 200px;
-  letter-spacing: -0.2px;
-}
-
-/* Medium screens (992px to 1340px): Compact sidebar column */
-@media (min-width: 992px) and (max-width: 1340px) {
-  .csr-stack-layout-wrap {
-    grid-template-columns: 160px minmax(0, 1fr);
-    gap: 28px;
-  }
-  .csr-sidebar-logo-box {
-    height: 95px;
-  }
-  .csr-sidebar-counter .csr-counter-active {
-    font-size: 20px;
-  }
-  .csr-sidebar-name {
-    font-size: 12px;
-    max-width: 150px;
-  }
-}
-
-/* Mobile & Tablet (< 992px): Stack sidebar above cards */
+/* Mobile: keep the logo from causing horizontal overflow */
 @media (max-width: 991px) {
-  .csr-stack-layout-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 30px;
-  }
-  .csr-stack-sidebar-col {
-    width: 100%;
-    height: auto;
-  }
-  .csr-stack-sidebar-sticky {
-    position: relative !important;
-    top: auto !important;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    padding: 0;
-  }
-  .csr-sidebar-logo-box {
-    height: 70px !important;
-    width: auto !important;
-  }
-  .csr-sidebar-name {
-    width: 100%;
-    max-width: 100% !important;
-  }
-}
+    .csr-dynamic-logo-container {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 0 auto 20px !important;
+        float: none !important;
+    }
 
-/* Mobile Fallback (< 992px): Natural Vertical Flow */
-@media (max-width: 991px) {
-  .csr-sticky-wrapper-main {
-    padding-bottom: 0 !important;
-  }
-  .csr-card,
-  .csr-card-wrapper {
-    position: relative !important;
-    top: auto !important;
-    margin-bottom: 32px !important;
-  }
-  .csr-card-inner,
-  .csr-card-wrapper .inner {
-    transform: none !important;
-    filter: none !important;
-  }
+    .csr-dynamic-logo-card {
+        width: 100px;
+    }
 }
 
 /* ==========================================================================
@@ -858,7 +705,7 @@ body.csr-page {
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+  
   background: #f4efe9;
 }
 
@@ -1232,4 +1079,63 @@ body.csr-page {
   .nl-placeholder-inner span {
     font-size: 11px;
   }
+}
+/* CSR sticky card stack — desktop */
+.csr-sticky-wrapper-main {
+    position: relative !important;
+    display: block !important;
+    width: 100%;
+    max-width: 1140px;
+    margin: 50px auto 0;
+    padding-bottom: 100vh;
+    overflow: visible !important;
+    box-sizing: border-box;
+}
+
+/* All cards stick to the same point */
+.csr-sticky-wrapper-main > .csr-card-wrapper {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 120px !important;
+    width: 100%;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+/* Later cards appear above earlier cards */
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(1) {
+    z-index: 10 !important;
+}
+
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(2) {
+    z-index: 20 !important;
+}
+
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(3) {
+    z-index: 30 !important;
+}
+
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(4) {
+    z-index: 40 !important;
+}
+
+.csr-sticky-wrapper-main > .csr-card-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+/* Keep normal card flow on tablet and mobile */
+@media (max-width: 991px) {
+    .csr-sticky-wrapper-main {
+        padding-bottom: 0 !important;
+    }
+
+    .csr-sticky-wrapper-main > .csr-card-wrapper {
+        position: relative !important;
+        top: auto !important;
+        margin-bottom: 28px !important;
+    }
+
+    .csr-sticky-wrapper-main > .csr-card-wrapper:last-child {
+        margin-bottom: 0 !important;
+    }
 }

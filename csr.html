@@ -45,30 +45,19 @@
                 </p>
             </div>
 
-            <!-- Two-column grid matching header margins: Sidebar on left (28px), Cards on right (28px) -->
-            <div class="csr-stack-layout-wrap">
-                <!-- Left Logo Sidebar -->
-                <aside class="csr-stack-sidebar-col" id="csrStackSidebar">
-                    <div class="csr-stack-sidebar-sticky">
-                        <div class="csr-sidebar-logo-box">
-                            <img id="csrDynamicLogoImg" class="csr-dynamic-logo-img" src="assets/images/csr/logo4.png" alt="Jankibai Shikshan Sanstha Logo">
-                        </div>
-                        <div class="csr-sidebar-counter" aria-label="Active Card Counter">
-                            <span class="csr-counter-active" id="csrCounterActive">01</span>
-                            <span class="csr-counter-sep">/</span>
-                            <span class="csr-counter-total">04</span>
-                        </div>
-                        <div class="csr-sidebar-dots" id="csrSidebarDots">
-                            <span class="csr-dot is-active" data-index="0" title="Jankibai Shikshan Sanstha"></span>
-                            <span class="csr-dot" data-index="1" title="Ashakiran Foundation"></span>
-                            <span class="csr-dot" data-index="2" title="Anath Balakashram"></span>
-                            <span class="csr-dot" data-index="3" title="Ambubai Residential School"></span>
-                        </div>
-                        <div class="csr-sidebar-name" id="csrSidebarOrgName">Jankibai Shikshan Sanstha</div>
-                    </div>
-                </aside>
+            <!-- Dynamic Logo Beside Stack Section -->
+            <div class="csr-dynamic-logo-container" id="csrDynamicLogoContainer">
+                <div class="csr-dynamic-logo-card">
+                    <img
+                        id="csrDynamicLogoImg"
+                        class="csr-dynamic-logo-img"
+                        src="assets/images/csr/logo1.png"
+                        alt="Active Organization Logo"
+                    >
+                </div>
+            </div>
 
-                <div class="csr-sticky-wrapper-main">
+            <div class="csr-sticky-wrapper-main mt--60">
                 
                 <!-- Card 1: Jankibai Shikshan Sanstha -->
                 <div class="csr-card csr-card-wrapper">
@@ -179,7 +168,6 @@
                 </div>
                 <!-- Card 4 end -->
 
-                </div>
             </div>
         </div>
     </div>
@@ -276,127 +264,87 @@
     <!-- Card Stacking Interactive Scroll Effect (High-Performance 60/120fps rAF) -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const cards = Array.from(document.querySelectorAll('.csr-sticky-wrapper-main > .csr-card'));
+            const cards = Array.from(
+                document.querySelectorAll(
+                    '.csr-sticky-wrapper-main > .csr-card-wrapper'
+                )
+            );
+            const logoContainer = document.getElementById('csrDynamicLogoContainer');
+            const logoImg = document.getElementById('csrDynamicLogoImg');
             if (!cards.length) return;
 
             let isTicking = false;
 
-            // Verified 1-to-1 Institution Data & Logo Mapping
-            const csrInstitutions = [
-                {
-                    name: 'Jankibai Shikshan Sanstha',
-                    logo: 'assets/images/csr/logo4.png', // Hearing-impaired special education emblem
-                    step: '01'
-                },
-                {
-                    name: 'ASHAKIRAN FOUNDATION',
-                    logo: 'assets/images/csr/logo1.png', // Explicitly matches "ASHAKIRAN foundation" logo
-                    step: '02'
-                },
-                {
-                    name: 'ANATH BALAKASHRAM',
-                    logo: 'assets/images/csr/logo2.png', // Explicitly matches "Ashirwad Sevadham Trust Anath Balakashram" logo
-                    step: '03'
-                },
-                {
-                    name: 'Mathoshree Ambubai Residential School',
-                    logo: 'assets/images/csr/logo3.png', // Explicitly matches "Smt. Ambubai School" circular emblem
-                    step: '04'
-                }
+            // Verified 1-to-1 organization mapping:
+            // Card 1: Jankibai Shikshan Sanstha -> no logo in logo1-3
+            // Card 2: ASHAKIRAN FOUNDATION -> assets/images/csr/logo1.png
+            // Card 3: ANATH BALAKASHRAM -> assets/images/csr/logo2.png
+            // Card 4: Mathoshree Ambubai -> assets/images/csr/logo3.png
+            const csrLogos = [
+                '',
+                'assets/images/csr/logo1.png',
+                'assets/images/csr/logo2.png',
+                'assets/images/csr/logo3.png'
             ];
-            let activeOrgIndex = -1;
 
-            function updateSidebar(newIndex, isStackVisible) {
-                const sidebar = document.getElementById('csrStackSidebar');
-                const logoImg = document.getElementById('csrDynamicLogoImg');
-                const counterActive = document.getElementById('csrCounterActive');
-                const orgNameEl = document.getElementById('csrSidebarOrgName');
-                const dots = document.querySelectorAll('#csrSidebarDots .csr-dot');
-                if (!sidebar || !logoImg) return;
-
-                if (!isStackVisible) {
-                    sidebar.style.opacity = '0';
-                    sidebar.style.pointerEvents = 'none';
-                    return;
-                } else {
-                    sidebar.style.opacity = '1';
-                    sidebar.style.pointerEvents = 'auto';
-                }
-
-                if (newIndex === activeOrgIndex) return;
-                activeOrgIndex = newIndex;
-
-                const data = csrInstitutions[newIndex] || csrInstitutions[0];
-
-                // Smooth micro-fade on logo swap
-                if (logoImg.getAttribute('src') !== data.logo) {
-                    logoImg.classList.add('csr-logo-fade');
-                    setTimeout(() => {
-                        logoImg.src = data.logo;
-                        logoImg.alt = data.name + ' Logo';
-                        logoImg.classList.remove('csr-logo-fade');
-                    }, 160);
-                }
-
-                if (counterActive && counterActive.textContent !== data.step) {
-                    counterActive.textContent = data.step;
-                }
-
-                if (orgNameEl && orgNameEl.textContent !== data.name) {
-                    orgNameEl.textContent = data.name;
-                }
-
-                dots.forEach((dot, idx) => {
-                    dot.classList.toggle('is-active', idx === newIndex);
-                });
-            }
+            let activeLogoIndex = -1;
 
             function updateCardStack() {
                 const isMobile = window.innerWidth < 992;
-                let activeIndex = 0;
-                const stickyThreshold = Math.min(180, window.innerHeight * 0.32);
-
-                cards.forEach((card, index) => {
-                    const rect = card.getBoundingClientRect();
-                    if (rect.top <= stickyThreshold) {
-                        activeIndex = index;
-                    }
-
-                    if (isMobile) return; // Flat cards on mobile
-
-                    const inner = card.querySelector('.csr-card-inner, .inner');
-                    if (!inner) return;
-
-                    let targetScale = 1;
-                    let targetBrightness = 1;
-
-                    // Subtle progressive depth as subsequent covering cards arrive
-                    for (let j = index + 1; j < cards.length; j++) {
-                        const nextCard = cards[j];
-                        const nextRect = nextCard.getBoundingClientRect();
-
-                        const totalTravel = Math.max(1, rect.height || 420);
-                        const currentOverlap = Math.max(0, (rect.top + totalTravel) - nextRect.top);
-                        const progress = Math.min(1, Math.max(0, currentOverlap / totalTravel));
-
-                        if (progress > 0) {
-                            targetScale -= progress * 0.015;     // Ultra-subtle scale down to 0.97 max (no width distortion)
-                            targetBrightness -= progress * 0.06; // Gentle contrast reduction
+                if (isMobile) {
+                    if (logoContainer) logoContainer.style.opacity = '1';
+                    cards.forEach(card => {
+                        const inner = card.querySelector('.csr-card-inner, .inner');
+                        if (inner) {
+                            inner.style.transform = '';
+                            inner.style.filter = '';
                         }
+                    });
+                    isTicking = false;
+                    return;
+                }
+
+                const stickyDockTop = 120;
+                let activeIndex = 0;
+
+                // Deterministic active card detection - fixes duplicate card selection
+                for (let i = 0; i < cards.length; i++) {
+                    const rect = cards[i].getBoundingClientRect();
+                    if (rect.top <= stickyDockTop + 25) {
+                        activeIndex = i;
                     }
+                }
 
-                    targetScale = Math.max(0.97, targetScale);
-                    targetBrightness = Math.max(0.86, targetBrightness);
-
-                    inner.style.transform = `scale3d(${targetScale.toFixed(4)}, ${targetScale.toFixed(4)}, 1)`;
-                    inner.style.filter = `brightness(${targetBrightness.toFixed(3)})`;
-                });
-
+                // Stack visibility boundaries
                 const firstCardRect = cards[0].getBoundingClientRect();
                 const lastCardRect = cards[cards.length - 1].getBoundingClientRect();
-                const isStackVisible = firstCardRect.top <= 450 && lastCardRect.bottom >= 80;
+                const isStackActive = firstCardRect.top <= (window.innerHeight * 0.75) && lastCardRect.bottom >= (stickyDockTop - 40);
 
-                updateSidebar(activeIndex, isStackVisible);
+                // Update Dynamic Logo Image beside cards
+                if (logoContainer && logoImg) {
+                    if (!isStackActive) {
+                        logoContainer.style.opacity = '0';
+                    } else {
+                        logoContainer.style.opacity = '1';
+                        const targetLogo = csrLogos[activeIndex];
+                        if (targetLogo) {
+                            if (activeIndex !== activeLogoIndex) {
+                                activeLogoIndex = activeIndex;
+                                logoImg.classList.add('csr-logo-fade');
+                                setTimeout(() => {
+                                    logoImg.src = targetLogo;
+                                    logoImg.classList.remove('csr-logo-fade');
+                                    logoImg.style.opacity = '1';
+                                }, 150);
+                            }
+                        } else {
+                            // Card 1 has no logo in logo1-3
+                            activeLogoIndex = activeIndex;
+                            logoImg.classList.add('csr-logo-fade');
+                            logoImg.style.opacity = '0';
+                        }
+                    }
+                }
 
                 isTicking = false;
             }
@@ -410,7 +358,7 @@
 
             window.addEventListener('scroll', requestUpdate, { passive: true });
             window.addEventListener('resize', requestUpdate);
-            
+
             // Initial sync
             updateCardStack();
         });
