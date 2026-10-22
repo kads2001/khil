@@ -201,7 +201,7 @@ body.committees-page ::selection {
 /* 3. MAIN SECTION */
 .cob-main {
   width: 100%;
-  padding: 56px 0 80px;
+  padding: 32px 0 48px;
   box-sizing: border-box;
 }
 
@@ -210,57 +210,60 @@ body.committees-page ::selection {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--khil-border);
-  padding-bottom: 16px;
-  margin-bottom: 36px;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
   box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .cob-section-eyebrow {
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   color: var(--khil-plum);
   font-weight: 700;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .cob-section-title {
   font-family: var(--khil-font-serif);
-  font-size: clamp(26px, 3vw, 36px);
+  font-size: clamp(24px, 2.6vw, 32px);
   font-weight: 700;
   color: var(--khil-ink);
   margin: 0;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
 }
 
 .cob-section-tag {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 12px;
+  gap: 6px;
+  font-size: 11.5px;
   font-weight: 700;
   color: var(--khil-plum);
   background: var(--khil-plum-soft);
-  padding: 6px 16px;
+  padding: 5px 14px;
   border-radius: 50px;
   border: 1px solid var(--khil-plum-border);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
 /* 4. COMMITTEES GRID */
 .cob-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  margin-bottom: 48px;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 24px;
   box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
   .cob-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 }
 
@@ -272,40 +275,41 @@ body.committees-page ::selection {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   box-sizing: border-box;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cob-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   border-color: var(--khil-gold);
-  box-shadow: 0 10px 28px rgba(184, 155, 105, 0.12);
+  box-shadow: 0 8px 22px rgba(184, 155, 105, 0.12);
 }
 
 /* Card Header */
 .cob-card-header {
-  padding: 28px 28px 22px;
+  padding: 18px 24px 16px;
   border-bottom: 1px solid var(--khil-border-light);
   background: #ffffff;
   display: flex;
   align-items: flex-start;
-  gap: 18px;
+  gap: 14px;
+  box-sizing: border-box;
 }
 
 .cob-card-icon-wrap {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
   background-color: var(--khil-plum-soft);
   border: 1px solid var(--khil-plum-border);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--khil-plum);
-  font-size: 22px;
+  font-size: 18px;
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .cob-card-title-group {
@@ -313,60 +317,82 @@ body.committees-page ::selection {
 }
 
 .cob-card-reg-label {
-  font-size: 11px;
+  font-size: 10.5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   font-weight: 700;
   color: var(--khil-gold-dark);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   display: block;
 }
 
 .cob-card-title {
   font-family: var(--khil-font-serif);
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 700;
   color: var(--khil-ink);
-  line-height: 1.25;
-  margin: 0 0 6px 0;
+  line-height: 1.2;
+  margin: 0 0 4px 0;
   letter-spacing: -0.3px;
 }
 
 .cob-card-desc {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 12.5px;
+  line-height: 1.5;
   color: var(--khil-muted);
   margin: 0;
 }
 
-/* Members Table */
+/* Members Table - Full Bleed, Flush 24px Alignment */
 .cob-table-wrapper {
-  padding: 0 28px;
+  width: 100%;
   overflow-x: auto;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cob-table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   text-align: left;
-  margin: 18px 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 .cob-table thead th {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   color: var(--khil-muted);
-  padding: 10px 14px;
-  border-bottom: 2px solid var(--khil-border);
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--khil-border);
   background-color: var(--khil-sand);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.cob-table thead th:first-child,
+.cob-table tbody td:first-child {
+  padding-left: 24px;
+  padding-right: 12px;
+  width: auto;
+  text-align: left;
+}
+
+.cob-table thead th:last-child,
+.cob-table tbody td:last-child {
+  padding-left: 12px;
+  padding-right: 24px;
+  width: 180px;
+  text-align: left;
 }
 
 .cob-table tbody td {
-  padding: 14px;
+  padding: 10px 12px;
   font-size: 13.5px;
   border-bottom: 1px solid var(--khil-border-light);
   color: var(--khil-ink);
@@ -377,6 +403,10 @@ body.committees-page ::selection {
   border-bottom: none;
 }
 
+.cob-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
 .cob-table tbody tr:hover {
   background-color: #faf8f5;
 }
@@ -384,72 +414,66 @@ body.committees-page ::selection {
 .cob-director-name {
   font-weight: 600;
   color: var(--khil-ink);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.cob-director-avatar-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--khil-plum);
-  display: inline-block;
-}
-
-.cob-director-status {
-  font-size: 12.5px;
-  color: var(--khil-muted);
+  letter-spacing: -0.1px;
 }
 
 /* Badges for Designation */
 .cob-badge-chair {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  border-radius: 50px;
-  font-size: 11.5px;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   background-color: #fbf5eb;
   color: var(--khil-gold-dark);
   border: 1px solid var(--khil-gold-border);
+  line-height: 1.35;
+  white-space: nowrap;
 }
 
 .cob-badge-chair i {
   color: var(--khil-gold);
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .cob-badge-member {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  border-radius: 50px;
-  font-size: 11.5px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 11px;
   font-weight: 600;
   background-color: var(--khil-sand);
   color: var(--khil-body);
   border: 1px solid var(--khil-border);
+  line-height: 1.35;
+  white-space: nowrap;
 }
 
-/* Card Footer */
-.cob-card-footer {
-  padding: 14px 28px;
-  background-color: var(--khil-sand);
-  border-top: 1px solid var(--khil-border-light);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 12px;
-  color: var(--khil-muted);
-}
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .cob-card-header {
+    padding: 14px 18px;
+  }
 
-.cob-card-footer strong {
-  color: var(--khil-plum);
+  .cob-table thead th:first-child,
+  .cob-table tbody td:first-child {
+    padding-left: 18px;
+  }
+
+  .cob-table thead th:last-child,
+  .cob-table tbody td:last-child {
+    padding-right: 18px;
+    width: 150px;
+  }
+
+  .cob-table {
+    min-width: 440px;
+  }
 }
 
 /* 5. GOVERNANCE MANDATE CALLOUT */
