@@ -604,6 +604,162 @@ body.csr-page {
 }
 
 /* ==========================================================================
+   The Indira Venkatesh Foundation Section
+   ========================================================================== */
+.csr-foundation-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 0 100px;
+  background-color: #ffffff;
+}
+
+.csr-foundation-block {
+  display: flex;
+  flex-direction: column;
+  gap: 84px;
+}
+
+.csr-foundation-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.csr-foundation-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.csr-foundation-image-col {
+  flex: 0 0 48%;
+  max-width: 560px;
+  width: 100%;
+}
+
+.csr-foundation-image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+  background: #f4efe9;
+}
+
+.csr-foundation-image-wrapper img {
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.csr-foundation-image-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+.csr-foundation-content-col {
+  flex: 1 1 50%;
+  max-width: 620px;
+}
+
+.csr-foundation-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #242729;
+  margin-bottom: 12px;
+}
+
+.csr-foundation-eyebrow i {
+  font-size: 14px;
+  color: #242729;
+}
+
+.csr-foundation-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(26px, 2.6vw, 36px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1a1a1a !important;
+  letter-spacing: -0.5px;
+  margin: 0 0 20px 0;
+}
+
+.csr-foundation-text p {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #333333 !important;
+  margin: 0 0 16px 0;
+}
+
+.csr-foundation-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .csr-foundation-section {
+    padding: 60px 0;
+  }
+
+  .csr-foundation-block {
+    gap: 56px;
+  }
+
+  .csr-foundation-row,
+  .csr-foundation-row-reverse {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .csr-foundation-image-col {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .csr-foundation-image-wrapper img {
+    height: 500px;
+  }
+
+  .csr-foundation-content-col {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .csr-foundation-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 576px) {
+  .csr-foundation-section {
+    padding: 40px 0;
+  }
+
+  .csr-foundation-block {
+    gap: 44px;
+  }
+
+  .csr-foundation-image-wrapper img {
+    height: 380px;
+    border-radius: 16px;
+  }
+
+  .csr-foundation-title {
+    font-size: 23px;
+  }
+
+  .csr-foundation-text p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+}
+
+/* ==========================================================================
    Horizontal Continuous Marquee Gallery (Hero 10 Showcase)
    ========================================================================== */
 .csr-gallery-marquee-section {
