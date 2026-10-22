@@ -445,10 +445,11 @@
 
 .who-link-item a {
   display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  padding: 10px 12px !important;
-  border-radius: 10px !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
   text-decoration: none !important;
   transition: all 0.2s ease !important;
   background: transparent !important;
@@ -457,23 +458,8 @@
   text-align: left !important;
 }
 
-.who-link-item a .item-icon-box {
-  width: 26px !important;
-  height: 26px !important;
-  border-radius: 6px !important;
-  background: #f4f0f4 !important;
-  color: var(--khil-primary) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 11px !important;
-  flex-shrink: 0 !important;
-  border: none !important;
-  transition: all 0.2s ease !important;
-}
-
 .who-link-item a .item-content {
-  flex-grow: 1 !important;
+  width: 100% !important;
   display: flex !important;
   flex-direction: column !important;
   text-align: left !important;
@@ -491,14 +477,7 @@
   font-size: 10.5px !important;
   color: var(--khil-text-muted) !important;
   line-height: 1.3 !important;
-  margin-top: 1px !important;
-}
-
-.who-link-item a .item-arrow {
-  font-size: 9px !important;
-  color: #94a3b8 !important;
-  transition: transform 0.2s ease, color 0.2s ease !important;
-  flex-shrink: 0 !important;
+  margin-top: 2px !important;
 }
 
 .who-link-item a:hover {
@@ -507,19 +486,8 @@
   transform: translateX(3px) !important;
 }
 
-.who-link-item a:hover .item-icon-box {
-  background: var(--khil-primary) !important;
-  color: #ffffff !important;
-  border: none !important;
-}
-
 .who-link-item a:hover .item-title {
   color: var(--khil-primary) !important;
-}
-
-.who-link-item a:hover .item-arrow {
-  color: var(--khil-primary) !important;
-  transform: translateX(2px) !important;
 }
 
 /* Right Feature Card */
