@@ -44,7 +44,7 @@
   left: 0;
   width: 100%;
   background: #ffffff !important;
-  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important; */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
   z-index: 1050 !important;
   animation: khilStickySlideDown 0.35s ease-out;
 }

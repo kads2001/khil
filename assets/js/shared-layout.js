@@ -26,6 +26,39 @@
     document.body.appendChild(mainScript);
   } else {
     initializeStandaloneMenu();
+    initializeStickyHeader();
+  }
+
+  function initializeStickyHeader() {
+    function setupSticky() {
+      var header = document.querySelector('.header--sticky');
+      if (!header) return;
+
+      var isSticky = false;
+      function onScroll() {
+        var top = window.pageYOffset || document.documentElement.scrollTop || 0;
+        if (top > 150) {
+          if (!isSticky) {
+            header.classList.add('sticky');
+            isSticky = true;
+          }
+        } else {
+          if (isSticky) {
+            header.classList.remove('sticky');
+            isSticky = false;
+          }
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupSticky);
+    } else {
+      setupSticky();
+    }
   }
 
   function initializeStandaloneMenu() {
