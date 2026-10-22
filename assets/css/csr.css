@@ -7,12 +7,16 @@
    CRITICAL FOR POSITION: STICKY & SMOOTH SCROLL TO WORK
    ========================================================================== */
 html {
-  overflow-x: clip !important;
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
   scroll-behavior: smooth;
 }
 
+body,
 body.csr-page {
-  overflow-x: clip !important;
+  overflow: visible !important;
+  overflow-x: visible !important;
   overflow-y: visible !important;
   background-color: #F6F2EB !important;
   color: black;
@@ -23,23 +27,59 @@ body.csr-page {
 .csr-page main,
 .rts-csr-area,
 .rts-csr-area .container,
+.csr-container,
+.csr-stack-container-rel,
 .csr-sticky-wrapper-main {
   overflow: visible !important;
 }
 
-/* 1. SECTION CONTAINER */
+/* 1. SECTION CONTAINER (MATCHES KHIL HEADER 1680px STANDARD) */
 .rts-csr-area {
   position: relative;
   background-color: #F6F2EB;
   color: #000000;
 }
 
-.rts-csr-area .container {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
+.csr-container,
+.csr-page .container {
+  width: 100%;
+  max-width: 1680px !important;
+  margin: 0 auto !important;
+  padding-left: 28px !important;
+  padding-right: 28px !important;
+  box-sizing: border-box !important;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1340px) {
+  .csr-container,
+  .csr-page .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .csr-container,
+  .csr-page .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .csr-container,
+  .csr-page .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .csr-container,
+  .csr-page .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
 }
 
 .rts-section-gap {
@@ -114,52 +154,51 @@ body.csr-page {
   margin-top: 50px;
 }
 
-/* 3. STICKY STACKING WRAPPER */
+/* CSR stack container */
 .csr-sticky-wrapper-main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 90px;
-  box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 100vh;
+    box-sizing: border-box;
 }
 
-/* 4. STICKY CSR CARDS (THE STACK EFFECT) */
-.csr-card,
-.csr-card-wrapper {
-  position: -webkit-sticky;
-  position: sticky;
-  margin-bottom: 100px;
-  will-change: transform, top;
+/* Each card sticks at a slightly different position */
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(1) {
+    position: sticky;
+    top: 120px;
+    z-index: 1;
 }
 
-/* 4-card cascading top offsets */
-.csr-card:nth-child(1),
-.csr-card-wrapper:nth-child(1) {
-  top: 90px;
-  z-index: 10;
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(2) {
+    position: sticky;
+    top: 145px;
+    z-index: 2;
 }
 
-.csr-card:nth-child(2),
-.csr-card-wrapper:nth-child(2) {
-  top: 115px;
-  z-index: 20;
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(3) {
+    position: sticky;
+    top: 170px;
+    z-index: 3;
 }
 
-.csr-card:nth-child(3),
-.csr-card-wrapper:nth-child(3) {
-  top: 140px;
-  z-index: 30;
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(4) {
+    position: sticky;
+    top: 195px;
+    z-index: 4;
 }
 
-.csr-card:nth-child(4),
-.csr-card-wrapper:nth-child(4) {
-  top: 165px;
-  z-index: 40;
+/* Preserve card dimensions */
+.csr-sticky-wrapper-main > .csr-card-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
 }
 
-.csr-card:last-child,
-.csr-card-wrapper:last-child {
-  margin-bottom: 0;
+.csr-sticky-wrapper-main > .csr-card-wrapper:last-child {
+    margin-bottom: 0;
 }
 
 /* Card Inner Surface */
@@ -168,12 +207,13 @@ body.csr-page {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 48px;
-  padding: 44px 52px 48px 52px;
+  gap: 40px;
+  padding: 30px 42px 32px 42px; /* Proportional padding ensuring entire card fits viewport */
   border-radius: 20px;
   position: relative;
   background: #b1b1b1;
   border: 1px solid rgba(0, 0, 0, 0.12);
+ 
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   transform: translate3d(0, 0, 0);
@@ -213,11 +253,16 @@ body.csr-page {
 .csr-card-content .csr-card-title,
 .csr-card-wrapper .left-content .title {
   color: #000000 !important;
+<<<<<<< HEAD
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: clamp(24px, 2.4vw, 32px);
+=======
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(20px, 2.1vw, 26px);
+>>>>>>> d78b232ff4f928214eaba2944751c01aa05314c8
   line-height: 1.25;
   font-weight: 700;
-  margin: 0 0 14px 0;
+  margin: 0 0 10px 0;
   letter-spacing: -0.3px;
 }
 
@@ -225,10 +270,10 @@ body.csr-page {
 .csr-card-content .csr-card-disc,
 .csr-card-wrapper .left-content p.disc {
   color: #1a1612 !important;
-  font-size: 14.5px;
-  line-height: 1.65;
+  font-size: 14px;
+  line-height: 1.55;
   font-weight: 400;
-  margin: 0 0 22px 0;
+  margin: 0 0 14px 0;
 }
 
 /* Highlights / Impact List (Replaces generic product feature-list) */
@@ -238,7 +283,7 @@ body.csr-page {
 .csr-card-wrapper .left-content .feature-list {
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 8px;
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -471,39 +516,28 @@ body.csr-page {
   }
 
   .csr-sticky-wrapper-main {
-    padding-bottom: 80px;
+    padding-bottom: 0 !important;
   }
 
   .csr-card,
   .csr-card-wrapper {
-    margin-bottom: 40px;
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 28px !important;
   }
 
-  .csr-card:nth-child(1),
-  .csr-card-wrapper:nth-child(1) {
-    top: 80px;
-  }
-
-  .csr-card:nth-child(2),
-  .csr-card-wrapper:nth-child(2) {
-    top: 100px;
-  }
-
-  .csr-card:nth-child(3),
-  .csr-card-wrapper:nth-child(3) {
-    top: 120px;
-  }
-
-  .csr-card:nth-child(4),
-  .csr-card-wrapper:nth-child(4) {
-    top: 140px;
+  .csr-card:last-child,
+  .csr-card-wrapper:last-child {
+    margin-bottom: 0 !important;
   }
 
   .csr-card-inner,
   .csr-card-wrapper .inner {
     flex-direction: column;
-    padding: 32px 24px;
-    gap: 26px;
+    padding: 28px 22px;
+    gap: 24px;
+    transform: none !important;
+    filter: none !important;
   }
 
   .csr-card-content,
@@ -521,7 +555,7 @@ body.csr-page {
   .csr-card-image img,
   .csr-card-wrapper .image-area img {
     max-width: 100%;
-    height: 250px;
+    height: 240px;
   }
 }
 
@@ -544,35 +578,6 @@ body.csr-page {
 
   .csr-intro-disc {
     font-size: 13.5px;
-  }
-
-  .csr-sticky-wrapper-main {
-    padding-bottom: 40px;
-  }
-
-  .csr-card,
-  .csr-card-wrapper {
-    margin-bottom: 24px;
-  }
-
-  .csr-card:nth-child(1),
-  .csr-card-wrapper:nth-child(1) {
-    top: 70px;
-  }
-
-  .csr-card:nth-child(2),
-  .csr-card-wrapper:nth-child(2) {
-    top: 88px;
-  }
-
-  .csr-card:nth-child(3),
-  .csr-card-wrapper:nth-child(3) {
-    top: 106px;
-  }
-
-  .csr-card:nth-child(4),
-  .csr-card-wrapper:nth-child(4) {
-    top: 124px;
   }
 
   .csr-card-inner,
@@ -601,6 +606,70 @@ body.csr-page {
     width: 100%;
     justify-content: center;
   }
+}
+
+/* ==========================================================================
+   Stack Stage & Separate Left Logo Dock (Symmetrically Balanced)
+   ========================================================================== */
+/* ==========================================================================
+   CSR stack: logo positioned outside the cards
+   ========================================================================== */
+.csr-stack-container-rel {
+    position: relative;
+}
+
+.csr-dynamic-logo-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
+    float: left;
+    left: 0;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    margin-right: -150px;
+    margin-bottom: -150px;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.csr-dynamic-logo-card {
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.25s ease;
+}
+
+.csr-dynamic-logo-img {
+    display: block;
+    width: 100%;
+    max-width: 130px;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.2s ease;
+}
+
+.csr-dynamic-logo-img.csr-logo-fade {
+    opacity: 0;
+}
+
+/* Mobile: keep the logo from causing horizontal overflow */
+@media (max-width: 991px) {
+    .csr-dynamic-logo-container {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 0 auto 20px !important;
+        float: none !important;
+    }
+
+    .csr-dynamic-logo-card {
+        width: 100px;
+    }
 }
 
 /* ==========================================================================
@@ -641,20 +710,34 @@ body.csr-page {
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+  
   background: #f4efe9;
 }
 
+.nl-image-features-9,
 .csr-foundation-image-wrapper img {
   width: 100%;
   height: 640px;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  /* Top to down reveal animation */
+  clip-path: inset(0 0 100% 0);
+  transform: scale(1.15) translateY(-20px);
+  transition: clip-path 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.3s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: clip-path, transform;
+  backface-visibility: hidden;
 }
 
-.csr-foundation-image-wrapper:hover img {
+.csr-foundation-image-wrapper.is-revealed .nl-image-features-9,
+.csr-foundation-image-wrapper.is-revealed img {
+  clip-path: inset(0 0 0% 0);
+  transform: scale(1) translateY(0);
+}
+
+.csr-foundation-image-wrapper.is-revealed:hover .nl-image-features-9,
+.csr-foundation-image-wrapper.is-revealed:hover img {
   transform: scale(1.03);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .csr-foundation-content-col {
@@ -1001,4 +1084,63 @@ body.csr-page {
   .nl-placeholder-inner span {
     font-size: 11px;
   }
+}
+/* CSR sticky card stack — desktop */
+.csr-sticky-wrapper-main {
+    position: relative !important;
+    display: block !important;
+    width: 100%;
+    max-width: 1140px;
+    margin: 50px auto 0;
+    padding-bottom: 100vh;
+    overflow: visible !important;
+    box-sizing: border-box;
+}
+
+/* All cards stick to the same point */
+.csr-sticky-wrapper-main > .csr-card-wrapper {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 120px !important;
+    width: 100%;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+/* Later cards appear above earlier cards */
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(1) {
+    z-index: 10 !important;
+}
+
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(2) {
+    z-index: 20 !important;
+}
+
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(3) {
+    z-index: 30 !important;
+}
+
+.csr-sticky-wrapper-main > .csr-card-wrapper:nth-child(4) {
+    z-index: 40 !important;
+}
+
+.csr-sticky-wrapper-main > .csr-card-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+/* Keep normal card flow on tablet and mobile */
+@media (max-width: 991px) {
+    .csr-sticky-wrapper-main {
+        padding-bottom: 0 !important;
+    }
+
+    .csr-sticky-wrapper-main > .csr-card-wrapper {
+        position: relative !important;
+        top: auto !important;
+        margin-bottom: 28px !important;
+    }
+
+    .csr-sticky-wrapper-main > .csr-card-wrapper:last-child {
+        margin-bottom: 0 !important;
+    }
 }

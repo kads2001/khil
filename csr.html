@@ -28,7 +28,7 @@
 
     <!-- CSR Initiatives Area Start -->
     <div class="rts-csr-area rts-section-gap">
-        <div class="container">
+        <div class="csr-container csr-stack-container-rel">
             <div class="title-center-wrapper">
                 <span class="csr-eyebrow"><i class="fa-solid fa-hands-holding-heart"></i> Our Association</span>
                 <h1 class="title mt--0">Corporate Social Responsibility</h1>
@@ -39,6 +39,19 @@
                     Please visit their websites for more information and to make a donation.
                 </p>
             </div>
+
+            <!-- Dynamic Logo Beside Stack Section -->
+            <div class="csr-dynamic-logo-container" id="csrDynamicLogoContainer">
+                <div class="csr-dynamic-logo-card">
+                    <img
+                        id="csrDynamicLogoImg"
+                        class="csr-dynamic-logo-img"
+                        src="assets/images/csr/logo1.png"
+                        alt="Active Organization Logo"
+                    >
+                </div>
+            </div>
+
             <div class="csr-sticky-wrapper-main mt--60">
                 
                 <!-- Card 1: Jankibai Shikshan Sanstha -->
@@ -157,14 +170,14 @@
 
     <!-- The Indira Venkatesh Foundation Section -->
     <section class="csr-foundation-section">
-        <div class="container">
+        <div class="csr-container">
             <div class="csr-foundation-block">
                 
                 <!-- Foundation Row 1: Story & Mission -->
                 <div class="csr-foundation-row">
                     <div class="csr-foundation-image-col">
                         <div class="csr-foundation-image-wrapper">
-                            <img src="assets/images/csr/csr1.png" alt="The Indira Venkatesh Foundation - Women Empowerment Initiative" loading="lazy">
+                            <img src="assets/images/csr/csr1.png" alt="The Indira Venkatesh Foundation - Women Empowerment Initiative" loading="lazy" class="nl-image-features-9">
                         </div>
                     </div>
                     <div class="csr-foundation-content-col">
@@ -182,7 +195,7 @@
                 <div class="csr-foundation-row csr-foundation-row-reverse">
                     <div class="csr-foundation-image-col">
                         <div class="csr-foundation-image-wrapper">
-                            <img src="assets/images/csr/csr2.png" alt="Empowering Women and Fostering Change - Education Support" loading="lazy">
+                            <img src="assets/images/csr/csr2.png" alt="Empowering Women and Fostering Change - Education Support" loading="lazy" class="nl-image-features-9">
                         </div>
                     </div>
                     <div class="csr-foundation-content-col">
@@ -202,7 +215,7 @@
 
     <!-- CSR Showcase Horizontal Continuous Marquee Gallery -->
     <section class="csr-gallery-marquee-section">
-        <div class="container">
+        <div class="csr-container">
             <div class="csr-gallery-header-row">
                 <div class="csr-gallery-header-left">
                     <span class="csr-gallery-pretitle">Mathoshree Ambubai Residential School for<br> Blind Girls</span>
@@ -246,41 +259,87 @@
     <!-- Card Stacking Interactive Scroll Effect (High-Performance 60/120fps rAF) -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const cards = Array.from(document.querySelectorAll('.csr-card, .csr-card-wrapper'));
+            const cards = Array.from(
+                document.querySelectorAll(
+                    '.csr-sticky-wrapper-main > .csr-card-wrapper'
+                )
+            );
+            const logoContainer = document.getElementById('csrDynamicLogoContainer');
+            const logoImg = document.getElementById('csrDynamicLogoImg');
             if (!cards.length) return;
 
             let isTicking = false;
 
+            // Verified 1-to-1 organization mapping:
+            // Card 1: Jankibai Shikshan Sanstha -> no logo in logo1-3
+            // Card 2: ASHAKIRAN FOUNDATION -> assets/images/csr/logo1.png
+            // Card 3: ANATH BALAKASHRAM -> assets/images/csr/logo2.png
+            // Card 4: Mathoshree Ambubai -> assets/images/csr/logo3.png
+            const csrLogos = [
+                '',
+                'assets/images/csr/logo1.png',
+                'assets/images/csr/logo2.png',
+                'assets/images/csr/logo3.png'
+            ];
+
+            let activeLogoIndex = -1;
+
             function updateCardStack() {
-                cards.forEach((card, index) => {
-                    const inner = card.querySelector('.csr-card-inner, .inner');
-                    if (!inner) return;
+                const isMobile = window.innerWidth < 992;
+                if (isMobile) {
+                    if (logoContainer) logoContainer.style.opacity = '1';
+                    cards.forEach(card => {
+                        const inner = card.querySelector('.csr-card-inner, .inner');
+                        if (inner) {
+                            inner.style.transform = '';
+                            inner.style.filter = '';
+                        }
+                    });
+                    isTicking = false;
+                    return;
+                }
 
-                    let targetScale = 1;
-                    let targetBrightness = 1;
+                const stickyDockTop = 120;
+                let activeIndex = 0;
 
-                    // Compute progressive depth based on all subsequent covering cards
-                    for (let j = index + 1; j < cards.length; j++) {
-                        const nextCard = cards[j];
-                        const cardRect = card.getBoundingClientRect();
-                        const nextRect = nextCard.getBoundingClientRect();
+                // Deterministic active card detection - fixes duplicate card selection
+                for (let i = 0; i < cards.length; i++) {
+                    const rect = cards[i].getBoundingClientRect();
+                    if (rect.top <= stickyDockTop + 25) {
+                        activeIndex = i;
+                    }
+                }
 
-                        const totalTravel = Math.max(1, cardRect.bottom - (cardRect.top + 25));
-                        const currentOverlap = Math.max(0, cardRect.bottom - nextRect.top);
-                        const progress = Math.min(1, Math.max(0, currentOverlap / totalTravel));
+                // Stack visibility boundaries
+                const firstCardRect = cards[0].getBoundingClientRect();
+                const lastCardRect = cards[cards.length - 1].getBoundingClientRect();
+                const isStackActive = firstCardRect.top <= (window.innerHeight * 0.75) && lastCardRect.bottom >= (stickyDockTop - 40);
 
-                        if (progress > 0) {
-                            targetScale -= progress * 0.045;
-                            targetBrightness -= progress * 0.14;
+                // Update Dynamic Logo Image beside cards
+                if (logoContainer && logoImg) {
+                    if (!isStackActive) {
+                        logoContainer.style.opacity = '0';
+                    } else {
+                        logoContainer.style.opacity = '1';
+                        const targetLogo = csrLogos[activeIndex];
+                        if (targetLogo) {
+                            if (activeIndex !== activeLogoIndex) {
+                                activeLogoIndex = activeIndex;
+                                logoImg.classList.add('csr-logo-fade');
+                                setTimeout(() => {
+                                    logoImg.src = targetLogo;
+                                    logoImg.classList.remove('csr-logo-fade');
+                                    logoImg.style.opacity = '1';
+                                }, 150);
+                            }
+                        } else {
+                            // Card 1 has no logo in logo1-3
+                            activeLogoIndex = activeIndex;
+                            logoImg.classList.add('csr-logo-fade');
+                            logoImg.style.opacity = '0';
                         }
                     }
-
-                    targetScale = Math.max(0.86, targetScale);
-                    targetBrightness = Math.max(0.65, targetBrightness);
-
-                    inner.style.transform = `scale3d(${targetScale.toFixed(4)}, ${targetScale.toFixed(4)}, 1)`;
-                    inner.style.filter = `brightness(${targetBrightness.toFixed(3)})`;
-                });
+                }
 
                 isTicking = false;
             }
@@ -294,10 +353,48 @@
 
             window.addEventListener('scroll', requestUpdate, { passive: true });
             window.addEventListener('resize', requestUpdate);
-            
-            // Initial calculation
+
+            // Initial sync
             updateCardStack();
         });
+
+        // Up-to-down Image Reveal on Scroll (Dual Trigger: IntersectionObserver + Scroll Fallback)
+        (function () {
+            function checkImageReveal() {
+                var wrappers = document.querySelectorAll('.csr-foundation-image-wrapper:not(.is-revealed)');
+                if (!wrappers.length) return;
+                var viewH = window.innerHeight || document.documentElement.clientHeight;
+                for (var i = 0; i < wrappers.length; i++) {
+                    var rect = wrappers[i].getBoundingClientRect();
+                    if (rect.top <= viewH * 0.90 && rect.bottom >= 0) {
+                        wrappers[i].classList.add('is-revealed');
+                    }
+                }
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-revealed');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+
+                document.querySelectorAll('.csr-foundation-image-wrapper').forEach(function (el) {
+                    observer.observe(el);
+                });
+            }
+
+            window.addEventListener('scroll', checkImageReveal, { passive: true });
+            window.addEventListener('resize', checkImageReveal);
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', checkImageReveal);
+            } else {
+                checkImageReveal();
+            }
+        })();
     </script>
 </body>
 </html>
