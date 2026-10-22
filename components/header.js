@@ -17,81 +17,48 @@
                                 <ul class="who-links-list">
                                     <li class="who-link-item">
                                         <a href="about.html">
-                                            <div class="item-icon-box">
-                                                <i class="fa-regular fa-hotel"></i>
-                                            </div>
                                             <div class="item-content">
                                                 <span class="item-title">About Us</span>
                                                 <span class="item-desc">Asia's pioneer in environmentally sensitive hotels</span>
                                             </div>
-                                            <i class="fa-regular fa-chevron-right item-arrow"></i>
                                         </a>
                                     </li>
                                     <li class="who-link-item">
                                         <a href="milestone.html">
-                                            <div class="item-icon-box">
-                                                <i class="fa-regular fa-flag"></i>
-                                            </div>
                                             <div class="item-content">
                                                 <span class="item-title">Milestones</span>
                                                 <span class="item-desc">Four decades of hospitality excellence &amp; growth</span>
                                             </div>
-                                            <i class="fa-regular fa-chevron-right item-arrow"></i>
                                         </a>
                                     </li>
                                     <li class="who-link-item">
                                         <a href="board-of-directors.html">
-                                            <div class="item-icon-box">
-                                                <i class="fa-regular fa-user-tie"></i>
-                                            </div>
                                             <div class="item-content">
                                                 <span class="item-title">Board of Directors</span>
                                                 <span class="item-desc">Executive stewardship &amp; strategic vision</span>
                                             </div>
-                                            <i class="fa-regular fa-chevron-right item-arrow"></i>
                                         </a>
                                     </li>
                                     <li class="who-link-item">
                                         <a href="committees-of-board.html">
-                                            <div class="item-icon-box">
-                                                <i class="fa-regular fa-clipboard-check"></i>
-                                            </div>
                                             <div class="item-content">
                                                 <span class="item-title">Committees of Board</span>
                                                 <span class="item-desc">Audit, stakeholders &amp; governance oversight</span>
                                             </div>
-                                            <i class="fa-regular fa-chevron-right item-arrow"></i>
                                         </a>
                                     </li>
                                     <li class="who-link-item">
                                         <a href="directorships-of-the-board-of-directors.html">
-                                            <div class="item-icon-box">
-                                                <i class="fa-regular fa-id-card-clip"></i>
-                                            </div>
                                             <div class="item-content">
                                                 <span class="item-title">Directorships of the Board</span>
                                                 <span class="item-desc">Board representations &amp; corporate disclosures</span>
                                             </div>
-                                            <i class="fa-regular fa-chevron-right item-arrow"></i>
                                         </a>
                                     </li>
                                 </ul>
 
-                                <!-- Right Column: Brand Feature Highlight Card -->
-                                <div class="who-feature-card">
-                                    <div>
-                                        <span class="feat-tag"><i class="fa-solid fa-leaf"></i> Pioneering Eco-Luxury</span>
-                                        <h4 class="feat-title">Kamat Hotels (India) Ltd.</h4>
-                                        <p class="feat-desc">From the iconic 5-star Orchid Hotel to 300-year-old heritage Fort JadhavGADH, redefining conscious hospitality across India.</p>
-                                    </div>
-                                    <div>
-                                        <div class="feat-stats">
-                                            <span class="stat-pill"><i class="fa-regular fa-calendar-check"></i> Since 1986</span>
-                                            <span class="stat-pill"><i class="fa-regular fa-award"></i> Multi-Awarded</span>
-                                        </div>
-                                        <a href="about.html" class="feat-btn">Discover Our Story <i class="fa-regular fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
+                               
+                           
                             </div>
                         </div>
                     </li>
@@ -108,7 +75,7 @@
                                             <span class="brand-badge badge-orchid">5-Star Ecotel</span>
                                         </div>
                                         <span class="brand-tagline">Asia's First Certified Eco-Friendly 5-Star Hotel</span>
-                                        <span class="brand-locs"><i class="fa-regular fa-location-dot"></i> Mumbai &bull; Pune &bull; Jamnagar</span>
+                                        <span class="brand-locs">Mumbai &bull; Pune &bull; Jamnagar</span>
                                     </a>
                                 </div>
                                 <div class="brand-card-item">
@@ -118,7 +85,7 @@
                                             <span class="brand-badge badge-heritage">Heritage Fort</span>
                                         </div>
                                         <span class="brand-tagline">Maharashtra's Only 300-Year-Old Fort Heritage Hotel</span>
-                                        <span class="brand-locs"><i class="fa-regular fa-location-dot"></i> Hadapsar &bull; Pune</span>
+                                        <span class="brand-locs">Hadapsar &bull; Pune</span>
                                     </a>
                                 </div>
                                 <div class="brand-card-item">
@@ -128,7 +95,7 @@
                                             <span class="brand-badge badge-resort">Beach Resort</span>
                                         </div>
                                         <span class="brand-tagline">Serene Nature &amp; Beach Resorts in Pristine Landscapes</span>
-                                        <span class="brand-locs"><i class="fa-regular fa-location-dot"></i> Konark &bull; Goa &bull; Murud</span>
+                                        <span class="brand-locs">Konark &bull; Goa &bull; Murud</span>
                                     </a>
                                 </div>
                                 <div class="brand-card-item">
@@ -138,13 +105,9 @@
                                             <span class="brand-badge badge-contemporary">Upscale Leisure</span>
                                         </div>
                                         <span class="brand-tagline">Contemporary Business &amp; Leisure Experiences</span>
-                                        <span class="brand-locs"><i class="fa-regular fa-location-dot"></i> Bhubaneswar &bull; Nashik &bull; Sambhajinagar</span>
+                                        <span class="brand-locs">Bhubaneswar &bull; Nashik &bull; Sambhajinagar</span>
                                     </a>
                                 </div>
-                            </div>
-                            <div class="brands-bottom-bar">
-                                <span>Experience world-class sustainable hospitality</span>
-                                <a href="index.html#brands">View All Destinations <i class="fa-regular fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </li>
@@ -153,55 +116,39 @@
                     <li class="main-nav has-dropdown mega-menu">
                         <a href="#">Investors</a>
                         <div class="khil-mega-dropdown">
-                            <!-- Top Investor Bar: Pulse Status & Instant Search -->
-                            <div class="investor-top-bar">
-                                <div class="investor-status-info">
-                                    <span class="live-pulse-dot"></span>
-                                    <span class="portal-title-tag">KHIL Investor Relations</span>
-                                    <span class="stock-ticker-pill">BSE: <strong>526668</strong></span>
-                                    <span class="stock-ticker-pill">NSE: <strong>KAMATHOTEL</strong></span>
-                                    <span class="stock-ticker-pill d-none d-xxl-inline">ISIN: <strong>INE967C01018</strong></span>
-                                </div>
-                                <div class="investor-search-box">
-                                    <i class="fa-regular fa-magnifying-glass"></i>
-                                    <input type="text" id="investorSearchInput" placeholder="Quick find filings (e.g. AGM, Results, Secretarial)...">
-                                </div>
-                            </div>
-
                             <div class="row g-3 g-xl-4" id="investorMegaGrid">
                                 <!-- Column 1: Financials & Shareholding -->
                                 <div class="col-lg-3">
                                     <div class="mega-col-card">
                                         <div class="mega-col-header">
                                             <div class="header-left">
-                                                <span class="header-icon"><i class="fa-regular fa-chart-line"></i></span>
                                                 <span class="header-title">Financials</span>
                                             </div>
                                             <span class="header-count">4 Filings</span>
                                         </div>
                                         <ul class="mega-links-list">
-                                            <li><a href="annual-reports.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Annual Reports</span> <span class="badge-new">Audited</span></a></li>
-                                            <li><a href="quarterly-results.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Quarterly Reports</span> <span class="badge-new">Latest</span></a></li>
-                                            <li><a href="khil-subsidiary.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Khil Subsidiary</span></a></li>
-                                            <li><a href="investor-presentations.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Investor Presentations</span></a></li>
+                                            <li><a href="annual-reports.html"><span class="link-left">Annual Reports</span> <span class="badge-new">Audited</span></a></li>
+                                            <li><a href="quarterly-results.html"><span class="link-left">Quarterly Reports</span> <span class="badge-new">Latest</span></a></li>
+                                            <li><a href="khil-subsidiary.html"><span class="link-left">Khil Subsidiary</span></a></li>
+                                            <li><a href="investor-presentations.html"><span class="link-left">Investor Presentations</span></a></li>
                                         </ul>
 
                                         <div class="sub-section-divider">
-                                            <i class="fa-regular fa-pie-chart"></i> Shareholding &amp; Dividends
+                                            Shareholding &amp; Dividends
                                         </div>
                                         <ul class="mega-links-list">
-                                            <li><a href="shareholding-pattern.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Shareholding Pattern</span></a></li>
-                                            <li><a href="unclaimed-shares-dividend.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Unclaimed Shares &amp; Dividend</span></a></li>
-                                            <li><a href="unclaimed-dividend.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Unclaimed Dividend</span></a></li>
+                                            <li><a href="shareholding-pattern.html"><span class="link-left">Shareholding Pattern</span></a></li>
+                                            <li><a href="unclaimed-shares-dividend.html"><span class="link-left">Unclaimed Shares &amp; Dividend</span></a></li>
+                                            <li><a href="unclaimed-dividend.html"><span class="link-left">Unclaimed Dividend</span></a></li>
                                         </ul>
 
                                         <div class="sub-section-divider">
-                                            <i class="fa-regular fa-headset"></i> Investor Support
+                                            Investor Support
                                         </div>
                                         <ul class="mega-links-list">
-                                            <li><a href="investor-contact.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Investor Contact Details</span></a></li>
-                                            <li><a href="investor-notices.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Investor Notices</span></a></li>
-                                            <li><a href="investor-grievance.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Investor Grievance</span> <span class="badge-form">Portal</span></a></li>
+                                            <li><a href="investor-contact.html"><span class="link-left">Investor Contact Details</span></a></li>
+                                            <li><a href="investor-notices.html"><span class="link-left">Investor Notices</span></a></li>
+                                            <li><a href="investor-grievance.html"><span class="link-left">Investor Grievance</span> <span class="badge-form">Portal</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -211,30 +158,29 @@
                                     <div class="mega-col-card">
                                         <div class="mega-col-header">
                                             <div class="header-left">
-                                                <span class="header-icon"><i class="fa-regular fa-shield-halved"></i></span>
                                                 <span class="header-title">Governance</span>
                                             </div>
                                             <span class="header-count">6 Items</span>
                                         </div>
                                         <ul class="mega-links-list">
-                                            <li><a href="related-party-policy.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Related Party Policy</span></a></li>
-                                            <li><a href="insider-trading.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Insider Trading</span></a></li>
-                                            <li><a href="other-policies.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Other Policies</span></a></li>
-                                            <li><a href="corporate-governance-reports.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Governance Reports</span></a></li>
-                                            <li><a href="appointment-letters-of-directors.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Appointment Letters</span></a></li>
-                                            <li><a href="Employee Stock Option Scheme 2026.pdf" target="_blank"><span class="link-left"><i class="fa-regular fa-file-pdf text-danger"></i> ESOP Scheme 2026</span> <span class="badge-pdf">PDF</span></a></li>
+                                            <li><a href="related-party-policy.html"><span class="link-left">Related Party Policy</span></a></li>
+                                            <li><a href="insider-trading.html"><span class="link-left">Insider Trading</span></a></li>
+                                            <li><a href="other-policies.html"><span class="link-left">Other Policies</span></a></li>
+                                            <li><a href="corporate-governance-reports.html"><span class="link-left">Governance Reports</span></a></li>
+                                            <li><a href="appointment-letters-of-directors.html"><span class="link-left">Appointment Letters</span></a></li>
+                                            <li><a href="Employee Stock Option Scheme 2026.pdf" target="_blank"><span class="link-left">ESOP Scheme 2026</span> <span class="badge-pdf">PDF</span></a></li>
                                         </ul>
 
                                         <div class="sub-section-divider">
-                                            <i class="fa-regular fa-file-invoice-dollar"></i> Disclosures Reg 62 (Debt)
+                                            Disclosures Reg 62 (Debt)
                                         </div>
                                         <ul class="mega-links-list">
-                                            <li><a href="financial-results-security-cover-certificate.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Financial Results &amp; Security Cover</span> <span class="badge-debt">Debt</span></a></li>
-                                            <li><a href="record-date-intimation.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Record Date Intimation</span></a></li>
-                                            <li><a href="investor-grievance-debt.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Investor Grievance Debt</span></a></li>
-                                            <li><a href="interest-payment-and-redemption.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Interest Payment &amp; Redemption</span></a></li>
-                                            <li><a href="statement-of-deviation-and-variation.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Statement of Deviation</span></a></li>
-                                            <li><a href="other-disclosures-debt.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Other Disclosures Debt</span></a></li>
+                                            <li><a href="financial-results-security-cover-certificate.html"><span class="link-left">Financial Results &amp; Security Cover</span> <span class="badge-debt">Debt</span></a></li>
+                                            <li><a href="record-date-intimation.html"><span class="link-left">Record Date Intimation</span></a></li>
+                                            <li><a href="investor-grievance-debt.html"><span class="link-left">Investor Grievance Debt</span></a></li>
+                                            <li><a href="interest-payment-and-redemption.html"><span class="link-left">Interest Payment &amp; Redemption</span></a></li>
+                                            <li><a href="statement-of-deviation-and-variation.html"><span class="link-left">Statement of Deviation</span></a></li>
+                                            <li><a href="other-disclosures-debt.html"><span class="link-left">Other Disclosures Debt</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -244,31 +190,30 @@
                                     <div class="mega-col-card">
                                         <div class="mega-col-header">
                                             <div class="header-left">
-                                                <span class="header-icon"><i class="fa-regular fa-users"></i></span>
                                                 <span class="header-title">Meetings</span>
                                             </div>
                                             <span class="header-count">5 Meetings</span>
                                         </div>
                                         <ul class="mega-links-list">
-                                            <li><a href="board-meeting.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Board Meeting Intimation</span></a></li>
-                                            <li><a href="board-meeting-outcome.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Board Meeting Outcome</span></a></li>
-                                            <li><a href="annual-general-meeting.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Annual General Meeting</span></a></li>
-                                            <li><a href="extra-ordinary-general-meeting.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Extra-Ordinary General Meeting</span></a></li>
-                                            <li><a href="postal-ballot.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Postal Ballot</span></a></li>
+                                            <li><a href="board-meeting.html"><span class="link-left">Board Meeting Intimation</span></a></li>
+                                            <li><a href="board-meeting-outcome.html"><span class="link-left">Board Meeting Outcome</span></a></li>
+                                            <li><a href="annual-general-meeting.html"><span class="link-left">Annual General Meeting</span></a></li>
+                                            <li><a href="extra-ordinary-general-meeting.html"><span class="link-left">Extra-Ordinary General Meeting</span></a></li>
+                                            <li><a href="postal-ballot.html"><span class="link-left">Postal Ballot</span></a></li>
                                         </ul>
 
                                         <div class="sub-section-divider">
-                                            <i class="fa-regular fa-file-contract"></i> Secretarial &amp; Compliance
+                                            Secretarial &amp; Compliance
                                         </div>
                                         <ul class="mega-links-list">
-                                            <li><a href="trading-window-closure.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Trading Window Closure</span></a></li>
-                                            <li><a href="structural-digital-database.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Structural Digital Database</span></a></li>
-                                            <li><a href="reconciliation-share-capital-audit.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Reconciliation Share Capital</span></a></li>
-                                            <li><a href="related-party-transactions.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Related Party Transactions</span></a></li>
-                                            <li><a href="annual-secretarial-compliance-report.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Annual Secretarial Compliance</span></a></li>
-                                            <li><a href="newspaper-publications.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Newspaper Publications</span></a></li>
-                                            <li><a href="book-closure-intimation.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Book Closure Intimation</span></a></li>
-                                            <li><a href="merger.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Merger</span></a></li>
+                                            <li><a href="trading-window-closure.html"><span class="link-left">Trading Window Closure</span></a></li>
+                                            <li><a href="structural-digital-database.html"><span class="link-left">Structural Digital Database</span></a></li>
+                                            <li><a href="reconciliation-share-capital-audit.html"><span class="link-left">Reconciliation Share Capital</span></a></li>
+                                            <li><a href="related-party-transactions.html"><span class="link-left">Related Party Transactions</span></a></li>
+                                            <li><a href="annual-secretarial-compliance-report.html"><span class="link-left">Annual Secretarial Compliance</span></a></li>
+                                            <li><a href="newspaper-publications.html"><span class="link-left">Newspaper Publications</span></a></li>
+                                            <li><a href="book-closure-intimation.html"><span class="link-left">Book Closure Intimation</span></a></li>
+                                            <li><a href="merger.html"><span class="link-left">Merger</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -278,35 +223,22 @@
                                     <div class="mega-col-card">
                                         <div class="mega-col-header">
                                             <div class="header-left">
-                                                <span class="header-icon"><i class="fa-regular fa-scale-balanced"></i></span>
                                                 <span class="header-title">SEBI &amp; Filings</span>
                                             </div>
                                             <span class="header-count">9 Filings</span>
                                         </div>
                                         <ul class="mega-links-list">
-                                            <li><a href="regulation-30.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Regulation 30 SEBI (LODR)</span> <span class="badge-lodr">LODR</span></a></li>
-                                            <li><a href="disclosures-under-Regulation-46-of-the-LODR.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Disclosures under Reg 46</span> <span class="badge-lodr">LODR 46</span></a></li>
-                                            <li><a href="credit-ratings.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Credit Ratings</span></a></li>
-                                            <li><a href="complaince-certificate.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Compliance Cert Reg 40(9)</span></a></li>
-                                            <li><a href="complaince-certificate-2.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Compliance Cert Reg 7(3)</span></a></li>
-                                            <li><a href="confirmation-certificate.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Confirmation Cert Reg 74(5)</span></a></li>
-                                            <li><a href="sast-regulations.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> SAST Regulations</span></a></li>
-                                            <li><a href="investor-analyst-meet.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Investor/Analyst Meet</span></a></li>
-                                            <li><a href="others.html"><span class="link-left"><i class="fa-regular fa-chevron-right"></i> Others</span></a></li>
+                                            <li><a href="regulation-30.html"><span class="link-left">Regulation 30 SEBI (LODR)</span> <span class="badge-lodr">LODR</span></a></li>
+                                            <li><a href="disclosures-under-Regulation-46-of-the-LODR.html"><span class="link-left">Disclosures under Reg 46</span> <span class="badge-lodr">LODR 46</span></a></li>
+                                            <li><a href="credit-ratings.html"><span class="link-left">Credit Ratings</span></a></li>
+                                            <li><a href="complaince-certificate.html"><span class="link-left">Compliance Cert Reg 40(9)</span></a></li>
+                                            <li><a href="complaince-certificate-2.html"><span class="link-left">Compliance Cert Reg 7(3)</span></a></li>
+                                            <li><a href="confirmation-certificate.html"><span class="link-left">Confirmation Cert Reg 74(5)</span></a></li>
+                                            <li><a href="sast-regulations.html"><span class="link-left">SAST Regulations</span></a></li>
+                                            <li><a href="investor-analyst-meet.html"><span class="link-left">Investor/Analyst Meet</span></a></li>
+                                            <li><a href="others.html"><span class="link-left">Others</span></a></li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Mega Menu Bottom Bar -->
-                            <div class="mega-menu-bottom-bar">
-                                <div class="bottom-info">
-                                    <span class="badge-tag">CIN: L55101MH1986PLC039307</span>
-                                    <span class="text">Head Office: 70-C, Nehru Road, Vile Parle (East), Mumbai 400099</span>
-                                </div>
-                                <div class="bottom-links">
-                                    <a href="investor-contact.html" class="quick-link"><i class="fa-regular fa-envelope"></i> Investor Relations</a>
-                                    <a href="investor-grievance.html" class="quick-link redressal"><i class="fa-regular fa-shield-check"></i> Grievance Redressal</a>
                                 </div>
                             </div>
                         </div>

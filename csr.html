@@ -344,7 +344,20 @@
                 isTicking = false;
             }
 
+            // Sticky Navigation Header (matching Home page behavior)
+            const stickyHeaderEl = document.querySelector('.header--sticky');
+            function updateStickyHeader() {
+                if (!stickyHeaderEl) return;
+                const scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+                if (scrollY > 150) {
+                    stickyHeaderEl.classList.add('sticky');
+                } else {
+                    stickyHeaderEl.classList.remove('sticky');
+                }
+            }
+
             function requestUpdate() {
+                updateStickyHeader();
                 if (!isTicking) {
                     window.requestAnimationFrame(updateCardStack);
                     isTicking = true;
@@ -355,6 +368,7 @@
             window.addEventListener('resize', requestUpdate);
 
             // Initial sync
+            updateStickyHeader();
             updateCardStack();
         });
 
