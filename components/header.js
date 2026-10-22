@@ -77,21 +77,8 @@
                                     </li>
                                 </ul>
 
-                                <!-- Right Column: Brand Feature Highlight Card -->
-                                <div class="who-feature-card">
-                                    <div>
-                                        <span class="feat-tag"><i class="fa-solid fa-leaf"></i> Pioneering Eco-Luxury</span>
-                                        <h4 class="feat-title">Kamat Hotels (India) Ltd.</h4>
-                                        <p class="feat-desc">From the iconic 5-star Orchid Hotel to 300-year-old heritage Fort JadhavGADH, redefining conscious hospitality across India.</p>
-                                    </div>
-                                    <div>
-                                        <div class="feat-stats">
-                                            <span class="stat-pill"><i class="fa-regular fa-calendar-check"></i> Since 1986</span>
-                                            <span class="stat-pill"><i class="fa-regular fa-award"></i> Multi-Awarded</span>
-                                        </div>
-                                        <a href="about.html" class="feat-btn">Discover Our Story <i class="fa-regular fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
+                               
+                           
                             </div>
                         </div>
                     </li>
@@ -141,10 +128,6 @@
                                         <span class="brand-locs"><i class="fa-regular fa-location-dot"></i> Bhubaneswar &bull; Nashik &bull; Sambhajinagar</span>
                                     </a>
                                 </div>
-                            </div>
-                            <div class="brands-bottom-bar">
-                                <span>Experience world-class sustainable hospitality</span>
-                                <a href="index.html#brands">View All Destinations <i class="fa-regular fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </li>
