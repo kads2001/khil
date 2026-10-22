@@ -27979,30 +27979,9 @@ h3,
 }
 
 
-/* ==========================================================================
-   GLOBAL BUTTON GRADIENT OVERRIDE
-   ========================================================================== */
-.rts-btn.btn-primary,
-.btn-primary,
-.btn-secondary,
-.custom-submit-btn,
-button[type="submit"],
-input[type="submit"],
-button.btn,
-a.btn {
-  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
-  color: #ffffff !important;
-  border-color: transparent !important;
-}
-
-.rts-btn.btn-primary::after,
-.rts-btn.btn-primary:hover::after {
-  display: none !important;
-}
-
 
 /* ==========================================================================
-   UNIFIED BUTTON SIZE & SHAPE SPECIFICATION (Exact Same Height & Width)
+   EXACT MATCH BUTTON SPECIFICATION (Matching User Reference Image 1:1)
    ========================================================================== */
 .btn-book-now,
 .btn-employer-login,
@@ -28026,31 +28005,34 @@ input[type="submit"],
 .btn-primary,
 .btn-secondary,
 .khil-btn {
-  width: 200px !important;
-  min-width: 200px !important;
-  max-width: 200px !important;
-  height: 48px !important;
-  min-height: 48px !important;
-  max-height: 48px !important;
+  width: 172px !important;
+  min-width: 172px !important;
+  max-width: 172px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
   padding: 0 16px !important;
   border-radius: 999px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+  gap: 8px !important;
   box-sizing: border-box !important;
-  font-size: 13.5px !important;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 13px !important;
   font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
   white-space: nowrap !important;
   text-align: center !important;
   background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
   color: #ffffff !important;
   border: none !important;
-  box-shadow: 0 4px 16px rgba(160, 10, 168, 0.22);
-  transition: all 0.25s ease;
-  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(160, 10, 168, 0.28) !important;
+  transition: all 0.25s ease !important;
+  text-decoration: none !important;
 }
 
-/* Ensure all text and icons inside buttons are white */
+/* Ensure crisp white text and icon */
 .btn-book-now *,
 .btn-employer-login *,
 .khil-hero-btn *,
@@ -28071,46 +28053,31 @@ input[type="submit"] *,
   color: #ffffff !important;
 }
 
-/* Inner circle icon adjustments */
-.khil-hero-btn > i:last-child,
-.khil-hero-btn.primary > i:last-child {
-  width: 26px !important;
-  height: 26px !important;
-  border-radius: 50% !important;
-  margin-left: 8px !important;
-  background: rgba(255, 255, 255, 0.22) !important;
-  color: #ffffff !important;
-  font-size: 11px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-shrink: 0 !important;
-}
-
+/* Clean inline arrow/icons (No circular backgrounds to match reference 1:1) */
 .btn-book-now i,
-.btn-employer-login i {
-  width: 22px !important;
-  height: 22px !important;
-  border-radius: 50% !important;
-  background: rgba(255, 255, 255, 0.18) !important;
-  color: #ffffff !important;
-  font-size: 11px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-shrink: 0 !important;
-  margin-right: 6px !important;
-}
-
+.btn-employer-login i,
+.khil-hero-btn i,
+.khil-hero-btn.primary > i:last-child,
+.khil-hero-btn.secondary > i:last-child,
 .khil-about-btn-primary i,
 .khil-bento-btn-primary i,
-.khil-blog-view-all i {
-  margin-left: 6px !important;
-  font-size: 12px !important;
+.khil-blog-view-all i,
+.custom-submit-btn i {
+  font-size: 13px !important;
   color: #ffffff !important;
+  background: transparent !important;
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.2s ease !important;
 }
 
-/* Button Hover State */
+/* Hover State */
 .btn-book-now:hover,
 .btn-employer-login:hover,
 .khil-hero-btn:hover,
@@ -28131,21 +28098,30 @@ input[type="submit"]:hover,
 .bod-member-btn:hover,
 .btn-primary:hover {
   background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
-  filter: brightness(1.18);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(160, 10, 168, 0.40) !important;
+  filter: brightness(1.16) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(160, 10, 168, 0.42) !important;
   color: #ffffff !important;
 }
 
-/* Mobile header book button adjustment */
+.btn-book-now:hover i,
+.btn-employer-login:hover i,
+.khil-hero-btn:hover i,
+.khil-hero-btn.primary:hover > i:last-child,
+.khil-about-btn-primary:hover i,
+.khil-bento-btn-primary:hover i,
+.khil-blog-view-all:hover i,
+.custom-submit-btn:hover i {
+  transform: translateX(3px) !important;
+}
+
 @media only screen and (max-width: 575px) {
   .header-action-buttons .btn-book-now {
-    width: 145px !important;
-    min-width: 145px !important;
-    max-width: 145px !important;
-    height: 40px !important;
-    min-height: 40px !important;
-    max-height: 40px !important;
+    width: 135px !important;
+    min-width: 135px !important;
+    max-width: 135px !important;
+    height: 38px !important;
+    min-height: 38px !important;
     font-size: 12px !important;
   }
 }

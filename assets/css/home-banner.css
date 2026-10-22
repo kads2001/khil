@@ -154,10 +154,8 @@ body.radious-4 .rts-banner-area-three.bg_image-three-banner {
   display: flex;
   align-items: stretch;
   width: 100%;
-  height: 80vh;
-  height: 80svh;
-  min-height: 80vh;
-  min-height: 80svh;
+  height: 100vh;
+  min-height: 100vh;
   padding: 105px 0 26px;
   overflow: hidden;
   background-image: url("../../bannerimg.png");
