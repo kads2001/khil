@@ -4,7 +4,7 @@
 <header class="header-one header-relative header--sticky">
     <div class="khil-header-container">
         <div class="header-wrapper-main">
-            <div class="nav-area">
+            <nav class="nav-area" aria-label="Primary navigation">
                 <ul class="khil-nav">
                     <li class="main-nav">
                         <a href="index.html">Home</a>
@@ -244,42 +244,47 @@
                         </div>
                     </li>
 
-                    <li class="main-nav">
-                        <a href="csr.html">CSR</a>
-                    </li>
-                    <li class="main-nav">
-                        <a href="media.html">Media</a>
-                    </li>
-                    <li class="main-nav">
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li class="main-nav">
-                        <a href="careers.html">Careers</a>
-                    </li>
                 </ul>
-            </div>
-
-            <div class="logo-area">
+            </nav>
+        <div class="logo-area">
                 <a href="index.html">
                     <img src="assets/images/logo-2.png" alt="Kamat Hotels (India) Ltd.">
                 </a>
             </div>
+            <div class="header-right-group">
+                <nav class="nav-area nav-area-right" aria-label="Secondary navigation">
+                    <ul class="khil-nav">
+                        <li class="main-nav">
+                            <a href="csr.html">CSR</a>
+                        </li>
+                        <li class="main-nav">
+                            <a href="media.html">Media</a>
+                        </li>
+                        <li class="main-nav">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li class="main-nav">
+                            <a href="careers.html">Careers</a>
+                        </li>
+                    </ul>
+                </nav>
 
-            <div class="header-action-buttons">
-                <a href="employee-login.html" class="btn-employer-login">
-                    <i class="fa-regular fa-user"></i>
-                    <span>Employer Login</span>
-                </a>
-                <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685&amp;dlyx_xs=05a400bc797cdec0bc0e1655ea41621c&amp;_gl=1*hsiqx0*_gcl_au*MTU4Njg4MzUwMS4xNzIyMjI5MzY2Ljc2ODcyNzYwMy4xNzIyNDA4NTc1LjE3MjI0MDg1NzQ." target="_blank" class="btn-book-now">
-                    <i class="fa-regular fa-calendar-check"></i>
-                    <span>Book Now</span>
-                </a>
-                <div class="menu-btn-toggle khil-toggle">
-                    <svg width="22" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect y="14" width="20" height="2" fill="#121826"></rect>
-                        <rect y="7" width="20" height="2" fill="#121826"></rect>
-                        <rect width="20" height="2" fill="#121826"></rect>
-                    </svg>
+                <div class="header-action-buttons">
+                    <a href="employee-login.html" class="btn-employer-login">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Employer Login</span>
+                    </a>
+                    <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685&amp;dlyx_xs=05a400bc797cdec0bc0e1655ea41621c&amp;_gl=1*hsiqx0*_gcl_au*MTU4Njg4MzUwMS4xNzIyMjI5MzY2Ljc2ODcyNzYwMy4xNzIyNDA4NTc1LjE3MjI0MDg1NzQ." target="_blank" class="btn-book-now">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Book Now</span>
+                    </a>
+                    <div class="menu-btn-toggle khil-toggle">
+                        <svg width="22" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="14" width="20" height="2" fill="#121826"></rect>
+                            <rect y="7" width="20" height="2" fill="#121826"></rect>
+                            <rect width="20" height="2" fill="#121826"></rect>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>

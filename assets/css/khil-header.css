@@ -3,7 +3,7 @@
    ========================================================================== */
 
 :root {
-  --khil-font: "Nunito", sans-serif;
+  --khil-font: "Anybody", sans-serif;
   --khil-font-sans: var(--khil-font);
   --khil-font-serif: var(--khil-font);
   --khil-primary: #1843fe;
@@ -77,7 +77,6 @@
 @media only screen and (min-width: 1200px) {
   .header-wrapper-main {
     display: grid !important;
-    grid-template-columns: 1fr auto 1fr !important;
     align-items: center !important;
     gap: 16px !important;
     position: relative !important;
@@ -143,6 +142,30 @@
     grid-column: 1 !important;
     justify-self: start !important;
   }
+
+  .header-right-group {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    grid-column: 3;
+    justify-content: flex-end;
+    min-width: 0;
+  }
+
+  .header-right-group .nav-area {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .header-right-group .nav-area ul.khil-nav {
+    gap: 10px !important;
+  }
+
+  .header-right-group .nav-area ul.khil-nav > li.main-nav > a {
+    font-size: 18px !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
 }
 
 .nav-area ul.khil-nav {
@@ -196,8 +219,8 @@
 }
 
 .nav-area ul.khil-nav>li.main-nav>a {
-  font-size: 14.5px !important;
-  font-weight: 600 !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
   color: var(--khil-dark) !important;
   padding: 26px 4px !important;
   display: inline-flex !important;
@@ -1202,12 +1225,19 @@
 
 @media only screen and (min-width: 1200px) {
   .header-action-buttons {
-    grid-column: 3 !important;
-    justify-self: end !important;
     justify-content: flex-end !important;
     margin-left: 0 !important;
     gap: 10px !important;
-    min-width: 0 !important;
+    min-width: max-content !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .header-wrapper-main .header-action-buttons .btn-employer-login,
+  .header-wrapper-main .header-action-buttons .btn-book-now {
+    width: 132px !important;
+    min-width: 132px !important;
+    max-width: 132px !important;
   }
 }
 
@@ -1328,6 +1358,12 @@
     min-height: 66px !important;
   }
 
+  .header-right-group {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+  }
+
   .nav-area {
     display: none !important;
   }
@@ -1348,7 +1384,7 @@
     display: flex !important;
     align-items: center !important;
     gap: 8px !important;
-    margin-left: auto !important;
+    margin-left: 0 !important;
   }
 
   .menu-btn-toggle.khil-toggle {
@@ -3313,12 +3349,44 @@
 }
 
 .khil-blog-card-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  min-height: calc(1.55em * 3);
+  overflow: hidden;
   font-size: 14.5px;
   line-height: 1.55;
   color: #8c94a0;
   margin: 0;
   font-weight: 400;
   font-family: var(--font-primary);
+}
+
+.khil-blog-read-more {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 12px;
+  color: #7d007d;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.khil-blog-read-more i {
+  font-size: 11px;
+  transition: transform 0.2s ease;
+}
+
+.khil-blog-read-more:hover {
+  color: #4d004d;
+}
+
+.khil-blog-read-more:hover i {
+  transform: translateX(3px);
 }
 
 /* Responsive Breakpoints */
@@ -3791,6 +3859,33 @@ input[type="submit"]:hover,
 .khil-blog-view-all:hover i,
 .custom-submit-btn:hover i {
   transform: translateX(3px) !important;
+}
+
+.khil-btn-outline,
+.khil-btn-outline:visited {
+  background: transparent !important;
+  border: 1px solid currentColor !important;
+  box-shadow: none !important;
+  color: #7d007d !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease !important;
+}
+
+.khil-btn-outline *,
+.khil-btn-outline:visited * {
+  color: inherit !important;
+}
+
+.khil-btn-outline:hover,
+.khil-btn-outline:focus-visible {
+  background: #7d007d !important;
+  border-color: #7d007d !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+}
+
+.khil-btn-outline:hover *,
+.khil-btn-outline:focus-visible * {
+  color: #fff !important;
 }
 
 @media only screen and (max-width: 575px) {
