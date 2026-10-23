@@ -1,4 +1,92 @@
 (function () {
   'use strict';
-  document.write("<div class=\"rts-footer-one pt--100 bg_dark khil-shared-footer\">\n        <div class=\"container pb--80\">\n            <div class=\"row\">\n                <div class=\"col-lg-3\">\n                    <div class=\"left-wiget\">\n                        <a class=\"logo\" href=\"index.html\">\n                            <img class=\"khil-footer-logo\" src=\"assets/images/logo-2.png\" alt=\"Kamat Hotels (India) Limited\">\n                        </a>\n                        <p class=\"disc\">Subscribe to our newsletter for the latest news and updates from Kamat Hotels.</p>\n                        <form action=\"#\" class=\"footer-form\">\n                            <input type=\"email\" placeholder=\"Enter your email...\" aria-label=\"Email address\" required>\n                            <button class=\"rts-btn btn-primary\" type=\"submit\">Send Now</button>\n                        </form>\n                    </div>\n                </div>\n                <div class=\"offset-lg-1 col-lg-8 mt_md--50 mt_sm--50\">\n                    <div class=\"footer-wized-wrapper\">\n                        <div class=\"single\">\n                            <h6 class=\"title\">Company</h6>\n                            <ul>\n                                <li><a href=\"about.html\">About Us</a></li>\n                                <li><a href=\"careers.html\">Careers</a></li>\n                                <li><a href=\"index.html\">Our Brands</a></li>\n                                <li><a href=\"media.html\">News</a></li>\n                                <li><a href=\"contact.html\">Contact</a></li>\n                            </ul>\n                        </div>\n                        <div class=\"single\">\n                            <h6 class=\"title\">Our Hotels</h6>\n                            <ul>\n                                <li><a href=\"index.html\">The Orchid Hotels</a></li>\n                                <li><a href=\"index.html\">Fort JadhavGADH</a></li>\n                                <li><a href=\"index.html\">Mahodadhi Palace</a></li>\n                                <li><a href=\"index.html\">Lotus Resorts</a></li>\n                                <li><a href=\"index.html\">IRA by Orchid Hotels</a></li>\n                            </ul>\n                        </div>\n                        <div class=\"single\">\n                            <h6 class=\"title\">Resources</h6>\n                            <ul>\n                                <li><a href=\"media.html\">Media &amp; News</a></li>\n                                <li><a href=\"https://khil.com/investors/annual-reports/annual-reports.html\" target=\"_blank\" rel=\"noopener noreferrer\">Annual Reports</a></li>\n                                <li><a href=\"https://khil.com/investors/quarterly-results/quarterly-results.html\" target=\"_blank\" rel=\"noopener noreferrer\">Quarterly Results</a></li>\n                                <li><a href=\"https://khil.com/investors/investors/corporate-governance-reports.html\" target=\"_blank\" rel=\"noopener noreferrer\">Corporate Governance</a></li>\n                                <li><a href=\"contact.html\">Get in Touch</a></li>\n                            </ul>\n                        </div>\n                        <div class=\"single\">\n                            <h6 class=\"title\">Social Media</h6>\n                            <ul>\n                                <li><a href=\"#\">Facebook</a></li>\n                                <li><a href=\"#\">Instagram</a></li>\n                                <li><a href=\"#\">LinkedIn</a></li>\n                            </ul>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"copyright-area\">\n            <div class=\"container\">\n                <div class=\"row\">\n                    <div class=\"col-lg-12\">\n                        <div class=\"copyright-1\">\n                            <p class=\"disc\">Copyright &copy; <span data-current-year></span>. Kamat Hotels (India) Limited. All rights reserved.</p>\n                            <ul>\n                                <li><a href=\"about.html\">About Company</a></li>\n                                <li><a href=\"index.html\">Our Brands</a></li>\n                                <li><a href=\"media.html\">News</a></li>\n                            </ul>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <!-- Shared KHIL footer end -->");
+
+  document.write(`
+    <footer class="khil-shared-footer">
+      <div class="container">
+        <div class="khil-footer-grid">
+          <a class="khil-footer-brand" href="index.html" aria-label="Kamat Hotels (India) Limited home">
+            <img src="assets/images/logo-2.png" alt="Kamat Hotels (India) Limited">
+          </a>
+
+          <nav class="khil-footer-column" aria-label="Company information">
+            <h2 class="khil-footer-heading">Company Info</h2>
+            <ul>
+              <li><a href="about.html">Who We Are</a></li>
+              <li><a href="board-of-directors.html">Board of Directors</a></li>
+              <li><a href="committees-of-board.html">Board Committees</a></li>
+              <li><a href="directorships-of-the-board-of-directors.html">Directorships</a></li>
+              <li><a href="milestone.html">Milestones</a></li>
+              <li><a href="careers.html">Careers</a></li>
+            </ul>
+          </nav>
+
+          <nav class="khil-footer-column" aria-label="Hotels and brands">
+            <h2 class="khil-footer-heading">Our Hotels</h2>
+            <ul>
+              <li><a href="index.html#brands">The Orchid Mumbai</a></li>
+              <li><a href="index.html#brands">The Orchid Lonavala</a></li>
+              <li><a href="index.html#brands">The Orchid Pune</a></li>
+              <li><a href="index.html#brands">The Orchid Shimla</a></li>
+              <li><a href="index.html#brands">The Orchid Manali</a></li>
+              <li><a href="index.html#brands">The Orchid Jamnagar</a></li>
+              <li><a href="index.html#brands">The Orchid Chandigarh</a></li>
+              <li><a href="index.html#brands">The Orchid Rishikesh</a></li>
+              <li><a href="index.html#brands">The Orchid Panchgani</a></li>
+              <li><a href="index.html#brands">Fort JadhavGADH</a></li>
+              <li><a href="index.html#brands">Mahodadhi Palace</a></li>
+              <li><a href="index.html#brands">Lotus Eco Beach Resort Konark</a></li>
+              <li><a href="index.html#brands">The Orchid Passaros - Benaulim</a></li>
+              <li><a href="index.html#brands">Lotus Eco Beach Resort Murud</a></li>
+              <li><a href="index.html#brands">IRA by Orchid Mumbai</a></li>
+              <li><a href="index.html#brands">IRA by Orchid Bhubaneswar</a></li>
+              <li><a href="index.html#brands">IRA by Orchid Nashik</a></li>
+              <li><a href="index.html#brands">IRA by Orchid Sambhaji Nagar</a></li>
+              <li><a href="index.html#brands">IRA by Orchid Ayodhya</a></li>
+              <li><a href="index.html#brands">IRA by Orchid Noida</a></li>
+              <li><a href="index.html#brands">IRA by Orchid Goa</a></li>
+              <li><a href="index.html#brands">IRA by Orchid Hyderabad</a></li>
+              <li><a href="index.html#brands">Toyam by Orchid</a></li>
+            </ul>
+          </nav>
+
+          <nav class="khil-footer-column" aria-label="Resources and press">
+            <h2 class="khil-footer-heading">Resources</h2>
+            <ul>
+              <li><a href="https://khil.com/investors/corporate-governance-reports.html" target="_blank" rel="noopener noreferrer">Corporate Governance Reports</a></li>
+              <li><a href="https://khil.com/investors/shareholding-pattern.html" target="_blank" rel="noopener noreferrer">Shareholding Pattern</a></li>
+              <li><a href="https://khil.com/investors/annual-reports/annual-reports.html" target="_blank" rel="noopener noreferrer">Annual Reports</a></li>
+              <li><a href="https://khil.com/investors/quarterly-results/quarterly-results.html" target="_blank" rel="noopener noreferrer">Quarterly Results</a></li>
+              <li><a href="media.html">Awards</a></li>
+              <li><a href="media.html">Media</a></li>
+            </ul>
+          </nav>
+
+          <nav class="khil-footer-column" aria-label="Support">
+            <h2 class="khil-footer-heading">Support</h2>
+            <ul>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="index.html#brands">Wellness</a></li>
+              <li><a href="index.html#brands">IRA Hotels</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="khil-footer-bottom">
+          <nav class="khil-footer-legal" aria-label="Legal information">
+            <a href="https://khil.com/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            <span>Copyright &copy; <span data-current-year></span> Kamat Hotels (India) Limited. All rights reserved.</span>
+            <span>Designed by <a href="https://10dumbs.com/" target="_blank" rel="noopener noreferrer">10 Dumb&#39;s Inc.</a></span>
+          </nav>
+          <div class="khil-footer-social" aria-label="Social media">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/KHILINDIA" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  `);
 }());

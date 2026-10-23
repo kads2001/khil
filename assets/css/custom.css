@@ -378,13 +378,13 @@ body.demo-cybersecurity .custom-submit-btn {
 .khil-brand-fort span {
   align-self: flex-start;
   margin-left: 16px;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-primary);
   font-size: 10px;
 }
 
 .khil-brand-fort strong {
   color: #8b7845;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-primary);
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.8px;
@@ -393,7 +393,7 @@ body.demo-cybersecurity .custom-submit-btn {
 .khil-brand-mahodadhi strong,
 .khil-brand-mahodadhi span {
   color: #7d007d;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-primary);
   font-size: 13px;
   letter-spacing: 0.5px;
 }
@@ -423,7 +423,7 @@ body.demo-cybersecurity .custom-submit-btn {
 
 .khil-brand-toyam strong {
   color: #252525;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-primary);
   font-size: 27px;
   font-weight: 500;
 }
@@ -1853,4 +1853,131 @@ body.home-three-page .blog-news-grid .blog-read-btn {
 *::after {
   box-shadow: none !important;
   text-shadow: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   SHARED FOOTER
+   -------------------------------------------------------------------------- */
+.khil-shared-footer {
+  background: #fff;
+  color: #17304e;
+  padding: 28px 0 0;
+}
+
+.khil-shared-footer .khil-footer-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1.55fr 1.15fr 1fr;
+  gap: 34px;
+  padding: 0 20px 35px;
+}
+
+.khil-shared-footer .khil-footer-brand {
+  align-self: start;
+  display: inline-block;
+  margin-top: 0;
+}
+
+.khil-shared-footer .khil-footer-brand img {
+  display: block;
+  height: auto;
+  max-width: 88px;
+  width: 100%;
+}
+
+.khil-shared-footer .khil-footer-heading {
+  color: #101820;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 14px;
+}
+
+.khil-shared-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.khil-shared-footer li {
+  margin: 0 0 5px;
+  padding: 0;
+}
+
+.khil-shared-footer a {
+  color: #53677f;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.khil-shared-footer a:hover {
+  color: #7d007d;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.khil-shared-footer .khil-footer-bottom {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 0 20px 20px;
+}
+
+.khil-shared-footer .khil-footer-legal {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.khil-shared-footer .khil-footer-legal > span {
+  color: #53677f;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.khil-shared-footer .khil-footer-social {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+}
+
+.khil-shared-footer .khil-footer-social a {
+  color: #263238;
+  font-size: 13px;
+}
+
+@media (max-width: 991px) {
+  .khil-shared-footer .khil-footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  .khil-shared-footer .khil-footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 575px) {
+  .khil-shared-footer {
+    padding-top: 28px;
+  }
+
+  .khil-shared-footer .khil-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 18px;
+    padding: 0 8px 30px;
+  }
+
+  .khil-shared-footer .khil-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .khil-shared-footer .khil-footer-bottom {
+    align-items: flex-start;
+    padding: 0 8px 20px;
+  }
 }
