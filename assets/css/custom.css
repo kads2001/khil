@@ -357,79 +357,21 @@ body.demo-cybersecurity .custom-submit-btn {
 
 .khil-brand-wordmark {
   display: flex;
-  flex: 0 0 150px;
-  width: 150px;
-  min-width: 150px;
-  min-height: 54px;
+  flex: 0 0 160px;
+  width: 160px;
+  min-width: 160px;
+  min-height: 72px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #514a42;
-  line-height: 1;
-  text-align: center;
 }
 
-.khil-brand-wordmark small {
-  margin-top: 4px;
-  font-size: 8px;
-  line-height: 1.2;
-}
-
-.khil-brand-fort span {
-  align-self: flex-start;
-  margin-left: 16px;
-  font-family: var(--font-primary);
-  font-size: 10px;
-}
-
-.khil-brand-fort strong {
-  color: #8b7845;
-  font-family: var(--font-primary);
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -0.8px;
-}
-
-.khil-brand-mahodadhi strong,
-.khil-brand-mahodadhi span {
-  color: #7d007d;
-  font-family: var(--font-primary);
-  font-size: 13px;
-  letter-spacing: 0.5px;
-}
-
-.khil-brand-mahodadhi span {
-  margin-top: 1px;
-  font-size: 11px;
-}
-
-.khil-brand-lotus strong {
-  color: #4785a4;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1.4px;
-}
-
-.khil-brand-lotus small {
-  color: #7d007d;
-}
-
-.khil-brand-ira img {
+.khil-brand-wordmark img {
   display: block;
-  width: 72px;
-  height: 54px;
+  width: 100%;
+  max-width: 150px;
+  height: 64px;
   object-fit: contain;
-}
-
-.khil-brand-toyam strong {
-  color: #252525;
-  font-family: var(--font-primary);
-  font-size: 27px;
-  font-weight: 500;
-}
-
-.khil-brand-toyam small {
-  color: #252525;
 }
 
 /* 3-Column Grid */
