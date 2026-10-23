@@ -402,11 +402,11 @@
                         <a href="#">70-C, Nehru Road, Vile Parle (East), Mumbai 400099</a>
                     </div>
                 </div>
-                <div class="social-wrapper-two menu">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="linkdin"><i class="fa-brands fa-linkedin-in"></i></a>
+               <div class="social-wrapper-two menu">
+                    <a href="https://www.facebook.com/KHILINDIA" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/KHILINDIA" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/kamat-hotels-india-limited-ba2a79171" aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/results?search_query=kamat+hotel+india+limited" aria-label="youtube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
         </div>
