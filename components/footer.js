@@ -1,78 +1,106 @@
 (function () {
   'use strict';
 
-  const currentYear = new Date().getFullYear();
-
   document.write(`
     <footer class="khil-shared-footer">
       <div class="container">
         <div class="khil-footer-grid">
-          <!-- Left Column: Brand & Newsletter -->
+          <!-- Column 1: Brand & Company -->
           <div class="khil-footer-brand-col">
             <a class="khil-footer-brand" href="index.html" aria-label="Kamat Hotels (India) Limited home">
               <img src="assets/images/logo-2.png" alt="Kamat Hotels (India) Limited">
             </a>
-            <p class="khil-footer-subscribe-text">Subscribe to our newsletter for the latest news and updates from Kamat Hotels.</p>
-            <form class="khil-footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-              <input type="email" class="khil-footer-input" placeholder="Enter your email..." required aria-label="Enter your email">
-              <button type="submit" class="khil-footer-send-btn">Send Now</button>
-            </form>
+          
           </div>
-
-          <!-- Column 2: Company -->
-          <nav class="khil-footer-column" aria-label="Company">
+            <div class="khil-footer-column" aria-label="Company">
             <h3 class="khil-footer-heading">Company</h3>
             <ul>
-              <li><a href="about.html">About Us</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">Who We Are</a></li>
+              <li><a href="milestone.html">Milestones</a></li>
+              <li><a href="board-of-directors.html">Board of Directors</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
               <li><a href="careers.html">Careers</a></li>
-              <li><a href="index.html#brands">Our Brands</a></li>
-              <li><a href="media.html">News</a></li>
-              <li><a href="contact.html">Contact</a></li>
+            </ul>  <h4 class="khil-footer-subheading">Wellness</h4>
+            <ul>
+              <li><a href="https://orchidtoyam.com/" target="_blank" rel="noopener noreferrer">Toyam By Orchid</a></li>
+            </ul></div>
+
+          <!-- Column 2: Brands Orchid & Wellness -->
+          <nav class="khil-footer-column" aria-label="Brands Orchid">
+            <h3 class="khil-footer-heading">Brands Orchid</h3>
+            <ul>
+              <li><a href="https://www.orchidhotel.com/mumbai-vile-parle/" target="_blank" rel="noopener noreferrer">The Orchid Mumbai</a></li>
+              <li><a href="https://www.orchidhotel.com/the-orchid-lonavala/" target="_blank" rel="noopener noreferrer">The Orchid Lonavala</a></li>
+              <li><a href="https://www.orchidhotel.com/pune/" target="_blank" rel="noopener noreferrer">The Orchid Pune</a></li>
+              <li><a href="https://www.orchidhotel.com/hotel-in-shimla/" target="_blank" rel="noopener noreferrer">The Orchid Shimla</a></li>
+              <li><a href="https://www.orchidhotel.com/manali/" target="_blank" rel="noopener noreferrer">The Orchid Manali</a></li>
+              <li><a href="https://www.orchidhotel.com/jamnagar/" target="_blank" rel="noopener noreferrer">The Orchid Jamnagar</a></li>
+              <li><a href="https://www.orchidhotel.com/chandigarh/" target="_blank" rel="noopener noreferrer">The Orchid Chandigarh</a></li>
+              <li><a href="https://www.orchidhotel.com/hotel-in-rishikesh/" target="_blank" rel="noopener noreferrer">The Orchid Rishikesh</a></li>
+              <li><a href="https://www.orchidhotel.com/hotel-in-panchgani/" target="_blank" rel="noopener noreferrer">The Orchid Panchgani</a></li>
+            </ul>
+          
+          </nav>
+
+          <!-- Column 3: Heritage & Leisure Hotels -->
+          <nav class="khil-footer-column" aria-label="Heritage and Leisure Hotels">
+            <h3 class="khil-footer-heading">Heritage Collection</h3>
+            <ul>
+              <li><a href="https://www.orchidhotel.com/fort-jadhavgadh/" target="_blank" rel="noopener noreferrer">Fort JadhavGADH</a></li>
+              <li><a href="https://www.orchidhotel.com/mahodadhi-palace-a-beach-view-heritage-resort-puri/" target="_blank" rel="noopener noreferrer">Mahodadhi Palace</a></li>
+            </ul>
+            <h4 class="khil-footer-subheading">Leisure Hotels</h4>
+            <ul>
+              <li><a href="https://www.orchidhotel.com/lotus-eco-beach-resort-konark/" target="_blank" rel="noopener noreferrer">Lotus Eco Beach Resort Konark</a></li>
+              <li><a href="https://orchidresortgoa.com/" target="_blank" rel="noopener noreferrer">The Orchid Passaros - Benaulim</a></li>
+              <li><a href="https://www.orchidhotel.com/lotus-eco-beach-resort-murud-dapoli-ratnagiri/" target="_blank" rel="noopener noreferrer">Lotus Eco Beach Resort Murud</a></li>
             </ul>
           </nav>
 
-          <!-- Column 3: Our Hotels -->
-          <nav class="khil-footer-column" aria-label="Our Hotels">
-            <h3 class="khil-footer-heading">Our Hotels</h3>
+          <!-- Column 4: Ira Hotels -->
+          <nav class="khil-footer-column" aria-label="Ira Hotels">
+            <h3 class="khil-footer-heading">Ira Hotels</h3>
             <ul>
-              <li><a href="index.html#brands">The Orchid Hotels</a></li>
-              <li><a href="index.html#brands">Fort JadhavGADH</a></li>
-              <li><a href="index.html#brands">Mahodadhi Palace</a></li>
-              <li><a href="index.html#brands">Lotus Resorts</a></li>
-              <li><a href="index.html#brands">IRA by Orchid Hotels</a></li>
+              <li><a href="https://irahotels.com/mumbai.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Mumbai</a></li>
+              <li><a href="https://irahotels.com/bhubaneshwar.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Bhubaneswar</a></li>
+              <li><a href="https://irahotels.com/nashik.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Nashik</a></li>
+              <li><a href="https://irahotels.com/sambhajinagar.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Sambhaji Nagar</a></li>
+              <li><a href="https://irahotels.com/ayodhya.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Ayodhya</a></li>
+              <li><a href="https://irahotels.com/noida.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Noida</a></li>
+              <li><a href="https://irahotels.com/porvorim.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Goa</a></li>
+              <li><a href="https://irahotels.com/hyderabad.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Hyderabad</a></li>
             </ul>
           </nav>
 
-          <!-- Column 4: Resources -->
-          <nav class="khil-footer-column" aria-label="Resources">
-            <h3 class="khil-footer-heading">Resources</h3>
+          <!-- Column 5: Investors & Press Room -->
+          <nav class="khil-footer-column" aria-label="Investors and Press Room">
+            <h3 class="khil-footer-heading">Investors</h3>
             <ul>
-              <li><a href="media.html">Media &amp; News</a></li>
+              <li><a href="https://khil.com/annual-reports.html" target="_blank" rel="noopener noreferrer">View Reports</a></li>
               <li><a href="https://khil.com/investors/annual-reports/annual-reports.html" target="_blank" rel="noopener noreferrer">Annual Reports</a></li>
               <li><a href="https://khil.com/investors/quarterly-results/quarterly-results.html" target="_blank" rel="noopener noreferrer">Quarterly Results</a></li>
-              <li><a href="https://khil.com/investors/corporate-governance-reports.html" target="_blank" rel="noopener noreferrer">Corporate Governance</a></li>
-              <li><a href="contact.html">Get in Touch</a></li>
+              <li><a href="https://khil.com/investors/investors/corporate-governance-reports.html" target="_blank" rel="noopener noreferrer">Corporate Governance Reports</a></li>
+              <li><a href="https://khil.com/investors/investors/shareholding-pattern.html" target="_blank" rel="noopener noreferrer">Shareholding Pattern</a></li>
+            </ul>
+            <h4 class="khil-footer-subheading">Press Room</h4>
+            <ul>
+              <li><a href="media.html">Awards</a></li>
+              <li><a href="media.html">Media</a></li>
             </ul>
           </nav>
 
-          <!-- Column 5: Social Media -->
-          <nav class="khil-footer-column" aria-label="Social Media">
-            <h3 class="khil-footer-heading">Social Media</h3>
-            <ul>
-              <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-              <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-              <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            </ul>
-          </nav>
         </div>
 
         <!-- Bottom Copyright Row -->
         <div class="khil-footer-bottom">
-          <p class="khil-footer-copy">Copyright &copy; ${currentYear}. Kamat Hotels (India) Limited. All rights reserved.</p>
+          <p class="khil-footer-copy">
+            Copyright &copy; 2026 Kamat Hotels (India) Limited. All rights reserved. Powered by <a href="https://www.10dumbs.com/" target="_blank" rel="noopener noreferrer">10 Dumbs Inc.</a>
+          </p>
           <div class="khil-footer-bottom-links">
-            <a href="about.html">About Company</a>
-            <a href="index.html#brands">Our Brands</a>
-            <a href="media.html">News</a>
+            <a href="https://khil.com/investors/privacy-policy/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">Who We Are</a>
           </div>
         </div>
       </div>
