@@ -2821,13 +2821,13 @@
   gap: 7px;
   font-size: 13.5px;
   font-weight: 600;
-  color: #7d007d;
+  color: #666666;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .bento-card-link:hover {
-  color: #0369a1;
+  color: #111111;
 }
 
 .bento-card-link i {
