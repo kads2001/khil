@@ -43,104 +43,189 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle.k
   fill: #252525;
 }
 
-body.home-three-page .loader-wrapper {
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  background: #fff;
-  transform: none;
+/* ==========================================================================
+   KHIL LUXURY PRELOADER (Official Logo, Brand Name & Progressive Loading Line)
+   ========================================================================== */
+.khil-preloader-wrapper,
+body.home-three-page .loader-wrapper,
+.loader-wrapper {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: #ffffff !important;
+  background-image: radial-gradient(circle at center, #ffffff 0%, #fafbfc 100%) !important;
+  z-index: 9999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s ease !important;
+  pointer-events: all !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
 }
 
+/* Smooth fade-out state */
+.khil-preloader-wrapper.khil-preloader-fade,
+body.loaded .khil-preloader-wrapper,
+body.loaded .loader-wrapper,
 body.loaded.home-three-page .loader-wrapper {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: none !important;
+  transition: opacity 0.5s ease, visibility 0.5s ease !important;
+}
+
+body.home-three-page .loader-wrapper::before,
+.loader-section {
   display: none !important;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-100%);
-  transition: opacity 0.3s ease, transform 0.3s 1s ease, visibility 0s 1s;
 }
 
-body.home-three-page .loader-wrapper::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #fff;
+/* Center Content Container */
+.khil-preloader-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 24px !important;
+  max-width: 480px !important;
+  width: 90% !important;
+  animation: khilPreloaderPop 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-body.home-three-page .loader-wrapper .loader-section {
-  display: none;
-}
-
-body.home-three-page .loader-wrapper .loader {
-  position: relative;
-  top: auto;
-  left: auto;
-  display: flex;
-  width: auto;
-  height: auto;
-  transform: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #000;
-  text-align: center;
-  opacity: 1;
-}
-
-body.home-three-page .loader-wrapper .loader::after {
-  display: none;
-}
-
-body.home-three-page .loader-emblem {
-  display: none;
-}
-
-body.home-three-page .loader-brand {
-  display: block;
-  margin: 0;
-  padding: 0;
-  font-size: 22px;
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: 0;
-  color: #000;
-  position: relative;
-  text-align: center;
-}
-
-body.home-three-page .loader-brand::after {
-  content: "";
-  display: block;
-  width: 100%;
-  max-width: 230px;
-  height: 1px;
-  background: #000;
-  margin: 12px auto 0;
-}
-
-body.home-three-page .loader-caption {
-  display: none;
-}
-
-@keyframes khil-loader-orbit {
-  to {
-    transform: rotate(360deg);
+@keyframes khilPreloaderPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }
 
-@keyframes khil-loader-pulse {
+/* Official KHIL Logo */
+.khil-preloader-logo {
+  position: relative !important;
+  margin-bottom: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.khil-preloader-logo img {
+  height: 72px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.05)) !important;
+  animation: khilLogoBreathe 3s ease-in-out infinite !important;
+}
+
+@keyframes khilLogoBreathe {
+  0%, 100% {
+    transform: scale(1);
+  }
   50% {
-    transform: scale(0.72);
-    opacity: 0.7;
+    transform: scale(1.03);
+  }
+}
+
+/* Brand Name Group */
+.khil-preloader-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 5px !important;
+  margin-bottom: 22px !important;
+}
+
+.khil-preloader-title {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em !important;
+  color: #0f172a !important;
+  text-transform: uppercase !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+}
+
+.khil-preloader-sub {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  font-size: 10.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  color: #7d007d !important;
+  text-transform: uppercase !important;
+  opacity: 0.85 !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+}
+
+/* Progressive Line Track below Logo & Name */
+.khil-preloader-progress-track {
+  position: relative !important;
+  width: 240px !important;
+  max-width: 100% !important;
+  height: 3.5px !important;
+  background: #edf0f5 !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Progressive Line Active Fill */
+.khil-preloader-progress-bar {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  height: 100% !important;
+  width: 0%;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, #A00AA8 0%, #7d007d 45%, #140253 100%) !important;
+  box-shadow: 0 0 10px rgba(160, 10, 168, 0.5) !important;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden !important;
+}
+
+/* Progressive Shimmer Sweep */
+.khil-preloader-progress-bar::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    transparent 100%
+  ) !important;
+  transform: translateX(-100%);
+  animation: khilShimmer 1.5s infinite ease-in-out !important;
+}
+
+@keyframes khilShimmer {
+  100% {
+    transform: translateX(100%);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-
-  body.home-three-page .loader-emblem,
-  body.home-three-page .loader-emblem::before,
-  body.home-three-page .loader-emblem::after {
-    animation: none;
+  .khil-preloader-inner,
+  .khil-preloader-logo img,
+  .khil-preloader-progress-bar::after {
+    animation: none !important;
   }
 }
 
