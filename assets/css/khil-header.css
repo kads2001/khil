@@ -2802,9 +2802,10 @@
 
 /* Hotel Card Component (Matching Reference Card Container) */
 .khil-bento-hotel-card {
+  max-width: 700px;
   background: #ffffff;
-  border: 2px solid rgba(125, 0, 125, 0.2);
-  border-radius: 28px;
+  border: 1px solid rgba(125, 0, 125, 0.2);
+  border-radius: 25px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -2853,7 +2854,7 @@
 .bento-visual-media {
   position: relative;
   width: 100%;
-  height: 350px;
+  height:500px;
   overflow: hidden;
   background: #0f172a;
 }
@@ -2970,7 +2971,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 0 16px 12px;
+    padding: 0 40px 12px;
 }
 
 .bento-card-title {
