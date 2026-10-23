@@ -158,66 +158,63 @@ body.csr-page {
 .mt--60 {
   margin-top: 20px;
 }
+/* =========================================
+   CSR CARD STACK — CLEAN FINAL VERSION
+   ========================================= */
 
-/* 3. CSR STACK STAGE & CARDS CONTAINER */
-.csr-stack-stage {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 28px;
-  width: 100%;
-  max-width: 1380px;
-  margin: 30px auto 0;
-  position: relative;
-  box-sizing: border-box;
+.csr-stack-container-rel,
+.csr-stack-stage,
+.csr-sticky-wrapper-main {
+    overflow: visible !important;
 }
 
-.csr-stack-spacer {
-  width: 130px;
-  flex-shrink: 0;
-  visibility: hidden;
-  pointer-events: none;
+.csr-stack-stage {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 28px;
+    width: 100%;
+    max-width: 1380px;
+    margin: 30px auto 0;
+    position: relative;
 }
 
 .csr-sticky-wrapper-main {
-  position: relative;
-  display: block;
-  flex: 1 1 1060px;
-  max-width: 1060px;
-  margin: 0;
-  padding-bottom: 85vh;
-  box-sizing: border-box;
+    position: relative;
+    flex: 1 1 1060px;
+    min-width: 0;
+    max-width: 1060px;
+    padding-bottom: 500px;
+    margin: 0;
 }
 
-/* All cards stick at top: 295px beneath sticky title */
 .csr-sticky-wrapper-main > .csr-card-wrapper {
-  position: -webkit-sticky !important;
-  position: sticky !important;
-  top: 295px !important;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 90vh !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 320px !important;
+    width: 100%;
+    margin: 0 0 24px !important;
+    box-sizing: border-box;
+}
+
+.csr-sticky-wrapper-main > .card-step-1 {
+    z-index: 1;
+}
+
+.csr-sticky-wrapper-main > .card-step-2 {
+    z-index: 2;
+}
+
+.csr-sticky-wrapper-main > .card-step-3 {
+    z-index: 3;
+}
+
+.csr-sticky-wrapper-main > .card-step-4 {
+    z-index: 4;
 }
 
 .csr-sticky-wrapper-main > .csr-card-wrapper:last-child {
-  margin-bottom: 0 !important;
-}
-
-/* Layering order: later cards cover earlier cards */
-.csr-sticky-wrapper-main > .csr-card-wrapper.card-step-1 {
-  z-index: 10 !important;
-}
-
-.csr-sticky-wrapper-main > .csr-card-wrapper.card-step-2 {
-  z-index: 11 !important;
-}
-
-.csr-sticky-wrapper-main > .csr-card-wrapper.card-step-3 {
-  z-index: 12 !important;
-}
-
-.csr-sticky-wrapper-main > .csr-card-wrapper.card-step-4 {
-  z-index: 13 !important;
+    margin-bottom: 0 !important;
 }
 
 /* Card Inner Surface */
@@ -623,7 +620,7 @@ body.csr-page {
 .csr-dynamic-logo-container {
     position: -webkit-sticky;
     position: sticky;
-    top: 295px;
+    top: 320px;
     width: 130px;
     height: 350px;
     flex-shrink: 0;
@@ -697,6 +694,17 @@ body.csr-page {
 
     .csr-dynamic-logo-card {
         width: 100px;
+    }
+
+    .csr-sticky-wrapper-main {
+        max-width: 100%;
+        padding-bottom: 0 !important;
+    }
+
+    .csr-sticky-wrapper-main > .csr-card-wrapper {
+        position: relative !important;
+        top: auto !important;
+        margin-bottom: 24px !important;
     }
 }
 
@@ -1124,3 +1132,5 @@ body.csr-page {
   box-shadow: none !important;
   text-shadow: none !important;
 }
+
+

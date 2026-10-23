@@ -19,105 +19,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Dedicated CSR Stylesheet with Cache Busting -->
-    <link rel="stylesheet" href="assets/css/csr.css?v=3.2">
-
-    <!-- Critical Inlined Stacking Rules (Guarantees immediate zero-cache sticky docking) -->
-    <style id="csr-critical-stacking">
-        .title-center-wrapper {
-            position: -webkit-sticky !important;
-            position: sticky !important;
-            top: 96px !important;
-            z-index: 100 !important;
-            background: #F6F2EB !important;
-            padding: 18px 20px 14px !important;
-        }
-
-        .csr-stack-stage {
-            display: flex !important;
-            justify-content: center !important;
-            align-items: flex-start !important;
-            gap: 28px !important;
-            width: 100% !important;
-            max-width: 1380px !important;
-            margin: 30px auto 0 !important;
-            position: relative !important;
-            box-sizing: border-box !important;
-        }
-
-        .csr-stack-spacer {
-            width: 130px !important;
-            flex-shrink: 0 !important;
-            visibility: hidden !important;
-            pointer-events: none !important;
-        }
-
-        .csr-dynamic-logo-container {
-            position: -webkit-sticky !important;
-            position: sticky !important;
-            top: 295px !important;
-            width: 130px !important;
-            height: 350px !important;
-            flex-shrink: 0 !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            z-index: 50 !important;
-            pointer-events: none !important;
-            transition: opacity 0.25s ease !important;
-        }
-
-        .csr-sticky-wrapper-main {
-            position: relative !important;
-            display: block !important;
-            flex: 1 1 1060px !important;
-            max-width: 1060px !important;
-            margin: 0 !important;
-            padding-bottom: 85vh !important;
-            box-sizing: border-box !important;
-        }
-
-        .csr-sticky-wrapper-main > .csr-card-wrapper {
-            position: -webkit-sticky !important;
-            position: sticky !important;
-            top: 295px !important;
-            width: 100% !important;
-            box-sizing: border-box !important;
-            margin-bottom: 90vh !important;
-        }
-
-        .csr-sticky-wrapper-main > .csr-card-wrapper:last-child {
-            margin-bottom: 0 !important;
-        }
-
-        .csr-sticky-wrapper-main > .csr-card-wrapper.card-step-1 { z-index: 10 !important; }
-        .csr-sticky-wrapper-main > .csr-card-wrapper.card-step-2 { z-index: 11 !important; }
-        .csr-sticky-wrapper-main > .csr-card-wrapper.card-step-3 { z-index: 12 !important; }
-        .csr-sticky-wrapper-main > .csr-card-wrapper.card-step-4 { z-index: 13 !important; }
-
-        @media (max-width: 1399px) {
-            .csr-stack-stage { gap: 16px !important; max-width: 1260px !important; }
-            .csr-dynamic-logo-container, .csr-stack-spacer { width: 110px !important; }
-            .csr-sticky-wrapper-main { max-width: 980px !important; }
-        }
-
-        @media (max-width: 600px) {
-            .title-center-wrapper { position: relative !important; top: auto !important; }
-            .csr-stack-stage { display: block !important; }
-            .csr-stack-spacer { display: none !important; }
-            .csr-dynamic-logo-container {
-                position: relative !important;
-                top: auto !important;
-                width: 100% !important;
-                height: auto !important;
-                margin: 0 auto 15px !important;
-            }
-            .csr-sticky-wrapper-main > .csr-card-wrapper {
-                position: relative !important;
-                top: auto !important;
-                margin-bottom: 24px !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/csr.css?v=5.0">
 </head>
 <body class="radious-4 demo-default csr-page">
 
@@ -386,9 +288,11 @@
             let activeLogoIndex = -1;
 
             function updateCardStack() {
-                const isMobile = window.innerWidth < 600;
+                const isMobile = window.innerWidth <= 991;
                 if (isMobile) {
-                    if (logoContainer) logoContainer.style.opacity = '1';
+                    if (logoContainer) {
+                        logoContainer.style.opacity = '1';
+                    }
                     cards.forEach(card => {
                         const inner = card.querySelector('.csr-card-inner, .inner');
                         if (inner) {
@@ -396,18 +300,31 @@
                             inner.style.filter = '';
                         }
                     });
+                    // On mobile, sync logo based on which card is in view
+                    let mobileActiveIndex = 0;
+                    cards.forEach((card, index) => {
+                        const rect = card.getBoundingClientRect();
+                        if (rect.top <= window.innerHeight * 0.45) {
+                            mobileActiveIndex = index;
+                        }
+                    });
+                    if (logoImg && csrLogos[mobileActiveIndex] && mobileActiveIndex !== activeLogoIndex) {
+                        activeLogoIndex = mobileActiveIndex;
+                        logoImg.src = csrLogos[mobileActiveIndex];
+                    }
                     isTicking = false;
                     return;
                 }
 
-                const stickyDockTop = 295;
+                const stickyDockTop = 320;
                 let activeIndex = 0;
 
-                // Deterministic active card detection - fixes duplicate card selection
-                for (let i = 0; i < cards.length; i++) {
+                // Pick the highest card index that has reached or passed the sticky dock
+                for (let i = cards.length - 1; i >= 0; i--) {
                     const rect = cards[i].getBoundingClientRect();
-                    if (rect.top <= stickyDockTop + 25) {
+                    if (rect.top <= stickyDockTop + 20) {
                         activeIndex = i;
+                        break;
                     }
                 }
 
@@ -434,7 +351,6 @@
                                 }, 150);
                             }
                         } else {
-                            // Card 1 has no logo in logo1-3
                             activeLogoIndex = activeIndex;
                             logoImg.classList.add('csr-logo-fade');
                             logoImg.style.opacity = '0';
