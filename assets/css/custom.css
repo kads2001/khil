@@ -2126,5 +2126,59 @@ body.home-three-page .blog-news-grid .blog-read-btn {
   transform: translateX(3px) !important;
 }
 
+/* Bento Hotel Card with Right-Side Brand Logo */
+.bento-card-main-row {
+  display: flex;
+
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.bento-card-text-side {
+  flex: 1;
+}
+
+.bento-card-brand-side {
+  flex-shrink: 0;
+  display: flex;
+  
+  justify-content: center;
+  padding-left: 12px;
+  padding-top: 2px;
+}
+
+.bento-brand-logo-img {
+  display: block;
+  max-width: 165px;
+  max-height: 85px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.khil-bento-hotel-card:hover .bento-brand-logo-img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 575px) {
+  .bento-card-main-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .bento-card-brand-side {
+    padding-left: 0;
+  }
+
+  .bento-brand-logo-img {
+    max-width: 130px;
+    max-height: 65px;
+  }
+}
+
+
 
 
