@@ -18,8 +18,106 @@
     <link rel="stylesheet" href="assets/css/khil-header.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 
-    <!-- Dedicated CSR Stylesheet -->
-    <link rel="stylesheet" href="assets/css/csr.css">
+    <!-- Dedicated CSR Stylesheet with Cache Busting -->
+    <link rel="stylesheet" href="assets/css/csr.css?v=3.2">
+
+    <!-- Critical Inlined Stacking Rules (Guarantees immediate zero-cache sticky docking) -->
+    <style id="csr-critical-stacking">
+        .title-center-wrapper {
+            position: -webkit-sticky !important;
+            position: sticky !important;
+            top: 96px !important;
+            z-index: 100 !important;
+            background: #F6F2EB !important;
+            padding: 18px 20px 14px !important;
+        }
+
+        .csr-stack-stage {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: flex-start !important;
+            gap: 28px !important;
+            width: 100% !important;
+            max-width: 1380px !important;
+            margin: 30px auto 0 !important;
+            position: relative !important;
+            box-sizing: border-box !important;
+        }
+
+        .csr-stack-spacer {
+            width: 130px !important;
+            flex-shrink: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+
+        .csr-dynamic-logo-container {
+            position: -webkit-sticky !important;
+            position: sticky !important;
+            top: 295px !important;
+            width: 130px !important;
+            height: 350px !important;
+            flex-shrink: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 50 !important;
+            pointer-events: none !important;
+            transition: opacity 0.25s ease !important;
+        }
+
+        .csr-sticky-wrapper-main {
+            position: relative !important;
+            display: block !important;
+            flex: 1 1 1060px !important;
+            max-width: 1060px !important;
+            margin: 0 !important;
+            padding-bottom: 85vh !important;
+            box-sizing: border-box !important;
+        }
+
+        .csr-sticky-wrapper-main > .csr-card-wrapper {
+            position: -webkit-sticky !important;
+            position: sticky !important;
+            top: 295px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            margin-bottom: 90vh !important;
+        }
+
+        .csr-sticky-wrapper-main > .csr-card-wrapper:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        .csr-sticky-wrapper-main > .csr-card-wrapper.card-step-1 { z-index: 10 !important; }
+        .csr-sticky-wrapper-main > .csr-card-wrapper.card-step-2 { z-index: 11 !important; }
+        .csr-sticky-wrapper-main > .csr-card-wrapper.card-step-3 { z-index: 12 !important; }
+        .csr-sticky-wrapper-main > .csr-card-wrapper.card-step-4 { z-index: 13 !important; }
+
+        @media (max-width: 1399px) {
+            .csr-stack-stage { gap: 16px !important; max-width: 1260px !important; }
+            .csr-dynamic-logo-container, .csr-stack-spacer { width: 110px !important; }
+            .csr-sticky-wrapper-main { max-width: 980px !important; }
+        }
+
+        @media (max-width: 600px) {
+            .title-center-wrapper { position: relative !important; top: auto !important; }
+            .csr-stack-stage { display: block !important; }
+            .csr-stack-spacer { display: none !important; }
+            .csr-dynamic-logo-container {
+                position: relative !important;
+                top: auto !important;
+                width: 100% !important;
+                height: auto !important;
+                margin: 0 auto 15px !important;
+            }
+            .csr-sticky-wrapper-main > .csr-card-wrapper {
+                position: relative !important;
+                top: auto !important;
+                margin-bottom: 24px !important;
+            }
+        }
+    </style>
 </head>
 <body class="radious-4 demo-default csr-page">
 
@@ -40,22 +138,22 @@
                 </p>
             </div>
 
-            <!-- Dynamic Logo Beside Stack Section -->
-            <div class="csr-dynamic-logo-container" id="csrDynamicLogoContainer">
-                <div class="csr-dynamic-logo-card">
-                    <img
-                        id="csrDynamicLogoImg"
-                        class="csr-dynamic-logo-img"
-                        src="assets/images/csr/logo1.png"
-                        alt="Active Organization Logo"
-                    >
+            <div class="csr-stack-stage mt--40">
+                <!-- Dynamic Logo Beside Stack Section -->
+                <div class="csr-dynamic-logo-container" id="csrDynamicLogoContainer">
+                    <div class="csr-dynamic-logo-card">
+                        <img
+                            id="csrDynamicLogoImg"
+                            class="csr-dynamic-logo-img"
+                            src="assets/images/csr/logo4.png"
+                            alt="Active Organization Logo"
+                        >
+                    </div>
                 </div>
-            </div>
 
-            <div class="csr-sticky-wrapper-main mt--60">
-                
-                <!-- Card 1: Jankibai Shikshan Sanstha -->
-                <div class="csr-card csr-card-wrapper">
+                <div class="csr-sticky-wrapper-main">
+                    <!-- Card 1: Jankibai Shikshan Sanstha -->
+                    <div class="csr-card csr-card-wrapper card-step-1">
                     <div class="csr-card-inner inner one">
                         <div class="csr-card-content left-content">
                             <h3 class="csr-card-title title">Jankibai Shikshan Sanstha</h3>
@@ -80,7 +178,7 @@
                 <!-- Card 1 end -->
 
                 <!-- Card 2: ASHAKIRAN FOUNDATION -->
-                <div class="csr-card csr-card-wrapper">
+                <div class="csr-card csr-card-wrapper card-step-2">
                     <div class="csr-card-inner inner two">
                         <div class="csr-card-content left-content">
                             <h3 class="csr-card-title title">ASHAKIRAN FOUNDATION</h3>
@@ -108,7 +206,7 @@
                 <!-- Card 2 end -->
 
                 <!-- Card 3: ANATH BALAKASHRAM -->
-                <div class="csr-card csr-card-wrapper">
+                <div class="csr-card csr-card-wrapper card-step-3">
                     <div class="csr-card-inner inner three">
                         <div class="csr-card-content left-content">
                             <h3 class="csr-card-title title">ANATH BALAKASHRAM</h3>
@@ -136,7 +234,7 @@
                 <!-- Card 3 end -->
 
                 <!-- Card 4: Mathoshree Ambubai Residential School for Blind Girls -->
-                <div class="csr-card csr-card-wrapper">
+                <div class="csr-card csr-card-wrapper card-step-4">
                     <div class="csr-card-inner inner four">
                         <div class="csr-card-content left-content">
                             <h3 class="csr-card-title title">Mathoshree Ambubai Residential School for Blind Girls</h3>
@@ -163,6 +261,9 @@
                 </div>
                 <!-- Card 4 end -->
 
+                </div>
+                <!-- Symmetrical Spacer for perfect center alignment with title -->
+                <div class="csr-stack-spacer" aria-hidden="true"></div>
             </div>
         </div>
     </div>
@@ -271,12 +372,12 @@
             let isTicking = false;
 
             // Verified 1-to-1 organization mapping:
-            // Card 1: Jankibai Shikshan Sanstha -> no logo in logo1-3
+            // Card 1: Jankibai Shikshan Sanstha -> assets/images/csr/logo4.png
             // Card 2: ASHAKIRAN FOUNDATION -> assets/images/csr/logo1.png
             // Card 3: ANATH BALAKASHRAM -> assets/images/csr/logo2.png
             // Card 4: Mathoshree Ambubai -> assets/images/csr/logo3.png
             const csrLogos = [
-                '',
+                'assets/images/csr/logo4.png',
                 'assets/images/csr/logo1.png',
                 'assets/images/csr/logo2.png',
                 'assets/images/csr/logo3.png'
@@ -285,7 +386,7 @@
             let activeLogoIndex = -1;
 
             function updateCardStack() {
-                const isMobile = window.innerWidth < 992;
+                const isMobile = window.innerWidth < 600;
                 if (isMobile) {
                     if (logoContainer) logoContainer.style.opacity = '1';
                     cards.forEach(card => {
@@ -299,7 +400,7 @@
                     return;
                 }
 
-                const stickyDockTop = 250;
+                const stickyDockTop = 295;
                 let activeIndex = 0;
 
                 // Deterministic active card detection - fixes duplicate card selection
