@@ -65,7 +65,7 @@
   font-weight: 400;
 }
 
-.banner-bg-attach-agency .hero-desc a {
+.banner-bg-attach-agency .hero-desc a:not(.khil-btn-outline):not(.khil-bento-btn-primary) {
   display: inline-block;
   margin-top: 14px;
   color: #fff;
@@ -76,8 +76,38 @@
   transition: color 0.25s ease;
 }
 
-.banner-bg-attach-agency .hero-desc a:hover {
+.banner-bg-attach-agency .hero-desc a:not(.khil-btn-outline):not(.khil-bento-btn-primary):hover {
   color: #d7d7d7;
+}
+
+.banner-bg-attach-agency .hero-desc a.khil-btn-outline,
+.banner-bg-attach-agency a.khil-btn-outline {
+  margin-top: 24px;
+  background: transparent !important;
+  border: 1px solid #ffffff !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+}
+
+.banner-bg-attach-agency .hero-desc a.khil-btn-outline *,
+.banner-bg-attach-agency a.khil-btn-outline * {
+  color: #ffffff !important;
+  transition: color 0.25s ease !important;
+}
+
+.banner-bg-attach-agency .hero-desc a.khil-btn-outline:hover,
+.banner-bg-attach-agency a.khil-btn-outline:hover {
+  background: #7d007d !important;
+  border-color: #7d007d !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+
+.banner-bg-attach-agency .hero-desc a.khil-btn-outline:hover i,
+.banner-bg-attach-agency a.khil-btn-outline:hover i {
+  transform: translateX(3px) !important;
 }
 
 @media (max-width: 991px) {
@@ -2056,4 +2086,49 @@ body.home-three-page .blog-news-grid .blog-read-btn {
   color: #64748b;
   margin: 0 0 32px;
 }
+
+/* Header Employer Login Button - Outline styling matching hero Explore Our Brands button */
+.header-action-buttons .btn-employer-login.khil-btn-outline,
+.khil-mobile-actions .btn-employer-login.khil-btn-outline,
+.btn-employer-login.khil-btn-outline {
+  background: transparent !important;
+  border: 1px solid #000000 !important;
+  color: #000000 !important;
+  box-shadow: none !important;
+  transition: all 0.25s ease !important;
+}
+
+.header-action-buttons .btn-employer-login.khil-btn-outline *,
+.khil-mobile-actions .btn-employer-login.khil-btn-outline *,
+.btn-employer-login.khil-btn-outline * {
+  color: #000000 !important;
+  transition: color 0.25s ease !important;
+}
+
+.header-action-buttons .btn-employer-login.khil-btn-outline:hover,
+.khil-mobile-actions .btn-employer-login.khil-btn-outline:hover,
+.btn-employer-login.khil-btn-outline:hover {
+  background: #7d007d !important;
+  border-color: #7d007d !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+
+.header-action-buttons .btn-employer-login.khil-btn-outline:hover *,
+.khil-mobile-actions .btn-employer-login.khil-btn-outline:hover *,
+.btn-employer-login.khil-btn-outline:hover * {
+  color: #ffffff !important;
+}
+
+.header-action-buttons .btn-employer-login.khil-btn-outline i,
+.khil-mobile-actions .btn-employer-login.khil-btn-outline i {
+  transition: transform 0.25s ease !important;
+}
+
+.header-action-buttons .btn-employer-login.khil-btn-outline:hover i,
+.khil-mobile-actions .btn-employer-login.khil-btn-outline:hover i {
+  transform: translateX(3px) !important;
+}
+
+
 
