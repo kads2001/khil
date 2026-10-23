@@ -2176,7 +2176,7 @@ body.home-three-page .blog-news-grid .blog-read-btn {
 /* Bento Hotel Card with Right-Side Brand Logo */
 .bento-card-main-row {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   gap: 24px;
   width: 100%;
@@ -2187,19 +2187,35 @@ body.home-three-page .blog-news-grid .blog-read-btn {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .bento-card-text-side .bento-card-title {
   margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .bento-card-text-side .bento-card-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
   margin-bottom: 14px;
+  min-height: 4.8em;
+  text-wrap: pretty;
+}
+
+.bento-card-text-side .bento-card-action {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
 }
 
 .bento-card-brand-side {
-  flex-shrink: 0;
+  flex: 0 0 200px;
+  width: 200px;
+  max-width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2210,8 +2226,8 @@ body.home-three-page .blog-news-grid .blog-read-btn {
 
 .bento-brand-logo-img {
   display: block;
-  max-width: 205px;
-  max-height: 100px;
+  max-width: 195px;
+  max-height: 90px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -2229,7 +2245,14 @@ body.home-three-page .blog-news-grid .blog-read-btn {
     gap: 14px;
   }
 
+  .bento-card-text-side .bento-card-desc {
+    min-height: auto;
+  }
+
   .bento-card-brand-side {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
     padding-left: 0;
     align-self: flex-start;
   }
