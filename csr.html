@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="assets/css/khil-header.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 
-    <!-- Dedicated CSR Stylesheet -->
-    <link rel="stylesheet" href="assets/css/csr.css">
+    <!-- Dedicated CSR Stylesheet with Cache Busting -->
+    <link rel="stylesheet" href="assets/css/csr.css?v=5.0">
 </head>
 <body class="radious-4 demo-default csr-page">
 
@@ -42,22 +42,22 @@
                 </p>
             </div>
 
-            <!-- Dynamic Logo Beside Stack Section -->
-            <div class="csr-dynamic-logo-container" id="csrDynamicLogoContainer">
-                <div class="csr-dynamic-logo-card">
-                    <img
-                        id="csrDynamicLogoImg"
-                        class="csr-dynamic-logo-img"
-                        src="assets/images/csr/logo1.png"
-                        alt="Active Organization Logo"
-                    >
+            <div class="csr-stack-stage mt--40">
+                <!-- Dynamic Logo Beside Stack Section -->
+                <div class="csr-dynamic-logo-container" id="csrDynamicLogoContainer">
+                    <div class="csr-dynamic-logo-card">
+                        <img
+                            id="csrDynamicLogoImg"
+                            class="csr-dynamic-logo-img"
+                            src="assets/images/csr/logo4.png"
+                            alt="Active Organization Logo"
+                        >
+                    </div>
                 </div>
-            </div>
 
-            <div class="csr-sticky-wrapper-main mt--60">
-                
-                <!-- Card 1: Jankibai Shikshan Sanstha -->
-                <div class="csr-card csr-card-wrapper">
+                <div class="csr-sticky-wrapper-main">
+                    <!-- Card 1: Jankibai Shikshan Sanstha -->
+                    <div class="csr-card csr-card-wrapper card-step-1">
                     <div class="csr-card-inner inner one">
                         <div class="csr-card-content left-content">
                             <h3 class="csr-card-title title">Jankibai Shikshan Sanstha</h3>
@@ -82,7 +82,7 @@
                 <!-- Card 1 end -->
 
                 <!-- Card 2: ASHAKIRAN FOUNDATION -->
-                <div class="csr-card csr-card-wrapper">
+                <div class="csr-card csr-card-wrapper card-step-2">
                     <div class="csr-card-inner inner two">
                         <div class="csr-card-content left-content">
                             <h3 class="csr-card-title title">ASHAKIRAN FOUNDATION</h3>
@@ -110,7 +110,7 @@
                 <!-- Card 2 end -->
 
                 <!-- Card 3: ANATH BALAKASHRAM -->
-                <div class="csr-card csr-card-wrapper">
+                <div class="csr-card csr-card-wrapper card-step-3">
                     <div class="csr-card-inner inner three">
                         <div class="csr-card-content left-content">
                             <h3 class="csr-card-title title">ANATH BALAKASHRAM</h3>
@@ -138,7 +138,7 @@
                 <!-- Card 3 end -->
 
                 <!-- Card 4: Mathoshree Ambubai Residential School for Blind Girls -->
-                <div class="csr-card csr-card-wrapper">
+                <div class="csr-card csr-card-wrapper card-step-4">
                     <div class="csr-card-inner inner four">
                         <div class="csr-card-content left-content">
                             <h3 class="csr-card-title title">Mathoshree Ambubai Residential School for Blind Girls</h3>
@@ -165,6 +165,9 @@
                 </div>
                 <!-- Card 4 end -->
 
+                </div>
+                <!-- Symmetrical Spacer for perfect center alignment with title -->
+                <div class="csr-stack-spacer" aria-hidden="true"></div>
             </div>
         </div>
     </div>
@@ -273,12 +276,12 @@
             let isTicking = false;
 
             // Verified 1-to-1 organization mapping:
-            // Card 1: Jankibai Shikshan Sanstha -> no logo in logo1-3
+            // Card 1: Jankibai Shikshan Sanstha -> assets/images/csr/logo4.png
             // Card 2: ASHAKIRAN FOUNDATION -> assets/images/csr/logo1.png
             // Card 3: ANATH BALAKASHRAM -> assets/images/csr/logo2.png
             // Card 4: Mathoshree Ambubai -> assets/images/csr/logo3.png
             const csrLogos = [
-                '',
+                'assets/images/csr/logo4.png',
                 'assets/images/csr/logo1.png',
                 'assets/images/csr/logo2.png',
                 'assets/images/csr/logo3.png'
@@ -287,9 +290,11 @@
             let activeLogoIndex = -1;
 
             function updateCardStack() {
-                const isMobile = window.innerWidth < 992;
+                const isMobile = window.innerWidth <= 991;
                 if (isMobile) {
-                    if (logoContainer) logoContainer.style.opacity = '1';
+                    if (logoContainer) {
+                        logoContainer.style.opacity = '1';
+                    }
                     cards.forEach(card => {
                         const inner = card.querySelector('.csr-card-inner, .inner');
                         if (inner) {
@@ -297,18 +302,31 @@
                             inner.style.filter = '';
                         }
                     });
+                    // On mobile, sync logo based on which card is in view
+                    let mobileActiveIndex = 0;
+                    cards.forEach((card, index) => {
+                        const rect = card.getBoundingClientRect();
+                        if (rect.top <= window.innerHeight * 0.45) {
+                            mobileActiveIndex = index;
+                        }
+                    });
+                    if (logoImg && csrLogos[mobileActiveIndex] && mobileActiveIndex !== activeLogoIndex) {
+                        activeLogoIndex = mobileActiveIndex;
+                        logoImg.src = csrLogos[mobileActiveIndex];
+                    }
                     isTicking = false;
                     return;
                 }
 
-                const stickyDockTop = 250;
+                const stickyDockTop = 320;
                 let activeIndex = 0;
 
-                // Deterministic active card detection - fixes duplicate card selection
-                for (let i = 0; i < cards.length; i++) {
+                // Pick the highest card index that has reached or passed the sticky dock
+                for (let i = cards.length - 1; i >= 0; i--) {
                     const rect = cards[i].getBoundingClientRect();
-                    if (rect.top <= stickyDockTop + 25) {
+                    if (rect.top <= stickyDockTop + 20) {
                         activeIndex = i;
+                        break;
                     }
                 }
 
@@ -335,7 +353,6 @@
                                 }, 150);
                             }
                         } else {
-                            // Card 1 has no logo in logo1-3
                             activeLogoIndex = activeIndex;
                             logoImg.classList.add('csr-logo-fade');
                             logoImg.style.opacity = '0';
