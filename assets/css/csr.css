@@ -214,7 +214,14 @@ body.csr-page {
 }
 
 .csr-sticky-wrapper-main > .csr-card-wrapper:last-child {
-    margin-bottom: 0 !important;
+    margin-bottom: 60vh !important;
+}
+
+.csr-stack-spacer {
+    width: 130px;
+    flex-shrink: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 /* Card Inner Surface */
@@ -223,12 +230,13 @@ body.csr-page {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  padding: 30px 42px 32px 42px; /* Proportional padding ensuring entire card fits viewport */
+  gap: 36px;
+  padding: 24px 38px;
   border-radius: 20px;
   position: relative;
-  background:#efefef;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #efefef;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-top: 2px solid rgba(0, 0, 0, 0.22);
  
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
