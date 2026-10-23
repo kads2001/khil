@@ -92,6 +92,42 @@
 
         </div>
 
+        <!-- Hotel Brand Logos Strip Below All Columns -->
+        <div class="khil-footer-brands-bar" aria-label="Our hotel brand logos">
+          <a href="https://www.orchidhotel.com/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="The Orchid Hotels">
+            <img src="assets/img/Logo-without-back/orchidlogo-removebg-preview.png" alt="The Orchid Hotels" loading="lazy">
+          </a>
+          <a href="https://www.orchidhotel.com/fort-jadhavgadh/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="Fort JadhavGADH">
+            <img src="assets/img/Logo-without-back/jadhavgadlogo-removebg-preview.png" alt="Fort JadhavGADH" loading="lazy">
+          </a>
+          <a href="https://www.orchidhotel.com/mahodadhi-palace-a-beach-view-heritage-resort-puri/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="Mahodadhi Palace">
+            <img src="assets/img/Logo-without-back/mahadodhilogo-removebg-preview.png" alt="Mahodadhi Palace" loading="lazy">
+          </a>
+          <a href="https://www.orchidhotel.com/lotus-eco-beach-resort-konark/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="Lotus Eco Beach Resort">
+            <img src="assets/img/Logo-without-back/lotuslogo-removebg-preview.png" alt="Lotus Eco Beach Resort" loading="lazy">
+          </a>
+          <a href="https://irahotels.com/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="IRA by Orchid Hotels">
+            <img src="assets/img/Logo-without-back/iralogo-removebg-preview.png" alt="IRA by Orchid Hotels" loading="lazy">
+          </a>
+
+
+            <a href="https://orchidtoyam.com/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="IRA by Orchid Hotels">
+              <img src="assets/img/Logo-without-back/toyamlogo.png" alt="IRA by Orchid Hotels" loading="lazy">
+            </a>
+
+
+            <a href="https://www.orchidhotel.com/lotus-eco-beach-resort-murud-dapoli-ratnagiri/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="IRA by Orchid Hotels">
+              <img src="assets/img/Logo-without-back/passaros-logo.webp" alt="IRA by Orchid Hotels" loading="lazy">
+            </a>
+
+
+
+
+
+
+
+        </div>
+
         <!-- Bottom Copyright Row -->
         <div class="khil-footer-bottom">
           <p class="khil-footer-copy">
