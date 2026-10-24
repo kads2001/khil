@@ -2559,7 +2559,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 36px;
-  row-gap: 36px;
+  row-gap: 90px;
   align-items: stretch;
 }
 
