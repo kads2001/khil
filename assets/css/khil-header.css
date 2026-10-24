@@ -3611,8 +3611,8 @@ input[type="submit"]:hover,
 
 .khil-btn-outline:hover,
 .khil-btn-outline:focus-visible {
-  background: #7d007d !important;
-  border-color: #7d007d !important;
+  background: transparent !important;
+  border-color: transparent !important;
   color: #fff !important;
   transform: translateY(-2px) !important;
 }

@@ -331,8 +331,8 @@ body.radious-4 .rts-banner-area-three .khil-hero-btn.primary.khil-btn-outline i 
 }
 
 body.radious-4 .rts-banner-area-three .khil-hero-btn.primary.khil-btn-outline:hover {
-  background: #7d007d !important;
-  border-color: #7d007d !important;
+  background: transparent !important;
+  border-color: transparent !important;
   filter: none;
   color: #fff !important;
 }

@@ -3,7 +3,7 @@
 
   document.write(`
     <footer class="khil-shared-footer">
-      <!-- Animated Glowing Purple Ambient Background Shapes -->
+      <!-- Animated Glowing Ambient Background Shapes -->
       <div class="khil-footer-glow-bg" aria-hidden="true">
         <div class="khil-glow-orb orb-center"></div>
         <div class="khil-glow-orb orb-top-left"></div>
