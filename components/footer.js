@@ -3,6 +3,16 @@
 
   document.write(`
     <footer class="khil-shared-footer">
+      <!-- Animated Glowing Purple Ambient Background Shapes -->
+      <div class="khil-footer-glow-bg" aria-hidden="true">
+        <div class="khil-glow-orb orb-center"></div>
+        <div class="khil-glow-orb orb-top-left"></div>
+        <div class="khil-glow-orb orb-bottom-left"></div>
+        <div class="khil-glow-orb orb-top-right"></div>
+        <div class="khil-glow-orb orb-bottom-right"></div>
+        <div class="khil-glow-orb orb-ambient"></div>
+      </div>
+
       <div class="container">
         <div class="khil-footer-grid">
           <!-- Column 1: Brand & Company -->
@@ -25,7 +35,7 @@
               </a>
             </div>
           </div>
-            <div class="khil-footer-column" aria-label="Company">
+          <div class="khil-footer-column" aria-label="Company">
             <h3 class="khil-footer-heading">Company</h3>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -34,10 +44,12 @@
               <li><a href="board-of-directors.html">Board of Directors</a></li>
               <li><a href="contact.html">Contact Us</a></li>
               <li><a href="careers.html">Careers</a></li>
-            </ul>  <h4 class="khil-footer-subheading">Wellness</h4>
+            </ul>  
+            <h4 class="khil-footer-subheading">Wellness</h4>
             <ul>
               <li><a href="https://orchidtoyam.com/" target="_blank" rel="noopener noreferrer">Toyam By Orchid</a></li>
-            </ul></div>
+            </ul>
+          </div>
 
           <!-- Column 2: Brands Orchid & Wellness -->
           <nav class="khil-footer-column" aria-label="Brands Orchid">
@@ -53,7 +65,6 @@
               <li><a href="https://www.orchidhotel.com/hotel-in-rishikesh/" target="_blank" rel="noopener noreferrer">The Orchid Rishikesh</a></li>
               <li><a href="https://www.orchidhotel.com/hotel-in-panchgani/" target="_blank" rel="noopener noreferrer">The Orchid Panchgani</a></li>
             </ul>
-          
           </nav>
 
           <!-- Column 3: Heritage & Leisure Hotels -->
@@ -123,7 +134,6 @@
             <img src="assets/img/Logo-without-back/iralogo-removebg-preview.png" alt="IRA by Orchid Hotels" loading="lazy">
           </a>
 
-
           <a href="https://orchidtoyam.com/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="Toyam by Orchid">
             <img src="assets/img/Logo-without-back/toyamblack.webp" alt="Toyam by Orchid" loading="lazy">
           </a>
@@ -146,4 +156,49 @@
       </div>
     </footer>
   `);
+
+  // Subtle interactive parallax for the glowing ambient shapes on mouse move
+  function initFooterGlowParallax() {
+    var footer = document.querySelector('.khil-shared-footer');
+    if (!footer) return;
+    var glowWrap = footer.querySelector('.khil-footer-glow-bg');
+    if (!glowWrap) return;
+
+    var targetX = 0, targetY = 0;
+    var currentX = 0, currentY = 0;
+    var rafId = null;
+
+    footer.addEventListener('mousemove', function (e) {
+      var rect = footer.getBoundingClientRect();
+      var x = ((e.clientX - rect.left) / rect.width) - 0.5;
+      var y = ((e.clientY - rect.top) / rect.height) - 0.5;
+      targetX = x * 40;
+      targetY = y * 25;
+      if (!rafId) updateParallax();
+    }, { passive: true });
+
+    footer.addEventListener('mouseleave', function () {
+      targetX = 0;
+      targetY = 0;
+      if (!rafId) updateParallax();
+    }, { passive: true });
+
+    function updateParallax() {
+      currentX += (targetX - currentX) * 0.06;
+      currentY += (targetY - currentY) * 0.06;
+      glowWrap.style.transform = 'translate3d(' + currentX.toFixed(2) + 'px, ' + currentY.toFixed(2) + 'px, 0)';
+      if (Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
+        rafId = requestAnimationFrame(updateParallax);
+      } else {
+        glowWrap.style.transform = targetX === 0 ? '' : 'translate3d(' + targetX + 'px, ' + targetY + 'px, 0)';
+        rafId = null;
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFooterGlowParallax);
+  } else {
+    initFooterGlowParallax();
+  }
 }());
