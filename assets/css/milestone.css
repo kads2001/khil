@@ -417,8 +417,8 @@ body.milestone-page i[class*=" fa-"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 54px;
-  height: 54px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   border: 2px solid var(--color-gold);
   background: #FFFFFF;
@@ -447,16 +447,45 @@ body.milestone-page i[class*=" fa-"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid rgba(184, 148, 90, 0.25);
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 17px;
+  font-size: 13.5px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  line-height: 1;
   color: var(--color-plum);
   background: #FAF8F5;
   transition: all 0.3s ease;
+}
+
+/* Range nodes: clean stacked layout for 1970–1985 and 2007–2008 */
+.node-number.node-range {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5px;
+  padding: 2px 0;
+}
+
+.node-number.node-range .range-start,
+.node-number.node-range .range-end {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--color-plum);
+}
+
+.node-number.node-range .range-dash {
+  display: block;
+  width: 13px;
+  height: 1px;
+  background-color: var(--color-gold);
+  opacity: 0.85;
 }
 
 .node-circle.node-active .node-number {
