@@ -2391,7 +2391,7 @@
 .khil-about-showcase-section .khil-showcase-card.card-0 {
   width: 140px;
   height: 150px;
-  transform: translateY(8px);
+  transform: translateY(-65px);
 }
 .khil-about-showcase-section .khil-showcase-card.card-0:hover {
   transform: translateY(2px);
@@ -2400,7 +2400,7 @@
 .khil-about-showcase-section .khil-showcase-card.card-1 {
   width: 150px;
   height: 150px;
-  transform: translateY(8px);
+  transform: translateY(-22px);
 }
 .khil-about-showcase-section .khil-showcase-card.card-1:hover {
   transform: translateY(2px);
@@ -2441,7 +2441,7 @@
 .khil-about-showcase-section .khil-showcase-card.card-5 {
   width: 150px;
   height: 150px;
-  transform: translateY(8px);
+  transform: translateY(-22px);
 }
 .khil-about-showcase-section .khil-showcase-card.card-5:hover {
   transform: translateY(2px);
@@ -2450,7 +2450,7 @@
 .khil-about-showcase-section .khil-showcase-card.card-6 {
   width: 140px;
   height: 150px;
-  transform: translateY(8px);
+  transform: translateY(-60px);
 }
 .khil-about-showcase-section .khil-showcase-card.card-6:hover {
   transform: translateY(2px);
