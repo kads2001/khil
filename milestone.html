@@ -52,15 +52,13 @@
 
   <!-- Header -->
   <header class="milestone-header">
-    <h2>Our Journey</h2>
-
-    <h1 class="milestone-main-title">
-Explore the Milestones</h1>
-   
-
-    <!-- Quick Jump Bar -->
-   
-  </header><br>
+    <div class="milestone-banner-tag">
+      <i class="fa-solid fa-crown" style="color: #8e257e;"></i>
+      <span>Our Journey</span>
+    </div>
+    <h1 class="milestone-main-title">Explore the Milestones</h1>
+    <p class="milestone-subtitle">Decades of Heritage, Innovation &amp; Sustainable Hospitality</p>
+  </header>
 
   <!-- Main Timeline Container -->
   <main class="milestone-main">
@@ -93,14 +91,14 @@ Explore the Milestones</h1>
           <!-- Node 1 -->
           <div class="timeline-step" id="step-1" data-step="1">
             <div class="milestone-card">
-              <span class="milestone-badge badge-genesis">The Genesis</span>
+           
               <h3 class="milestone-title">The Beginning</h3>
               <p class="milestone-desc">Late Shri Venkatesh Kamat started Satkar Hotel in Mumbai at Churchgate.</p>
               <div class="milestone-card-pointer"></div>
             </div>
             <div class="milestone-stem"></div>
             <div class="node-circle" id="circle-1">
-              <div class="node-number">1</div>
+              <div class="node-number">1958</div>
             </div>
           </div>
 
@@ -114,7 +112,11 @@ Explore the Milestones</h1>
             </div>
             <div class="milestone-stem"></div>
             <div class="node-circle" id="circle-2">
-              <div class="node-number">1970 – 1985</div>
+              <div class="node-number node-range">
+                <span class="range-start">1970</span>
+                <span class="range-dash"></span>
+                <span class="range-end">1985</span>
+              </div>
             </div>
           </div>
 
@@ -266,7 +268,11 @@ Explore the Milestones</h1>
             </div>
             <div class="milestone-stem"></div>
             <div class="node-circle" id="circle-10">
-              <div class="node-number">2007 – 2008</div>
+              <div class="node-number node-range">
+                <span class="range-start">2007</span>
+                <span class="range-dash"></span>
+                <span class="range-end">2008</span>
+              </div>
             </div>
           </div>
         </div>
@@ -322,14 +328,13 @@ Explore the Milestones</h1>
         <div class="milestone-terminus-row">
           <div class="timeline-step terminus-step" id="step-16" data-step="16">
             <div class="milestone-card card-terminus">
-            
               <h3 class="milestone-title">Continuing The Legacy</h3>
               <p class="milestone-desc">Expanded the IRA by Orchid Hotels portfolio with the grand opening of Bhavnagar.</p>
               <div class="milestone-card-pointer"></div>
             </div>
             <div class="milestone-stem stem-terminus"></div>
             <div class="node-circle terminus-circle" id="circle-16">
-              <div class="node-number">2026 Future</div>
+              <div class="node-number">2026</div>
             </div>
           </div>
         </div>
@@ -345,7 +350,7 @@ Explore the Milestones</h1>
       <div class="mobile-step">
         <div class="mobile-node">1</div>
         <div class="mobile-card">
-          <span class="milestone-badge badge-genesis">The Genesis</span>
+          <span class="milestone-badge badge-genesis">1958 · The Genesis</span>
           <h3 class="mobile-title">The Beginning</h3>
           <p class="mobile-desc">Late Shri Venkatesh Kamat started Satkar Hotel in Mumbai at Churchgate.</p>
         </div>
@@ -480,7 +485,7 @@ Explore the Milestones</h1>
       <div class="mobile-step">
         <div class="mobile-node">16</div>
         <div class="mobile-card card-terminus">
-          <span class="milestone-badge badge-future">2026 Future</span>
+          <span class="milestone-badge badge-future">Vision 2026 &amp; Beyond</span>
           <h3 class="mobile-title">Continuing The Legacy</h3>
           <p class="mobile-desc">Expanded the IRA by Orchid Hotels portfolio with the grand opening of Bhavnagar.</p>
         </div>
@@ -589,9 +594,10 @@ Explore the Milestones</h1>
         d += `L ${pts[15].x} ${pts[13].y} `;
 
         // Turn 5 (Row 5 to Row 6: 15 -> 16 centered)
-        const r5 = (pts[16].y - pts[13].y) / 2;
-        d += `L ${turnRightX} ${pts[13].y} `;
-        d += `C ${turnRightX + r5 * 0.75} ${pts[13].y}, ${pts[16].x + 90} ${pts[16].y}, ${pts[16].x} ${pts[16].y} `;
+        const r5 = (pts[16].y - pts[15].y) / 2;
+        d += `L ${turnRightX} ${pts[15].y} `;
+        d += `C ${turnRightX + r5 * 0.85} ${pts[15].y}, ${turnRightX + r5 * 0.85} ${pts[16].y}, ${turnRightX} ${pts[16].y} `;
+        d += `L ${pts[16].x} ${pts[16].y} `;
 
         // Apply to background and active paths
         trackPath.setAttribute('d', d);
