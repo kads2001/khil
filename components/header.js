@@ -19,7 +19,7 @@
                                         <a href="about.html">
                                             <div class="item-content">
                                                 <span class="item-title">About Us</span>
-                                                <span class="item-desc">Asia's pioneer in environmentally sensitive hotels</span>
+                                               
                                             </div>
                                         </a>
                                     </li>
@@ -27,7 +27,7 @@
                                         <a href="milestone.html">
                                             <div class="item-content">
                                                 <span class="item-title">Milestones</span>
-                                                <span class="item-desc">Four decades of hospitality excellence &amp; growth</span>
+                                                
                                             </div>
                                         </a>
                                     </li>
@@ -35,7 +35,7 @@
                                         <a href="board-of-directors.html">
                                             <div class="item-content">
                                                 <span class="item-title">Board of Directors</span>
-                                                <span class="item-desc">Executive stewardship &amp; strategic vision</span>
+                                                
                                             </div>
                                         </a>
                                     </li>
@@ -43,7 +43,7 @@
                                         <a href="committees-of-board.html">
                                             <div class="item-content">
                                                 <span class="item-title">Committees of Board</span>
-                                                <span class="item-desc">Audit, stakeholders &amp; governance oversight</span>
+                                             
                                             </div>
                                         </a>
                                     </li>
@@ -51,7 +51,7 @@
                                         <a href="directorships-of-the-board-of-directors.html">
                                             <div class="item-content">
                                                 <span class="item-title">Directorships of the Board</span>
-                                                <span class="item-desc">Board representations &amp; corporate disclosures</span>
+                                              
                                             </div>
                                         </a>
                                     </li>
