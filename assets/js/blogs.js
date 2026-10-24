@@ -9,15 +9,27 @@
 
 export const blogsData = [
   {
-    id: "corporate-citizen",
-    title: "Mastering the art of relaxation and revelation",
-    source: "Corporate Citizen",
+    id: "hospibuz-ram-navami-fadnavis",
+    title: "Maharashtra CM Devendra Fadnavis Does Ram Navami Pooja at The Orchid Hotel, Pune",
+    source: "Hospibuz",
     category: "In The News",
-    meta: "Corporate Citizen · Leadership Insights",
-    image: "assets/images/blogs/image copy.png",
-    url: "https://fliphtml5.com/check/ottei/bugq/#p=46",
-    description: "Vishal Kamat, Director at Kamat Hotels, shares candid insights on leadership, work culture, and mindful living in Corporate Citizen.",
-    details: "In an in-depth conversation, Vishal Kamat shares his perspective on the hotel industry, work-life balance, and finding inspiration from timeless screen characters.",
+    meta: "Hospibuz · Events & Celebrations",
+    image: "assets/images/blogs/image copy 6.png",
+    url: "https://hospibuz.com/hotel/Hotel-listicles/maharashtra-cm-devendra-fadnavis-does-ram-navami-pooja-at-the-orchid-hotel-pune-8935330",
+    description: "On the auspicious occasion of Shri Ram Navami, Maharashtra CM Devendra Fadnavis offered prayers and performed a special pooja at The Orchid Hotel, Pune, joined by Vishal Vithal Kamat.",
+    details: "Following a state revenue workshop at the property, CM Devendra Fadnavis participated in festive celebrations and took darshan of Lord Ram at the hotel's temple setup.",
+    featured: true
+  },
+  {
+    id: "costar-nifty-tourism-index",
+    title: "Launch of Nifty Tourism Index puts India’s hotel industry in the spotlight",
+    source: "CoStar",
+    category: "In The News",
+    meta: "CoStar · Industry Spotlight",
+    image: "assets/images/blogs/image copy 7.png",
+    url: "https://www.costar.com/article/1906361982/launch-of-nifty-tourism-index-puts-indias-hotel-industry-in-the-spotlight",
+    description: "The launch of the Nifty India Tourism Index puts a long-overdue spotlight on the country's hospitality sector, establishing a formal benchmark and tracking industry growth.",
+    details: "Highlighting how the index formalizes valuation and shifts perceptions of tourism and hospitality into recognized economic growth drivers, industry leaders including Vishal Vithal Kamat share insights on accountability and expansion.",
     featured: true
   },
   {
@@ -30,6 +42,18 @@ export const blogsData = [
     url: "https://hospibuz.com/the-kamat-legacy-a-father-son-duo-redefining-indian-hospitality/",
     description: "The inspiring story of Dr. Vithal Venkatesh Kamat, Chairman, Kamat Hotels India Ltd (KHIL) and his son, Vishal Vithal Kamat, Executive Director at KHIL, stands as a testament to the power of mentorship, tradition, and innovation.",
     details: "From pioneering eco-friendly luxury with The Orchid to restoring historic Fort JadhavGADH, this Hospibuz special chronicles the dynamic synergy between Dr. Vithal Kamat and Vishal Kamat.",
+    featured: true
+  },
+  {
+    id: "corporate-citizen",
+    title: "Mastering the art of relaxation and revelation",
+    source: "Corporate Citizen",
+    category: "In The News",
+    meta: "Corporate Citizen · Leadership Insights",
+    image: "assets/images/blogs/image copy.png",
+    url: "https://fliphtml5.com/check/ottei/bugq/#p=46",
+    description: "Vishal Kamat, Director at Kamat Hotels, shares candid insights on leadership, work culture, and mindful living in Corporate Citizen.",
+    details: "In an in-depth conversation, Vishal Kamat shares his perspective on the hotel industry, work-life balance, and finding inspiration from timeless screen characters.",
     featured: true
   },
   {
