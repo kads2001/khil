@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Archivo+Black&family=Isometra&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Anybody:ital,wght@0,100..900;1,100..900&family=Archivo+Black&family=Isometra&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
 
 /*=================Scss Indexing=============
 1.variables
@@ -87,21 +87,21 @@
   --s-extra-bold: 800;
   --s-black: 900;
   --transition: 0.3s;
-  --khil-font-sans: "Anybody", sans-serif;
-  --khil-font-serif: "Anybody", sans-serif;
-  --font-anybody: "Anybody", sans-serif;
+  --khil-font-sans: "Familjen Grotesk", sans-serif;
+  --khil-font-serif: "Familjen Grotesk", sans-serif;
+  --font-anybody: "Familjen Grotesk", sans-serif;
   --font-archivo-black: "Archivo Black", sans-serif;
   --font-isometra: "Isometra", sans-serif;
-  --font-body: "Anybody", sans-serif;
-  --font-heading: "Anybody", sans-serif;
-  --font-sans: "Anybody", sans-serif;
-  --font-serif: "Anybody", sans-serif;
-  --font-medium: "Anybody", sans-serif;
-  --font-primary: "Anybody", sans-serif;
-  --font-secondary: "Anybody", sans-serif;
+  --font-body: "Familjen Grotesk", sans-serif;
+  --font-heading: "Familjen Grotesk", sans-serif;
+  --font-sans: "Familjen Grotesk", sans-serif;
+  --font-serif: "Familjen Grotesk", sans-serif;
+  --font-medium: "Familjen Grotesk", sans-serif;
+  --font-primary: "Familjen Grotesk", sans-serif;
+  --font-secondary: "Familjen Grotesk", sans-serif;
   --font-3: "fontawesome";
-  --font-4: "Anybody", sans-serif;
-  --font-5: "Anybody", sans-serif;
+  --font-4: "Familjen Grotesk", sans-serif;
+  --font-5: "Familjen Grotesk", sans-serif;
   --font-size-b1: 16px;
   --font-size-b2: 16px;
   --font-size-b3: 22px;
@@ -117,21 +117,42 @@
 }
 
 /* ==========================================================================
-   GLOBAL FONT ASSIGNMENT
+   GLOBAL FONT ASSIGNMENT (Leaving Header and Footer)
    ========================================================================== */
-html, body, button, input, select, textarea, optgroup {
+html, body {
   font-family: var(--font-primary) !important;
 }
 
-body,
-body *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]):not([class^="icon-"]):not([class*=" icon-"]):not([class^="unicons-"]):not([class*=" unicons-"]) {
+body *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]):not([class^="icon-"]):not([class*=" icon-"]):not([class^="unicons-"]):not([class*=" unicons-"]):not(.lucide):not(.lucide *):not(header):not(header *):not(.header-one):not(.header-one *):not(.khil-header-container):not(.khil-header-container *):not(.khil-nav):not(.khil-nav *):not(.khil-mobile-menu):not(.khil-mobile-menu *):not(footer):not(footer *):not(.khil-shared-footer):not(.khil-shared-footer *) {
   font-family: var(--font-primary) !important;
+}
+
+/* Preserve Header & Navigation original fonts */
+header,
+header *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]),
+.header-one,
+.header-one *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]),
+.khil-header-container,
+.khil-header-container *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]),
+.khil-nav,
+.khil-nav *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]),
+.khil-mobile-menu,
+.khil-mobile-menu *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]) {
+  font-family: var(--khil-font, "Anybody", sans-serif) !important;
+}
+
+/* Preserve Shared Footer original fonts */
+footer,
+footer *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]),
+.khil-shared-footer,
+.khil-shared-footer *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]) {
+  font-family: "Anybody", "Nunito", sans-serif !important;
 }
 
 /* Preserve Font Awesome & icon glyphs */
 .fa, .fas, .far, .fab, .fal, .fad, .fat, .fa-solid, .fa-regular, .fa-brands,
 [class^="fa-"], [class*=" fa-"], [class^="unicons-"], [class*=" unicons-"],
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"], .lucide {
   font-family: "Font Awesome 6 Pro", "Font Awesome 6 Free", "fontawesome", unicons !important;
 }
 

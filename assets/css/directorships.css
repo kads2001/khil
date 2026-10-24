@@ -27,8 +27,8 @@
   --khil-border: #E8DED1;
   --khil-border-light: #F2ECE2;
 
-  --khil-font-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --khil-font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --khil-font-serif: 'Familjen Grotesk', system-ui, -apple-system, sans-serif;
+  --khil-font-sans: 'Familjen Grotesk', system-ui, -apple-system, sans-serif;
   --khil-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
