@@ -2332,14 +2332,14 @@
   transform: translateY(-2px);
 }
 
-/* 5-Card Floating Showcase Stage (Brand Logo Cards) */
+/* 7-Card Floating Showcase Stage (Brand Logo Cards) */
 .khil-about-cards-stage {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   width: 100%;
-  max-width: 1140px;
+  max-width: 1160px;
   margin: 35px auto 0;
   padding: 10px 10px 40px;
 }
@@ -2388,28 +2388,37 @@
 }
 
 /* Curved Vertical Alignments matching reference image */
+.khil-about-showcase-section .khil-showcase-card.card-0 {
+  width: 140px;
+  height: 150px;
+  transform: translateY(8px);
+}
+.khil-about-showcase-section .khil-showcase-card.card-0:hover {
+  transform: translateY(2px);
+}
+
 .khil-about-showcase-section .khil-showcase-card.card-1 {
-  width: 160px;
-  height: 160px;
-  transform: translateY(0px);
+  width: 150px;
+  height: 150px;
+  transform: translateY(8px);
 }
 .khil-about-showcase-section .khil-showcase-card.card-1:hover {
-  transform: translateY(-6px);
+  transform: translateY(2px);
 }
 
 .khil-about-showcase-section .khil-showcase-card.card-2 {
-  width: 160px;
-  height: 160px;
-  transform: translateY(36px);
+  width: 150px;
+  height: 150px;
+  transform: translateY(26px);
 }
 .khil-about-showcase-section .khil-showcase-card.card-2:hover {
-  transform: translateY(30px);
+  transform: translateY(20px);
 }
 
 .khil-about-showcase-section .khil-showcase-card.card-3 {
-  width: 320px;
-  height: 180px;
-  transform: translateY(54px);
+  width: 310px;
+  height: 170px;
+  transform: translateY(42px);
   padding: 24px 28px !important;
 }
 .khil-about-showcase-section .khil-showcase-card.card-3 .card-logo-center img {
@@ -2417,25 +2426,34 @@
   max-width: 82%;
 }
 .khil-about-showcase-section .khil-showcase-card.card-3:hover {
-  transform: translateY(48px);
+  transform: translateY(36px);
 }
 
 .khil-about-showcase-section .khil-showcase-card.card-4 {
-  width: 160px;
-  height: 160px;
-  transform: translateY(36px);
+  width: 150px;
+  height: 150px;
+  transform: translateY(26px);
 }
 .khil-about-showcase-section .khil-showcase-card.card-4:hover {
-  transform: translateY(30px);
+  transform: translateY(20px);
 }
 
 .khil-about-showcase-section .khil-showcase-card.card-5 {
-  width: 160px;
-  height: 160px;
-  transform: translateY(0px);
+  width: 150px;
+  height: 150px;
+  transform: translateY(8px);
 }
 .khil-about-showcase-section .khil-showcase-card.card-5:hover {
-  transform: translateY(-6px);
+  transform: translateY(2px);
+}
+
+.khil-about-showcase-section .khil-showcase-card.card-6 {
+  width: 140px;
+  height: 150px;
+  transform: translateY(8px);
+}
+.khil-about-showcase-section .khil-showcase-card.card-6:hover {
+  transform: translateY(2px);
 }
 
 /* Responsive */
@@ -2450,10 +2468,12 @@
   .khil-about-headline {
     font-size: 36px;
   }
+  .khil-about-showcase-section .khil-showcase-card.card-0,
   .khil-about-showcase-section .khil-showcase-card.card-1,
   .khil-about-showcase-section .khil-showcase-card.card-2,
   .khil-about-showcase-section .khil-showcase-card.card-4,
-  .khil-about-showcase-section .khil-showcase-card.card-5 {
+  .khil-about-showcase-section .khil-showcase-card.card-5,
+  .khil-about-showcase-section .khil-showcase-card.card-6 {
     width: 135px;
     height: 135px;
   }
