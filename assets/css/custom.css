@@ -399,9 +399,16 @@ body.demo-cybersecurity .custom-submit-btn {
   text-align: center;
 }
 
+.khil-brand-strip .container {
+  max-width: 1280px;
+  padding: 0 20px;
+}
+
 .khil-brand-strip-list {
   overflow: hidden;
   width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .khil-brand-marquee-track {
