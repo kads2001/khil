@@ -28083,6 +28083,38 @@ input[type="submit"] *,
   transition: transform 0.2s ease !important;
 }
 
+/* Add a trailing arrow to CTAs unless they already have a right-facing arrow. */
+.btn-book-now:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.btn-employer-login:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.khil-hero-btn:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.khil-about-btn-story:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.khil-about-btn-primary:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.khil-bento-btn-primary:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.khil-blog-view-all:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.blog-read-btn:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.btn-line:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.custom-submit-btn:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+button[type="submit"]:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.rts-btn:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.careers-button:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.careers-job-btn:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.search-btn:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.csr-btn-donate:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.csr-btn-read-more:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.bod-member-btn:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.btn-primary:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.btn-secondary:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
+.khil-btn:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after {
+  content: "\f061" !important;
+  font-family: "Font Awesome 6 Pro" !important;
+  font-weight: 900 !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  margin-left: 8px !important;
+  display: inline-block !important;
+  transition: transform 0.2s ease !important;
+}
+
 /* Hover State */
 .btn-book-now:hover,
 .btn-employer-login:hover,
@@ -28117,7 +28149,29 @@ input[type="submit"]:hover,
 .khil-about-btn-primary:hover i,
 .khil-bento-btn-primary:hover i,
 .khil-blog-view-all:hover i,
-.custom-submit-btn:hover i {
+.custom-submit-btn:hover i,
+.btn-book-now:hover::after,
+.btn-employer-login:hover::after,
+.khil-about-btn-story:hover::after,
+.khil-hero-btn:hover::after,
+.khil-about-btn-primary:hover::after,
+.khil-bento-btn-primary:hover::after,
+.khil-blog-view-all:hover::after,
+.blog-read-btn:hover::after,
+.btn-line:hover::after,
+.custom-submit-btn:hover::after,
+.rts-btn:hover::after,
+.careers-button:hover::after,
+.careers-job-btn:hover::after,
+.search-btn:hover::after,
+.csr-btn-donate:hover::after,
+.csr-btn-read-more:hover::after,
+.bod-member-btn:hover::after,
+.btn-primary:hover::after,
+.btn-secondary:hover::after,
+.khil-btn:hover::after,
+button[type="submit"]:hover::after,
+input[type="submit"]:hover::after {
   transform: translateX(3px) !important;
 }
 

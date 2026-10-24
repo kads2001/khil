@@ -216,6 +216,7 @@
                     </a>
                     <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685&amp;dlyx_xs=05a400bc797cdec0bc0e1655ea41621c&amp;_gl=1*hsiqx0*_gcl_au*MTU4Njg4MzUwMS4xNzIyMjI5MzY2Ljc2ODcyNzYwMy4xNzIyNDA4NTc1LjE3MjI0MDg1NzQ." target="_blank" class="btn-book-now">
                         <span>Book Now</span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
                     <div class="menu-btn-toggle khil-toggle">
                         <svg width="22" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -242,6 +243,7 @@
             <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685&amp;dlyx_xs=05a400bc797cdec0bc0e1655ea41621c&amp;_gl=1*hsiqx0*_gcl_au*MTU4Njg4MzUwMS4xNzIyMjI5MzY2Ljc2ODcyNzYwMy4xNzIyNDA4NTc1LjE3MjI0MDg1NzQ." target="_blank" class="btn-book-now">
                 <i class="fa-regular fa-calendar-check"></i>
                 <span>Book Now</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
             <a href="employee-login.html" class="btn-employer-login khil-hero-btn primary khil-btn-outline">
                 <span>Employer Login</span>
