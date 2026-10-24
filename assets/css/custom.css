@@ -2933,5 +2933,31 @@ body.home-three-page .blog-news-grid .blog-read-btn {
   }
 }
 
+/* ==========================================================================
+   BLOG / NEWS CARD HEADING CUSTOM CLASS (20px)
+   ========================================================================== */
+.blog-card-heading,
+.khil-blog-card-heading,
+.card-heading-20,
+.khil-blog-card-title,
+h3.blog-card-heading,
+h3.khil-blog-card-heading,
+.khil-blog-card .blog-card-heading,
+.blog-card-heading a,
+.khil-blog-card-heading a,
+.card-heading-20 a,
+.khil-blog-card-title a {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #111827 !important;
+  letter-spacing: normal !important;
+}
 
-
+.blog-card-heading a:hover,
+.khil-blog-card-heading a:hover,
+.khil-blog-card-title a:hover,
+.khil-blog-card:hover .blog-card-heading a,
+.khil-blog-card:hover .khil-blog-card-heading a {
+  color: #7d007d !important;
+}
