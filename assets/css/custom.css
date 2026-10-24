@@ -383,6 +383,38 @@ body.demo-cybersecurity .custom-submit-btn {
   display: none;
 }
 
+/* Home Page Pill Badges - Harmonized with About Section Pill Badge */
+body.home-three-page .khil-bento-pill,
+body.home-three-page .khil-blog-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 18px;
+  background: #ffffff;
+  border: 1px solid rgba(142, 37, 126, 0.35);
+  border-radius: 999px;
+  margin-bottom: 20px;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #8e257e !important;
+  letter-spacing: 0.01em;
+  box-shadow: none !important;
+  align-self: flex-start;
+}
+
+body.home-three-page .khil-bento-pill i,
+body.home-three-page .khil-blog-pill i {
+  color: #8e257e;
+  font-size: 13px;
+}
+
+@media (max-width: 767px) {
+  body.home-three-page .khil-bento-pill,
+  body.home-three-page .khil-blog-pill {
+    font-size: 11.5px !important;
+  }
+}
+
 .khil-brand-strip {
   padding: 30px 0 34px;
   background: #ffffff;
