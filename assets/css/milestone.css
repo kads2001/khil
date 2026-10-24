@@ -16,8 +16,8 @@
   --color-gold: #B8945A;
   --color-gold-light: #F7F3ED;
   --color-green: #008060;
-  --font-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: 'Familjen Grotesk', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: 'Familjen Grotesk', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* ── Base Setup ── */
@@ -31,14 +31,36 @@ html {
 }
 
 body.milestone-page {
+  --font-primary: 'Familjen Grotesk', sans-serif !important;
+  --font-heading: 'Familjen Grotesk', sans-serif !important;
+  --font-body: 'Familjen Grotesk', sans-serif !important;
+  --font-sans: 'Familjen Grotesk', sans-serif !important;
+  --font-serif: 'Familjen Grotesk', sans-serif !important;
+  --khil-font-sans: 'Familjen Grotesk', sans-serif !important;
+  --khil-font-serif: 'Familjen Grotesk', sans-serif !important;
   margin: 0;
   padding: 0;
   background-color: var(--color-bg);
   color: var(--color-text-main);
-  font-family: var(--font-sans);
+  font-family: 'Familjen Grotesk', sans-serif !important;
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+}
+
+body.milestone-page,
+body.milestone-page *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]):not([class^="icon-"]):not([class*=" icon-"]):not([class^="unicons-"]):not([class*=" unicons-"]):not(.lucide):not(.lucide *) {
+  font-family: 'Familjen Grotesk', sans-serif !important;
+}
+
+body.milestone-page [class*="fa-"],
+body.milestone-page .fa,
+body.milestone-page .fas,
+body.milestone-page .fab,
+body.milestone-page .far,
+body.milestone-page i[class^="fa-"],
+body.milestone-page i[class*=" fa-"] {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 6 Brands", sans-serif !important;
 }
 
 ::selection {

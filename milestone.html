@@ -6,7 +6,7 @@
   <title>Kamat Hotels (India) Ltd - The Legacy Timeline</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 
   <!-- Core Icons & Vendor Styles for KHIL Header & Footer -->
@@ -20,8 +20,30 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Dedicated Timeline Stylesheet (No inline CSS) -->
-  <link rel="stylesheet" href="assets/css/milestone.css"/>
+  <!-- Dedicated Timeline Stylesheet -->
+  <link rel="stylesheet" href="assets/css/milestone.css?v=2"/>
+
+  <!-- Page-specific Font Override (Familjen Grotesk) -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap');
+
+    html,
+    body.milestone-page {
+      --font-primary: 'Familjen Grotesk', sans-serif !important;
+      --font-heading: 'Familjen Grotesk', sans-serif !important;
+      --font-body: 'Familjen Grotesk', sans-serif !important;
+      --font-sans: 'Familjen Grotesk', sans-serif !important;
+      --font-serif: 'Familjen Grotesk', sans-serif !important;
+      --khil-font-sans: 'Familjen Grotesk', sans-serif !important;
+      --khil-font-serif: 'Familjen Grotesk', sans-serif !important;
+      font-family: 'Familjen Grotesk', sans-serif !important;
+    }
+
+    body.milestone-page,
+    body.milestone-page *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]):not([class^="icon-"]):not([class*=" icon-"]):not([class^="unicons-"]):not([class*=" unicons-"]):not(.lucide):not(.lucide *) {
+      font-family: 'Familjen Grotesk', sans-serif !important;
+    }
+  </style>
 </head>
 <body class="radious-4 demo-default milestone-page">
   <script src="components/header.js"></script>
