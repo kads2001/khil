@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Background Test</title>
+  <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <style>
+    body {
+      background: #000000;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .page-content-dummy {
+      padding: 60px 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* ==========================================================================
+       ANIMATED PURPLE GLOWING ORBS FOOTER BACKGROUND
+       ========================================================================== */
+    .khil-shared-footer {
+      position: relative !important;
+      background: #000000 !important;
+      color: #a3a3a3 !important;
+      padding: 65px 0 0 !important;
+      font-family: var(--font-primary, "Nunito", sans-serif);
+      overflow: hidden !important;
+      isolation: isolate;
+    }
+
+    .khil-shared-footer .container {
+      position: relative !important;
+      z-index: 2 !important;
+    }
+
+    /* Ambient Glow Container */
+    .khil-footer-glow-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+      background: #000000;
+    }
+
+    /* Common Orb Styles */
+    .khil-glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(50px);
+      -webkit-filter: blur(50px);
+      will-change: transform, opacity;
+      mix-blend-mode: screen;
+    }
+
+    /* Center Large Orb */
+    .khil-glow-orb.orb-center {
+      width: 650px;
+      height: 650px;
+      left: 50%;
+      top: 50%;
+      margin-left: -325px;
+      margin-top: -325px;
+      background: radial-gradient(circle closest-side, rgba(155, 45, 245, 0.65) 0%, rgba(120, 25, 210, 0.45) 30%, rgba(78, 14, 150, 0.22) 58%, rgba(42, 6, 85, 0.08) 78%, transparent 100%);
+      animation: khilOrbFloatCenter 24s ease-in-out infinite alternate;
+    }
+
+    /* Top-Left Orb */
+    .khil-glow-orb.orb-top-left {
+      width: 320px;
+      height: 320px;
+      left: 20%;
+      top: 14%;
+      background: radial-gradient(circle closest-side, rgba(165, 55, 255, 0.7) 0%, rgba(128, 30, 220, 0.48) 32%, rgba(82, 16, 155, 0.22) 60%, transparent 100%);
+      animation: khilOrbFloatTopLeft 18s ease-in-out infinite alternate;
+    }
+
+    /* Bottom-Left Orb */
+    .khil-glow-orb.orb-bottom-left {
+      width: 380px;
+      height: 380px;
+      left: 2%;
+      bottom: 8%;
+      background: radial-gradient(circle closest-side, rgba(160, 50, 250, 0.68) 0%, rgba(122, 26, 215, 0.46) 32%, rgba(76, 14, 145, 0.2) 60%, transparent 100%);
+      animation: khilOrbFloatBottomLeft 22s ease-in-out infinite alternate;
+    }
+
+    /* Top-Right Orb */
+    .khil-glow-orb.orb-top-right {
+      width: 290px;
+      height: 290px;
+      right: 4%;
+      top: 3%;
+      background: radial-gradient(circle closest-side, rgba(168, 58, 255, 0.72) 0%, rgba(130, 32, 225, 0.48) 32%, rgba(84, 18, 158, 0.22) 60%, transparent 100%);
+      animation: khilOrbFloatTopRight 20s ease-in-out infinite alternate;
+    }
+
+    /* Bottom-Right Orb */
+    .khil-glow-orb.orb-bottom-right {
+      width: 360px;
+      height: 360px;
+      right: 17%;
+      bottom: 12%;
+      background: radial-gradient(circle closest-side, rgba(158, 48, 248, 0.65) 0%, rgba(120, 24, 210, 0.44) 32%, rgba(74, 14, 142, 0.2) 60%, transparent 100%);
+      animation: khilOrbFloatBottomRight 25s ease-in-out infinite alternate;
+    }
+
+    /* Ambient Subtle Deep Floater */
+    .khil-glow-orb.orb-ambient {
+      width: 460px;
+      height: 460px;
+      left: 44%;
+      bottom: -60px;
+      background: radial-gradient(circle closest-side, rgba(140, 35, 230, 0.45) 0%, rgba(95, 18, 175, 0.25) 38%, rgba(55, 8, 110, 0.1) 65%, transparent 100%);
+      animation: khilOrbFloatAmbient 28s ease-in-out infinite alternate;
+    }
+
+    /* Keyframe Animations for Fluid 2D Floating */
+    @keyframes khilOrbFloatCenter {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.88;
+      }
+      33% {
+        transform: translate(45px, -35px) scale(1.1);
+        opacity: 1;
+      }
+      66% {
+        transform: translate(-38px, 42px) scale(0.93);
+        opacity: 0.82;
+      }
+      100% {
+        transform: translate(28px, 22px) scale(1.06);
+        opacity: 0.94;
+      }
+    }
+
+    @keyframes khilOrbFloatTopLeft {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.85;
+      }
+      30% {
+        transform: translate(55px, 48px) scale(1.14);
+        opacity: 1;
+      }
+      70% {
+        transform: translate(-28px, 62px) scale(0.9);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translate(42px, -22px) scale(1.08);
+        opacity: 0.92;
+      }
+    }
+
+    @keyframes khilOrbFloatBottomLeft {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.86;
+      }
+      35% {
+        transform: translate(65px, -52px) scale(1.12);
+        opacity: 1;
+      }
+      70% {
+        transform: translate(32px, -88px) scale(0.94);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translate(82px, -32px) scale(1.06);
+        opacity: 0.92;
+      }
+    }
+
+    @keyframes khilOrbFloatTopRight {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.88;
+      }
+      40% {
+        transform: translate(-62px, 42px) scale(1.14);
+        opacity: 1;
+      }
+      75% {
+        transform: translate(-32px, 78px) scale(0.92);
+        opacity: 0.82;
+      }
+      100% {
+        transform: translate(-72px, 22px) scale(1.06);
+        opacity: 0.94;
+      }
+    }
+
+    @keyframes khilOrbFloatBottomRight {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.85;
+      }
+      35% {
+        transform: translate(-52px, -62px) scale(1.12);
+        opacity: 1;
+      }
+      70% {
+        transform: translate(-82px, -26px) scale(0.92);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translate(-32px, -78px) scale(1.08);
+        opacity: 0.94;
+      }
+    }
+
+    @keyframes khilOrbFloatAmbient {
+      0% {
+        transform: translate(0, 0) scale(0.95);
+        opacity: 0.65;
+      }
+      50% {
+        transform: translate(-62px, -48px) scale(1.15);
+        opacity: 0.92;
+      }
+      100% {
+        transform: translate(52px, -32px) scale(1.02);
+        opacity: 0.78;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .khil-glow-orb.orb-center {
+        width: 480px;
+        height: 480px;
+        margin-left: -240px;
+        margin-top: -240px;
+        filter: blur(45px);
+      }
+      .khil-glow-orb.orb-top-left,
+      .khil-glow-orb.orb-bottom-left,
+      .khil-glow-orb.orb-top-right,
+      .khil-glow-orb.orb-bottom-right {
+        width: 260px;
+        height: 260px;
+        filter: blur(40px);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .khil-glow-orb.orb-center {
+        width: 340px;
+        height: 340px;
+        margin-left: -170px;
+        margin-top: -170px;
+        filter: blur(35px);
+      }
+      .khil-glow-orb.orb-top-left,
+      .khil-glow-orb.orb-bottom-left,
+      .khil-glow-orb.orb-top-right,
+      .khil-glow-orb.orb-bottom-right {
+        width: 190px;
+        height: 190px;
+        filter: blur(30px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-content-dummy">
+    <h2>Page Content Preview Above Footer</h2>
+    <p>Check the footer background and moving purple glowing shapes below.</p>
+  </div>
+
+  <footer class="khil-shared-footer">
+    <!-- Glowing Moving Ambient Background Orbs -->
+    <div class="khil-footer-glow-bg" aria-hidden="true">
+      <div class="khil-glow-orb orb-center"></div>
+      <div class="khil-glow-orb orb-top-left"></div>
+      <div class="khil-glow-orb orb-bottom-left"></div>
+      <div class="khil-glow-orb orb-top-right"></div>
+      <div class="khil-glow-orb orb-bottom-right"></div>
+      <div class="khil-glow-orb orb-ambient"></div>
+    </div>
+
+    <div class="container">
+      <div class="khil-footer-grid">
+        <!-- Column 1: Brand & Company -->
+        <div class="khil-footer-brand-col">
+          <a class="khil-footer-brand" href="index.html" aria-label="Kamat Hotels (India) Limited home">
+            <img src="assets/images/logo-2.png" alt="Kamat Hotels (India) Limited">
+          </a>
+          <div class="khil-footer-social" aria-label="Social media links">
+            <a href="https://www.facebook.com/KHILINDIA" target="_blank" rel="noopener noreferrer" class="khil-footer-social-link" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://twitter.com/KHILINDIA" target="_blank" rel="noopener noreferrer" class="khil-footer-social-link" aria-label="Twitter / X">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/kamat-hotels-india-limited-ba2a79171" target="_blank" rel="noopener noreferrer" class="khil-footer-social-link" aria-label="LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=kamat+hotel+india+limited" target="_blank" rel="noopener noreferrer" class="khil-footer-social-link" aria-label="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="khil-footer-column" aria-label="Company">
+          <h3 class="khil-footer-heading">Company</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Who We Are</a></li>
+            <li><a href="milestone.html">Milestones</a></li>
+            <li><a href="board-of-directors.html">Board of Directors</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>  
+          <h4 class="khil-footer-subheading">Wellness</h4>
+          <ul>
+            <li><a href="https://orchidtoyam.com/" target="_blank" rel="noopener noreferrer">Toyam By Orchid</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Brands Orchid & Wellness -->
+        <nav class="khil-footer-column" aria-label="Brands Orchid">
+          <h3 class="khil-footer-heading">Brands Orchid</h3>
+          <ul>
+            <li><a href="https://www.orchidhotel.com/mumbai-vile-parle/" target="_blank" rel="noopener noreferrer">The Orchid Mumbai</a></li>
+            <li><a href="https://www.orchidhotel.com/the-orchid-lonavala/" target="_blank" rel="noopener noreferrer">The Orchid Lonavala</a></li>
+            <li><a href="https://www.orchidhotel.com/pune/" target="_blank" rel="noopener noreferrer">The Orchid Pune</a></li>
+            <li><a href="https://www.orchidhotel.com/hotel-in-shimla/" target="_blank" rel="noopener noreferrer">The Orchid Shimla</a></li>
+            <li><a href="https://www.orchidhotel.com/manali/" target="_blank" rel="noopener noreferrer">The Orchid Manali</a></li>
+            <li><a href="https://www.orchidhotel.com/jamnagar/" target="_blank" rel="noopener noreferrer">The Orchid Jamnagar</a></li>
+            <li><a href="https://www.orchidhotel.com/chandigarh/" target="_blank" rel="noopener noreferrer">The Orchid Chandigarh</a></li>
+            <li><a href="https://www.orchidhotel.com/hotel-in-rishikesh/" target="_blank" rel="noopener noreferrer">The Orchid Rishikesh</a></li>
+            <li><a href="https://www.orchidhotel.com/hotel-in-panchgani/" target="_blank" rel="noopener noreferrer">The Orchid Panchgani</a></li>
+          </ul>
+        </nav>
+
+        <!-- Column 3: Heritage & Leisure Hotels -->
+        <nav class="khil-footer-column" aria-label="Heritage and Leisure Hotels">
+          <h3 class="khil-footer-heading">Heritage Collection</h3>
+          <ul>
+            <li><a href="https://www.orchidhotel.com/fort-jadhavgadh/" target="_blank" rel="noopener noreferrer">Fort JadhavGADH</a></li>
+            <li><a href="https://www.orchidhotel.com/mahodadhi-palace-a-beach-view-heritage-resort-puri/" target="_blank" rel="noopener noreferrer">Mahodadhi Palace</a></li>
+          </ul>
+          <h4 class="khil-footer-subheading">Leisure Hotels</h4>
+          <ul>
+            <li><a href="https://www.orchidhotel.com/lotus-eco-beach-resort-konark/" target="_blank" rel="noopener noreferrer">Lotus Eco Beach Resort Konark</a></li>
+            <li><a href="https://orchidresortgoa.com/" target="_blank" rel="noopener noreferrer">The Orchid Passaros - Benaulim</a></li>
+            <li><a href="https://www.orchidhotel.com/lotus-eco-beach-resort-murud-dapoli-ratnagiri/" target="_blank" rel="noopener noreferrer">Lotus Eco Beach Resort Murud</a></li>
+          </ul>
+        </nav>
+
+        <!-- Column 4: Ira Hotels -->
+        <nav class="khil-footer-column" aria-label="Ira Hotels">
+          <h3 class="khil-footer-heading">Ira Hotels</h3>
+          <ul>
+            <li><a href="https://irahotels.com/mumbai.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Mumbai</a></li>
+            <li><a href="https://irahotels.com/bhubaneshwar.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Bhubaneswar</a></li>
+            <li><a href="https://irahotels.com/nashik.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Nashik</a></li>
+            <li><a href="https://irahotels.com/sambhajinagar.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Sambhaji Nagar</a></li>
+            <li><a href="https://irahotels.com/ayodhya.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Ayodhya</a></li>
+            <li><a href="https://irahotels.com/noida.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Noida</a></li>
+            <li><a href="https://irahotels.com/porvorim.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Goa</a></li>
+            <li><a href="https://irahotels.com/hyderabad.html" target="_blank" rel="noopener noreferrer">IRA By Orchid Hyderabad</a></li>
+          </ul>
+        </nav>
+
+        <!-- Column 5: Investors & Press Room -->
+        <nav class="khil-footer-column" aria-label="Investors and Press Room">
+          <h3 class="khil-footer-heading">Investors</h3>
+          <ul>
+            <li><a href="https://khil.com/annual-reports.html" target="_blank" rel="noopener noreferrer">View Reports</a></li>
+            <li><a href="https://khil.com/investors/annual-reports/annual-reports.html" target="_blank" rel="noopener noreferrer">Annual Reports</a></li>
+            <li><a href="https://khil.com/investors/quarterly-results/quarterly-results.html" target="_blank" rel="noopener noreferrer">Quarterly Results</a></li>
+            <li><a href="https://khil.com/investors/investors/corporate-governance-reports.html" target="_blank" rel="noopener noreferrer">Corporate Governance Reports</a></li>
+            <li><a href="https://khil.com/investors/investors/shareholding-pattern.html" target="_blank" rel="noopener noreferrer">Shareholding Pattern</a></li>
+          </ul>
+          <h4 class="khil-footer-subheading">Press Room</h4>
+          <ul>
+            <li><a href="media.html">Awards</a></li>
+            <li><a href="media.html">Media</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Hotel Brand Logos Strip Below All Columns -->
+      <div class="khil-footer-brands-bar" aria-label="Our hotel brand logos">
+        <a href="https://www.orchidhotel.com/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="The Orchid Hotels">
+          <img src="assets/img/Logo-without-back/orchidlogo-removebg-preview.png" alt="The Orchid Hotels" loading="lazy">
+        </a>
+        <a href="https://www.orchidhotel.com/fort-jadhavgadh/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="Fort JadhavGADH">
+          <img src="assets/img/Logo-without-back/jadhavgadlogo-removebg-preview.png" alt="Fort JadhavGADH" loading="lazy">
+        </a>
+        <a href="https://www.orchidhotel.com/mahodadhi-palace-a-beach-view-heritage-resort-puri/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="Mahodadhi Palace">
+          <img src="assets/img/Logo-without-back/mahadodhilogo-removebg-preview.png" alt="Mahodadhi Palace" loading="lazy">
+        </a>
+        <a href="https://www.orchidhotel.com/lotus-eco-beach-resort-konark/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="Lotus Eco Beach Resort">
+          <img src="assets/img/Logo-without-back/lotuslogo-removebg-preview.png" alt="Lotus Eco Beach Resort" loading="lazy">
+        </a>
+        <a href="https://irahotels.com/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="IRA by Orchid Hotels">
+          <img src="assets/img/Logo-without-back/iralogo-removebg-preview.png" alt="IRA by Orchid Hotels" loading="lazy">
+        </a>
+        <a href="https://orchidtoyam.com/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="Toyam by Orchid">
+          <img src="assets/img/Logo-without-back/toyamblack.webp" alt="Toyam by Orchid" loading="lazy">
+        </a>
+        <a href="https://www.orchidhotel.com/lotus-eco-beach-resort-murud-dapoli-ratnagiri/" target="_blank" rel="noopener noreferrer" class="khil-footer-brand-logo" aria-label="Passaros">
+          <img src="assets/img/Logo-without-back/passaros-logo.webp" alt="Passaros" loading="lazy">
+        </a>
+      </div>
+
+      <!-- Bottom Copyright Row -->
+      <div class="khil-footer-bottom">
+        <p class="khil-footer-copy">
+          Copyright &copy; 2026 Kamat Hotels (India) Limited. All rights reserved. Powered by <a href="https://www.10dumbs.com/" target="_blank" rel="noopener noreferrer">10 Dumbs Inc.</a>
+        </p>
+        <div class="khil-footer-bottom-links">
+          <a href="https://khil.com/investors/privacy-policy/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="about.html">Who We Are</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Interactive subtle mouse parallax on footer hover
+    (function() {
+      const footer = document.querySelector('.khil-shared-footer');
+      const glowWrap = footer ? footer.querySelector('.khil-footer-glow-bg') : null;
+      if (!footer || !glowWrap) return;
+
+      let targetX = 0, targetY = 0;
+      let currentX = 0, currentY = 0;
+      let rafId = null;
+
+      footer.addEventListener('mousemove', function(e) {
+        const rect = footer.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) - 0.5;
+        const y = ((e.clientY - rect.top) / rect.height) - 0.5;
+        targetX = x * 40;
+        targetY = y * 25;
+        if (!rafId) updateParallax();
+      }, { passive: true });
+
+      footer.addEventListener('mouseleave', function() {
+        targetX = 0;
+        targetY = 0;
+        if (!rafId) updateParallax();
+      }, { passive: true });
+
+      function updateParallax() {
+        currentX += (targetX - currentX) * 0.06;
+        currentY += (targetY - currentY) * 0.06;
+        glowWrap.style.transform = 'translate3d(' + currentX.toFixed(2) + 'px, ' + currentY.toFixed(2) + 'px, 0)';
+        if (Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
+          rafId = requestAnimationFrame(updateParallax);
+        } else {
+          glowWrap.style.transform = targetX === 0 ? '' : 'translate3d(' + targetX + 'px, ' + targetY + 'px, 0)';
+          rafId = null;
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
