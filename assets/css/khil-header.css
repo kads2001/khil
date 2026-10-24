@@ -36,17 +36,23 @@
   position: relative;
   transition: all 0.3s ease;
   z-index: 990;
+    max-width: 1600px;
+  margin: 0 auto;
+  border-radius:32px;
+   margin-top: 20px;
 }
 
 .header--sticky.sticky {
   position: fixed !important;
-  top: 0;
+  top: 20px;
   left: 0;
   width: 100%;
   background: #ffffff !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
   z-index: 1050 !important;
   animation: khilStickySlideDown 0.35s ease-out;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 @keyframes khilStickySlideDown {
