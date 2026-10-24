@@ -2641,23 +2641,18 @@ body.home-three-page .blog-news-grid .blog-read-btn {
 }
 
 .khil-founder-card {
-  background: #FFFFFF;
-  border: 1.5px solid #E8DED1;
   border-radius: 18px;
   padding: 16px;
   height: 100%;
   display: flex;
   flex-direction: column;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.3s ease,
-              box-shadow 0.35s ease;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+              border-color 0.3s ease;
 }
 
 .khil-founder-card:hover {
   transform: translateY(-6px);
   border-color: #B8945A;
-  box-shadow: 0 16px 36px rgba(184, 148, 90, 0.12);
 }
 
 .khil-founder-photo-wrap {
@@ -2702,7 +2697,7 @@ body.home-three-page .blog-news-grid .blog-read-btn {
 }
 
 .khil-founder-designation {
-  font-size: 0.82rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #8e257e;
   text-transform: uppercase;
@@ -2819,5 +2814,124 @@ body.home-three-page .blog-news-grid .blog-read-btn {
 .banner-bg-attach-agency .khil-btn-outline:hover * {
   color: #ffffff !important;
 }
+
+/* ==========================================================================
+   UNIFIED SECTION HEADINGS AND PARAGRAPHS TYPOGRAPHY
+   Standardizes all main section headings and sub-paragraphs to uniform sizes
+   ========================================================================== */
+.khil-about-headline,
+.khil-about-showcase-section .khil-about-headline,
+.khil-founders-title,
+.khil-founders-section .khil-founders-title,
+.khil-bento-title,
+.khil-hotels-bento .khil-bento-title,
+.banner-bg-attach-agency .hero-title,
+.khil-gallery-title,
+.khil-gallery-section .khil-gallery-title,
+.khil-blog-title,
+.khil-blog-news-section .khil-blog-title,
+.contact-main-title,
+.rts-contact-us-strip .contact-main-title,
+.section-title,
+.rts-about-area .title,
+.csr-foundation-title,
+.csr-gallery-title {
+  font-family: var(--font-primary, "Familjen Grotesk", sans-serif) !important;
+  font-size: clamp(32px, 3.5vw, 44px) !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.khil-about-subdesc,
+.khil-about-showcase-section .khil-about-subdesc,
+.khil-founders-subtitle,
+.khil-founders-section .khil-founders-subtitle,
+.khil-bento-desc,
+.khil-hotels-bento .khil-bento-desc,
+.banner-bg-attach-agency .hero-desc,
+.banner-bg-attach-agency .hero-desc p,
+.banner-bg-attach-agency .hero-intro,
+.khil-gallery-desc,
+.khil-gallery-section .khil-gallery-desc,
+.khil-blog-desc,
+.khil-blog-news-section .khil-blog-desc,
+.contact-subtitle,
+.rts-contact-us-strip .contact-subtitle,
+.rts-about-area .disc,
+.csr-foundation-desc {
+  font-family: var(--font-primary, "Familjen Grotesk", sans-serif) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+}
+
+@media (max-width: 767px) {
+  .khil-about-headline,
+  .khil-about-showcase-section .khil-about-headline,
+  .khil-founders-title,
+  .khil-founders-section .khil-founders-title,
+  .khil-bento-title,
+  .khil-hotels-bento .khil-bento-title,
+  .banner-bg-attach-agency .hero-title,
+  .khil-gallery-title,
+  .khil-gallery-section .khil-gallery-title,
+  .khil-blog-title,
+  .khil-blog-news-section .khil-blog-title,
+  .contact-main-title,
+  .rts-contact-us-strip .contact-main-title,
+  .section-title,
+  .rts-about-area .title,
+  .csr-foundation-title,
+  .csr-gallery-title {
+    font-size: 30px !important;
+    line-height: 1.22 !important;
+  }
+
+  .khil-about-subdesc,
+  .khil-about-showcase-section .khil-about-subdesc,
+  .khil-founders-subtitle,
+  .khil-founders-section .khil-founders-subtitle,
+  .khil-bento-desc,
+  .khil-hotels-bento .khil-bento-desc,
+  .banner-bg-attach-agency .hero-desc,
+  .banner-bg-attach-agency .hero-desc p,
+  .banner-bg-attach-agency .hero-intro,
+  .khil-gallery-desc,
+  .khil-gallery-section .khil-gallery-desc,
+  .khil-blog-desc,
+  .khil-blog-news-section .khil-blog-desc,
+  .contact-subtitle,
+  .rts-contact-us-strip .contact-subtitle,
+  .rts-about-area .disc,
+  .csr-foundation-desc {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .khil-about-headline,
+  .khil-about-showcase-section .khil-about-headline,
+  .khil-founders-title,
+  .khil-founders-section .khil-founders-title,
+  .khil-bento-title,
+  .khil-hotels-bento .khil-bento-title,
+  .banner-bg-attach-agency .hero-title,
+  .khil-gallery-title,
+  .khil-gallery-section .khil-gallery-title,
+  .khil-blog-title,
+  .khil-blog-news-section .khil-blog-title,
+  .contact-main-title,
+  .rts-contact-us-strip .contact-main-title,
+  .section-title,
+  .rts-about-area .title,
+  .csr-foundation-title,
+  .csr-gallery-title {
+    font-size: 26px !important;
+    line-height: 1.25 !important;
+  }
+}
+
 
 
