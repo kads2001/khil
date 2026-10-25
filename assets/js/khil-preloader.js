@@ -50,6 +50,16 @@
         setTimeout(function () {
           preloader.classList.add('khil-preloader-fade');
           document.body.classList.add('loaded');
+          if (window.AOS) {
+            if (typeof window.AOS.refreshHard === 'function') {
+              window.AOS.refreshHard();
+            } else if (typeof window.AOS.refresh === 'function') {
+              window.AOS.refresh();
+            }
+          }
+          try {
+            window.dispatchEvent(new CustomEvent('khil-preloader-done'));
+          } catch (e) {}
           setTimeout(function () {
             preloader.style.display = 'none';
           }, 650);

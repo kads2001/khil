@@ -196,9 +196,38 @@
     }
   }
 
+  function ensureAOSLoaded() {
+    if (!document.querySelector('link[href*="aos.css"]')) {
+      var l = document.createElement('link');
+      l.rel = 'stylesheet';
+      l.href = 'assets/css/plugins/aos.css';
+      document.head ? document.head.appendChild(l) : document.body.appendChild(l);
+    }
+    if (!window.AOS && !document.querySelector('script[src*="plugins/aos.js"]')) {
+      var s1 = document.createElement('script');
+      s1.src = 'assets/js/plugins/aos.js';
+      s1.onload = function () {
+        if (!document.querySelector('script[src*="home-aos.js"]')) {
+          var s2 = document.createElement('script');
+          s2.src = 'assets/js/home-aos.js';
+          document.body.appendChild(s2);
+        }
+      };
+      document.body.appendChild(s1);
+    } else if (!document.querySelector('script[src*="home-aos.js"]')) {
+      var s3 = document.createElement('script');
+      s3.src = 'assets/js/home-aos.js';
+      document.body.appendChild(s3);
+    }
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFooterGlowParallax);
+    document.addEventListener('DOMContentLoaded', function () {
+      initFooterGlowParallax();
+      ensureAOSLoaded();
+    });
   } else {
     initFooterGlowParallax();
+    ensureAOSLoaded();
   }
 }());

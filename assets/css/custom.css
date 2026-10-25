@@ -3251,3 +3251,31 @@ body.loaded .loader-wrapper {
   text-align: right !important;
   min-width: 38px !important;
 }
+
+/* ==========================================================================
+   AOS Fade-Up Smooth Luxury Animations
+   ========================================================================== */
+html, body {
+  overflow-x: hidden;
+}
+
+[data-aos="fade-up"] {
+  transform: translate3d(0, 36px, 0);
+  opacity: 0;
+  transition-property: transform, opacity;
+  will-change: transform, opacity;
+}
+
+[data-aos="fade-up"].aos-animate {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+

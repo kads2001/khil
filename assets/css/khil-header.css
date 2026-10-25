@@ -2332,7 +2332,7 @@
 }
 
 .khil-about-btn-story:hover {
-  background: #8e257e !important;
+  background:  linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
   border-color: #8e257e !important;
   color: #ffffff !important;
   transform: translateY(-2px);
