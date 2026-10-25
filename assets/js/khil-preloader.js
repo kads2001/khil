@@ -1,67 +1,66 @@
 /**
- * KHIL Luxury Preloader Controller
- * Handles smooth progressive line animation, window load detection, and graceful dismissal
+ * KHIL Classic Animated Luxury Preloader Controller
+ * Kamat Hotels (India) Limited
  */
 (function () {
   'use strict';
 
-  function initKhilPreloader() {
-    var preloader = document.getElementById('khil-preloader') || document.querySelector('.khil-preloader-wrapper') || document.querySelector('.loader-wrapper');
-    var progressBar = document.getElementById('khil-preloader-bar') || (preloader ? preloader.querySelector('.khil-preloader-progress-bar') : null);
+  if (window.khilPreloaderInitialized) return;
+  window.khilPreloaderInitialized = true;
 
+  var phrases = [
+    "Curating bespoke hospitality...",
+    "Preserving heritage & luxury...",
+    "Asia's pioneering hospitality chain...",
+    "Welcoming you to Kamat Hotels..."
+  ];
+
+  function runPreloader() {
+    var preloader = document.getElementById('khil-preloader');
     if (!preloader) return;
 
+    var bar = document.getElementById('khil-preloader-bar');
+    var percent = document.getElementById('khil-preloader-percent');
+    var status = document.getElementById('khil-preloader-status');
+
+    // Ensure preloader is actively visible from 0%
+    preloader.classList.remove('khil-preloader-fade');
+    preloader.style.display = 'flex';
+    preloader.style.opacity = '1';
+    preloader.style.visibility = 'visible';
+
     var progress = 0;
-    var startTime = Date.now();
-    var minDuration = 1200; // 1.2s smooth minimum duration
-    var isDone = false;
+    var interval = setInterval(function () {
+      // Smooth steady progress (~1.8s) for a premium cinematic hospitality introduction
+      progress += 2;
+      if (progress > 100) progress = 100;
 
-    // Progressive simulated incremental steps
-    var progressInterval = setInterval(function () {
-      if (progress < 85) {
-        progress += Math.floor(Math.random() * 8) + 5;
-        if (progress > 85) progress = 85;
-        if (progressBar) {
-          progressBar.style.width = progress + '%';
-        }
+      if (bar) bar.style.width = progress + '%';
+      if (percent) percent.textContent = Math.round(progress) + '%';
+
+      if (status) {
+        if (progress < 28) status.textContent = phrases[0];
+        else if (progress < 60) status.textContent = phrases[1];
+        else if (progress < 88) status.textContent = phrases[2];
+        else status.textContent = phrases[3];
       }
-    }, 85);
 
-    function completePreloader() {
-      if (isDone) return;
-      isDone = true;
-      clearInterval(progressInterval);
-
-      var elapsed = Date.now() - startTime;
-      var remaining = Math.max(0, minDuration - elapsed);
-
-      setTimeout(function () {
-        if (progressBar) {
-          progressBar.style.width = '100%';
-        }
+      if (progress >= 100) {
+        clearInterval(interval);
         setTimeout(function () {
           preloader.classList.add('khil-preloader-fade');
           document.body.classList.add('loaded');
           setTimeout(function () {
             preloader.style.display = 'none';
-          }, 600);
-        }, 250);
-      }, remaining);
-    }
-
-    if (document.readyState === 'complete') {
-      completePreloader();
-    } else {
-      window.addEventListener('load', completePreloader);
-    }
-
-    // Fail-safe timeout so loader NEVER gets stuck on slow networks (max 2.8s)
-    setTimeout(completePreloader, 2800);
+          }, 650);
+        }, 350);
+      }
+    }, 35);
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initKhilPreloader);
+    document.addEventListener('DOMContentLoaded', runPreloader);
   } else {
-    initKhilPreloader();
+    runPreloader();
   }
 })();

@@ -36,7 +36,7 @@
     },
     methods: function (e) {
       rtsJs.fonklsAnimation();
-      rtsJs.preloader();
+      // rtsJs.preloader(); // Handled by KHIL Classic Luxury Preloader
       rtsJs.sideMenu();
       rtsJs.swiperActivation();
       rtsJs.splitText();
