@@ -422,8 +422,8 @@ body.home-three-page .khil-blog-grid {
 .khil-brand-strip {
   padding: 30px 0 34px;
   background: #ffffff;
-  border-top: 1px solid #E7E1DA;
-  border-bottom: 1px solid #E7E1DA;
+  /* border-top: 1px solid #E7E1DA;
+  border-bottom: 1px solid #E7E1DA; */
 }
 
 .khil-brand-strip h2 {

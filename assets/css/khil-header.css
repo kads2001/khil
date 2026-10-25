@@ -2569,6 +2569,8 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 12px 20px 24px 6px;
+  margin-left: 100px;
+  margin-top: 105px;
 }
 
 .khil-bento-pill {
