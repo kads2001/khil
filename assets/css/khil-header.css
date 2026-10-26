@@ -31,9 +31,9 @@
    HEADER CONTAINER & POSITIONING
    ========================================================================== */
 .header-one.header-relative {
-  background: #ffffff;
+  background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: none;
   position: relative;
   transition: all 0.3s ease;
   z-index: 990;
@@ -43,7 +43,8 @@
   border-radius: 0 !important;
 }
 
-/* Homepage absolute overlay positioning for hero slideshow */
+/* Transparent header overlay positioning */
+.header-one.header-relative:not(.sticky),
 body.radious-4 .header-one.header-relative:not(.sticky),
 body.home-three-page .header-one.header-relative:not(.sticky) {
   position: absolute !important;
@@ -53,12 +54,88 @@ body.home-three-page .header-one.header-relative:not(.sticky) {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
-  background: #ffffff !important;
+  background: transparent !important;
   border-radius: 0 !important;
   border: none !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-bottom: none !important;
   box-shadow: none !important;
   z-index: 1050 !important;
+}
+
+/* Ensure logo area is completely transparent (no white background tab) */
+.header-one.header-relative:not(.sticky) .logo-area a,
+body.radious-4 .header-one.header-relative:not(.sticky) .logo-area a,
+body.home-three-page .header-one.header-relative:not(.sticky) .logo-area a {
+  background: transparent !important;
+}
+
+/* White text for navigation links over transparent background */
+.header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav > a,
+body.radious-4 .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav > a,
+body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav > a {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75) !important;
+}
+
+.header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav > a::after,
+body.radious-4 .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav > a::after,
+body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav > li.main-nav > a::after {
+  color: #ffffff !important;
+}
+
+/* White outline pill for Employer Login button */
+.header-one.header-relative:not(.sticky) .header-action-buttons .btn-employer-login,
+body.radious-4 .header-one.header-relative:not(.sticky) .header-action-buttons .btn-employer-login,
+body.home-three-page .header-one.header-relative:not(.sticky) .header-action-buttons .btn-employer-login {
+  color: #ffffff !important;
+  background: transparent !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+}
+
+.header-one.header-relative:not(.sticky) .header-action-buttons .btn-employer-login *,
+body.radious-4 .header-one.header-relative:not(.sticky) .header-action-buttons .btn-employer-login *,
+body.home-three-page .header-one.header-relative:not(.sticky) .header-action-buttons .btn-employer-login * {
+  color: #ffffff !important;
+}
+
+.header-one.header-relative:not(.sticky) .header-action-buttons .btn-employer-login:hover,
+body.radious-4 .header-one.header-relative:not(.sticky) .header-action-buttons .btn-employer-login:hover,
+body.home-three-page .header-one.header-relative:not(.sticky) .header-action-buttons .btn-employer-login:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* Purple pill for Book Now button */
+.header-one .header-action-buttons .btn-book-now,
+.header-action-buttons .btn-book-now {
+  background: #7a0082 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 14px rgba(122, 0, 130, 0.35) !important;
+}
+
+.header-one .header-action-buttons .btn-book-now *,
+.header-action-buttons .btn-book-now * {
+  color: #ffffff !important;
+}
+
+.header-one .header-action-buttons .btn-book-now:hover,
+.header-action-buttons .btn-book-now:hover {
+  background: #96009f !important;
+  box-shadow: 0 6px 18px rgba(122, 0, 130, 0.5) !important;
+}
+
+/* Mobile toggle icon white */
+.header-one.header-relative:not(.sticky) .menu-btn-toggle svg rect,
+body.radious-4 .header-one.header-relative:not(.sticky) .menu-btn-toggle svg rect,
+body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle svg rect {
+  fill: #ffffff !important;
 }
 
 .header--sticky.sticky {
@@ -141,7 +218,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+  background: transparent;
   padding: 8px 24px 20px 24px;
   border-radius: 0 0 30px 30px;
   border: none !important;
