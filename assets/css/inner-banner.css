@@ -1,24 +1,28 @@
 /* ==========================================================================
    KAMAT HOTELS (INDIA) LTD. (KHIL) - INNER PAGE BANNER
-   Dedicated styling for unified inner hero banners across all pages.
-   Matches reference: Deep dark emerald aurora glow, clean typography.
+   Dedicated styling matching reference design:
+   - Preserves dark green aurora background
+   - Modern bold typography with dual-gradient accent words (Pink/Purple & Blue/Cyan)
+   - Centered 2-line subtitle
    ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Familjen+Grotesk:wght@400;500;600;700&display=swap');
 
 .khil-inner-banner {
   position: relative;
   width: 100%;
+  height: 750px;
   background-color: #030d06;
   background-image: url('../images/banner/inner-banner-bg.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 100px 0 90px;
+  padding: 105px 0 95px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  min-height: 700px;
 }
 
 /* Subtle Vignette & Ambient Radial Glow Overlay */
@@ -30,13 +34,13 @@
   pointer-events: none;
   background: radial-gradient(
     ellipse at center,
-    rgba(3, 13, 6, 0.2) 0%,
-    rgba(2, 9, 4, 0.6) 80%,
-    rgba(1, 5, 2, 0.85) 100%
+    rgba(3, 13, 6, 0.22) 0%,
+    rgba(2, 9, 4, 0.65) 75%,
+    rgba(1, 5, 2, 0.88) 100%
   );
 }
 
-/* Subtle Top/Bottom Edge Blend */
+/* Top & Bottom Edge Blends */
 .khil-inner-banner::after {
   content: "";
   position: absolute;
@@ -59,95 +63,99 @@
 }
 
 .khil-inner-banner-content {
-  max-width: 860px;
+  max-width: 980px;
   margin: 0 auto;
   text-align: center;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
-/* Small Uppercase Eyebrow / Category Tag */
-.khil-inner-banner-eyebrow {
-  display: inline-block;
-  font-family: var(--font-primary, "Familjen Grotesk", sans-serif);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2.2px;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 12px;
-  opacity: 0.95;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-}
-
-/* Big Bold Hero Title */
+/* Main Headline matching reference layout: Big, Bold, Natural Case */
 .khil-inner-banner-title {
-  font-family: var(--font-primary, "Familjen Grotesk", sans-serif);
-  font-size: clamp(34px, 5.2vw, 56px);
+  font-family: 'Plus Jakarta Sans', var(--font-primary, "Familjen Grotesk", sans-serif);
+  font-size: clamp(34px, 5.2vw, 58px);
   font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
   color: #ffffff;
-  margin: 0 0 14px 0;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
 }
 
-/* Clean, readable description / subtitle */
+.khil-inner-banner-title .title-line {
+  display: block;
+}
+
+/* Gradient 1: Pink to Purple gradient (matching "Analytics" in reference) */
+.khil-inner-banner-title .gradient-purple,
+.khil-inner-banner-title .gradient-pink {
+  background: linear-gradient(135deg, #f43f8e 0%, #e879f9 45%, #a855f7 75%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  font-weight: 800;
+}
+
+/* Gradient 2: Indigo to Electric Blue to Cyan (matching "Fuel Your" in reference) */
+.khil-inner-banner-title .gradient-blue,
+.khil-inner-banner-title .gradient-cyan {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 45%, #38bdf8 80%, #2dd4bf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  font-weight: 800;
+}
+
+/* Subtitle / Description matching reference */
 .khil-inner-banner-desc {
   font-family: var(--font-primary, "Familjen Grotesk", sans-serif);
-  font-size: clamp(14.5px, 1.8vw, 16.5px);
+  font-size: clamp(15px, 1.7vw, 17.5px);
   font-weight: 400;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.92);
-  margin: 0 auto;
-  max-width: 660px;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+  color: rgba(255, 255, 255, 0.85);
+  margin: 20px auto 0;
+  max-width: 680px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75);
 }
 
 .khil-inner-banner-desc br {
   display: inline;
 }
 
-/* Responsive adjustments */
+/* Responsive Breakpoints */
 @media (max-width: 991px) {
   .khil-inner-banner {
-    padding: 75px 0 65px;
+    padding: 85px 0 75px;
   }
 
   .khil-inner-banner-title {
-    font-size: clamp(28px, 4.5vw, 42px);
-    margin-bottom: 10px;
-  }
-
-  .khil-inner-banner-eyebrow {
-    font-size: 12px;
-    letter-spacing: 1.8px;
-    margin-bottom: 8px;
+    font-size: clamp(28px, 4.6vw, 42px);
+    line-height: 1.22;
   }
 
   .khil-inner-banner-desc {
-    font-size: 14.5px;
+    font-size: 15px;
+    margin-top: 16px;
   }
 }
 
 @media (max-width: 575px) {
   .khil-inner-banner {
-    padding: 55px 0 50px;
+    padding: 65px 0 55px;
   }
 
   .khil-inner-banner-title {
     font-size: 26px;
-    letter-spacing: 0.5px;
-  }
-
-  .khil-inner-banner-eyebrow {
-    font-size: 11px;
-    letter-spacing: 1.5px;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
   }
 
   .khil-inner-banner-desc {
-    font-size: 13.5px;
+    font-size: 14px;
     line-height: 1.55;
+    margin-top: 14px;
   }
 
   .khil-inner-banner-desc br {
