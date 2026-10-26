@@ -55,9 +55,9 @@ body.directorships-page ::selection {
   color: #FFFFFF;
 }
 
-/* --------------------------------------------------------------------------
+/* 
    Container matching KHIL Header & Governance Standards (1680px max-width)
-   -------------------------------------------------------------------------- */
+  */
 .dir-container {
   width: 100%;
   max-width: 1680px;

@@ -86,9 +86,20 @@
                     <li class="main-nav">
                         <a href="index.html">Home</a>
                     </li>
+
+    
+                       
+
+
+
                     <li class="main-nav has-dropdown">
                         <a href="#">Who We Are</a>
                         <div class="khil-dropdown-who">
+
+
+
+
+
                             <div class="who-dropdown-wrapper">
                                 <!-- Left Column: Rich Navigation Cards -->
                                 <ul class="who-links-list">
@@ -100,6 +111,8 @@
                                             </div>
                                         </a>
                                     </li>
+
+                                    
                                     <li class="who-link-item">
                                         <a href="milestone.html">
                                             <div class="item-content">
@@ -165,6 +178,12 @@
                                         <div class="item-content"><span class="item-title">IRA by Orchid Hotels</span></div>
                                     </a>
                                 </li>
+
+
+
+
+
+
                             </ul>
                         </div>
                     </li>
@@ -261,23 +280,24 @@
                             </div>
                         </div>
                     </li>
-
+                    <li class="main-nav">
+                        <a href="csr.html">CSR</a>
+                    </li>
+                    <li class="main-nav">
+                        <a href="media.html">Media</a>
+                    </li>
                 </ul>
+                
             </nav>
-        <div class="logo-area">
-                <a href="index.html">
+        <div class="logo-area khil-logo-tab">
+                <a href="index.html" aria-label="Kamat Hotels (India) Ltd.">
                     <img src="assets/images/logo-2.png" alt="Kamat Hotels (India) Ltd.">
                 </a>
             </div>
             <div class="header-right-group">
                 <nav class="nav-area nav-area-right" aria-label="Secondary navigation">
                     <ul class="khil-nav">
-                        <li class="main-nav">
-                            <a href="csr.html">CSR</a>
-                        </li>
-                        <li class="main-nav">
-                            <a href="media.html">Media</a>
-                        </li>
+                        
                         <li class="main-nav">
                             <a href="contact.html">Contact</a>
                         </li>
@@ -288,8 +308,9 @@
                 </nav>
 
                 <div class="header-action-buttons">
-                    <a href="employee-login.html" class="btn-employer-login khil-hero-btn primary khil-btn-outline">
+                    <a href="employee-login.html" class="btn-employer-login khil-btn-outline">
                         <span>Employer Login</span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
                     <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685&amp;dlyx_xs=05a400bc797cdec0bc0e1655ea41621c&amp;_gl=1*hsiqx0*_gcl_au*MTU4Njg4MzUwMS4xNzIyMjI5MzY2Ljc2ODcyNzYwMy4xNzIyNDA4NTc1LjE3MjI0MDg1NzQ." target="_blank" class="btn-book-now">
                         <span>Book Now</span>
@@ -322,7 +343,7 @@
                 <span>Book Now</span>
                 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
-            <a href="employee-login.html" class="btn-employer-login khil-hero-btn primary khil-btn-outline">
+            <a href="employee-login.html" class="btn-employer-login khil-btn-outline">
                 <span>Employer Login</span>
                 <i class="fa-regular fa-arrow-right"></i>
             </a>

@@ -298,8 +298,6 @@ body.home-three-page .khil-blog-grid {
   object-fit: contain;
 }
 
-body.home-three-page .btn-employer-login,
-body.home-three-page .btn-book-now,
 body.home-three-page .khil-hero-btn,
 body.home-three-page .khil-direct-book-btn,
 body.home-three-page .btn-line,
@@ -1539,49 +1537,6 @@ body.home-three-page .rts-btn {
   margin: 0 0 32px;
 }
 
-/* Header Employer Login Button - Outline styling matching hero Explore Our Brands button */
-.header-action-buttons .btn-employer-login.khil-btn-outline,
-.khil-mobile-actions .btn-employer-login.khil-btn-outline,
-.btn-employer-login.khil-btn-outline {
-  background: transparent !important;
-  border: 1px solid #000000 !important;
-  color: #000000 !important;
-  box-shadow: none !important;
-  transition: all 0.25s ease !important;
-}
-
-.header-action-buttons .btn-employer-login.khil-btn-outline *,
-.khil-mobile-actions .btn-employer-login.khil-btn-outline *,
-.btn-employer-login.khil-btn-outline * {
-  color: #000000 !important;
-  transition: color 0.25s ease !important;
-}
-
-.header-action-buttons .btn-employer-login.khil-btn-outline:hover,
-.khil-mobile-actions .btn-employer-login.khil-btn-outline:hover,
-.btn-employer-login.khil-btn-outline:hover {
-  background: transparent !important;
-  border-color: transparent !important;
-  color: #ffffff !important;
-  transform: translateY(-2px) !important;
-}
-
-.header-action-buttons .btn-employer-login.khil-btn-outline:hover *,
-.khil-mobile-actions .btn-employer-login.khil-btn-outline:hover *,
-.btn-employer-login.khil-btn-outline:hover * {
-  color: #ffffff !important;
-}
-
-.header-action-buttons .btn-employer-login.khil-btn-outline i,
-.khil-mobile-actions .btn-employer-login.khil-btn-outline i {
-  transition: transform 0.25s ease !important;
-}
-
-.header-action-buttons .btn-employer-login.khil-btn-outline:hover i,
-.khil-mobile-actions .btn-employer-login.khil-btn-outline:hover i {
-  transform: translateX(3px) !important;
-}
-
 /* Bento Hotel Card with Right-Side Brand Logo */
 .bento-card-main-row {
   display: flex;
@@ -1811,7 +1766,6 @@ body.home-three-page .rts-btn {
 .btn-outline,
 [class*="btn-outline"],
 .khil-hero-btn.khil-btn-outline,
-.btn-employer-login.khil-btn-outline,
 .banner-bg-attach-agency .khil-btn-outline {
   position: relative !important;
   overflow: hidden !important;
@@ -1826,7 +1780,6 @@ body.home-three-page .rts-btn {
 .btn-outline::before,
 [class*="btn-outline"]::before,
 .khil-hero-btn.khil-btn-outline::before,
-.btn-employer-login.khil-btn-outline::before,
 .banner-bg-attach-agency .khil-btn-outline::before {
   content: "" !important;
   position: absolute !important;
@@ -1851,8 +1804,6 @@ body.home-three-page .rts-btn {
 [class*="btn-outline"]:focus-visible::before,
 .khil-hero-btn.khil-btn-outline:hover::before,
 .khil-hero-btn.khil-btn-outline:focus-visible::before,
-.btn-employer-login.khil-btn-outline:hover::before,
-.btn-employer-login.khil-btn-outline:focus-visible::before,
 .banner-bg-attach-agency .khil-btn-outline:hover::before,
 .banner-bg-attach-agency .khil-btn-outline:focus-visible::before {
   transform: translateX(0) !important;
@@ -1865,7 +1816,6 @@ body.home-three-page .rts-btn {
 [class*="btn-outline"]:hover,
 [class*="btn-outline"]:focus-visible,
 .khil-hero-btn.khil-btn-outline:hover,
-.btn-employer-login.khil-btn-outline:hover,
 .banner-bg-attach-agency .khil-btn-outline:hover {
   background: transparent !important;
   border-color: transparent !important;
@@ -1880,7 +1830,6 @@ body.home-three-page .rts-btn {
 .btn-outline > *,
 [class*="btn-outline"] > *,
 .khil-hero-btn.khil-btn-outline > *,
-.btn-employer-login.khil-btn-outline > *,
 .banner-bg-attach-agency .khil-btn-outline > * {
   position: relative;
   z-index: 1;
@@ -1894,7 +1843,6 @@ body.home-three-page .rts-btn {
 [class*="btn-outline"]:hover *,
 [class*="btn-outline"]:focus-visible *,
 .khil-hero-btn.khil-btn-outline:hover *,
-.btn-employer-login.khil-btn-outline:hover *,
 .banner-bg-attach-agency .khil-btn-outline:hover * {
   color: #ffffff !important;
 }

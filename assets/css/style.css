@@ -27925,8 +27925,6 @@ h3,
 /* ==========================================================================
    EXACT MATCH BUTTON SPECIFICATION (Matching User Reference Image 1:1)
    ========================================================================== */
-.btn-book-now,
-.btn-employer-login,
 .khil-hero-btn,
 .khil-hero-btn.primary,
 .khil-hero-btn.secondary,
@@ -28020,8 +28018,6 @@ input[type="submit"] *,
 }
 
 /* Add a trailing arrow to CTAs unless they already have a right-facing arrow. */
-.btn-book-now:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
-.btn-employer-login:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
 .khil-hero-btn:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
 .khil-about-btn-story:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
 .khil-about-btn-primary:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-right))::after,
@@ -28052,8 +28048,6 @@ button[type="submit"]:not(:has(i.fa-arrow-right, i.fa-chevron-right, i.fa-angle-
 }
 
 /* Hover State */
-.btn-book-now:hover,
-.btn-employer-login:hover,
 .khil-hero-btn:hover,
 .khil-hero-btn.primary:hover,
 .khil-hero-btn.secondary:hover,
@@ -28078,16 +28072,12 @@ input[type="submit"]:hover,
   color: #ffffff !important;
 }
 
-.btn-book-now:hover i,
-.btn-employer-login:hover i,
 .khil-hero-btn:hover i,
 .khil-hero-btn.primary:hover > i:last-child,
 .khil-about-btn-primary:hover i,
 .khil-bento-btn-primary:hover i,
 .khil-blog-view-all:hover i,
 .custom-submit-btn:hover i,
-.btn-book-now:hover::after,
-.btn-employer-login:hover::after,
 .khil-about-btn-story:hover::after,
 .khil-hero-btn:hover::after,
 .khil-about-btn-primary:hover::after,
