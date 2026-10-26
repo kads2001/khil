@@ -115,7 +115,7 @@ body.radious-4 .rts-banner-area-three.bg_image-three-banner::before {
   inset: 0;
   content: "";
   pointer-events: none;
-  background: linear-gradient(90deg, rgb(0 0 0 / 34%) 0%, rgb(0 0 0 / 45%) 25%, rgba(24, 67, 254, 0) 50%, rgba(24, 67, 254, 0) 100%);
+  background: linear-gradient(90deg, rgb(0 0 0 / 34%) 0%, rgb(0 0 0 / 45%) 25%, rgba(2, 2, 2, 0) 50%, rgba(24, 67, 254, 0) 100%);
 }
 
 body.radious-4 .rts-banner-area-three.bg_image-three-banner>.container {
