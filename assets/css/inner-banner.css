@@ -26,7 +26,7 @@
 }
 
 /* Subtle Vignette & Ambient Radial Glow Overlay */
-.khil-inner-banner::before {
+/* .khil-inner-banner::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -38,7 +38,7 @@
     rgba(2, 9, 4, 0.65) 75%,
     rgba(1, 5, 2, 0.88) 100%
   );
-}
+} */
 
 /* Top & Bottom Edge Blends */
 .khil-inner-banner::after {
@@ -87,7 +87,7 @@
 }
 
 /* Gradient 1: Pink to Purple gradient (matching "Analytics" in reference) */
-.khil-inner-banner-title .gradient-purple,
+/* .khil-inner-banner-title .gradient-purple,
 .khil-inner-banner-title .gradient-pink {
   background: linear-gradient(135deg, #f43f8e 0%, #e879f9 45%, #a855f7 75%, #818cf8 100%);
   -webkit-background-clip: text;
@@ -95,10 +95,10 @@
   background-clip: text;
   display: inline-block;
   font-weight: 800;
-}
+} */
 
 /* Gradient 2: Indigo to Electric Blue to Cyan (matching "Fuel Your" in reference) */
-.khil-inner-banner-title .gradient-blue,
+/* .khil-inner-banner-title .gradient-blue,
 .khil-inner-banner-title .gradient-cyan {
   background: linear-gradient(135deg, #6366f1 0%, #3b82f6 45%, #38bdf8 80%, #2dd4bf 100%);
   -webkit-background-clip: text;
@@ -106,7 +106,7 @@
   background-clip: text;
   display: inline-block;
   font-weight: 800;
-}
+} */
 
 /* Subtitle / Description matching reference */
 .khil-inner-banner-desc {
