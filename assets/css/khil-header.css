@@ -112,12 +112,11 @@ body.home-three-page .header-one.header-relative:not(.sticky) .header-action-but
 /* Purple pill for Book Now button */
 .header-one .header-action-buttons .btn-book-now,
 .header-action-buttons .btn-book-now {
-  background: #7a0082 !important;
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
   color: #ffffff !important;
   border: none !important;
   border-radius: 999px !important;
   font-weight: 600 !important;
-  box-shadow: 0 4px 14px rgba(122, 0, 130, 0.35) !important;
 }
 
 .header-one .header-action-buttons .btn-book-now *,
