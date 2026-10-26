@@ -129,12 +129,12 @@
   border-radius: 50px;
   background: transparent !important;
   border: 1.5px solid #111111 !important;
-  color: #111111 !important;
+  color: #111111;
   font-weight: 600;
   font-size: 15px;
   text-decoration: none !important;
   box-shadow: none !important;
-  transition: all 0.25s ease !important;
+  transition: all 0.25s ease;
 }
 
 .banner-bg-attach-agency .khil-btn-outline,
@@ -1050,7 +1050,7 @@ body.home-three-page .rts-btn {
   top: 50%;
   margin-left: -380px;
   margin-top: -380px;
-  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%);
   filter: blur(56px);
   -webkit-filter: blur(56px);
   animation: khilOrbMoveCenter 22s ease-in-out infinite alternate;
@@ -1062,7 +1062,7 @@ body.home-three-page .rts-btn {
   height: 300px;
   left: 19%;
   top: 14%;
-  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%);
   filter: blur(42px);
   -webkit-filter: blur(42px);
   animation: khilOrbMoveTopLeft 17s ease-in-out infinite alternate;
@@ -1074,7 +1074,7 @@ body.home-three-page .rts-btn {
   height: 300px;
   left: -30px;
   top: 42%;
-  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%);
   filter: blur(52px);
   -webkit-filter: blur(52px);
   animation: khilOrbMoveBottomLeft 20s ease-in-out infinite alternate;
@@ -1086,7 +1086,7 @@ body.home-three-page .rts-btn {
   height: 350px;
   right: 5%;
   top: 2%;
-  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%);
   filter: blur(44px);
   -webkit-filter: blur(44px);
   animation: khilOrbMoveTopRight 18s ease-in-out infinite alternate;
@@ -1098,7 +1098,7 @@ body.home-three-page .rts-btn {
   height: 300px;
   right: 14%;
   top: 48%;
-  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%);
   filter: blur(50px);
   -webkit-filter: blur(50px);
   animation: khilOrbMoveBottomRight 24s ease-in-out infinite alternate;
@@ -1110,7 +1110,7 @@ body.home-three-page .rts-btn {
   height: 300px;
   left: 40%;
   bottom: -80px;
-  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%);
   filter: blur(60px);
   -webkit-filter: blur(60px);
   animation: khilOrbMoveAmbient 26s ease-in-out infinite alternate;
