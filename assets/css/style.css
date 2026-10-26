@@ -27974,7 +27974,6 @@ input[type="submit"],
 
 /* Ensure crisp white text and icon */
 .btn-book-now *,
-.btn-employer-login *,
 .khil-hero-btn *,
 .khil-about-btn-primary *,
 .khil-bento-btn-primary *,
@@ -27995,7 +27994,6 @@ input[type="submit"] *,
 
 /* Clean inline arrow/icons (No circular backgrounds to match reference 1:1) */
 .btn-book-now i,
-.btn-employer-login i,
 .khil-hero-btn i,
 .khil-hero-btn.primary > i:last-child,
 .khil-hero-btn.secondary > i:last-child,
