@@ -1,25 +1,28 @@
 body.radious-4 .header-one.header-relative:not(.sticky) {
   position: absolute;
-  inset: 0 0 auto;
-  background: #fff;
-  border-bottom: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 1480px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   z-index: 1050;
 }
 
-/* body.radious-4 .header-one.header-relative:not(.sticky) .logo-area img {
-  filter: brightness(0) invert(1);
-} */
-
 body.radious-4 .header-one.header-relative:not(.sticky) .logo-area a {
-  padding: 3px 5px;
+  padding: 10px 24px 18px 24px;
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav>li.main-nav>a {
-  color: #000 !important;
+  color: #1a1a1a !important;
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav>li.has-dropdown>a::after {
-  color: #000 !important;
+  color: #94a3b8 !important;
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav>li.main-nav:hover>a,
@@ -32,19 +35,30 @@ body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .btn-employer-login {
-  color: #000;
-  background: transparent;
-  border-color: #000;
+  color: #1a1a1a !important;
+  background: transparent !important;
+  border: 1.5px solid #1a1a1a !important;
+  border-radius: 9999px !important;
+  padding: 9px 22px !important;
+  font-size: 13.5px !important;
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .btn-employer-login i {
-  color: #000;
+  color: #1a1a1a !important;
 }
 
 body.radious-4 .header-one.header-relative:not(.sticky) .btn-book-now {
-  background: #fff;
-  border-color: #000;
-  color: #000;
+  background: linear-gradient(135deg, #42006e 0%, #6d008d 50%, #96009f 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 14px rgba(109, 0, 141, 0.35) !important;
+  padding: 10px 26px !important;
+  font-size: 13.5px !important;
+}
+
+body.radious-4 .header-one.header-relative:not(.sticky) .btn-book-now i {
+  color: #ffffff !important;
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle.khil-toggle svg rect {
@@ -68,6 +82,7 @@ body.radious-4 .rts-banner-area-three.bg_image-three-banner {
   padding: 105px 0 26px;
   overflow: hidden;
   background-color: #1a1a1a;
+  background-image: none !important;
   background-size: cover;
   background-position: center;
 }
