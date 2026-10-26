@@ -276,20 +276,16 @@
                                         <li><a href="investor-analyst-meet.html">Investor/Analyst Meet</a></li>
                                         <li><a href="others.html">Others</a></li>
                                     </ul>
-                              
+                                </div>
                             </div>
-                            
                         </div>
-                        
                     </li>
-                     <li class="main-nav">
-                            <a href="csr.html">CSR</a>
-                        </li>
-                        <li class="main-nav">
-                            <a href="media.html">Media</a>
-                        </li>
-
-
+                    <li class="main-nav">
+                        <a href="csr.html">CSR</a>
+                    </li>
+                    <li class="main-nav">
+                        <a href="media.html">Media</a>
+                    </li>
                 </ul>
                 
             </nav>
@@ -312,7 +308,7 @@
                 </nav>
 
                 <div class="header-action-buttons">
-                    <a href="employee-login.html" class="btn-employer-login khil-hero-btn primary khil-btn-outline">
+                    <a href="employee-login.html" class="btn-employer-login khil-btn-outline">
                         <span>Employer Login</span>
                         <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
@@ -347,7 +343,7 @@
                 <span>Book Now</span>
                 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
-            <a href="employee-login.html" class="btn-employer-login khil-hero-btn primary khil-btn-outline">
+            <a href="employee-login.html" class="btn-employer-login khil-btn-outline">
                 <span>Employer Login</span>
                 <i class="fa-regular fa-arrow-right"></i>
             </a>
