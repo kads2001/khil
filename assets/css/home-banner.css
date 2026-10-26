@@ -18,9 +18,17 @@ body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-
   color: #000 !important;
 }
 
-body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav>li.main-nav:hover>a,
 body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav>li.has-dropdown>a::after {
   color: #000 !important;
+}
+
+body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav>li.main-nav:hover>a,
+body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav>li.has-dropdown:hover>a::after {
+  color: #ff060a !important;
+}
+
+body.home-three-page .header-one.header-relative:not(.sticky) .nav-area ul.khil-nav>li.main-nav:hover>a::before {
+  background: #76088f !important;
 }
 
 body.home-three-page .header-one.header-relative:not(.sticky) .btn-employer-login {
