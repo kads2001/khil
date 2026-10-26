@@ -581,7 +581,7 @@ body.milestone-page i[class*=" fa-"] {
 
 .mobile-card.card-terminus {
   border-color: var(--color-gold);
- 
+}
 
 .mobile-title {
   font-size: 15px;
@@ -679,7 +679,6 @@ body.milestone-page i[class*=" fa-"] {
   .node-circle.terminus-circle {
     animation: none !important;
   }
-}
 }
 
 /* ==========================================================================
