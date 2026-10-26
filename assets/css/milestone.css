@@ -372,9 +372,9 @@ body.milestone-page i[class*=" fa-"] {
 }
 
 .milestone-title {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-text-main);
-  font-size: 15px;
+  font-size: 22px !important;
   line-height: 1.22;
   margin: 0 0 5px 0;
   display: -webkit-box;
@@ -384,8 +384,8 @@ body.milestone-page i[class*=" fa-"] {
 }
 
 .milestone-desc {
-  font-size: 12px;
-  color: var(--color-text-muted);
+  font-size: 13px !important;
+  color: var(--color-text-muted) !important;
   line-height: 1.42;
   margin: 0;
   display: -webkit-box;
