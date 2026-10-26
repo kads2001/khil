@@ -73,7 +73,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) {
   border-radius: 0 !important;
   border: none !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+  
   z-index: 1100 !important;
   animation: khilStickySlideDown 0.35s ease-out;
 }
@@ -1306,7 +1306,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) {
   overflow: hidden !important;
   line-height: 1.2 !important;
   box-sizing: border-box !important;
-  box-shadow: 0 4px 14px rgba(109, 0, 141, 0.35) !important;
+
 }
 
 .btn-book-now::after {
