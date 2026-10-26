@@ -51,8 +51,20 @@
       setFadeUp(aboutCenter.querySelector('.khil-about-subdesc'), 250);
       setFadeUp(aboutCenter.querySelector('.khil-about-cta-wrap'), 350);
     }
-    staggerList(document.querySelectorAll('.khil-about-stat-side.left .stat-item'), 100, 100);
-    staggerList(document.querySelectorAll('.khil-about-stat-side.right .stat-item'), 150, 100);
+    // Fade in place without moving up
+    function setFade(el, delay) {
+      if (!el) return;
+      el.setAttribute('data-aos', 'fade');
+      if (delay !== undefined && delay !== null) {
+        el.setAttribute('data-aos-delay', String(delay));
+      }
+    }
+    document.querySelectorAll('.khil-about-stat-side.left .stat-item').forEach(function (el, i) {
+      setFade(el, 100 + i * 100);
+    });
+    document.querySelectorAll('.khil-about-stat-side.right .stat-item').forEach(function (el, i) {
+      setFade(el, 150 + i * 100);
+    });
     staggerList(document.querySelectorAll('.khil-about-cards-stage .khil-showcase-card'), 100, 80);
 
     // 4. Founders & Leadership Section
@@ -161,6 +173,64 @@
         window.AOS.refresh();
       }
     }, 400);
+
+    // Initialize About Metrics Counter Animation
+    initAboutCounters();
+  }
+
+  function initAboutCounters() {
+    function animateValue(el) {
+      if (el.classList.contains('counter-triggered')) return;
+      el.classList.add('counter-triggered');
+
+      var raw = el.getAttribute('data-count') || el.textContent.trim();
+      var target = parseInt(raw.replace(/[^0-9]/g, ''), 10);
+      if (isNaN(target)) return;
+
+      // Calibrated timing and easing: small numbers like 7 get rhythmic quadratic pacing
+      var duration = target <= 10 ? 1200 : (target <= 100 ? 1400 : 1800);
+      var startTime = performance.now();
+      var formatComma = target >= 1000 || el.getAttribute('data-format') === 'comma';
+
+      // Pure in-place text update - no vertical movement or scrolling
+      function step(now) {
+        var elapsed = now - startTime;
+        var progress = Math.min(elapsed / duration, 1);
+        var easeOut = target <= 10
+          ? (1 - Math.pow(1 - progress, 2))
+          : (1 - Math.pow(1 - progress, 3));
+        var current = Math.round(easeOut * target);
+        el.textContent = formatComma ? current.toLocaleString('en-US') : current;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = formatComma ? target.toLocaleString('en-US') : target;
+        }
+      }
+      requestAnimationFrame(step);
+    }
+
+    var numbers = document.querySelectorAll('.khil-about-container .stat-counter, .khil-about-container .odometer, .khil-about-stat-side .stat-counter, .khil-about-stat-side .odometer');
+    if (!numbers.length) return;
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateValue(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      numbers.forEach(function (num) {
+        observer.observe(num);
+      });
+    } else {
+      numbers.forEach(function (num) {
+        animateValue(num);
+      });
+    }
   }
 
   if (document.readyState === 'complete') {

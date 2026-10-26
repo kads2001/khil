@@ -749,38 +749,69 @@
 
     odoMeter: function () {
       $(document).ready(function () {
-        function isInViewport(element) {
-          const rect = element.getBoundingClientRect();
-          return (
-            rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-          );
-        }
-
-        function triggerOdometer(element) {
+        function triggerCounter(element) {
           const $element = $(element);
-          if (!$element.hasClass('odometer-triggered')) {
-            const countNumber = $element.attr('data-count');
-            $element.html(countNumber);
-            $element.addClass('odometer-triggered'); // Add a class to prevent re-triggering
-          }
-        }
+          if ($element.hasClass('counter-triggered') || $element.hasClass('odometer-triggered')) return;
+          $element.addClass('counter-triggered odometer-triggered');
 
-        function handleOdometer() {
-          $('.odometer').each(function () {
-            if (isInViewport(this)) {
-              triggerOdometer(this);
+          const rawTarget = $element.attr('data-count') || $element.text().trim();
+          const target = parseInt(rawTarget.replace(/[^0-9]/g, ''), 10);
+          if (isNaN(target)) return;
+
+          // Pure in-place counter (no vertical upward translation or reel scroll)
+          const duration = target <= 10 ? 1200 : (target <= 100 ? 1400 : 1800);
+          const startTime = performance.now();
+          const formatComma = target >= 1000 || $element.attr('data-format') === 'comma';
+          function step(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeOut = target <= 10
+              ? (1 - Math.pow(1 - progress, 2))
+              : (1 - Math.pow(1 - progress, 3));
+            const current = Math.round(easeOut * target);
+            element.textContent = formatComma ? current.toLocaleString('en-US') : current;
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              element.textContent = formatComma ? target.toLocaleString('en-US') : target;
             }
-          });
+          }
+          requestAnimationFrame(step);
         }
 
-        // Check on page load
-        handleOdometer();
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                triggerCounter(entry.target);
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.15 });
 
-        // Check on scroll
-        $(window).on('scroll', function () {
+          $('.stat-counter, .odometer').each(function () {
+            observer.observe(this);
+          });
+        } else {
+          function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+              rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.bottom >= 0
+            );
+          }
+
+          function handleOdometer() {
+            $('.stat-counter, .odometer').each(function () {
+              if (isInViewport(this)) {
+                triggerCounter(this);
+              }
+            });
+          }
+
           handleOdometer();
-        });
+          $(window).on('scroll', handleOdometer);
+        }
       });
     },
 

@@ -153,4 +153,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { passive: true });
 
     viewport.addEventListener('touchend', () => isDragging = false);
+
+    // Arrow Navigation Buttons
+    const prevBtn = document.getElementById('galleryPrevBtn');
+    const nextBtn = document.getElementById('galleryNextBtn');
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const step = (allCards[0] && allCards[0].offsetWidth) ? allCards[0].offsetWidth : 360;
+            targetX += step;
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const step = (allCards[0] && allCards[0].offsetWidth) ? allCards[0].offsetWidth : 360;
+            targetX -= step;
+        });
+    }
 });
