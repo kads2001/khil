@@ -89,18 +89,18 @@
   --transition: 0.3s;
   --khil-font-sans: "Boldonse", sans-serif;
   --khil-font-serif: "Boldonse", sans-serif;
-  --font-anybody: "Familjen Grotesk", sans-serif;
+  --font-anybody: "Boldonse", sans-serif;
   --font-archivo-black: "Archivo Black", sans-serif;
   --font-isometra: "Isometra", sans-serif;
-  --font-body: "Familjen Grotesk", sans-serif;
-  --font-heading: "Familjen Grotesk", sans-serif;
-  --font-sans: "Familjen Grotesk", sans-serif;
-  --font-serif: "Familjen Grotesk", sans-serif;
-  --font-medium: "Familjen Grotesk", sans-serif;
-  --font-primary: "Familjen Grotesk", sans-serif;
-  --font-secondary: "Familjen Grotesk", sans-serif;
+  --font-body: "Boldonse", sans-serif;
+  --font-heading: "Boldonse", sans-serif;
+  --font-sans: "Boldonse", sans-serif;
+  --font-serif: "Boldonse", sans-serif;
+  --font-medium: "Boldonse", sans-serif;
+  --font-primary: "Boldonse", sans-serif;
+  --font-secondary: "Boldonse", sans-serif;
   --font-3: "fontawesome";
-  --font-4: "Familjen Grotesk", sans-serif;
+  --font-4: "Boldonse", sans-serif;
   --font-5: "Familjen Grotesk", sans-serif;
   --font-size-b1: 16px;
   --font-size-b2: 16px;
@@ -108,7 +108,7 @@
   --line-height-b1: 26px;
   --line-height-b2: 26px;
   --line-height-b3: 1.7;
-  --h1: 70px;
+  --h1: 50px;
   --h2: 48px;
   --h3: 30px;
   --h4: 26px;
@@ -123,7 +123,7 @@ html, body {
   font-family: var(--font-primary) !important;
 }
 
-body *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]):not([class^="icon-"]):not([class*=" icon-"]):not([class^="unicons-"]):not([class*=" unicons-"]):not(.lucide):not(.lucide *):not(header):not(header *):not(.header-one):not(.header-one *):not(.khil-header-container):not(.khil-header-container *):not(.khil-nav):not(.khil-nav *):not(.khil-mobile-menu):not(.khil-mobile-menu *):not(footer):not(footer *):not(.khil-shared-footer):not(.khil-shared-footer *):not(.wheel-banner-section):not(.wheel-banner-section *) {
+body *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]):not([class^="icon-"]):not([class*=" icon-"]):not([class^="unicons-"]):not([class*=" unicons-"]):not(.lucide):not(.lucide *):not(header):not(header *):not(.header-one):not(.header-one *):not(.khil-header-container):not(.khil-header-container *):not(.khil-nav):not(.khil-nav *):not(.khil-mobile-menu):not(.khil-mobile-menu *):not(footer):not(footer *):not(.khil-shared-footer):not(.khil-shared-footer *) {
   font-family: var(--font-primary) !important;
 }
 
