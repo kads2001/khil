@@ -249,39 +249,54 @@ body.milestone-page i[class*=" fa-"] {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  width: 190px;
+  width: 220px;
 }
 
 .timeline-step.terminus-step {
-  width: 190px;
-  max-width: 190px;
+  width: 220px;
+  max-width: 220px;
 }
 
-/* ── Milestone Cards: Approximately 190px × 190px on Desktop ── */
+/* ── Milestone Cards: Approximately 220px × 220px on Desktop ── */
 .milestone-card {
   position: relative;
-  width: 190px;
-  height: 190px;
-  min-width: 190px;
-  max-width: 190px;
-  min-height: 190px;
-  max-height: 190px;
+  z-index: 2;
+  width: 220px;
+  height: 220px;
+  min-width: 220px;
+  max-width: 220px;
+  min-height: 220px;
+  max-height: 220px;
   box-sizing: border-box;
   margin: 0 auto;
-  background: white;
+  background: #ffffff;
   border: none;
   border-radius: 14px;
-  padding: 12px 14px;
+  padding: 8px 12px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  box-shadow: black 3px 3px;
   align-items: center;
-   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              border-color 0.3s ease, 
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  box-shadow:
+    0 5px 10px rgba(0, 0, 0, 0.08),
+    0 12px 28px rgba(0, 0, 0, 0.12),
+    0 2px 5px rgba(0, 0, 0, 0.05) !important;
+
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
   cursor: pointer;
+}
+
+.milestone-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.08),
+    0 16px 32px rgba(0, 0, 0, 0.12);
 }
 
 .timeline-step:hover .milestone-card {
@@ -292,8 +307,7 @@ body.milestone-page i[class*=" fa-"] {
 
 .milestone-card.card-active {
   border-color: var(--color-plum) !important;
-
-  transform: translateY(-3px);
+  transform: none;
 }
 
 .milestone-card.card-terminus {
@@ -321,6 +335,7 @@ body.milestone-page i[class*=" fa-"] {
   width: 12px;
   height: 7px;
   pointer-events: none;
+  z-index: 3;
 }
 
 .milestone-card-pointer::before {
@@ -404,7 +419,7 @@ body.milestone-page i[class*=" fa-"] {
   line-height: 1.42;
   margin: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -412,18 +427,25 @@ body.milestone-page i[class*=" fa-"] {
 /* ── Vertical Connector Stem ── */
 .milestone-stem {
   width: 2px;
-  height: 26px;
+  height: 32px;
   background: var(--color-border);
-  margin: 3px 0;
+  margin: 0;
   transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.milestone-card.card-active + .milestone-stem,
+.timeline-step:has(.node-circle.node-active) .milestone-stem,
+.milestone-stem.stem-active {
+  background-color: var(--color-plum) !important;
 }
 
 .timeline-step:hover .milestone-stem {
-  background-color: var(--color-gold);
+  background-color: var(--color-gold) !important;
 }
 
 .timeline-step:hover .milestone-stem.stem-terminus {
-  background-color: var(--color-plum);
+  background-color: var(--color-plum) !important;
 }
 
 /* ── Numbered Circles: Approximately 54px with Clean Double Border & Subtle Glow ── */
