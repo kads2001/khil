@@ -154,38 +154,9 @@
                     </li>
 
                     <!-- Our Brands Dropdown -->
-                    <li class="main-nav has-dropdown">
-                        <a href="index.html#brands">Our Brands</a>
-                        <div class="khil-dropdown-brands">
-                            <ul class="who-links-list">
-                                <li class="who-link-item">
-                                    <a href="https://www.orchidhotel.com/" target="_blank" rel="noopener noreferrer">
-                                        <div class="item-content"><span class="item-title">The Orchid Hotel</span></div>
-                                    </a>
-                                </li>
-                                <li class="who-link-item">
-                                    <a href="index.html#brands">
-                                        <div class="item-content"><span class="item-title">Fort JadhavGADH</span></div>
-                                    </a>
-                                </li>
-                                <li class="who-link-item">
-                                    <a href="index.html#brands">
-                                        <div class="item-content"><span class="item-title">Lotus Eco Resort</span></div>
-                                    </a>
-                                </li>
-                                <li class="who-link-item">
-                                    <a href="index.html#brands">
-                                        <div class="item-content"><span class="item-title">IRA by Orchid Hotels</span></div>
-                                    </a>
-                                </li>
-
-
-
-
-
-
-                            </ul>
-                        </div>
+                    <li class="main-nav ">
+                        <a href="brands.html">Our Brands</a>
+                       
                     </li>
 
                     <!-- Investors Mega Menu -->
