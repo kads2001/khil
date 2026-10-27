@@ -14,7 +14,7 @@
     <title>Our Founder's Legacy - About Us | Kamat Hotels (India) Ltd.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet preload" href="assets/css/plugins/fontawesome.css" as="style">
     <link rel="stylesheet preload" href="assets/css/plugins/swiper.css" as="style">
     <link rel="stylesheet preload" href="assets/css/plugins/metismenu.css" as="style">
@@ -25,7 +25,7 @@
 
     <link rel="stylesheet preload" href="assets/css/style.css" as="style">
     <link rel="stylesheet preload" href="assets/css/khil-header.css" as="style">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/custom.css?v=5">
 
     <link rel="stylesheet" href="assets/css/inner-banner.css">
 </head>
@@ -148,70 +148,218 @@
         </div>
     </div>
     <!-- Who We Are Section End -->
-<!-- rts vision & core principles area start -->
-<div class="rts-vision-principles-area">
-    <div class="container">
-        <div class="row g-4">
-            <!-- Our Vision -->
-            <div class="col-lg-6 col-md-12">
-                <div class="khil-vision-card">
-                    <div class="vision-card-header">
-                        <span class="vision-card-badge"><i class="fa-regular fa-compass"></i> Our Vision</span>
-                      
-                    </div>
-                    <h3 class="vision-card-title">Our Vision</h3>
-                    <p class="vision-card-text">
-                        To make Kamat Hotels (India) Limited, the country’s leading Hospitality Company.
-                    </p>
-                </div>
-            </div>
 
-            <!-- Our Core Principles -->
-            <div class="col-lg-6 col-md-12">
-                <div class="khil-vision-card">
-                    <div class="vision-card-header">
-                        <span class="vision-card-badge"><i class="fa-regular fa-shield-halved"></i> Our Core Principles</span>
-                    
-                    </div>
-                    <h3 class="vision-card-title">Our Core Principles</h3>
-                    <ul class="vision-principles-list">
-                        <li>
-                           
-                            <span>Our quality, health and safety standards will be second to none.</span>
-                        </li>
-                        <li>
-                          
-                            <span>Environmental awareness and care for the world in which we live will be part of our business' philosophy.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    <!-- Corporate Philosophy Section -->
-    <div class="corporate-philosophy-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="corporate-philosophy-box">
-                        <div class="section-header">
-                            <span class="section-tag"><i class="fa-regular fa-compass"></i> Explore</span>
-                            <h2 class="section-title">Corporate Philosophy</h2>
+    <style>
+    /* Critical sticky overrides to bypass global overflow clipping in style.css */
+    html {
+        overflow-x: clip !important;
+        overflow-y: visible !important;
+    }
+    body.demo-cybersecurity {
+        overflow-x: clip !important;
+        overflow-y: visible !important;
+    }
+    .our-process {
+        position: relative !important;
+        background-color: #ffffff;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+    @media (min-width: 992px) {
+        .our-process-pin-track {
+            position: relative !important;
+            height: 260vh !important;
+            overflow: visible !important;
+        }
+        .our-process-sticky-stage {
+            position: -webkit-sticky !important;
+            position: sticky !important;
+            top: 75px !important;
+            height: calc(84vh - 75px) !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            overflow: visible !important;
+            padding: 30px 0 !important;
+            box-sizing: border-box !important;
+            z-index: 5 !important;
+        }
+        .single-our-process-wrap {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transform-style: preserve-3d;
+            will-change: transform;
+            opacity: 1 !important;
+        }
+    }
+    @media (max-width: 991px) {
+        .our-process-pin-track {
+            height: auto !important;
+        }
+        .our-process-sticky-stage {
+            position: static !important;
+            height: auto !important;
+            padding: 60px 0 80px !important;
+        }
+        .single-our-process-wrap {
+            transform: none !important;
+            opacity: 1 !important;
+        }
+    }
+    </style>
+
+    <!-- ==========================================================================
+         OUR PROCESS / FOUNDATION (Vision, Principles & Philosophy)
+         ========================================================================== -->
+    <section class="our-process our-process-pin-track" id="ourProcessTrack">
+        <div class="our-process-sticky-stage">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <div class="subtitle-wrapper">
+                        <div class="subtitle-wrap">
+                            <span class="subtitle-text">OUR FOUNDATION</span>
                         </div>
-                        <p class="philosophy-text">
-                            Kamat Hotels (India) Limited believes that good Corporate Governance is an important
-                            constituent in ensuring stakeholders value. Kamat Hotels (India) Limited has in place,
-                            the processes and systems that comply with the requirements of Corporate Governance in the
-                            listing agreement issued by the Stock Exchanges. Kamat Hotels (India) Limited is committed
-                            in its responsibility towards the community and environment in which the company operates, 
-                            towards employees and business partners in particular and towards the society in general.
-                        </p>
                     </div>
+                    <h2 class="section-title"><span class="section-title-color">OUR GUIDING</span> PRINCIPLES</h2>
+                </div>
+                <div class="our-process-wrap">
+                    <!-- 01: Our Vision -->
+                    <div class="single-our-process-wrap _1st">
+                        <div class="our-process-card">
+                            <div class="our-process-number-wrap">
+                                <div class="our-process-number">01</div>
+                            </div>
+                            <div class="our-process-contant">
+                                <h3 class="our-process-title">Our Vision</h3>
+                                <p class="our-process-details">To make Kamat Hotels (India) Limited, the country’s leading Hospitality Company.</p>
+                            </div>
+                            <div class="our-process-hover-shape"></div>
+                        </div>
+                    </div>
+
+                    <!-- 02: Our Core Principles -->
+                    <div class="single-our-process-wrap _2nd">
+                        <div class="our-process-card">
+                            <div class="our-process-number-wrap">
+                                <div class="our-process-number">02</div>
+                            </div>
+                            <div class="our-process-contant">
+                                <h3 class="our-process-title">Our Core Principles</h3>
+                                <p class="our-process-details">Our quality, health and safety standards will be second to none. Environmental awareness and care for the world in which we live will be part of our business' philosophy.</p>
+                            </div>
+                            <div class="our-process-hover-shape"></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <script>
+    (function initProcessStickySequentialScroll() {
+        const track = document.getElementById('ourProcessTrack');
+        const wrap = document.querySelector('.our-process-wrap');
+
+        if (!track || !wrap) return;
+
+        const card1 = wrap.querySelector('._1st');
+        const card2 = wrap.querySelector('._2nd');
+
+        if (!card1 || !card2) return;
+
+        let targetProgress = 0;
+        let currentProgress = -1;
+        let animationFrame = null;
+
+        // Smooth S-curve easing without sudden takeoff jerks
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function updateProgress() {
+            if (window.innerWidth < 992) {
+                if (animationFrame) {
+                    cancelAnimationFrame(animationFrame);
+                    animationFrame = null;
+                }
+                card1.style.transform = 'none';
+                card1.style.opacity = '1';
+                card2.style.transform = 'none';
+                card2.style.opacity = '1';
+                return;
+            }
+
+            const rect = track.getBoundingClientRect();
+            const stickyTop = 75;
+            const scrollDistance = track.offsetHeight - window.innerHeight;
+
+            if (scrollDistance <= 0) return;
+
+            const currentScroll = stickyTop - rect.top;
+            targetProgress = Math.max(0, Math.min(1, currentScroll / scrollDistance));
+
+            if (animationFrame === null) {
+                animationFrame = requestAnimationFrame(render);
+            }
+        }
+
+        function render() {
+            if (window.innerWidth < 992) {
+                animationFrame = null;
+                return;
+            }
+
+            if (currentProgress < 0) {
+                currentProgress = targetProgress;
+            } else {
+                // Silky smooth dampening factor for 60-144Hz displays
+                currentProgress += (targetProgress - currentProgress) * 0.085;
+                if (Math.abs(targetProgress - currentProgress) < 0.0002) {
+                    currentProgress = targetProgress;
+                }
+            }
+
+            const p = currentProgress;
+
+            // Sequential timeline with generous travel & pauses:
+            // Phase 1 [0.03, 0.44]: Card 1 arrives completely to top
+            // Hold 1  [0.44, 0.56]: Card 1 fully settled at top, Card 2 resting
+            // Phase 2 [0.56, 0.94]: Card 2 arrives completely to top
+            // Hold 2  [0.94, 1.00]: Both cards resting in place, pin unpins
+            const p1 = Math.max(0, Math.min(1, (p - 0.03) / 0.41));
+            const p2 = Math.max(0, Math.min(1, (p - 0.56) / 0.38));
+
+            const e1 = easeInOutCubic(p1);
+            const e2 = easeInOutCubic(p2);
+
+            const y1 = (1 - e1) * 150;
+            const y2 = (1 - e2) * 180;
+
+            const scale1 = 0.96 + 0.04 * e1;
+            const scale2 = 0.96 + 0.04 * e2;
+
+            card1.style.transform = `translate3d(0, ${y1.toFixed(2)}px, 0) scale(${scale1.toFixed(4)})`;
+            card1.style.opacity = '1';
+
+            card2.style.transform = `translate3d(0, ${y2.toFixed(2)}px, 0) scale(${scale2.toFixed(4)})`;
+            card2.style.opacity = '1';
+
+            if (Math.abs(targetProgress - currentProgress) > 0.0002) {
+                animationFrame = requestAnimationFrame(render);
+            } else {
+                animationFrame = null;
+            }
+        }
+
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        window.addEventListener('resize', updateProgress);
+
+        updateProgress();
+        setTimeout(updateProgress, 100);
+    })();
+    </script>
+
    
 
 
