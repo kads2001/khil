@@ -1,0 +1,1066 @@
+/* ==========================================================================
+   KAMAT HOTELS (INDIA) LIMITED - INVESTORS & ANNUAL REPORTS STYLESHEET
+   Brand Palette: KHIL Royal Plum (#7d007d), Heritage Gold (#B89B69), Warm Sand (#FAF8F5)
+   File: assets/css/investors.css
+   ========================================================================== */
+
+:root {
+  --khil-plum: #7d007d;
+  --khil-plum-dark: #4d004d;
+  --khil-plum-deep: #380038;
+  --khil-plum-soft: rgba(125, 0, 125, 0.07);
+  --khil-plum-border: rgba(125, 0, 125, 0.22);
+  --khil-plum-glow: rgba(125, 0, 125, 0.18);
+
+  --khil-gold: #B89B69;
+  --khil-gold-dark: #9E7A36;
+  --khil-gold-light: #E8D3A7;
+  --khil-gold-soft: #F7F3ED;
+  --khil-gold-border: rgba(184, 155, 105, 0.35);
+
+  --khil-ink: #1f242e;
+  --khil-charcoal: #121826;
+  --khil-muted: #636b78;
+  --khil-body: #444b57;
+  --khil-bg: #FAF8F5;
+  --khil-sand: #F7F4F0;
+  --khil-white: #FFFFFF;
+  --khil-border: #E5DCCE;
+  --khil-border-light: #F0EAE1;
+  --khil-pdf-red: #c0392b;
+
+  --khil-font-serif: 'Familjen Grotesk', system-ui, -apple-system, sans-serif;
+  --khil-font-sans: 'Familjen Grotesk', system-ui, -apple-system, sans-serif;
+  --khil-transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Body Setup */
+body.investors-page {
+  background-color: white;
+  color: var(--khil-ink);
+  font-family: var(--khil-font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.investors-page ::selection {
+  background-color: var(--khil-plum);
+  color: #FFFFFF;
+}
+
+/* Container matching KHIL Header (1680px max-width) */
+.inv-container {
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0 28px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+  .inv-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .inv-container {
+    padding: 0 16px;
+  }
+}
+
+/* ==========================================================================
+   1. INVESTOR HIGHLIGHTS METRICS STRIP
+   ========================================================================== */
+.inv-highlights-strip {
+  margin-top: -46px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 38px;
+}
+
+.inv-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 12px;
+  border: 1px solid var(--khil-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 1100px) {
+  .inv-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .inv-highlights-strip {
+    margin-top: 20px;
+  }
+  .inv-highlights-grid {
+    grid-template-columns: 1fr;
+    padding: 18px 20px;
+  }
+}
+
+.inv-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 14px;
+  border-right: 1px solid var(--khil-border-light);
+}
+
+.inv-highlight-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+@media (max-width: 1100px) {
+  .inv-highlight-item:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .inv-highlight-item {
+    border-right: none;
+    border-bottom: 1px solid var(--khil-border-light);
+    padding-bottom: 14px;
+    padding-right: 0;
+  }
+  .inv-highlight-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.inv-highlight-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 10px;
+  background: var(--khil-plum-soft);
+  color: var(--khil-plum);
+  border: 1px solid var(--khil-plum-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.inv-highlight-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.inv-highlight-val {
+  font-family: var(--khil-font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--khil-charcoal);
+  line-height: 1.2;
+}
+
+.inv-highlight-lbl {
+  font-size: 13px;
+  color: var(--khil-muted);
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   2. SECTION HEADING & CONTROLS
+   ========================================================================== */
+.inv-main {
+  padding: 12px 0 64px;
+}
+
+.inv-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--khil-border);
+  padding-bottom: 18px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.inv-heading-left {
+  max-width: 720px;
+}
+
+.inv-section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  color: var(--khil-plum);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.inv-section-eyebrow i {
+  font-size: 10px;
+}
+
+.inv-section-title {
+  font-family: var(--khil-font-serif);
+  font-size: clamp(26px, 2.8vw, 36px);
+  font-weight: 700;
+  color: var(--khil-charcoal);
+  line-height: 1.22;
+  margin: 0 0 6px;
+}
+
+.inv-section-desc {
+  font-size: 15px;
+  color: var(--khil-muted);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* View Mode Switcher */
+.inv-view-toggle-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inv-view-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--khil-muted);
+}
+
+.inv-view-toggle {
+  display: inline-flex;
+  background: #ffffff;
+  border: 1px solid var(--khil-border);
+  border-radius: 8px;
+  padding: 3px;
+  gap: 3px;
+}
+
+.inv-toggle-btn {
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--khil-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--khil-transition);
+}
+
+.inv-toggle-btn:hover {
+  color: var(--khil-plum);
+}
+
+.inv-toggle-btn.active {
+  background: var(--khil-plum);
+  color: #ffffff;
+  box-shadow: 0 2px 8px var(--khil-plum-glow);
+}
+
+/* ==========================================================================
+   3. MODERN YEAR TABS SYSTEM (REPLACES OLD DESIGN)
+   ========================================================================== */
+.inv-years-bar-wrapper {
+  background: #ffffff;
+  border: 1px solid var(--khil-border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.inv-years-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.inv-years-heading {
+  font-size: 13.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--khil-charcoal);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inv-years-heading i {
+  color: var(--khil-plum);
+}
+
+.inv-year-count-badge {
+  background: var(--khil-gold-soft);
+  color: var(--khil-gold-dark);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--khil-gold-border);
+}
+
+/* Horizontal scrollable pills with nice scrollbar */
+.inv-years-scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--khil-border) transparent;
+}
+
+.inv-years-scroller::-webkit-scrollbar {
+  height: 6px;
+}
+
+.inv-years-scroller::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.inv-years-scroller::-webkit-scrollbar-thumb {
+  background-color: var(--khil-border);
+  border-radius: 10px;
+}
+
+.inv-years-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 991px) {
+  .inv-years-list {
+    flex-wrap: nowrap;
+    width: max-content;
+  }
+}
+
+.inv-year-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  background: #ffffff;
+  border: 1px solid var(--khil-border);
+  border-radius: 8px;
+  color: var(--khil-ink);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--khil-transition);
+}
+
+.inv-year-pill:hover {
+  background: var(--khil-plum-soft);
+  border-color: var(--khil-plum-border);
+  color: var(--khil-plum);
+  transform: translateY(-1px);
+}
+
+.inv-year-pill.active {
+  background: linear-gradient(135deg, #7d007d 0%, #4d004d 100%);
+  color: #ffffff !important;
+  border-color: #4d004d;
+  box-shadow: 0 4px 14px var(--khil-plum-glow);
+}
+
+.inv-year-pill .inv-tag-latest {
+  background: #f1c40f;
+  color: #380038;
+  font-size: 9.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.inv-year-pill.active .inv-tag-latest {
+  background: #ffffff;
+  color: var(--khil-plum);
+}
+
+/* ==========================================================================
+   4. SEARCH & FILTER CONTROLS BAR
+   ========================================================================== */
+.inv-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+.inv-search-wrap {
+  position: relative;
+  flex: 1;
+  max-width: 440px;
+  min-width: 260px;
+}
+
+.inv-search-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 42px 0 42px;
+  border: 1px solid var(--khil-border);
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--khil-ink);
+  outline: none;
+  transition: var(--khil-transition);
+}
+
+.inv-search-input:focus {
+  border-color: var(--khil-plum);
+  box-shadow: 0 0 0 3px var(--khil-plum-soft);
+}
+
+.inv-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--khil-muted);
+  font-size: 15px;
+  pointer-events: none;
+}
+
+.inv-search-clear {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--khil-muted);
+  cursor: pointer;
+  display: none;
+  padding: 4px;
+}
+
+.inv-search-clear:hover {
+  color: var(--khil-plum);
+}
+
+.inv-filter-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.inv-filter-btn {
+  background: #ffffff;
+  border: 1px solid var(--khil-border);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--khil-muted);
+  cursor: pointer;
+  transition: var(--khil-transition);
+}
+
+.inv-filter-btn:hover {
+  color: var(--khil-plum);
+  border-color: var(--khil-plum-border);
+}
+
+.inv-filter-btn.active {
+  background: var(--khil-plum-soft);
+  color: var(--khil-plum);
+  border-color: var(--khil-plum);
+  font-weight: 700;
+}
+
+/* Selected Year Context Banner */
+.inv-current-year-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-left: 4px solid var(--khil-plum);
+  border-top: 1px solid var(--khil-border);
+  border-right: 1px solid var(--khil-border);
+  border-bottom: 1px solid var(--khil-border);
+  padding: 14px 20px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.inv-current-year-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.inv-current-year-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--khil-charcoal);
+  margin: 0;
+}
+
+.inv-doc-count-tag {
+  background: var(--khil-plum-soft);
+  color: var(--khil-plum);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--khil-plum-border);
+}
+
+/* Tab Panes for Pure Static HTML */
+.inv-tab-pane {
+  display: none;
+  animation: invFadeIn 0.3s ease;
+}
+
+.inv-tab-pane.active {
+  display: block;
+}
+
+@keyframes invFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* View toggle for Static HTML */
+.inv-tab-pane .inv-table-view {
+  display: none;
+}
+
+.table-mode-active .inv-tab-pane .inv-docs-grid {
+  display: none !important;
+}
+
+.table-mode-active .inv-tab-pane .inv-table-view {
+  display: block !important;
+}
+
+/* ==========================================================================
+   5. DOCUMENT CARDS GRID (LUXURY NEW DESIGN)
+   ========================================================================== */
+.inv-docs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1200px) {
+  .inv-docs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .inv-docs-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.inv-doc-card {
+  background: #ffffff;
+  border: 1px solid var(--khil-border);
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.inv-doc-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--khil-plum), var(--khil-gold));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.inv-doc-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--khil-gold);
+  box-shadow: 0 12px 28px rgba(125, 0, 125, 0.08);
+}
+
+.inv-doc-card:hover::before {
+  opacity: 1;
+}
+
+.inv-doc-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.inv-doc-icon-wrap {
+  width: 46px;
+  height: 52px;
+  min-width: 46px;
+  border-radius: 8px;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  color: var(--khil-pdf-red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.inv-doc-icon-wrap svg,
+.inv-doc-icon-wrap i {
+  font-size: 22px;
+}
+
+.inv-doc-format-lbl {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+.inv-doc-info {
+  flex: 1;
+}
+
+.inv-doc-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.inv-badge-category {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--khil-plum);
+  background: var(--khil-plum-soft);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--khil-plum-border);
+}
+
+.inv-badge-year {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--khil-gold-dark);
+  background: var(--khil-gold-soft);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--khil-gold-border);
+}
+
+.inv-doc-title {
+  font-family: var(--khil-font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--khil-charcoal);
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+.inv-doc-desc {
+  font-size: 13.5px;
+  color: var(--khil-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.inv-doc-footer {
+  border-top: 1px solid var(--khil-border-light);
+  padding-top: 16px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.inv-doc-meta {
+  font-size: 12px;
+  color: var(--khil-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.inv-doc-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inv-btn-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid var(--khil-border);
+  color: var(--khil-ink);
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--khil-transition);
+}
+
+.inv-btn-view:hover {
+  background: var(--khil-plum-soft);
+  border-color: var(--khil-plum);
+  color: var(--khil-plum);
+}
+
+.inv-btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  background: var(--khil-plum);
+  border: 1px solid var(--khil-plum);
+  color: #ffffff !important;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--khil-transition);
+}
+
+.inv-btn-download:hover {
+  background: var(--khil-plum-dark);
+  box-shadow: 0 4px 12px var(--khil-plum-glow);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   6. TABLE VIEW (MATCHING IMAGE 1 BOARD COMMITTEES STYLE)
+   ========================================================================== */
+.inv-table-view {
+  display: none;
+  background: #ffffff;
+  border: 1px solid var(--khil-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  margin-bottom: 40px;
+}
+
+.inv-table-view.active {
+  display: block;
+}
+
+.inv-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.inv-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.inv-table thead th {
+  background: #faf8f5;
+  color: var(--khil-charcoal);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 14px 20px;
+  border-bottom: 2px solid var(--khil-border);
+  white-space: nowrap;
+}
+
+.inv-table tbody tr {
+  border-bottom: 1px solid var(--khil-border-light);
+  transition: background-color 0.2s ease;
+}
+
+.inv-table tbody tr:hover {
+  background-color: var(--khil-plum-soft);
+}
+
+.inv-table tbody td {
+  padding: 16px 20px;
+  vertical-align: middle;
+}
+
+.inv-table-doc-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.inv-table-doc-icon {
+  width: 32px;
+  height: 36px;
+  border-radius: 6px;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  color: var(--khil-pdf-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.inv-table-doc-name {
+  font-weight: 700;
+  color: var(--khil-charcoal);
+  font-size: 14.5px;
+}
+
+.inv-table-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* ==========================================================================
+   7. NO RESULTS EMPTY STATE
+   ========================================================================== */
+.inv-empty-state {
+  display: none;
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  border: 1px dashed var(--khil-border);
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.inv-empty-icon {
+  font-size: 42px;
+  color: var(--khil-gold);
+  margin-bottom: 14px;
+}
+
+.inv-empty-title {
+  font-family: var(--khil-font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--khil-charcoal);
+  margin: 0 0 8px;
+}
+
+.inv-empty-desc {
+  font-size: 14px;
+  color: var(--khil-muted);
+  max-width: 440px;
+  margin: 0 auto 18px;
+}
+
+.inv-empty-reset-btn {
+  background: var(--khil-plum);
+  color: #ffffff;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   8. QUICK INVESTOR RESOURCES & GOVERNANCE TILES
+   ========================================================================== */
+.inv-resources-section {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.inv-resources-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1100px) {
+  .inv-resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .inv-resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inv-resource-card {
+  background: #ffffff;
+  border: 1px solid var(--khil-border);
+  border-radius: 12px;
+  padding: 22px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.inv-resource-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--khil-gold);
+  box-shadow: 0 8px 24px rgba(184, 155, 105, 0.12);
+}
+
+.inv-resource-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--khil-plum-soft);
+  color: var(--khil-plum);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.inv-resource-title {
+  font-family: var(--khil-font-serif);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--khil-charcoal);
+  margin: 0 0 6px;
+}
+
+.inv-resource-desc {
+  font-size: 13px;
+  color: var(--khil-muted);
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.inv-resource-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--khil-plum);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   9. INVESTOR CONTACT & REGISTRAR STRIP
+   ========================================================================== */
+.inv-contact-strip {
+  background: #ffffff;
+  border: 1px solid var(--khil-border);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.inv-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .inv-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.inv-contact-box {
+  display: flex;
+  gap: 16px;
+}
+
+.inv-contact-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 10px;
+  background: var(--khil-plum-soft);
+  color: var(--khil-plum);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border: 1px solid var(--khil-plum-border);
+}
+
+.inv-contact-detail h4 {
+  font-family: var(--khil-font-serif);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--khil-charcoal);
+  margin: 0 0 4px;
+}
+
+.inv-contact-detail p {
+  font-size: 13.5px;
+  color: var(--khil-muted);
+  line-height: 1.55;
+  margin: 0 0 8px;
+}
+
+.inv-contact-detail a {
+  color: var(--khil-plum);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.inv-contact-detail a:hover {
+  text-decoration: underline;
+}

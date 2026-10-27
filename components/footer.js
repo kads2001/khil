@@ -101,8 +101,8 @@
           <nav class="khil-footer-column" aria-label="Investors and Press Room">
             <h3 class="khil-footer-heading">Investors</h3>
             <ul>
-              <li><a href="https://khil.com/annual-reports.html" target="_blank" rel="noopener noreferrer">View Reports</a></li>
-              <li><a href="https://khil.com/investors/annual-reports/annual-reports.html" target="_blank" rel="noopener noreferrer">Annual Reports</a></li>
+              <li><a href="investors.html">View Reports</a></li>
+              <li><a href="annual-reports.html">Annual Reports</a></li>
               <li><a href="https://khil.com/investors/quarterly-results/quarterly-results.html" target="_blank" rel="noopener noreferrer">Quarterly Results</a></li>
               <li><a href="https://khil.com/investors/investors/corporate-governance-reports.html" target="_blank" rel="noopener noreferrer">Corporate Governance Reports</a></li>
               <li><a href="https://khil.com/investors/investors/shareholding-pattern.html" target="_blank" rel="noopener noreferrer">Shareholding Pattern</a></li>

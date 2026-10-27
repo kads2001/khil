@@ -190,7 +190,7 @@
 
                     <!-- Investors Mega Menu -->
                     <li class="main-nav has-dropdown mega-menu">
-                        <a href="#">Investors</a>
+                        <a href="investors.html">Investors</a>
                         <div class="khil-mega-dropdown">
                             <div class="investor-link-groups" id="investorMegaGrid">
                                 <div class="investor-link-group">
@@ -369,7 +369,7 @@
                         <a href="index.html#brands" class="main">Our Brands</a>
                     </li>
                     <li class="has-droupdown">
-                        <a href="#" class="main">Investors</a>
+                        <a href="investors.html" class="main">Investors</a>
                         <ul class="submenu mm-collapse">
                             <li class="has-droupdown">
                                 <a href="#" class="main">Financials</a>
