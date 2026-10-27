@@ -1,0 +1,440 @@
+/* ==========================================================================
+   GALLERY CIRCLE WHEEL BANNER (Scroll-driven Orbit Carousel Hero)
+   Kamat Hotels (India) Limited (KHIL)
+   ========================================================================== */
+
+:root {
+  --wheel-bg: #F4F4F6;
+  --wheel-text: #111111;
+  --wheel-accent: #7d007d;
+  --wheel-radius: 280px;
+  --card-width: 175px;
+  --card-height: 230px;
+  --card-radius: 18px;
+}
+
+/* Lenis Scroll Smoothness Base */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+body.wheel-page {
+  margin: 0;
+  padding: 0;
+  background-color: var(--wheel-bg);
+  font-family: 'Familjen Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--wheel-text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Full-Bleed Pinned Banner Section
+   ========================================================================== */
+.wheel-banner-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--wheel-bg);
+  overflow: hidden;
+}
+
+.wheel-banner-stage {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 6vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Giant Subtle Background Watermark ("KAMAT") */
+.wheel-banner-watermark {
+  position: absolute;
+  left: 3vw;
+  bottom: -4vw;
+  font-size: clamp(140px, 22vw, 340px);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 0.8;
+  color: rgba(0, 0, 0, 0.04);
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Left Content Column */
+.wheel-banner-content,
+.wheel-banner-stage .rts-banner-content-three {
+  position: relative;
+  z-index: 10;
+  max-width: 520px;
+  padding: 20px 0;
+}
+
+.wheel-banner-content .khil-hero-eyebrow-tag,
+.wheel-banner-stage .khil-hero-eyebrow-tag {
+  display: inline-block;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--wheel-accent, #7d007d) !important;
+  margin: 0 0 16px 0;
+}
+
+.wheel-banner-heading,
+.wheel-banner-content h1,
+.wheel-banner-stage .rts-banner-content-three h1 {
+  font-size: clamp(44px, 5.2vw, 80px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--wheel-text, #111111) !important;
+  margin: 0 0 20px 0;
+}
+
+.wheel-banner-heading .hero-heading-line,
+.wheel-banner-content h1 .hero-heading-line,
+.wheel-banner-stage .rts-banner-content-three h1 .hero-heading-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.wheel-banner-heading .hero-heading-accent,
+.wheel-banner-content h1 .hero-heading-accent,
+.wheel-banner-stage .rts-banner-content-three h1 .hero-heading-accent {
+  color: var(--wheel-accent, #7d007d) !important;
+}
+
+.wheel-banner-desc,
+.wheel-banner-content p.disc,
+.wheel-banner-stage .rts-banner-content-three p.disc {
+  font-size: clamp(15px, 1.2vw, 17px) !important;
+  line-height: 1.6 !important;
+  color: #555555 !important;
+  max-width: 420px;
+  margin: 0 0 32px 0;
+  font-weight: 400 !important;
+}
+
+.wheel-banner-content .button-group,
+.wheel-banner-stage .rts-banner-content-three .button-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.wheel-banner-stage .khil-hero-btn.primary {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111 !important;
+  padding: 7px 8px 7px 22px;
+  border-radius: 999px !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wheel-banner-stage .khil-hero-btn.primary > i:last-child {
+  background: var(--wheel-accent, #7d007d) !important;
+  color: #ffffff !important;
+}
+
+.wheel-banner-stage .khil-hero-btn.primary:hover {
+  background: var(--wheel-accent, #7d007d) !important;
+  border-color: var(--wheel-accent, #7d007d) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(125, 0, 125, 0.28);
+}
+
+.wheel-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #111111;
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wheel-banner-btn .btn-arrow {
+  font-size: 15px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.wheel-banner-btn:hover {
+  background-color: var(--wheel-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(125, 0, 125, 0.28);
+}
+
+.wheel-banner-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Right Orbit Assembly
+   ========================================================================== */
+.wheel-orbit-wrapper {
+  position: absolute;
+  left: 67%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.gallery-circle-wheel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Orbit Dashed Guide Ring */
+.gallery-wheel-orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(var(--wheel-radius) * 2);
+  height: calc(var(--wheel-radius) * 2);
+  border-radius: 50%;
+  border: 1.5px dashed rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Individual 8 Cards */
+.gallery-image-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--card-width);
+  height: var(--card-height);
+  margin-left: calc(-1 * var(--card-width) / 2);
+  margin-top: calc(-1 * var(--card-height) / 2);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 20px 42px -6px rgba(0, 0, 0, 0.16), 0 6px 14px -3px rgba(0, 0, 0, 0.08);
+  transform-origin: center center;
+  will-change: transform;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.gallery-image-card:hover {
+  box-shadow: 0 30px 65px -8px rgba(125, 0, 125, 0.32), 0 10px 20px -3px rgba(0, 0, 0, 0.12);
+  outline: 2px solid var(--wheel-accent);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-image-card:hover .gallery-image {
+  transform: scale(1.06);
+}
+
+/* Card subtle gloss overlay */
+.gallery-image-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 65%, rgba(0,0,0,0.22) 100%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Far Right Vertical Rating Badge (as seen in reference)
+   ========================================================================== */
+.wheel-rating-badge {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: center center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #777777;
+  text-transform: uppercase;
+  z-index: 10;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.wheel-rating-badge .stars {
+  color: #111111;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   Next Experience Outro Section
+   ========================================================================== */
+.wheel-next-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 24px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.wheel-next-card {
+  max-width: 720px;
+  background: var(--wheel-bg);
+  border-radius: 28px;
+  padding: 60px 48px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.wheel-next-title {
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px 0;
+  color: #111111;
+}
+
+.wheel-next-desc {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0 0 32px 0;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 1300px) {
+  :root {
+    --wheel-radius: 245px;
+    --card-width: 155px;
+    --card-height: 205px;
+    --card-radius: 16px;
+  }
+  .wheel-orbit-wrapper {
+    left: 70%;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --wheel-radius: 215px;
+    --card-width: 135px;
+    --card-height: 180px;
+    --card-radius: 14px;
+  }
+  .wheel-banner-stage {
+    padding: 0 4vw;
+  }
+  .wheel-orbit-wrapper {
+    left: 72%;
+  }
+  .wheel-banner-heading {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 860px) {
+  .wheel-banner-stage {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px;
+    height: 100vh;
+  }
+  .wheel-banner-content {
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .wheel-banner-desc {
+    margin: 0 auto 24px;
+  }
+  .wheel-orbit-wrapper {
+    left: 50%;
+    top: 68%;
+  }
+  :root {
+    --wheel-radius: 180px;
+    --card-width: 110px;
+    --card-height: 150px;
+    --card-radius: 12px;
+  }
+  .wheel-rating-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --wheel-radius: 150px;
+    --card-width: 95px;
+    --card-height: 130px;
+    --card-radius: 10px;
+  }
+  .wheel-banner-heading {
+    font-size: 38px;
+  }
+  .wheel-orbit-wrapper {
+    top: 68%;
+  }
+}

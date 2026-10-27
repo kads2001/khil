@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exceptional Concepts | Kamat Hotels (India) Limited</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+
+    <!-- Dedicated Gallery Wheel Banner Stylesheet -->
+    <link rel="stylesheet" href="assets/css/gallery-wheel.css">
+</head>
+<body class="wheel-page">
+
+    <!-- ==========================================================================
+         HERO BANNER: Scroll-Driven Circular Orbit Gallery
+         ========================================================================== -->
+    <section class="wheel-banner-section" id="wheelBanner" aria-label="Hero Showcase">
+        <div class="wheel-banner-stage">
+            
+            <!-- Giant Subtle Background Watermark -->
+            <div class="wheel-banner-watermark" aria-hidden="true">YANSA</div>
+
+            <!-- Left Banner Content -->
+            <div class="wheel-banner-content rts-banner-content-three">
+                <h3 class="khil-hero-eyebrow-tag" data-aos="fade-up" data-aos-delay="100">
+                    Asia's Pioneering Ecotel Chain
+                </h3>
+                <h1 class="rts-text-anime-style-1" data-aos="fade-up" data-aos-delay="200"><span class="hero-heading-line"><span>Kamat </span><span
+                            class="hero-heading-accent">Hotels</span></span><span
+                        class="hero-heading-line">(India) Ltd.</span></h1>
+                <p class="disc" data-aos="fade-up" data-aos-delay="300">
+                    Asia's Pioneering Hospitality Chain of Environmentally Sensitive 5-Star Hotels.
+                </p>
+                <div class="button-group" data-aos="fade-up" data-aos-delay="400">
+                    <a href="index.html#brands" class="khil-hero-btn primary khil-btn-outline">Explore Our
+                        Brands <i class="fa-regular fa-arrow-right"></i></a>
+                    <!-- <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685" target="_blank" class="khil-hero-btn secondary"><i class="fa-regular fa-calendar-check"></i> Book Direct &amp; Save</a> -->
+                </div>
+            </div>
+
+            <!-- Right Orbit Assembly -->
+            <div class="wheel-orbit-wrapper">
+                <!-- Orbit Dashed Guide Ring -->
+                <div class="gallery-wheel-orbit-ring" aria-hidden="true"></div>
+
+                <!-- Revolving Wheel Container -->
+                <div class="gallery-circle-wheel" id="galleryWheel">
+                    
+                    <!-- 01: Top (12:00) -->
+                    <div class="gallery-image-card slot-01">
+                        <img src="assets/img/Whell/image.png" alt="Creative Project 1" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 02: Top-Right (1:30) -->
+                    <div class="gallery-image-card slot-02">
+                        <img src="assets/img/Whell/image copy.png" alt="Creative Project 2" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 03: Right (3:00) -->
+                    <div class="gallery-image-card slot-03">
+                        <img src="assets/img/Whell/image copy 2.png" alt="Creative Project 3" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 04: Bottom-Right (4:30) -->
+                    <div class="gallery-image-card slot-04">
+                        <img src="assets/img/Whell/image copy 3.png" alt="Creative Project 4" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 05: Bottom (6:00) -->
+                    <div class="gallery-image-card slot-05">
+                        <img src="assets/img/Whell/image.png" alt="Creative Project 5" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 06: Bottom-Left (7:30) -->
+                    <div class="gallery-image-card slot-06">
+                        <img src="assets/img/Whell/image copy.png" alt="Creative Project 6" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 07: Left (9:00) -->
+                    <div class="gallery-image-card slot-07">
+                        <img src="assets/img/Whell/image copy 2.png" alt="Creative Project 7" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 08: Top-Left (10:30) -->
+                    <div class="gallery-image-card slot-08">
+                        <img src="assets/img/Whell/image copy 3.png" alt="Creative Project 8" class="gallery-image" loading="lazy">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Far Right Vertical Rating Badge (matching reference) -->
+           
+
+        </div>
+    </section>
+
+    <!-- Outro Section (Unpins and Continues Smoothly) -->
+    <section class="wheel-next-section">
+        <div class="wheel-next-card">
+            <h2 class="wheel-next-title">Pioneering Luxury Across India</h2>
+            <p class="wheel-next-desc">
+                From Asia's first ecotel hotel to iconic heritage palace fortresses, Kamat Hotels (India) Limited blends eco-sensitive innovation with heartfelt Indian hospitality.
+            </p>
+            <a href="about.html" class="wheel-banner-btn" style="background: linear-gradient(135deg, #7d007d 0%, #3e0040 100%);">
+                <span class="btn-arrow">&rarr;</span>
+                <span>DISCOVER OUR HERITAGE</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Core Scripts: Lenis + GSAP + ScrollTrigger + Wheel Controller -->
+    <script src="assets/js/plugins/lenis.min.js"></script>
+    <script>
+        // Fallback to CDN if local bundle not reached
+        if (typeof Lenis === 'undefined') {
+            document.write('<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"><\/script>');
+        }
+    </script>
+    <script src="assets/js/plugins/gsap.js"></script>
+    <script src="assets/js/plugins/scroll-trigger.js"></script>
+    <script src="assets/js/gallery-wheel.js"></script>
+</body>
+</html>
