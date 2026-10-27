@@ -247,6 +247,7 @@ body.investors-page ::selection {
   border-radius: 8px;
   padding: 3px;
   gap: 3px;
+  min-width:250px;
 }
 
 .inv-toggle-btn {
@@ -558,17 +559,22 @@ body.investors-page ::selection {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* View toggle for Static HTML */
+/* View toggle for Static HTML - Table View is DEFAULT */
 .inv-tab-pane .inv-table-view {
-  display: none;
+  display: block !important;
 }
 
-.table-mode-active .inv-tab-pane .inv-docs-grid {
+.inv-tab-pane .inv-docs-grid {
   display: none !important;
 }
 
-.table-mode-active .inv-tab-pane .inv-table-view {
-  display: block !important;
+/* When Card Grid mode is activated */
+.cards-mode-active .inv-tab-pane .inv-docs-grid {
+  display: grid !important;
+}
+
+.cards-mode-active .inv-tab-pane .inv-table-view {
+  display: none !important;
 }
 
 /* ==========================================================================
@@ -709,6 +715,7 @@ body.investors-page ::selection {
 }
 
 .inv-doc-desc {
+  display:none;
   font-size: 13.5px;
   color: var(--khil-muted);
   line-height: 1.5;
@@ -785,17 +792,12 @@ body.investors-page ::selection {
    6. TABLE VIEW (MATCHING IMAGE 1 BOARD COMMITTEES STYLE)
    ========================================================================== */
 .inv-table-view {
-  display: none;
   background: #ffffff;
   border: 1px solid var(--khil-border);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
   margin-bottom: 40px;
-}
-
-.inv-table-view.active {
-  display: block;
 }
 
 .inv-table-wrapper {

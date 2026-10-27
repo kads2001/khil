@@ -172,24 +172,24 @@
       <section class="inv-content-section" id="annual-reports-archive">
         <div class="inv-section-heading">
           <div class="inv-heading-left">
-            <!-- <span class="inv-section-eyebrow">
+            <span class="inv-section-eyebrow">
               <i class="fas fa-circle"></i> FINANCIALS &gt; ANNUAL REPORTS
-            </span> -->
+            </span>
             <h2 class="inv-section-title">Annual Reports &amp; Statutory Filings</h2>
             <p class="inv-section-desc">
               Browse and download official audited annual reports, AGM notices, and Form MGT-7 filings. Select a financial year below to explore full statutory documentation.
             </p>
           </div>
 
-          <!-- View Mode Switcher (Card Grid vs Table View) -->
+          <!-- View Mode Switcher (Table View default vs Card Grid) -->
           <div class="inv-view-toggle-wrap">
             <span class="inv-view-label">Display View:</span>
             <div class="inv-view-toggle" role="group" aria-label="View toggle">
-              <button type="button" class="inv-toggle-btn active" id="btnViewCards" aria-pressed="true">
-                <i class="fas fa-th-large"></i> Card Grid
-              </button>
-              <button type="button" class="inv-toggle-btn" id="btnViewTable" aria-pressed="false">
+              <button type="button" class="inv-toggle-btn active" id="btnViewTable" aria-pressed="true">
                 <i class="fas fa-table"></i> Table View
+              </button>
+              <button type="button" class="inv-toggle-btn" id="btnViewCards" aria-pressed="false">
+                <i class="fas fa-th-large"></i> Card Grid
               </button>
             </div>
           </div>
@@ -198,10 +198,10 @@
         <!-- MODERN YEAR TABS SYSTEM -->
         <div class="inv-years-bar-wrapper">
           <div class="inv-years-header">
-            <!-- <div class="inv-years-heading">
+            <div class="inv-years-heading">
               <i class="far fa-calendar-alt"></i> Select Financial Year
-            </div> -->
-            <!-- <span class="inv-year-count-badge">13 Financial Years Available</span> -->
+            </div>
+            <span class="inv-year-count-badge">13 Financial Years Available</span>
           </div>
 
           <div class="inv-years-scroller" id="yearsScroller">
@@ -3348,22 +3348,26 @@
         });
       });
 
-      // 2. View Mode Toggle (Card Grid vs Table View)
+      // 2. View Mode Toggle (Table View default vs Card Grid)
       var mainSection = document.getElementById('investorsMainSection');
-      var btnCards = document.getElementById('btnViewCards');
       var btnTable = document.getElementById('btnViewTable');
+      var btnCards = document.getElementById('btnViewCards');
 
       if (btnCards && btnTable && mainSection) {
-        btnCards.addEventListener('click', function () {
-          btnCards.classList.add('active');
-          btnTable.classList.remove('active');
-          mainSection.classList.remove('table-mode-active');
-        });
-
         btnTable.addEventListener('click', function () {
           btnTable.classList.add('active');
+          btnTable.setAttribute('aria-pressed', 'true');
           btnCards.classList.remove('active');
-          mainSection.classList.add('table-mode-active');
+          btnCards.setAttribute('aria-pressed', 'false');
+          mainSection.classList.remove('cards-mode-active');
+        });
+
+        btnCards.addEventListener('click', function () {
+          btnCards.classList.add('active');
+          btnCards.setAttribute('aria-pressed', 'true');
+          btnTable.classList.remove('active');
+          btnTable.setAttribute('aria-pressed', 'false');
+          mainSection.classList.add('cards-mode-active');
         });
       }
     })();
