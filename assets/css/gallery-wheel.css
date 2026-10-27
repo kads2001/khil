@@ -2,14 +2,15 @@
    GALLERY CIRCLE WHEEL BANNER (Scroll-driven Orbit Carousel Hero)
    Kamat Hotels (India) Limited (KHIL)
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Familjen+Grotesk:ital,wght@0,400..800;1,400..800&display=swap');
 
 :root {
   --wheel-bg: #F4F4F6;
   --wheel-text: #111111;
   --wheel-accent: #7d007d;
-  --wheel-radius: 280px;
-  --card-width: 175px;
-  --card-height: 230px;
+  --wheel-radius: 275px;
+  --card-width: 146px;
+  --card-height: 180px;
   --card-radius: 18px;
 }
 
@@ -59,13 +60,21 @@ body.wheel-page {
   position: relative;
   width: 100%;
   max-width: 100%;
-  height: 100vh;
+  height: clamp(620px, 92vh, 880px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 6vw;
+  padding-top: 85px;
+  padding-bottom: 15px;
+  padding-left: max(36px, calc((100vw - 1720px) / 2));
+  padding-right: max(36px, calc((100vw - 1720px) / 2));
   box-sizing: border-box;
   overflow: hidden;
+}
+
+/* Decrease bottom gap below wheel banner before next section on home page */
+.wheel-banner-section + .khil-about-showcase-section {
+  padding-top: 30px !important;
 }
 
 /* Giant Subtle Background Watermark ("KAMAT") */
@@ -73,9 +82,10 @@ body.wheel-page {
   position: absolute;
   left: 3vw;
   bottom: -4vw;
+  font-family: 'Boldonse', sans-serif !important;
   font-size: clamp(140px, 22vw, 340px);
-  font-weight: 900;
-  letter-spacing: -0.05em;
+  font-weight: 400;
+  
   line-height: 0.8;
   color: rgba(0, 0, 0, 0.04);
   text-transform: uppercase;
@@ -90,69 +100,98 @@ body.wheel-page {
 .wheel-banner-stage .rts-banner-content-three {
   position: relative;
   z-index: 10;
-  max-width: 520px;
-  padding: 20px 0;
+  max-width: min(460px, 34vw);
+  flex-shrink: 0;
+  padding: 10px 0;
+  margin: 0 0 0 clamp(48px, 4.5vw, 75px) !important;
+  text-align: left !important;
 }
 
 .wheel-banner-content .khil-hero-eyebrow-tag,
 .wheel-banner-stage .khil-hero-eyebrow-tag {
   display: inline-block;
-  font-size: 13.5px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--wheel-accent, #7d007d) !important;
-  margin: 0 0 16px 0;
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+  text-align: left !important;
 }
 
 .wheel-banner-heading,
 .wheel-banner-content h1,
-.wheel-banner-stage .rts-banner-content-three h1 {
-  font-size: clamp(44px, 5.2vw, 80px);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
+.wheel-banner-stage .rts-banner-content-three h1,
+.wheel-banner-content h1 *,
+.wheel-banner-stage .rts-banner-content-three h1 *,
+.wheel-banner-content h1 span,
+.wheel-banner-stage .rts-banner-content-three h1 span,
+.wheel-banner-content h1 div,
+.wheel-banner-stage .rts-banner-content-three h1 div {
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: clamp(34px, 3.8vw, 60px) !important;
+  font-weight: 400 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.01em;
   color: var(--wheel-text, #111111) !important;
-  margin: 0 0 20px 0;
+  margin: 0 0 18px 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
 }
 
 .wheel-banner-heading .hero-heading-line,
 .wheel-banner-content h1 .hero-heading-line,
 .wheel-banner-stage .rts-banner-content-three h1 .hero-heading-line {
   display: block;
-  white-space: nowrap;
+  font-family: 'Boldonse', sans-serif !important;
+  white-space: normal;
+  word-break: normal;
+  text-align: left !important;
 }
 
 .wheel-banner-heading .hero-heading-accent,
 .wheel-banner-content h1 .hero-heading-accent,
 .wheel-banner-stage .rts-banner-content-three h1 .hero-heading-accent {
+  font-family: 'Boldonse', sans-serif !important;
   color: var(--wheel-accent, #7d007d) !important;
 }
 
 .wheel-banner-desc,
 .wheel-banner-content p.disc,
 .wheel-banner-stage .rts-banner-content-three p.disc {
-  font-size: clamp(15px, 1.2vw, 17px) !important;
+  font-family: 'Familjen Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: clamp(14px, 1.05vw, 16px) !important;
   line-height: 1.6 !important;
   color: #555555 !important;
-  max-width: 420px;
-  margin: 0 0 32px 0;
+  max-width: 410px !important;
+  margin: 0 0 28px 0 !important;
+  padding: 0 !important;
   font-weight: 400 !important;
+  text-align: left !important;
 }
 
 .wheel-banner-content .button-group,
 .wheel-banner-stage .rts-banner-content-three .button-group {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 16px;
-  margin: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
 }
 
 .wheel-banner-stage .khil-hero-btn.primary {
   background: #111111 !important;
   color: #ffffff !important;
   border-color: #111111 !important;
-  padding: 7px 8px 7px 22px;
+  font-family: 'Boldonse', sans-serif !important;
+  font-size: 14px !important;
+  letter-spacing: 0.04em;
+  padding: 8px 8px 8px 24px;
   border-radius: 999px !important;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -208,8 +247,8 @@ body.wheel-page {
    ========================================================================== */
 .wheel-orbit-wrapper {
   position: absolute;
-  left: 67%;
-  top: 50%;
+  left: 66%;
+  top: calc(50% + 18px);
   width: 0;
   height: 0;
   z-index: 5;
@@ -364,59 +403,97 @@ body.wheel-page {
 /* ==========================================================================
    Responsive Adaptations
    ========================================================================== */
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   :root {
-    --wheel-radius: 245px;
-    --card-width: 155px;
-    --card-height: 205px;
+    --wheel-radius: 250px;
+    --card-width: 132px;
+    --card-height: 164px;
     --card-radius: 16px;
   }
+  .wheel-banner-stage {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
   .wheel-orbit-wrapper {
-    left: 70%;
+    left: 66%;
+  }
+  .wheel-banner-content,
+  .wheel-banner-stage .rts-banner-content-three {
+    max-width: min(390px, 32vw) !important;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
   :root {
-    --wheel-radius: 215px;
-    --card-width: 135px;
-    --card-height: 180px;
+    --wheel-radius: 225px;
+    --card-width: 118px;
+    --card-height: 146px;
     --card-radius: 14px;
   }
   .wheel-banner-stage {
-    padding: 0 4vw;
+    padding-top: 85px;
+    padding-bottom: 30px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
   .wheel-orbit-wrapper {
-    left: 72%;
+    left: 68%;
   }
-  .wheel-banner-heading {
-    font-size: 52px;
+  .wheel-banner-content,
+  .wheel-banner-stage .rts-banner-content-three {
+    max-width: 340px !important;
+  }
+  .wheel-banner-heading,
+  .wheel-banner-content h1,
+  .wheel-banner-stage .rts-banner-content-three h1 {
+    font-size: 38px !important;
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 991px) {
   .wheel-banner-stage {
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 100px;
-    height: 100vh;
+    align-items: center;
+    padding: 100px 20px 30px !important;
+    height: auto;
+    min-height: 100vh;
   }
-  .wheel-banner-content {
-    max-width: 100%;
-    text-align: center;
-    padding: 0;
+  .wheel-banner-content,
+  .wheel-banner-stage .rts-banner-content-three {
+    max-width: 100% !important;
+    text-align: center !important;
+    padding: 0 0 24px 0;
+    margin: 0 auto !important;
   }
-  .wheel-banner-desc {
-    margin: 0 auto 24px;
+  .wheel-banner-content .khil-hero-eyebrow-tag,
+  .wheel-banner-stage .khil-hero-eyebrow-tag,
+  .wheel-banner-heading,
+  .wheel-banner-content h1,
+  .wheel-banner-stage .rts-banner-content-three h1,
+  .wheel-banner-desc,
+  .wheel-banner-content p.disc,
+  .wheel-banner-stage .rts-banner-content-three p.disc {
+    text-align: center !important;
+  }
+  .wheel-banner-content .button-group,
+  .wheel-banner-stage .rts-banner-content-three .button-group {
+    justify-content: center !important;
+  }
+  .wheel-banner-content p.disc,
+  .wheel-banner-stage .rts-banner-content-three p.disc {
+    margin: 0 auto 20px !important;
   }
   .wheel-orbit-wrapper {
-    left: 50%;
-    top: 68%;
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 160px auto 40px;
   }
   :root {
-    --wheel-radius: 180px;
-    --card-width: 110px;
-    --card-height: 150px;
+    --wheel-radius: 170px;
+    --card-width: 90px;
+    --card-height: 112px;
     --card-radius: 12px;
   }
   .wheel-rating-badge {
@@ -426,15 +503,21 @@ body.wheel-page {
 
 @media (max-width: 480px) {
   :root {
-    --wheel-radius: 150px;
-    --card-width: 95px;
-    --card-height: 130px;
+    --wheel-radius: 138px;
+    --card-width: 74px;
+    --card-height: 92px;
     --card-radius: 10px;
   }
-  .wheel-banner-heading {
-    font-size: 38px;
+  .wheel-banner-heading,
+  .wheel-banner-content h1,
+  .wheel-banner-stage .rts-banner-content-three h1 {
+    font-size: 30px !important;
+  }
+  .wheel-banner-stage {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
   .wheel-orbit-wrapper {
-    top: 68%;
+    margin: 130px auto 30px;
   }
 }

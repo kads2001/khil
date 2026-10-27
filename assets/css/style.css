@@ -87,8 +87,8 @@
   --s-extra-bold: 800;
   --s-black: 900;
   --transition: 0.3s;
-  --khil-font-sans: "Familjen Grotesk", sans-serif;
-  --khil-font-serif: "Familjen Grotesk", sans-serif;
+  --khil-font-sans: "Boldonse", sans-serif;
+  --khil-font-serif: "Boldonse", sans-serif;
   --font-anybody: "Familjen Grotesk", sans-serif;
   --font-archivo-black: "Archivo Black", sans-serif;
   --font-isometra: "Isometra", sans-serif;
@@ -123,7 +123,7 @@ html, body {
   font-family: var(--font-primary) !important;
 }
 
-body *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]):not([class^="icon-"]):not([class*=" icon-"]):not([class^="unicons-"]):not([class*=" unicons-"]):not(.lucide):not(.lucide *):not(header):not(header *):not(.header-one):not(.header-one *):not(.khil-header-container):not(.khil-header-container *):not(.khil-nav):not(.khil-nav *):not(.khil-mobile-menu):not(.khil-mobile-menu *):not(footer):not(footer *):not(.khil-shared-footer):not(.khil-shared-footer *) {
+body *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]):not([class^="icon-"]):not([class*=" icon-"]):not([class^="unicons-"]):not([class*=" unicons-"]):not(.lucide):not(.lucide *):not(header):not(header *):not(.header-one):not(.header-one *):not(.khil-header-container):not(.khil-header-container *):not(.khil-nav):not(.khil-nav *):not(.khil-mobile-menu):not(.khil-mobile-menu *):not(footer):not(footer *):not(.khil-shared-footer):not(.khil-shared-footer *):not(.wheel-banner-section):not(.wheel-banner-section *) {
   font-family: var(--font-primary) !important;
 }
 

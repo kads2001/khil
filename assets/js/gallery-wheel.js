@@ -108,11 +108,11 @@
 
     // Fallbacks based on viewport width
     const w = window.innerWidth;
-    if (w <= 420) return 180;
-    if (w <= 640) return 215;
-    if (w <= 991) return 280;
-    if (w <= 1200) return 330;
-    return 380;
+    if (w <= 480) return 138;
+    if (w <= 991) return 170;
+    if (w <= 1199) return 225;
+    if (w <= 1400) return 250;
+    return 275;
   }
 
   /**
@@ -183,8 +183,8 @@
       0
     );
 
-    // 3. Smooth forward scale: visibly scales in (0.88 -> 1.06) and holds (no descaling at end)
-    wheelTimeline.fromTo(
+    // 3. Natural scale: starts at 1.0 so wheel has full reference space without scaling, with subtle scroll depth
+     wheelTimeline.fromTo(
       wheel,
       {
         scale: 0.88,
