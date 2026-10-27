@@ -2364,13 +2364,14 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 }
 
 .khil-about-headline {
-  font-size: 44px;
-  font-weight: 600;
-  line-height: 1.16;
-  letter-spacing: -0.035em;
+  font-family: var(--font-heading) !important;
+  font-size: 32px !important;
+  line-height: 48px !important;
+  letter-spacing: -0.01em !important;
   color: #0f172a;
-  margin: 0 0 16px;
+  margin: 0 auto 16px;
   text-align: center;
+  max-width: 860px;
 }
 
 .khil-about-showcase-section .khil-about-subdesc {
@@ -2545,7 +2546,8 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
     font-size: 42px;
   }
   .khil-about-headline {
-    font-size: 36px;
+    font-size: 32px !important;
+    line-height: 48px !important;
   }
   .khil-about-showcase-section .khil-showcase-card.card-0,
   .khil-about-showcase-section .khil-showcase-card.card-1,
@@ -2604,7 +2606,8 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 
 @media (max-width: 575px) {
   .khil-about-headline {
-    font-size: 28px;
+    font-size: 32px !important;
+    line-height: 48px !important;
   }
   .khil-about-stat-side .stat-number {
     font-size: 36px;
@@ -3547,7 +3550,7 @@ h3,
 .sub-heading-title,
 .card-sub-title,
 .card-subheading {
-  font-size: 32px !important;
+  font-size: 20px !important;
   font-weight: 600 !important;
   line-height: 1.35 !important;
   color: #111827 !important;

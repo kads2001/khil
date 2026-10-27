@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Familjen+Grotesk:ital,wght@0,400..800;1,400..800&display=swap');
 
 :root {
+  --font-heading: "Boldonse", sans-serif;
   --wheel-bg: #F4F4F6;
   --wheel-text: #111111;
   --wheel-accent: #7d007d;
@@ -82,7 +83,7 @@ body.wheel-page {
   position: absolute;
   left: 3vw;
   bottom: -4vw;
-  font-family: 'Boldonse', sans-serif !important;
+  font-family: 'Familjen Grotesk', sans-serif !important;
   font-size: clamp(140px, 22vw, 340px);
   font-weight: 400;
   
@@ -110,13 +111,13 @@ body.wheel-page {
 .wheel-banner-content .khil-hero-eyebrow-tag,
 .wheel-banner-stage .khil-hero-eyebrow-tag {
   display: inline-block;
-  font-family: 'Boldonse', sans-serif !important;
-  font-size: 13px !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.08em;
+  font-family: 'Familjen Grotesk', -apple-system, sans-serif !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--wheel-accent, #7d007d) !important;
-  margin: 0 0 14px 0 !important;
+  /* margin: 0 0 12px 0 !important; */
   padding: 0 !important;
   line-height: 1.2 !important;
   text-align: left !important;
@@ -131,13 +132,12 @@ body.wheel-page {
 .wheel-banner-stage .rts-banner-content-three h1 span,
 .wheel-banner-content h1 div,
 .wheel-banner-stage .rts-banner-content-three h1 div {
-  font-family: 'Boldonse', sans-serif !important;
-  font-size: clamp(34px, 3.8vw, 60px) !important;
-  font-weight: 400 !important;
-  line-height: 1.15 !important;
+  font-family: var(--font-heading) !important;
+  font-size: 32px !important;
+  line-height: 48px !important;
   letter-spacing: -0.01em;
   color: var(--wheel-text, #111111) !important;
-  margin: 0 0 18px 0 !important;
+  /* margin: 0 0 16px 0 !important; */
   padding: 0 !important;
   text-align: left !important;
 }
@@ -146,7 +146,7 @@ body.wheel-page {
 .wheel-banner-content h1 .hero-heading-line,
 .wheel-banner-stage .rts-banner-content-three h1 .hero-heading-line {
   display: block;
-  font-family: 'Boldonse', sans-serif !important;
+  font-family: var(--font-heading) !important;
   white-space: normal;
   word-break: normal;
   text-align: left !important;
@@ -155,7 +155,7 @@ body.wheel-page {
 .wheel-banner-heading .hero-heading-accent,
 .wheel-banner-content h1 .hero-heading-accent,
 .wheel-banner-stage .rts-banner-content-three h1 .hero-heading-accent {
-  font-family: 'Boldonse', sans-serif !important;
+  font-family: var(--font-heading) !important;
   color: var(--wheel-accent, #7d007d) !important;
 }
 
@@ -188,7 +188,7 @@ body.wheel-page {
   background: #111111 !important;
   color: #ffffff !important;
   border-color: #111111 !important;
-  font-family: 'Boldonse', sans-serif !important;
+  font-family: 'Familjen Grotesk', sans-serif !important;
   font-size: 14px !important;
   letter-spacing: 0.04em;
   padding: 8px 8px 8px 24px;
@@ -446,7 +446,8 @@ body.wheel-page {
   .wheel-banner-heading,
   .wheel-banner-content h1,
   .wheel-banner-stage .rts-banner-content-three h1 {
-    font-size: 38px !important;
+    font-size: 32px !important;
+    line-height: 48px !important;
   }
 }
 

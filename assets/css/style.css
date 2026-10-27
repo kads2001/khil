@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Anybody:ital,wght@0,100..900;1,100..900&family=Archivo+Black&family=Isometra&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
 
+@font-face {
+  font-family: 'Boldonse';
+  src: url('../fonts/boldonse.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*=================Scss Indexing=============
 1.variables
 2.typography
@@ -87,18 +95,18 @@
   --s-extra-bold: 800;
   --s-black: 900;
   --transition: 0.3s;
-  --khil-font-sans: "Boldonse", sans-serif;
-  --khil-font-serif: "Boldonse", sans-serif;
+  --khil-font-sans: "Familjen Grotesk", sans-serif;
+  --khil-font-serif: var(--font-heading);
   --font-anybody: "Boldonse", sans-serif;
   --font-archivo-black: "Archivo Black", sans-serif;
   --font-isometra: "Isometra", sans-serif;
-  --font-body: "Boldonse", sans-serif;
+  --font-body: "Familjen Grotesk", sans-serif;
   --font-heading: "Boldonse", sans-serif;
-  --font-sans: "Boldonse", sans-serif;
-  --font-serif: "Boldonse", sans-serif;
-  --font-medium: "Boldonse", sans-serif;
-  --font-primary: "Boldonse", sans-serif;
-  --font-secondary: "Boldonse", sans-serif;
+  --font-sans: "Familjen Grotesk", sans-serif;
+  --font-serif: var(--font-heading);
+  --font-medium: "Familjen Grotesk", sans-serif;
+  --font-primary: "Familjen Grotesk", sans-serif;
+  --font-secondary: var(--font-heading);
   --font-3: "fontawesome";
   --font-4: "Boldonse", sans-serif;
   --font-5: "Familjen Grotesk", sans-serif;
@@ -119,13 +127,74 @@
 /* ==========================================================================
    GLOBAL FONT ASSIGNMENT (Leaving Header and Footer)
    ========================================================================== */
+
 html, body {
   font-family: var(--font-primary) !important;
 }
 
-body *:not(i):not(svg):not([class^="fa"]):not([class*=" fa"]):not([class^="icon-"]):not([class*=" icon-"]):not([class^="unicons-"]):not([class*=" unicons-"]):not(.lucide):not(.lucide *):not(header):not(header *):not(.header-one):not(.header-one *):not(.khil-header-container):not(.khil-header-container *):not(.khil-nav):not(.khil-nav *):not(.khil-mobile-menu):not(.khil-mobile-menu *):not(footer):not(footer *):not(.khil-shared-footer):not(.khil-shared-footer *) {
+/* Base Body Elements: Standard Brand Font */
+body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(h1 *):not(h2 *):not(h3 *):not(h4 *):not(h5 *):not(h6 *):not(.title):not([class*="-title"]):not([class*="-heading"]):not([class*="-headline"]):not(i):not(svg):not([class^="fa"]):not([class*=" fa"]):not([class^="icon-"]):not([class*=" icon-"]):not([class^="unicons-"]):not([class*=" unicons-"]):not(.lucide):not(.lucide *):not(header):not(header *):not(.header-one):not(.header-one *):not(.khil-header-container):not(.khil-header-container *):not(.khil-nav):not(.khil-nav *):not(.khil-mobile-menu):not(.khil-mobile-menu *):not(footer):not(footer *):not(.khil-shared-footer):not(.khil-shared-footer *) {
   font-family: var(--font-primary) !important;
 }
+
+/* Headings ONLY: var(--font-heading) ("Boldonse", sans-serif) */
+h1, h2, h3, h4, h5, h6,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *,
+.title,
+.section-title,
+.section-title *,
+.hero-title,
+.hero-title *,
+.wheel-banner-heading,
+.wheel-banner-heading *,
+.wheel-banner-content h1,
+.wheel-banner-content h1 *,
+.khil-about-headline,
+.khil-about-headline *,
+.khil-founders-title,
+.khil-founders-title *,
+.khil-bento-title,
+.khil-bento-title *,
+.bento-card-title,
+.bento-card-title *,
+.khil-gallery-title,
+.khil-gallery-title *,
+.khil-blog-title,
+.khil-blog-title *,
+.khil-blog-card-title,
+.khil-blog-card-heading,
+.blog-card-heading,
+.contact-main-title,
+.contact-map-heading,
+.csr-foundation-title,
+.csr-gallery-title,
+.csr-card-title,
+.khil-inner-banner-title,
+.khil-inner-banner-title *,
+.notices-portal-title,
+.reg46-intro-title,
+.usd-intro-title,
+.usd-pane-title {
+  font-family: var(--font-heading) !important;
+}
+
+/* Non-heading elements stay with standard brand font */
+p,
+span:not(h1 *):not(h2 *):not(h3 *):not(h4 *):not(h5 *):not(h6 *),
+a:not(h1 *):not(h2 *):not(h3 *):not(h4 *):not(h5 *):not(h6 *):not([class*="-title"]):not([class*="-heading"]),
+.subtitle,
+[class*="-subtitle"],
+[class*="-subdesc"],
+[class*="-desc"],
+.disc,
+.sub-title,
+.btn,
+.rts-btn,
+.badge,
+.table {
+  font-family: var(--font-primary) !important;
+}
+
 
 /* Preserve Header & Navigation original fonts */
 header,

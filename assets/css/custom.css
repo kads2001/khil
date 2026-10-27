@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Boldonse';
+  src: url('../fonts/boldonse.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-heading: "Boldonse", sans-serif;
+}
+
 /* ==========================================================================
    KAMAT HOTELS (INDIA) LTD. (KHIL) - CUSTOM STYLES
    ========================================================================== */
@@ -1859,11 +1871,11 @@ body.home-three-page .rts-btn {
 .rts-about-area .title,
 .csr-foundation-title,
 .csr-gallery-title {
-  font-family: var(--font-primary, "Familjen Grotesk", sans-serif) !important;
-  font-size: clamp(32px, 3.5vw, 44px) !important;
-  font-weight: 600 !important;
-  line-height: 1.2 !important;
-  letter-spacing: -0.025em !important;
+  font-family: var(--font-heading) !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  line-height: 48px !important;
+  letter-spacing: -0.01em !important;
 }
 
 .khil-about-subdesc,
@@ -1907,8 +1919,8 @@ body.home-three-page .rts-btn {
   .rts-about-area .title,
   .csr-foundation-title,
   .csr-gallery-title {
-    font-size: 30px !important;
-    line-height: 1.22 !important;
+    font-size: 26px !important;
+    line-height: 1.28 !important;
   }
 
   .khil-about-subdesc,
@@ -1970,9 +1982,9 @@ h3.khil-blog-card-heading,
 .khil-blog-card-heading a,
 .card-heading-20 a,
 .khil-blog-card-title a {
-  font-size: 20px !important;
+  font-size: 16px !important;
   font-weight: 700 !important;
-  line-height: 1.35 !important;
+  line-height: 1.6 !important;
   color: #111827 !important;
   letter-spacing: normal !important;
 }
