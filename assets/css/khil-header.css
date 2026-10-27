@@ -2631,19 +2631,26 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 .khil-hotels-bento-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 36px;
-  row-gap: 90px;
+  gap: 40px;
+  column-gap: 40px;
+  row-gap: 40px;
   align-items: stretch;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Header Block (Row 1 Left, Matching Reference Top-Left Text Stage) */
 .khil-bento-header-block {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 12px 20px 24px 6px;
-  margin-left: 100px;
-  margin-top: 105px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .khil-bento-pill {
@@ -2721,7 +2728,10 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 
 /* Hotel Card Component (Matching Reference Card Container) */
 .khil-bento-hotel-card {
-  max-width: 700px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
   background: #ffffff;
   border: 1px solid rgba(125, 0, 125, 0.2);
   border-radius: 25px;
