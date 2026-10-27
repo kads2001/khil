@@ -103,6 +103,7 @@
             <ul>
               <li><a href="investors.html">View Reports</a></li>
               <li><a href="annual-reports.html">Annual Reports</a></li>
+              <li><a href="investor-contact.html">Investor Contact</a></li>
               <li><a href="https://khil.com/investors/quarterly-results/quarterly-results.html" target="_blank" rel="noopener noreferrer">Quarterly Results</a></li>
               <li><a href="https://khil.com/investors/investors/corporate-governance-reports.html" target="_blank" rel="noopener noreferrer">Corporate Governance Reports</a></li>
               <li><a href="https://khil.com/investors/investors/shareholding-pattern.html" target="_blank" rel="noopener noreferrer">Shareholding Pattern</a></li>
