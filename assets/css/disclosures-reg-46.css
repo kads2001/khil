@@ -1,0 +1,535 @@
+/* ==========================================================================
+   KAMAT HOTELS (INDIA) LIMITED - DISCLOSURES UNDER REGULATION 46 OF LODR
+   Brand Palette: KHIL Royal Plum (#7d007d), Heritage Gold (#B89B69), Warm Sand (#FAF8F5)
+   File: assets/css/disclosures-reg-46.css
+   ========================================================================== */
+
+:root {
+  --khil-plum: #7d007d;
+  --khil-plum-dark: #520052;
+  --khil-plum-deep: #380038;
+  --khil-plum-soft: rgba(125, 0, 125, 0.06);
+  --khil-plum-border: rgba(125, 0, 125, 0.2);
+  --khil-plum-glow: rgba(125, 0, 125, 0.16);
+
+  --khil-gold: #B89B69;
+  --khil-gold-dark: #9E7A36;
+  --khil-gold-light: #E8D3A7;
+  --khil-gold-soft: #F9F6F0;
+  --khil-gold-border: rgba(184, 155, 105, 0.35);
+
+  --khil-ink: #1f242e;
+  --khil-charcoal: #121826;
+  --khil-muted: #616a78;
+  --khil-body: #424955;
+  --khil-bg: #FAF8F5;
+  --khil-sand: #F5F1EB;
+  --khil-white: #FFFFFF;
+  --khil-border: #E5DCCE;
+  --khil-border-light: #F0EAE1;
+
+  --khil-font-serif: 'Familjen Grotesk', system-ui, -apple-system, sans-serif;
+  --khil-font-sans: 'Familjen Grotesk', system-ui, -apple-system, sans-serif;
+  --khil-transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.reg46-page {
+  background-color: var(--khil-bg);
+  color: var(--khil-ink);
+  font-family: var(--khil-font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.reg46-page ::selection {
+  background-color: var(--khil-plum);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   CONTAINER & LAYOUT
+   ========================================================================== */
+.reg46-container {
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 28px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+  .reg46-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .reg46-container {
+    padding: 0 16px;
+  }
+}
+
+.reg46-main {
+  position: relative;
+  padding: 48px 0 90px;
+  background-color: var(--khil-bg);
+}
+
+/* ==========================================================================
+   1. HERO INTRO CARD
+   ========================================================================== */
+.reg46-intro-card {
+  position: relative;
+  z-index: 10;
+  background: var(--khil-white);
+  border: 1px solid var(--khil-border);
+  border-radius: 16px;
+  padding: 36px 40px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.05);
+  margin-bottom: 36px;
+}
+
+.reg46-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--khil-plum);
+  background: var(--khil-plum-soft);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  border: 1px solid var(--khil-plum-border);
+}
+
+.reg46-eyebrow i {
+  font-size: 11px;
+  color: var(--khil-gold-dark);
+}
+
+.reg46-intro-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--khil-charcoal);
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.reg46-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--khil-gold);
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.reg46-intro-desc {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--khil-body);
+  margin: 0 0 24px;
+  max-width: 1280px;
+}
+
+.reg46-toolbar-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid var(--khil-border-light);
+}
+
+.reg46-search-wrapper {
+  position: relative;
+  min-width: 340px;
+  max-width: 460px;
+  flex: 1;
+}
+
+.reg46-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--khil-muted);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.reg46-search-input {
+  width: 100%;
+  padding: 12px 18px 12px 42px;
+  border-radius: 30px;
+  border: 1px solid var(--khil-border);
+  background: #FAF8F5;
+  color: var(--khil-ink);
+  font-size: 14px;
+  outline: none;
+  transition: var(--khil-transition);
+  box-sizing: border-box;
+}
+
+.reg46-search-input:focus {
+  border-color: var(--khil-plum);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px var(--khil-plum-soft);
+}
+
+.reg46-meta-badges {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reg46-badge-counter {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--khil-plum);
+  background: var(--khil-plum-soft);
+  border: 1px solid var(--khil-plum-border);
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reg46-badge-law {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--khil-gold-dark);
+  background: var(--khil-gold-soft);
+  border: 1px solid var(--khil-gold-border);
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 768px) {
+  .reg46-intro-card {
+    padding: 24px;
+  }
+  .reg46-intro-title {
+    font-size: 26px;
+  }
+  .reg46-toolbar-strip {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .reg46-search-wrapper {
+    min-width: 100%;
+  }
+}
+
+/* ==========================================================================
+   2. LUXURY TABLE VIEW (DEFAULT VIEW)
+   ========================================================================== */
+.reg46-table-card {
+  background: var(--khil-white);
+  border: 1px solid var(--khil-border);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.reg46-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.reg46-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+/* THEAD */
+.reg46-table thead th {
+  background: #FAF8F5;
+  color: var(--khil-charcoal);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 18px 24px;
+  border-bottom: 2px solid var(--khil-border);
+  white-space: nowrap;
+}
+
+.reg46-th-sr {
+  width: 90px;
+  text-align: center;
+}
+
+.reg46-th-particulars {
+  min-width: 480px;
+}
+
+.reg46-th-category {
+  width: 220px;
+}
+
+.reg46-th-action {
+  width: 180px;
+  text-align: right;
+  padding-right: 32px !important;
+}
+
+/* TBODY */
+.reg46-table tbody tr {
+  border-bottom: 1px solid var(--khil-border-light);
+  transition: background-color 0.22s ease, transform 0.22s ease;
+}
+
+.reg46-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.reg46-table tbody tr:hover {
+  background-color: rgba(125, 0, 125, 0.035);
+}
+
+.reg46-table tbody td {
+  padding: 18px 24px;
+  vertical-align: middle;
+  font-size: 14.5px;
+}
+
+/* Serial Number Badge */
+.reg46-td-sr {
+  text-align: center;
+}
+
+.reg46-sr-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--khil-gold-soft);
+  border: 1px solid var(--khil-gold-border);
+  color: var(--khil-gold-dark);
+  font-weight: 800;
+  font-size: 13.5px;
+  letter-spacing: -0.01em;
+  transition: var(--khil-transition);
+}
+
+.reg46-table tbody tr:hover .reg46-sr-num {
+  background: var(--khil-plum);
+  color: #FFFFFF;
+  border-color: var(--khil-plum);
+}
+
+/* Particulars Item Link */
+.reg46-item-link {
+  color: var(--khil-charcoal);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.5;
+  display: inline-block;
+  transition: var(--khil-transition);
+}
+
+.reg46-item-link:hover {
+  color: var(--khil-plum);
+}
+
+.reg46-table tbody tr:hover .reg46-item-link {
+  color: var(--khil-plum-dark);
+}
+
+/* Category Pill */
+.reg46-category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 16px;
+  white-space: nowrap;
+}
+
+.reg46-category-tag.policy {
+  background: #FEF3F2;
+  color: #B42318;
+  border: 1px solid #FECDCA;
+}
+
+.reg46-category-tag.governance {
+  background: #F0FDF4;
+  color: #166534;
+  border: 1px solid #BBF7D0;
+}
+
+.reg46-category-tag.financial {
+  background: #EFF8FF;
+  color: #175CD3;
+  border: 1px solid #B2DDFF;
+}
+
+.reg46-category-tag.general {
+  background: #F9F5FF;
+  color: #6941C6;
+  border: 1px solid #E9D7FE;
+}
+
+/* Action Buttons */
+.reg46-action-wrap {
+  text-align: right;
+  padding-right: 8px;
+}
+
+.reg46-btn-doc {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--khil-transition);
+}
+
+.reg46-btn-doc.pdf {
+  background: #FAF8F5;
+  border: 1px solid var(--khil-border);
+  color: #c0392b;
+}
+
+.reg46-btn-doc.pdf i.fa-file-pdf {
+  font-size: 14px;
+}
+
+.reg46-btn-doc.pdf:hover {
+  background: #c0392b;
+  color: #FFFFFF;
+  border-color: #c0392b;
+}
+
+.reg46-btn-doc.web {
+  background: #FAF8F5;
+  border: 1px solid var(--khil-border);
+  color: var(--khil-plum);
+}
+
+.reg46-btn-doc.web:hover {
+  background: var(--khil-plum);
+  color: #FFFFFF;
+  border-color: var(--khil-plum);
+}
+
+.reg46-btn-doc i.fa-arrow-right,
+.reg46-btn-doc i.fa-arrow-up-right-from-square {
+  font-size: 11px;
+  transition: transform 0.2s ease;
+}
+
+.reg46-btn-doc:hover i {
+  transform: translateX(3px);
+}
+
+/* Empty State if searched and not found */
+.reg46-empty-state {
+  display: none;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.reg46-empty-icon {
+  font-size: 40px;
+  color: var(--khil-muted);
+  margin-bottom: 16px;
+}
+
+.reg46-empty-text {
+  font-size: 16px;
+  color: var(--khil-charcoal);
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.reg46-empty-sub {
+  font-size: 14px;
+  color: var(--khil-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   3. BOTTOM REGULATORY FOOTNOTE STRIP
+   ========================================================================== */
+.reg46-footnote-card {
+  background: var(--khil-gold-soft);
+  border-left: 4px solid var(--khil-gold);
+  border-radius: 0 12px 12px 0;
+  padding: 20px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--khil-gold-border);
+  border-right: 1px solid var(--khil-gold-border);
+  border-bottom: 1px solid var(--khil-gold-border);
+}
+
+.reg46-footnote-text {
+  font-size: 14px;
+  color: var(--khil-charcoal);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.reg46-footnote-text strong {
+  color: var(--khil-plum-dark);
+}
+
+.reg46-footnote-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.reg46-footnote-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--khil-white);
+  border: 1px solid var(--khil-border);
+  color: var(--khil-plum);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: var(--khil-transition);
+}
+
+.reg46-footnote-btn:hover {
+  background: var(--khil-plum);
+  color: #FFFFFF;
+  border-color: var(--khil-plum);
+}
+
+@media (max-width: 900px) {
+  .reg46-footnote-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
