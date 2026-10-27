@@ -268,14 +268,15 @@ body.milestone-page i[class*=" fa-"] {
   max-height: 190px;
   box-sizing: border-box;
   margin: 0 auto;
-  background: var(--color-card-bg);
-  border: 1.5px solid var(--color-border);
+  background: white;
+  border: none;
   border-radius: 14px;
   padding: 12px 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  box-shadow: black 3px 3px;
   align-items: center;
    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
               border-color 0.3s ease, 
