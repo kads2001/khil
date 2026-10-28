@@ -133,8 +133,8 @@ body.wheel-page {
 .wheel-banner-content h1 div,
 .wheel-banner-stage .rts-banner-content-three h1 div {
   font-family: var(--font-heading) !important;
-  font-size: 32px !important;
-  line-height: 48px !important;
+  font-size: 52px !important;
+  line-height: 54px !important;
   letter-spacing: -0.01em;
   color: var(--wheel-text, #111111) !important;
   /* margin: 0 0 16px 0 !important; */

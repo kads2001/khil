@@ -5,12 +5,12 @@
     <footer class="khil-shared-footer">
       <!-- Animated Glowing Ambient Background Shapes -->
       <div class="khil-footer-glow-bg" aria-hidden="true">
-        <div class="khil-glow-orb orb-center"></div>
+        <!--<div class="khil-glow-orb orb-center"></div>
         <div class="khil-glow-orb orb-top-left"></div>
         <div class="khil-glow-orb orb-bottom-left"></div>
         <div class="khil-glow-orb orb-top-right"></div>
         <div class="khil-glow-orb orb-bottom-right"></div>
-        <div class="khil-glow-orb orb-ambient"></div>
+        <div class="khil-glow-orb orb-ambient"></div>-->
       </div>
 
       <div class="container">

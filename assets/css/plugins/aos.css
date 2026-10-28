@@ -1602,3 +1602,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     -webkit-transform: perspective(2500px) rotateX(0);
     transform: perspective(2500px) rotateX(0)
 }
+
+/* Light Speed In Left */
+[data-aos="lightSpeedInLeft"] {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0) skewX(30deg);
+    transform-origin: left center;
+}
+
+[data-aos="lightSpeedInLeft"].aos-animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) skewX(0deg);
+}

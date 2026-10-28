@@ -97,18 +97,21 @@
   --transition: 0.3s;
   --khil-font-sans: "Familjen Grotesk", sans-serif;
   --khil-font-serif: var(--font-heading);
-  --font-anybody: "Boldonse", sans-serif;
+  /*--font-anybody: "Boldonse", sans-serif;*/
+  --font-anybody: "Familjen Grotesk", sans-serif;
   --font-archivo-black: "Archivo Black", sans-serif;
   --font-isometra: "Isometra", sans-serif;
   --font-body: "Familjen Grotesk", sans-serif;
-  --font-heading: "Boldonse", sans-serif;
+  /*--font-heading: "Boldonse", sans-serif;*/
+  --font-heading: "Familjen Grotesk", sans-serif;
   --font-sans: "Familjen Grotesk", sans-serif;
   --font-serif: var(--font-heading);
   --font-medium: "Familjen Grotesk", sans-serif;
   --font-primary: "Familjen Grotesk", sans-serif;
   --font-secondary: var(--font-heading);
   --font-3: "fontawesome";
-  --font-4: "Boldonse", sans-serif;
+  --font-4: "Familjen Grotesk", sans-serif;
+  /*--font-4: "Boldonse", sans-serif;*/
   --font-5: "Familjen Grotesk", sans-serif;
   --font-size-b1: 16px;
   --font-size-b2: 16px;

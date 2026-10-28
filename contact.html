@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="assets/css/home-banner.css">
 
     <link rel="stylesheet" href="assets/css/inner-banner.css">
+    <link rel="stylesheet" href="assets/css/contact-layout.css">
 </head>
 
 <body class="radious-4 demo-default contact-page">
@@ -108,10 +109,7 @@
     </div>
     <script src="assets/js/khil-preloader.js"></script>
 
-    <script src="components/header.js"></script>
-
-        <!-- KHIL Inner Page Banner -->
-    <section class="khil-inner-banner" aria-label="Page Banner">
+    <script src="components/header.js"></script>    <section class="khil-inner-banner" aria-label="Page Banner">
         <div class="container">
             <div class="khil-inner-banner-content">
                <h1 class="khil-inner-banner-title" style="font-family: 'Boldonse', sans-serif;">
@@ -126,87 +124,105 @@
         </div>
     </section>
 
-    <div class="rts-contact-us-strip">
-        <div class="container">
-            <div class="row contact-panel-row">
-                <div class="col-lg-4 contact-left-column">
-                    <div class="contact-card-item">
-                        <div class="contact-card-icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <h3>Our Location</h3>
-                        <p>KHIL House, 70-C, Nehru Road, Vile Parle (East), Adjoining Orchid Hotel, Mumbai - 400 099.</p>
-                        <a href="https://www.google.com/maps?cid=6858414189931827733" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
-                    </div>
 
-                    <div class="contact-card-item">
-                        <div class="contact-card-icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <h3>Email Us</h3>
-                        <p>Our support team is here to assist you</p>
-                        <a href="mailto:cs@khil.com">cs@khil.com</a>
-                    </div>
+    <!-- ==========================================================================
+         CONTACT PAGE SECTION - MODERN MINIMALIST LAYOUT
+         ========================================================================== -->
+    <section class="contact-layout-section" aria-label="Contact Kamat Hotels">
+        <div class="contact-layout-container">
 
-                    <div class="contact-card-item">
-                        <div class="contact-card-icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <h3>Call Us</h3>
-                        <p>Our customer support team is available</p>
-                        <a href="tel:+912226164000">+91 22 26164000</a>
+            <!-- Centered Bold Title -->
+         
+            <!-- 3 Info Cards Grid -->
+            <div class="contact-cards-grid">
+                <!-- Phone Card -->
+                <div class="contact-info-card">
+                    <div class="contact-card-badge" aria-hidden="true">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <h2 class="contact-card-heading">Phone</h2>
+                        <a href="tel:+912226164000" class="contact-card-link">+91 22 2616 4000</a>
                     </div>
                 </div>
 
-                <div class="col-lg-8 contact-right-column">
-                    <form method="post" action="mailer.php" id="contact-form" class="contact-form-main-wrapper-contact form__content">
-                        <div class="single-input-wrapper">
-                            <div class="single-input">
-                                <label for="name">First Name</label>
-                                <input name="name" id="name" type="text" placeholder="Your Name" required>
-                            </div>
-                            <div class="single-input">
-                                <label for="lname">Last Name</label>
-                                <input id="lname" type="text" placeholder="Last Name">
-                            </div>
-                        </div>
+                <!-- Email Card -->
+                <div class="contact-info-card">
+                    <div class="contact-card-badge" aria-hidden="true">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <h2 class="contact-card-heading">Email</h2>
+                        <a href="mailto:cs@khil.com" class="contact-card-link">cs@khil.com</a>
+                    </div>
+                </div>
 
-                        <div class="single-input-wrapper">
-                            <div class="single-input">
-                                <label for="email">Email</label>
-                                <input id="email" type="email" name="email" placeholder="example@gmail.com" required>
-                            </div>
-                            <div class="single-input">
-                                <label for="phone">Phone</label>
-                                <div class="input-with-country-selenct">
-                                    <select class="form-select" aria-label="Country select">
-                                        <option selected>IND (+91)</option>
-                                        <option value="1">USA (+1)</option>
-                                        <option value="2">UAE (+971)</option>
-                                        <option value="3">UK (+44)</option>
-                                    </select>
-                                    <input id="phone" type="tel" name="phone" placeholder="Phone">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="single-input">
-                            <label for="message">How can we help you?</label>
-                            <textarea name="message" id="message" placeholder="Your message..." required></textarea>
-                        </div>
-
-                        <div class="single-input with-checkbox">
-                            <input type="checkbox" name="checkbox" id="checkbox">
-                            <label for="checkbox">You agree to our friendly <a href="#">privacy policy</a></label>
-                        </div>
-
-                        <div id="form-messages"></div>
-                        <button class="custom-submit-btn" type="submit">Send Message</button>
-                    </form>
+                <!-- Location Card -->
+                <div class="contact-info-card">
+                    <div class="contact-card-badge" aria-hidden="true">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <h2 class="contact-card-heading">Location</h2>
+                        <p class="contact-card-desc">KHIL House, Vile Parle (E), Mumbai</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- Large Form Card -->
+            <div class="contact-form-card">
+                <form method="post" action="mailer.php" id="contact-form">
+                    <!-- Row 1: First Name & Last Name -->
+                    <div class="contact-form-grid-row">
+                        <div class="contact-field-group">
+                            <label for="name" class="contact-field-label">First Name *</label>
+                            <input type="text" id="name" name="name" class="contact-field-input" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="contact-field-group">
+                            <label for="lname" class="contact-field-label">Last Name *</label>
+                            <input type="text" id="lname" name="lname" class="contact-field-input" placeholder="Enter your last name" required>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Email & Phone Number -->
+                    <div class="contact-form-grid-row">
+                        <div class="contact-field-group">
+                            <label for="email" class="contact-field-label">Email *</label>
+                            <input type="email" id="email" name="email" class="contact-field-input" placeholder="Enter your email" required>
+                        </div>
+                        <div class="contact-field-group">
+                            <label for="phone" class="contact-field-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="contact-field-input" placeholder="Enter phone number">
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Subject -->
+                    <div class="contact-form-full-row">
+                        <div class="contact-field-group">
+                            <label for="subject" class="contact-field-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="contact-field-input" placeholder="Subject">
+                        </div>
+                    </div>
+
+                    <!-- Row 4: Message -->
+                    <div class="contact-form-full-row">
+                        <div class="contact-field-group">
+                            <label for="message" class="contact-field-label">Message</label>
+                            <textarea id="message" name="message" class="contact-field-textarea" placeholder="write your message here..." rows="6" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="contact-submit-wrapper">
+                        <button type="submit" class="contact-submit-btn">Send Message</button>
+                    </div>
+
+                    <!-- Feedback Messages -->
+                    <div id="form-messages"></div>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
 
     <section class="contact-map-section" aria-labelledby="contact-map-title">
         <div class="container">

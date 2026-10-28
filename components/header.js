@@ -283,10 +283,29 @@
                         <span>Employer Login</span>
                         <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
-                    <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685&amp;dlyx_xs=05a400bc797cdec0bc0e1655ea41621c&amp;_gl=1*hsiqx0*_gcl_au*MTU4Njg4MzUwMS4xNzIyMjI5MzY2Ljc2ODcyNzYwMy4xNzIyNDA4NTc1LjE3MjI0MDg1NzQ." target="_blank" class="btn-book-now">
+                    <!--<a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685&amp;dlyx_xs=05a400bc797cdec0bc0e1655ea41621c&amp;_gl=1*hsiqx0*_gcl_au*MTU4Njg4MzUwMS4xNzIyMjI5MzY2Ljc2ODcyNzYwMy4xNzIyNDA4NTc1LjE3MjI0MDg1NzQ." target="_blank" class="btn-book-now">
                         <span>Book Now</span>
                         <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                    </a>
+                    </a>-->
+					<a class="replica-button" href="#" aria-label="Button">
+					  <span class="button-label">Book Now</span>
+
+					  <span class="button-arrow" aria-hidden="true">
+						<svg
+						  fill="none"
+						  stroke="currentColor"
+						  viewBox="0 0 24 24"
+						  xmlns="http://www.w3.org/2000/svg"
+						>
+						  <path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M14 5l7 7m0 0l-7 7m7-7H3"
+						  />
+						</svg>
+					  </span>
+					</a>
                     <div class="menu-btn-toggle khil-toggle">
                         <svg width="22" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect y="14" width="20" height="2" fill="#121826"></rect>
