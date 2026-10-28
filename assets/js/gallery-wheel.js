@@ -83,6 +83,7 @@
       wheelMultiplier: 1.0,
       infinite: false,
     });
+    window.lenis = lenisInstance;
 
     // Synchronize Lenis scroll position with GSAP ScrollTrigger
     lenisInstance.on('scroll', ScrollTrigger.update);

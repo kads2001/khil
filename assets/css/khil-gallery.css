@@ -1,0 +1,618 @@
+/* ==========================================================================
+   KHIL 3D CURVED HORIZON GALLERY STYLESHEET
+   Kamat Hotels (India) Limited (KHIL)
+   Recreated to match reference panoramic curved horizon carousel
+   Scope: strictly scoped to .khil-gallery-section
+   NO clamp() used - Fully responsive across 9 breakpoints
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Section & Outer Layout
+   -------------------------------------------------------------------------- */
+.khil-gallery-section {
+    position: relative;
+    width: 100%;
+    background-color: #FAF8F5;
+    padding-top: 55px;
+    padding-bottom: 65px;
+    overflow: hidden !important;
+    box-sizing: border-box;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.khil-gallery-section .khil-gallery-container {
+    width: 100%;
+    max-width: 1620px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 36px;
+    padding-right: 36px;
+    box-sizing: border-box;
+}
+
+/* Bento Pill Badge */
+.khil-gallery-section .khil-bento-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 18px;
+    background: #ffffff;
+    border: 1px solid rgba(142, 37, 126, 0.35);
+    border-radius: 999px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #8e257e;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 8px rgba(142, 37, 126, 0.06);
+}
+
+.khil-gallery-section .khil-bento-pill i {
+    color: #8e257e;
+    font-size: 13px;
+}
+
+/* Header Area */
+.khil-gallery-section .khil-gallery-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 36px;
+    margin-bottom: 20px;
+}
+
+.khil-gallery-section .khil-gallery-title {
+    font-family: var(--font-heading, "Familjen Grotesk", sans-serif);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: -0.01em;
+    color: #111111;
+    margin: 0;
+    flex: 1 1 55%;
+}
+
+.khil-gallery-section .khil-gallery-header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    flex: 0 0 42%;
+    max-width: 540px;
+}
+
+.khil-gallery-section .khil-gallery-desc {
+    font-family: var(--font-primary, "Familjen Grotesk", sans-serif);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: #555555;
+    margin: 0;
+    text-align: right;
+}
+
+/* Navigation Arrow Buttons */
+.khil-gallery-section .khil-gallery-nav-arrows {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.khil-gallery-section .gallery-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1.5px solid rgba(17, 17, 17, 0.14);
+    color: #111111;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.khil-gallery-section .gallery-nav-btn:hover {
+    background-color: #7d007d;
+    border-color: #7d007d;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(125, 0, 125, 0.28);
+}
+
+.khil-gallery-section .gallery-nav-btn:active {
+    transform: translateY(0);
+}
+
+.khil-gallery-section .gallery-nav-btn:focus-visible {
+    outline: 2px solid #7d007d;
+    outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   2. 3D Panoramic Curved Horizon Viewport & Track
+   -------------------------------------------------------------------------- */
+.khil-gallery-section .khil-gallery-viewport,
+#galleryViewport.khil-gallery-viewport {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    overflow: hidden !important;
+    padding-top: 30px;
+    padding-bottom: 45px;
+    perspective: 1100px;
+    -webkit-perspective: 1100px;
+    perspective-origin: 50% 50%;
+    -webkit-perspective-origin: 50% 50%;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.khil-gallery-section .khil-gallery-viewport.is-dragging {
+    cursor: grabbing;
+}
+
+.khil-gallery-section .khil-gallery-track {
+    display: flex !important;
+    position: relative;
+    width: max-content;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    will-change: transform;
+    align-items: center;
+    gap: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. 3D Cards & Imagery
+   -------------------------------------------------------------------------- */
+.khil-gallery-section .khil-gallery-card {
+    position: relative;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 350px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    will-change: transform;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.khil-gallery-section .gallery-card-inner {
+    position: relative;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    border-radius: 22px;
+    overflow: hidden !important;
+    background-color: #EDE8E1;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.13), 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-origin: center center;
+    will-change: transform;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: box-shadow 0.35s ease;
+}
+
+.khil-gallery-section .khil-gallery-card:hover .gallery-card-inner {
+    box-shadow: 0 26px 58px rgba(0, 0, 0, 0.2), 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.khil-gallery-section .gallery-card-inner img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center;
+    pointer-events: none;
+    border-radius: inherit;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.khil-gallery-section .khil-gallery-card:hover .gallery-card-inner img {
+    transform: scale(1.04);
+}
+
+/* Preserve Fort JadhavGADH top alignment requirement */
+.khil-gallery-section .khil-gallery-card:nth-child(2) .gallery-card-inner img,
+.khil-gallery-section img[src*="2.jpg"] {
+    object-position: center top !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Explicit Breakpoints for all 9 Screen Sizes (NO clamp)
+   Breakpoints: 1920px, 1536px, 1366px, 1280px, 1024px, 768px, 430px, 390px, 320px
+   -------------------------------------------------------------------------- */
+
+/* 1920 × 1080 - Large Desktop Monitors */
+@media (min-width: 1720px) {
+    .khil-gallery-section {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+    .khil-gallery-section .khil-gallery-container {
+        max-width: 1720px;
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+    .khil-gallery-section .khil-gallery-title {
+        font-size: 56px;
+        line-height: 58px;
+    }
+    .khil-gallery-section .khil-gallery-viewport,
+    #galleryViewport.khil-gallery-viewport {
+        min-height: 560px;
+        padding-top: 35px;
+        padding-bottom: 50px;
+    }
+    .khil-gallery-section .khil-gallery-card {
+        width: 270px;
+        height: 390px;
+    }
+    .khil-gallery-section .gallery-card-inner {
+        border-radius: 26px;
+    }
+    .khil-gallery-section .khil-gallery-track {
+        gap: 14px;
+    }
+}
+
+/* 1536 × 864 - Standard Full HD Desktop */
+@media (max-width: 1719px) and (min-width: 1440px) {
+    .khil-gallery-section {
+        padding-top: 55px;
+        padding-bottom: 65px;
+    }
+    .khil-gallery-section .khil-gallery-title {
+        font-size: 50px;
+        line-height: 52px;
+    }
+    .khil-gallery-section .khil-gallery-viewport,
+    #galleryViewport.khil-gallery-viewport {
+        min-height: 510px;
+    }
+    .khil-gallery-section .khil-gallery-card {
+        width: 240px;
+        height: 350px;
+    }
+    .khil-gallery-section .gallery-card-inner {
+        border-radius: 22px;
+    }
+    .khil-gallery-section .khil-gallery-track {
+        gap: 12px;
+    }
+}
+
+/* 1366 × 768 - Typical Laptops */
+@media (max-width: 1439px) and (min-width: 1300px) {
+    .khil-gallery-section {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+    .khil-gallery-section .khil-gallery-header {
+        margin-bottom: 18px;
+    }
+    .khil-gallery-section .khil-gallery-title {
+        font-size: 46px;
+        line-height: 48px;
+    }
+    .khil-gallery-section .khil-gallery-viewport,
+    #galleryViewport.khil-gallery-viewport {
+        min-height: 470px;
+    }
+    .khil-gallery-section .khil-gallery-card {
+        width: 220px;
+        height: 320px;
+    }
+    .khil-gallery-section .gallery-card-inner {
+        border-radius: 20px;
+    }
+    .khil-gallery-section .khil-gallery-track {
+        gap: 10px;
+    }
+}
+
+/* 1280 × 720 - Small Laptops & Landscape Tablets */
+@media (max-width: 1299px) and (min-width: 1100px) {
+    .khil-gallery-section {
+        padding-top: 45px;
+        padding-bottom: 55px;
+    }
+    .khil-gallery-section .khil-gallery-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .khil-gallery-section .khil-gallery-header {
+        gap: 28px;
+        margin-bottom: 16px;
+    }
+    .khil-gallery-section .khil-gallery-title {
+        font-size: 42px;
+        line-height: 44px;
+    }
+    .khil-gallery-section .khil-gallery-desc {
+        font-size: 15.5px;
+        line-height: 1.6;
+    }
+    .khil-gallery-section .khil-gallery-viewport,
+    #galleryViewport.khil-gallery-viewport {
+        min-height: 440px;
+    }
+    .khil-gallery-section .khil-gallery-card {
+        width: 205px;
+        height: 300px;
+    }
+    .khil-gallery-section .gallery-card-inner {
+        border-radius: 18px;
+    }
+    .khil-gallery-section .khil-gallery-track {
+        gap: 10px;
+    }
+}
+
+/* 1024 × 1366 - iPad Pro / Tablet Landscape */
+@media (max-width: 1099px) and (min-width: 860px) {
+    .khil-gallery-section {
+        padding-top: 42px;
+        padding-bottom: 50px;
+    }
+    .khil-gallery-section .khil-gallery-container {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+    .khil-gallery-section .khil-gallery-header {
+        gap: 22px;
+        margin-bottom: 16px;
+    }
+    .khil-gallery-section .khil-gallery-title {
+        font-size: 38px;
+        line-height: 40px;
+    }
+    .khil-gallery-section .khil-gallery-desc {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+    .khil-gallery-section .khil-gallery-viewport,
+    #galleryViewport.khil-gallery-viewport {
+        min-height: 410px;
+    }
+    .khil-gallery-section .khil-gallery-card {
+        width: 190px;
+        height: 280px;
+    }
+    .khil-gallery-section .gallery-card-inner {
+        border-radius: 18px;
+    }
+    .khil-gallery-section .khil-gallery-track {
+        gap: 8px;
+    }
+}
+
+/* 768 × 1024 - Tablets Portrait */
+@media (max-width: 859px) and (min-width: 600px) {
+    .khil-gallery-section {
+        padding-top: 38px;
+        padding-bottom: 46px;
+    }
+    .khil-gallery-section .khil-gallery-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .khil-gallery-section .khil-gallery-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 14px;
+    }
+    .khil-gallery-section .khil-gallery-header-right {
+        align-items: flex-start;
+        max-width: 100%;
+        flex: 1 1 100%;
+        gap: 12px;
+    }
+    .khil-gallery-section .khil-gallery-desc {
+        text-align: left;
+        font-size: 15px;
+        line-height: 1.55;
+    }
+    .khil-gallery-section .khil-gallery-title {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    .khil-gallery-section .khil-gallery-viewport,
+    #galleryViewport.khil-gallery-viewport {
+        min-height: 370px;
+    }
+    .khil-gallery-section .khil-gallery-card {
+        width: 170px;
+        height: 250px;
+    }
+    .khil-gallery-section .gallery-card-inner {
+        border-radius: 16px;
+    }
+    .khil-gallery-section .khil-gallery-track {
+        gap: 8px;
+    }
+}
+
+/* 430 × 932 - iPhone Pro Max / Large Mobile */
+@media (max-width: 599px) and (min-width: 410px) {
+    .khil-gallery-section {
+        padding-top: 32px;
+        padding-bottom: 42px;
+    }
+    .khil-gallery-section .khil-gallery-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    .khil-gallery-section .khil-gallery-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+    .khil-gallery-section .khil-gallery-header-right {
+        align-items: flex-start;
+        max-width: 100%;
+        gap: 10px;
+    }
+    .khil-gallery-section .khil-gallery-title {
+        font-size: 27px;
+        line-height: 32px;
+    }
+    .khil-gallery-section .khil-gallery-desc {
+        text-align: left;
+        font-size: 14.5px;
+        line-height: 1.5;
+    }
+    .khil-gallery-section .gallery-nav-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 14px;
+    }
+    .khil-gallery-section .khil-gallery-viewport,
+    #galleryViewport.khil-gallery-viewport {
+        min-height: 330px;
+    }
+    .khil-gallery-section .khil-gallery-card {
+        width: 150px;
+        height: 220px;
+    }
+    .khil-gallery-section .gallery-card-inner {
+        border-radius: 14px;
+    }
+    .khil-gallery-section .khil-gallery-track {
+        gap: 6px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* 390 × 844 - Standard iPhone (iPhone 12/13/14/15) */
+@media (max-width: 409px) and (min-width: 340px) {
+    .khil-gallery-section {
+        padding-top: 28px;
+        padding-bottom: 38px;
+    }
+    .khil-gallery-section .khil-gallery-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .khil-gallery-section .khil-gallery-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .khil-gallery-section .khil-gallery-header-right {
+        align-items: flex-start;
+        max-width: 100%;
+        gap: 8px;
+    }
+    .khil-gallery-section .khil-gallery-title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .khil-gallery-section .khil-gallery-desc {
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .khil-gallery-section .gallery-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 13px;
+    }
+    .khil-gallery-section .khil-gallery-viewport,
+    #galleryViewport.khil-gallery-viewport {
+        min-height: 300px;
+    }
+    .khil-gallery-section .khil-gallery-card {
+        width: 135px;
+        height: 200px;
+    }
+    .khil-gallery-section .gallery-card-inner {
+        border-radius: 13px;
+    }
+    .khil-gallery-section .khil-gallery-track {
+        gap: 5px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+/* 320 × 568 - iPhone SE / Compact Mobile */
+@media (max-width: 339px) {
+    .khil-gallery-section {
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
+    .khil-gallery-section .khil-gallery-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .khil-gallery-section .khil-gallery-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+    .khil-gallery-section .khil-gallery-header-right {
+        align-items: flex-start;
+        max-width: 100%;
+        gap: 8px;
+    }
+    .khil-gallery-section .khil-gallery-title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .khil-gallery-section .khil-gallery-desc {
+        text-align: left;
+        font-size: 13px;
+        line-height: 1.45;
+    }
+    .khil-gallery-section .gallery-nav-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+    .khil-gallery-section .khil-gallery-viewport,
+    #galleryViewport.khil-gallery-viewport {
+        min-height: 265px;
+    }
+    .khil-gallery-section .khil-gallery-card {
+        width: 120px;
+        height: 175px;
+    }
+    .khil-gallery-section .gallery-card-inner {
+        border-radius: 12px;
+    }
+    .khil-gallery-section .khil-gallery-track {
+        gap: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
