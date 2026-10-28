@@ -16,7 +16,7 @@
     <title>Kamat Hotels (India) Ltd. - Pioneering Hospitality Chain</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet preload" href="assets/css/plugins/fontawesome.css" as="style">
     <link rel="stylesheet preload" href="assets/css/plugins/swiper.css" as="style">
@@ -25,12 +25,216 @@
     <link rel="stylesheet" href="assets/css/plugins/aos.css">
     <link rel="stylesheet preload" href="assets/css/plugins/odometer.css" as="style">
     <link rel="stylesheet preload" href="assets/css/vendor/bootstrap.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 
     <link rel="stylesheet preload" href="assets/css/style.css" as="style">
     <link rel="stylesheet preload" href="assets/css/khil-header.css" as="style">
     <link rel="stylesheet preload" href="assets/css/custom.css" as="style">
     <link rel="stylesheet" href="assets/css/home-banner.css">
+    <link rel="stylesheet" href="assets/css/gallery-wheel.css">
+    <style>
+        :root {
+            /*--font-heading: "Boldonse", sans-serif;*/
+			--font-heading: "Familjen Grotesk", sans-serif;
+        }
+
+        .wheel-banner-section .wheel-banner-content h1,
+        .wheel-banner-section .wheel-banner-content h1 * {
+            font-family: var(--font-heading) !important;
+            font-size: 52px !important;
+            line-height: 54px !important;
+            letter-spacing: -0.01em !important;
+        }
+        .wheel-banner-section .khil-hero-eyebrow-tag {
+            font-family: 'Familjen Grotesk', -apple-system, sans-serif !important;
+            font-weight: 600 !important;
+            font-size: 12.5px !important;
+            letter-spacing: 0.1em !important;
+        }
+        .wheel-banner-section .khil-hero-btn.primary {
+            font-family: 'Familjen Grotesk', -apple-system, sans-serif !important;
+            font-weight: 600 !important;
+        }
+
+        /* Home Page All Section Main Headings */
+        .khil-about-headline,
+        .khil-about-showcase-section .khil-about-headline,
+        .khil-founders-title,
+        .khil-founders-section .khil-founders-title,
+        .khil-bento-title,
+        .khil-hotels-bento .khil-bento-title,
+        .khil-gallery-title,
+        .khil-gallery-section .khil-gallery-title,
+        .khil-blog-title,
+        .khil-blog-news-section .khil-blog-title,
+        .contact-main-title,
+        .rts-contact-us-strip .contact-main-title,
+        .csr-foundation-title,
+        .csr-gallery-title {
+            font-family: var(--font-heading) !important;
+            font-size: 52px !important;
+            line-height: 54px !important;
+            letter-spacing: -0.01em !important;
+        }
+
+        /* Animate.css bounceInLeft Scroll Trigger with AOS - Slow & Smooth Luxury Pacing */
+        @keyframes bounceInLeft {
+            0% {
+                opacity: 0;
+                transform: translate3d(-120px, 0, 0);
+            }
+            60% {
+                opacity: 1;
+                transform: translate3d(16px, 0, 0);
+            }
+            75% {
+                transform: translate3d(-6px, 0, 0);
+            }
+            90% {
+                transform: translate3d(2px, 0, 0);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        :root {
+            --animate-duration: 1.4s;
+        }
+
+        [data-aos="animate__bounceInLeft"]:not(.aos-animate) {
+            opacity: 0 !important;
+            animation: none !important;
+        }
+        [data-aos="animate__bounceInLeft"].aos-animate {
+            opacity: 1 !important;
+            animation-name: bounceInLeft !important;
+            animation-duration: 1.4s !important;
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+            animation-fill-mode: both !important;
+            will-change: transform, opacity;
+        }
+        [data-aos="animate__bounceInLeft"][data-aos-delay="50"].aos-animate { animation-delay: 50ms; }
+        [data-aos="animate__bounceInLeft"][data-aos-delay="100"].aos-animate { animation-delay: 100ms; }
+        [data-aos="animate__bounceInLeft"][data-aos-delay="150"].aos-animate { animation-delay: 150ms; }
+        [data-aos="animate__bounceInLeft"][data-aos-delay="200"].aos-animate { animation-delay: 200ms; }
+        [data-aos="animate__bounceInLeft"][data-aos-delay="250"].aos-animate { animation-delay: 250ms; }
+        [data-aos="animate__bounceInLeft"][data-aos-delay="300"].aos-animate { animation-delay: 300ms; }
+        [data-aos="animate__bounceInLeft"][data-aos-delay="350"].aos-animate { animation-delay: 350ms; }
+        [data-aos="animate__bounceInLeft"][data-aos-delay="400"].aos-animate { animation-delay: 400ms; }
+
+        @media (max-width: 1199px) {
+            .wheel-banner-section .wheel-banner-content h1,
+            .wheel-banner-section .wheel-banner-content h1 *,
+            .khil-about-headline,
+            .khil-about-showcase-section .khil-about-headline,
+            .khil-founders-title,
+            .khil-founders-section .khil-founders-title,
+            .khil-bento-title,
+            .khil-hotels-bento .khil-bento-title,
+            .khil-gallery-title,
+            .khil-gallery-section .khil-gallery-title,
+            .khil-blog-title,
+            .khil-blog-news-section .khil-blog-title,
+            .contact-main-title,
+            .rts-contact-us-strip .contact-main-title,
+            .csr-foundation-title,
+            .csr-gallery-title {
+                font-size: 42px !important;
+                line-height: 46px !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .wheel-banner-section .wheel-banner-content h1,
+            .wheel-banner-section .wheel-banner-content h1 *,
+            .khil-about-headline,
+            .khil-about-showcase-section .khil-about-headline,
+            .khil-founders-title,
+            .khil-founders-section .khil-founders-title,
+            .khil-bento-title,
+            .khil-hotels-bento .khil-bento-title,
+            .khil-gallery-title,
+            .khil-gallery-section .khil-gallery-title,
+            .khil-blog-title,
+            .khil-blog-news-section .khil-blog-title,
+            .contact-main-title,
+            .rts-contact-us-strip .contact-main-title,
+            .csr-foundation-title,
+            .csr-gallery-title {
+                font-size: 36px !important;
+                line-height: 40px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .wheel-banner-section .wheel-banner-content h1,
+            .wheel-banner-section .wheel-banner-content h1 *,
+            .khil-about-headline,
+            .khil-about-showcase-section .khil-about-headline,
+            .khil-founders-title,
+            .khil-founders-section .khil-founders-title,
+            .khil-bento-title,
+            .khil-hotels-bento .khil-bento-title,
+            .khil-gallery-title,
+            .khil-gallery-section .khil-gallery-title,
+            .khil-blog-title,
+            .khil-blog-news-section .khil-blog-title,
+            .contact-main-title,
+            .rts-contact-us-strip .contact-main-title,
+            .csr-foundation-title,
+            .csr-gallery-title {
+                font-size: 30px !important;
+                line-height: 35px !important;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .wheel-banner-section .wheel-banner-content h1,
+            .wheel-banner-section .wheel-banner-content h1 *,
+            .khil-about-headline,
+            .khil-about-showcase-section .khil-about-headline,
+            .khil-founders-title,
+            .khil-founders-section .khil-founders-title,
+            .khil-bento-title,
+            .khil-hotels-bento .khil-bento-title,
+            .khil-gallery-title,
+            .khil-gallery-section .khil-gallery-title,
+            .khil-blog-title,
+            .khil-blog-news-section .khil-blog-title,
+            .contact-main-title,
+            .rts-contact-us-strip .contact-main-title,
+            .csr-foundation-title,
+            .csr-gallery-title {
+                font-size: 26px !important;
+                line-height: 31px !important;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .wheel-banner-section .wheel-banner-content h1,
+            .wheel-banner-section .wheel-banner-content h1 *,
+            .khil-about-headline,
+            .khil-about-showcase-section .khil-about-headline,
+            .khil-founders-title,
+            .khil-founders-section .khil-founders-title,
+            .khil-bento-title,
+            .khil-hotels-bento .khil-bento-title,
+            .khil-gallery-title,
+            .khil-gallery-section .khil-gallery-title,
+            .khil-blog-title,
+            .khil-blog-news-section .khil-blog-title,
+            .contact-main-title,
+            .rts-contact-us-strip .contact-main-title,
+            .csr-foundation-title,
+            .csr-gallery-title {
+                font-size: 23px !important;
+                line-height: 28px !important;
+            }
+        }
+    </style>
 
 </head>
 
@@ -110,74 +314,109 @@
 
     <script src="components/header.js"></script>
 
-    <!-- rts banner area three start -->
-    <div class="rts-banner-area-three bg_image-three-banner bg_image">
-        <!-- Background Image Slideshow (5 Luxury Destination Images) -->
-        <div class="khil-hero-slideshow" aria-hidden="true">
-            <div class="khil-hero-slide active" style="background-image: url('assets/img/bannerimgs/1.png');"></div>
-            <!-- <div class="khil-hero-slide" style="background-image: url('assets/img/bannerimgs/2.jpg');"></div> -->
-            <div class="khil-hero-slide" style="background-image: url('assets/img/bannerimgs/3.jpg');"></div>
-            <div class="khil-hero-slide" style="background-image: url('assets/img/bannerimgs/4.jpg');"></div>
-            <!-- <div class="khil-hero-slide" style="background-image: url('assets/img/bannerimgs/5.png');"></div> -->
-        </div>
+    <!-- ==========================================================================
+         HERO BANNER: Scroll-Driven Circular Orbit Gallery
+         ========================================================================== -->
+    <section class="wheel-banner-section" id="wheelBanner" aria-label="Hero Showcase">
+        <div class="wheel-banner-stage">
+            
+            <!-- Giant Subtle Background Watermark -->
+            <div class="wheel-banner-watermark" aria-hidden="true">KHIL</div>
 
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <div class="rts-banner-content-three">
+            <!-- Left Banner Content -->
+            <div class="wheel-banner-content rts-banner-content-three">
+                <h3 class="khil-hero-eyebrow-tag" data-aos="fade-up" data-aos-delay="100">
+                    Asia's Pioneering Ecotel Chain
+                </h3>
+                <h1 class="rts-text-anime-style-1 animate__animated animate__bounceInLeft" data-aos="animate__bounceInLeft" data-aos-delay="200"><span class="hero-heading-line"><span>Kamat </span><span
+                            class="hero-heading-accent">Hotels</span></span><span
+                        class="hero-heading-line">(India) Ltd.</span></h1>
+                <p class="disc" data-aos="fade-up" data-aos-delay="300">
+                    Asia's Pioneering Hospitality Chain of Environmentally Sensitive 5-Star Hotels.
+                </p>
+                <div class="button-group" data-aos="fade-up" data-aos-delay="400">
+                    <!--<a href="index.html#brands" class="khil-hero-btn primary khil-btn-outline">Explore Our
+                        Brands <i class="fa-regular fa-arrow-right"></i></a>-->
+						<a class="replica-button" href="#" aria-label="Button">
+					  <span class="button-label">Our
+                        Brands</span>
 
-                        <h3 class="khil-hero-eyebrow-tag" data-aos="fade-up" data-aos-delay="100">
-                            Asia's Pioneering Ecotel Chain
-                        </h3>
-                        <h1 class="rts-text-anime-style-1" data-aos="fade-up" data-aos-delay="200"><span class="hero-heading-line"><span>Kamat </span><span
-                                    class="hero-heading-accent">Hotels</span></span><span
-                                class="hero-heading-line">(India) Ltd.</span></h1>
-                        <p class="disc" data-aos="fade-up" data-aos-delay="300">
-                            Asia's Pioneering Hospitality Chain of Environmentally Sensitive 5-Star Hotels.
-                        </p>
-                        <div class="button-group" data-aos="fade-up" data-aos-delay="400">
-                            <a href="index.html#brands" class="khil-hero-btn primary khil-btn-outline">Explore Our
-                                Brands <i class="fa-regular fa-arrow-right"></i></a>
-                            <!-- <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685" target="_blank" class="khil-hero-btn secondary"><i class="fa-regular fa-calendar-check"></i> Book Direct &amp; Save</a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 mt_md--50 mt_sm--50">
-                    <div class="khil-hero-image-wrapper" data-aos="fade-up" data-aos-delay="250">
-                        <img src="assets/img/bannerimg.png" alt="Kamat Hotels Destinations" class="main-hero-img">
-
-                        <!-- Floating Stat Card (matching user reference image 2) -->
-
-                    </div>
+					  <span class="button-arrow" aria-hidden="true">
+						<svg
+						  fill="none"
+						  stroke="currentColor"
+						  viewBox="0 0 24 24"
+						  xmlns="http://www.w3.org/2000/svg"
+						>
+						  <path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M14 5l7 7m0 0l-7 7m7-7H3"
+						  />
+						</svg>
+					  </span>
+					</a>
+                    <!-- <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685" target="_blank" class="khil-hero-btn secondary"><i class="fa-regular fa-calendar-check"></i> Book Direct &amp; Save</a> -->
                 </div>
             </div>
 
-            <!-- Brand Marquee Ribbon (matching user reference image 2) -->
-            <!-- <div class="row">
-                <div class="col-lg-12">
-                    <div class="khil-marquee-ribbon">
-                        <div class="marquee-track">
-                            <span>THE ORCHID HOTEL • FORT JADHAVGADH • MAHADODHI PALACE • LOTUS ECO RESORT • IRA BY ORCHID • TOYAM RETREAT • THE ORCHID PUNE • </span>
-                            <span>THE ORCHID HOTEL • FORT JADHAVGADH • MAHADODHI PALACE • LOTUS ECO RESORT • IRA BY ORCHID • TOYAM RETREAT • THE ORCHID PUNE • </span>
-                        </div>
+            <!-- Right Orbit Assembly -->
+            <div class="wheel-orbit-wrapper">
+                <!-- Orbit Dashed Guide Ring -->
+                <div class="gallery-wheel-orbit-ring" aria-hidden="true"></div>
+
+                <!-- Revolving Wheel Container -->
+                <div class="gallery-circle-wheel" id="galleryWheel">
+                    
+                    <!-- 01: Top (12:00) -->
+                    <div class="gallery-image-card slot-01">
+                        <img src="assets/img/orchid_hotel1.jpg" alt="Creative Project 1" class="gallery-image" loading="lazy">
                     </div>
+
+                    <!-- 02: Top-Right (1:30) -->
+                    <div class="gallery-image-card slot-02">
+                        <img src="assets/img/jadhavfort.jpg" alt="Creative Project 2" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 03: Right (3:00) -->
+                    <div class="gallery-image-card slot-03">
+                        <img src="assets/img/mahadodhilogo1.jpg" alt="Creative Project 3" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 04: Bottom-Right (4:30) -->
+                    <div class="gallery-image-card slot-04">
+                        <img src="assets/img/lotus1.jpg" alt="Creative Project 4" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 05: Bottom (6:00) -->
+                    <div class="gallery-image-card slot-05">
+                        <img src="assets/img/toyam1.jpg" alt="Creative Project 5" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 06: Bottom-Left (7:30) -->
+                    <div class="gallery-image-card slot-06">
+                        <img src="assets/img/orchid_hotel1.jpg" alt="Creative Project 6" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 07: Left (9:00) -->
+                    <div class="gallery-image-card slot-07">
+                        <img src="assets/img/jadhavfort.jpg" alt="Creative Project 7" class="gallery-image" loading="lazy">
+                    </div>
+
+                    <!-- 08: Top-Left (10:30) -->
+                    <div class="gallery-image-card slot-08">
+                        <img src="assets/img/mahadodhilogo1.jpg" alt="Creative Project 8" class="gallery-image" loading="lazy">
+                    </div>
+
                 </div>
-            </div> -->
+            </div>
 
-            <!-- Official KHIL Stats Counter Strip (matching user reference image 1) -->
+            <!-- Far Right Vertical Rating Badge (matching reference) -->
+           
 
         </div>
-
-        <!-- Slideshow Indicators -->
-        <div class="khil-hero-slide-controls d-none" aria-label="Hero background controls">
-            <button type="button" class="khil-slide-dot active" data-slide="0" aria-label="Slide 1"></button>
-            <button type="button" class="khil-slide-dot" data-slide="1" aria-label="Slide 2"></button>
-            <button type="button" class="khil-slide-dot" data-slide="2" aria-label="Slide 3"></button>
-            <button type="button" class="khil-slide-dot" data-slide="3" aria-label="Slide 4"></button>
-            <button type="button" class="khil-slide-dot" data-slide="4" aria-label="Slide 5"></button>
-        </div>
-    </div>
-    <!-- rts banner area three end -->
+    </section>
 
 
 
@@ -191,7 +430,7 @@
                 <!-- Left Flank: 2 Numbers -->
                 <div class="khil-about-stat-side left">
                     <div class="stat-item" data-aos="fade" data-aos-delay="100">
-                        <span class="stat-number"><span class="stat-counter" data-count="7">0</span></span>
+                        <span class="stat-number">0<span class="stat-counter" data-count="7">0</span></span>
                         <span class="stat-label">Brands</span>
                     </div>
                     <div class="stat-item" data-aos="fade" data-aos-delay="200">
@@ -207,8 +446,8 @@
                         <i class="fa-solid fa-crown"></i>
                         <span>About Kamat Hotels</span>
                     </div>
-                    <h2 class="khil-about-headline" id="khil-about-title" data-aos="fade-up" data-aos-delay="150">
-                        Empowering conscious luxury<br class="d-none d-md-inline"> &amp; timeless Indian heritage<br
+                    <h2 class="khil-about-headline animate__animated animate__bounceInLeft" id="khil-about-title" data-aos="animate__bounceInLeft" data-aos-delay="150">
+                        Empowering conscious luxury<br class="d-none d-md-inline"> &amp; <span class="khil-hero-01-text-gradient">timeless Indian heritage</span><br
                             class="d-none d-md-inline"> wherever journeys take you
                     </h2>
                     <p class="khil-about-subdesc" data-aos="fade-up" data-aos-delay="250">
@@ -354,7 +593,7 @@
                     <i class="fa-solid fa-crown"></i>
                     <span>Our Founders</span>
                 </div>
-                <h2 class="khil-founders-title" id="founders-title" data-aos="fade-up" data-aos-delay="150">
+                <h2 class="khil-founders-title animate__animated animate__bounceInLeft" id="founders-title" data-aos="animate__bounceInLeft" data-aos-delay="150">
                     The Leadership Behind KHIL
                 </h2>
                 <p class="khil-founders-subtitle" data-aos="fade-up" data-aos-delay="250">
@@ -423,8 +662,8 @@
                         <span>Our Brands</span>
                     </div>
 
-                    <h2 class="khil-bento-title" id="our-hotels-title" data-aos="fade-up" data-aos-delay="150">
-                        Come explore <br>our brands
+                    <h2 class="khil-bento-title animate__animated animate__bounceInLeft" id="our-hotels-title" data-aos="animate__bounceInLeft" data-aos-delay="150">
+                        Come explore <br><span class="khil-hero-01-text-gradient">our brands</span>
                     </h2>
                     <p class="khil-bento-desc" data-aos="fade-up" data-aos-delay="250">
                         Did you know?<br><br>
@@ -433,11 +672,30 @@
                         95 National & International awards.
 
                     </p>
-                    <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685" target="_blank"
+					<!--<a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685" target="_blank"
                         rel="noopener noreferrer" class="khil-bento-btn-primary" data-aos="fade-up" data-aos-delay="350">
                         <span>Book Your Stay</span>
                         <i class="fa-regular fa-arrow-right"></i>
-                    </a>
+                    </a>-->
+					<a class="replica-button replica-button-lgr" href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685" target="_blank" aria-label="Button">
+					  <span class="button-label">Book Your Stay</span>
+
+					  <span class="button-arrow" aria-hidden="true">
+						<svg
+						  fill="none"
+						  stroke="currentColor"
+						  viewBox="0 0 24 24"
+						  xmlns="http://www.w3.org/2000/svg"
+						>
+						  <path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M14 5l7 7m0 0l-7 7m7-7H3"
+						  />
+						</svg>
+					  </span>
+					</a>
                 </div>
 
                 <!-- Cell 2 (Row 1 Right): Card 1 - The Orchid Hotel Mumbai -->
@@ -611,73 +869,7 @@
                         </div>
                     </div>
                 </article>
-                  <article class="khil-bento-hotel-card card-fort" data-aos="fade-up" data-aos-delay="150">
-                    <div class="bento-card-visual-stage">
-                        <div class="bento-visual-media">
-                            <span class="bento-badge-tag"><i class="fa-solid fa-chess-rook"></i> 300-Yr Fort</span>
-                            <span class="bento-badge-rating"><i class="fa-solid fa-star"></i> 4.8</span>
-                            <img src="assets/img/jadhavfort.jpg" alt="Fort JadhavGADH, Pune" loading="lazy">
-                        </div>
-
-                    </div>
-                    <div class="bento-card-content">
-                        <div class="bento-card-main-row">
-                            <div class="bento-card-text-side">
-                                <h3 class="bento-card-title">Fort JadhavGADH</h3>
-                                <p class="bento-card-desc">
-                                    Take a journey through the 300 years of Royal Maratha legacy at Fort JadhavGADH with
-                                    secret passages, dungeons, lush lawns, canons, and more..
-                                </p>
-                                <div class="bento-card-action">
-                                    <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685"
-                                        target="_blank" rel="noopener noreferrer" class="bento-card-link">
-                                       <span>Explore Our  Brand</span>
-
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bento-card-brand-side">
-                                <img src="assets/img/logos/jadhavgadlogo.webp" alt="Fort JadhavGADH logo"
-                                    class="bento-brand-logo-img" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                </article>
-  <article class="khil-bento-hotel-card card-fort" data-aos="fade-up" data-aos-delay="150">
-                    <div class="bento-card-visual-stage">
-                        <div class="bento-visual-media">
-                            <span class="bento-badge-tag"><i class="fa-solid fa-chess-rook"></i> 300-Yr Fort</span>
-                            <span class="bento-badge-rating"><i class="fa-solid fa-star"></i> 4.8</span>
-                            <img src="assets/img/jadhavfort.jpg" alt="Fort JadhavGADH, Pune" loading="lazy">
-                        </div>
-
-                    </div>
-                    <div class="bento-card-content">
-                        <div class="bento-card-main-row">
-                            <div class="bento-card-text-side">
-                                <h3 class="bento-card-title">Fort JadhavGADH</h3>
-                                <p class="bento-card-desc">
-                                    Take a journey through the 300 years of Royal Maratha legacy at Fort JadhavGADH with
-                                    secret passages, dungeons, lush lawns, canons, and more..
-                                </p>
-                                <div class="bento-card-action">
-                                    <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685"
-                                        target="_blank" rel="noopener noreferrer" class="bento-card-link">
-                                       <span>Explore Our  Brand</span>
-
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bento-card-brand-side">
-                                <img src="assets/img/logos/jadhavgadlogo.webp" alt="Fort JadhavGADH logo"
-                                    class="bento-brand-logo-img" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
+               
             </div>
         </div>
     </section>
@@ -693,7 +885,7 @@
         <div class="container">
             <div class="ira-banner-content">
                 <img class="ira-banner-logo" src="assets/img/ira.png" alt="IRA by Orchid Hotels" data-aos="fade-up" data-aos-delay="50">
-                <div class="hero-title" data-aos="fade-up" data-aos-delay="150">Comfortable Stay, for your Business Tour</div>
+                <div class="hero-title animate__animated animate__bounceInLeft" data-aos="animate__bounceInLeft" data-aos-delay="150">Comfortable Stay, for your <span class="khil-hero-01-text-gradient">Business Tour</span></div>
                 <div class="hero-desc" data-aos="fade-up" data-aos-delay="250">
                     <p class="hero-intro">
                         <strong>Introducing, IRA by Orchid Hotels</strong><br>
@@ -713,11 +905,30 @@
 
                 </div>
                 <div class="hero-action" data-aos="fade-up" data-aos-delay="350">
-                    <a href="https://www.irahotels.com" target="_blank" rel="noopener noreferrer"
+                    <!--<a href="https://www.irahotels.com" target="_blank" rel="noopener noreferrer"
                         class="khil-hero-btn primary khil-btn-outline">
                         <span>Visit Website <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
 
-                    </a>
+                    </a>-->
+					<a class="replica-button replica-button-lgr" href="https://www.irahotels.com" target="_blank" aria-label="Button">
+					  <span class="button-label">Visit Website</span>
+
+					  <span class="button-arrow" aria-hidden="true">
+						<svg
+						  fill="none"
+						  stroke="currentColor"
+						  viewBox="0 0 24 24"
+						  xmlns="http://www.w3.org/2000/svg"
+						>
+						  <path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M14 5l7 7m0 0l-7 7m7-7H3"
+						  />
+						</svg>
+					  </span>
+					</a>
                 </div>
             </div>
         </div>
@@ -736,8 +947,8 @@
             </div>
             <!-- Header Area -->
             <div class="khil-gallery-header">
-                <h2 class="khil-gallery-title" id="gallery-title" data-aos="fade-up" data-aos-delay="150">
-                    Hospitality to elevate your<br>journey forward
+                <h2 class="khil-gallery-title animate__animated animate__bounceInLeft" id="gallery-title" data-aos="animate__bounceInLeft" data-aos-delay="150">
+                    Hospitality to elevate your<br><span class="khil-hero-01-text-gradient">journey forward</span>
                 </h2>
                 <div class="khil-gallery-header-right" data-aos="fade-up" data-aos-delay="250">
                     <p class="khil-gallery-desc">
@@ -895,9 +1106,9 @@
     <!-- ==========================================================================
          KHIL LATEST NEWS & BLOG SECTION (3-Card Minimalist Layout Matching Reference)
          ========================================================================== -->
-    <section class="khil-blog-section" id="blog-news" aria-labelledby="blog-news-title">
-        <div class="container">
-            <!-- Section Header -->
+		 
+	<section class="blog-section">
+	<!-- Section Header -->
             <div class="khil-blog-header">
                 <div class="khil-blog-header-left">
 
@@ -906,23 +1117,186 @@
                         <span>Latest News &amp; Updates</span>
                     </div>
 
-                    <h2 class="khil-blog-title" id="blog-news-title" data-aos="fade-up" data-aos-delay="150">Our latest events & news</h2>
+                    <h2 class="khil-blog-title animate__animated animate__bounceInLeft" id="blog-news-title" data-aos="animate__bounceInLeft" data-aos-delay="200">Our latest <br><span class="khil-hero-01-text-gradient">events & news</span></h2>
                     <p class="khil-blog-desc" data-aos="fade-up" data-aos-delay="250">Did you know?
                         Kamat Hotels India has recentely announced a new hotel management, leasing arm, Ira by Orchid
                         Hotels that is opening at multiple locations.</p>
                 </div>
                 <div class="khil-blog-header-right" data-aos="fade-up" data-aos-delay="300">
-                    <a href="media.html" class="khil-blog-view-all">
+                    <!--<a href="media.html" class="khil-blog-view-all">
                         <span>View All Newsroom</span>
                         <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                    </a>-->
+					<a class="replica-button" href="media.html" aria-label="Button">
+					  <span class="button-label">View All</span>
+
+					  <span class="button-arrow" aria-hidden="true">
+						<svg
+						  fill="none"
+						  stroke="currentColor"
+						  viewBox="0 0 24 24"
+						  xmlns="http://www.w3.org/2000/svg"
+						>
+						  <path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M14 5l7 7m0 0l-7 7m7-7H3"
+						  />
+						</svg>
+					  </span>
+					</a>
+                </div>
+            </div>
+    <div class="blog-grid">
+
+      <!-- Blog 1 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img
+            src="assets/images/blogs/image copy 6.png"
+            alt=""
+          />
+          <span class="category">Event</span>
+        </div>
+
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="blog-author">The Orchid Pune</span>
+            <span class="meta-divider"></span>
+            <time class="blog-date" datetime="2026-01-01">
+              01.01.2026
+            </time>
+          </div>
+
+          <h2 class="blog-title">
+            <a href="#">Maharashtra CM Devendra Fadnavis Does Ram Navami Pooja at The Orchid Hotel, Pune</a>
+          </h2>
+
+          <div class="blog-footer">
+            <a href="#" class="read-more">
+              Read More
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog 2 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img
+            src="assets/images/blogs/image copy 7.png"
+            alt=""
+          />
+          <span class="category">News</span>
+        </div>
+
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="blog-author">The Orchid</span>
+            <span class="meta-divider"></span>
+            <time class="blog-date" datetime="2026-01-01">
+              01.01.2026
+            </time>
+          </div>
+
+          <h2 class="blog-title">
+            <a href="#">Launch of Nifty Tourism Index puts India’s hotel industry in the spotlight</a>
+          </h2>
+
+          <div class="blog-footer">
+            <a href="#" class="read-more">
+              Read More
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog 3 -->
+      <article class="blog-card">
+        <div class="blog-image">
+          <img
+            src="assets/images/blogs/image copy 3.png"
+            alt=""
+          />
+          <span class="category">News</span>
+        </div>
+
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span class="blog-author">The Orchid Trademark</span>
+            <span class="meta-divider"></span>
+            <time class="blog-date" datetime="2026-01-01">
+              01.01.2026
+            </time>
+          </div>
+
+          <h2 class="blog-title">
+            <a href="#">Delhi High Court Directs OTAs to Remove 22 Listings in 'The Orchid' Trademark Case</a>
+          </h2>
+
+          <div class="blog-footer">
+            <a href="#" class="read-more">
+              Read More
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  
+		 
+    <!--<section class="khil-blog-section" id="blog-news" aria-labelledby="blog-news-title">
+        <div class="container">
+            <div class="khil-blog-header">
+                <div class="khil-blog-header-left">
+
+                    <div class="khil-blog-pill" data-aos="fade-up" data-aos-delay="50">
+                        <i class="fa-solid fa-crown"></i>
+                        <span>Latest News &amp; Updates</span>
+                    </div>
+
+                    <h2 class="khil-blog-title animate__animated animate__bounceInLeft" id="blog-news-title" data-aos="animate__bounceInLeft" data-aos-delay="150">Our latest <br><span class="khil-hero-01-text-gradient">events & news</span></h2>
+                    <p class="khil-blog-desc" data-aos="fade-up" data-aos-delay="250">Did you know?
+                        Kamat Hotels India has recentely announced a new hotel management, leasing arm, Ira by Orchid
+                        Hotels that is opening at multiple locations.</p>
+                </div>
+                <div class="khil-blog-header-right" data-aos="fade-up" data-aos-delay="300">
+					<a class="replica-button" href="media.html" aria-label="Button">
+					  <span class="button-label">View All</span>
+
+					  <span class="button-arrow" aria-hidden="true">
+						<svg
+						  fill="none"
+						  stroke="currentColor"
+						  viewBox="0 0 24 24"
+						  xmlns="http://www.w3.org/2000/svg"
+						>
+						  <path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M14 5l7 7m0 0l-7 7m7-7H3"
+						  />
+						</svg>
+					  </span>
+					</a>
                 </div>
             </div>
 
-            <!-- 3-Column Blog Cards Grid Matching Reference Image 1:1 -->
+
             <div class="khil-blog-grid">
 
-                <!-- Card 1: Maharashtra CM Devendra Fadnavis at The Orchid Hotel, Pune -->
                 <article class="khil-blog-card" data-aos="fade-up" data-aos-delay="100">
                     <a href="https://hospibuz.com/hotel/Hotel-listicles/maharashtra-cm-devendra-fadnavis-does-ram-navami-pooja-at-the-orchid-hotel-pune-8935330"
                         target="_blank" rel="noopener noreferrer" class="khil-blog-media"
@@ -949,7 +1323,6 @@
                     </div>
                 </article>
 
-                <!-- Card 2: Launch of Nifty Tourism Index puts India’s hotel industry in the spotlight -->
                 <article class="khil-blog-card" data-aos="fade-up" data-aos-delay="200">
                     <a href="https://www.costar.com/article/1906361982/launch-of-nifty-tourism-index-puts-indias-hotel-industry-in-the-spotlight"
                         target="_blank" rel="noopener noreferrer" class="khil-blog-media"
@@ -976,7 +1349,7 @@
                     </div>
                 </article>
 
-                <!-- Card 3: Delhi High Court - The Orchid Trademark Case -->
+
                 <article class="khil-blog-card" data-aos="fade-up" data-aos-delay="300">
                     <a href="https://therealtytoday.com/news/regulatory/delhi-high-court-directs-otas-to-remove-22-listings-in-kamat-hotels-the-orchid-trademark-case/"
                         target="_blank" rel="noopener noreferrer" class="khil-blog-media"
@@ -1002,12 +1375,10 @@
                     </div>
                 </article>
 
-                <!-- Card 4: The Kamat Legacy -->
-
 
             </div>
         </div>
-    </section>
+    </section>-->
 
 
 
@@ -1091,7 +1462,8 @@
     </script>
 
     <script defer src="assets/js/gallery-scroll.js"></script>
-    <script src="assets/js/home-hero-slider.js"></script>
+    <script defer src="assets/js/plugins/lenis.min.js"></script>
+    <script defer src="assets/js/gallery-wheel.js"></script>
 </body>
 
 </html>

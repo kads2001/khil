@@ -2069,7 +2069,12 @@ body.demo-cybersecurity {
 	/*BLOG CSS*/
 	.blog-section {
       width: 100%;
-      padding: 23px 2.45%;
+      margin: 0 auto;
+      padding-top: 23px;
+      padding-bottom: 23px;
+      padding-left: max(36px, calc((100vw - 1720px) / 2));
+      padding-right: max(36px, calc((100vw - 1720px) / 2));
+      box-sizing: border-box;
     }
 
     .blog-grid {
@@ -2216,7 +2221,7 @@ body.demo-cybersecurity {
     /* Tablet */
     @media (max-width: 1100px) {
       .blog-section {
-        padding: 24px;
+        padding: 24px 36px;
       }
 
       .blog-grid {
@@ -2290,7 +2295,7 @@ body.demo-cybersecurity {
 
     @media (max-width: 360px) {
       .blog-section {
-        padding: 2vh 3vw;
+        padding: 2vh 10px;
       }
       .blog-title {
         font-size: 20px;
@@ -2342,5 +2347,53 @@ body.demo-cybersecurity {
     color: #030303;
     transition: all .5s cubic-bezier(.30, .50, .05, .95);
 }
+
+/* Animate.css bounceInLeft Scroll Trigger with AOS - Slow & Smooth Luxury Pacing */
+@keyframes bounceInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-120px, 0, 0);
+    }
+    60% {
+        opacity: 1;
+        transform: translate3d(16px, 0, 0);
+    }
+    75% {
+        transform: translate3d(-6px, 0, 0);
+    }
+    90% {
+        transform: translate3d(2px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+[data-aos="animate__bounceInLeft"]:not(.aos-animate),
+[data-aos="bounceInLeft"]:not(.aos-animate) {
+    opacity: 0 !important;
+    animation: none !important;
+}
+
+[data-aos="animate__bounceInLeft"].aos-animate,
+[data-aos="bounceInLeft"].aos-animate {
+    opacity: 1 !important;
+    animation-name: bounceInLeft !important;
+    animation-duration: 1.4s !important;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+    animation-fill-mode: both !important;
+    will-change: transform, opacity;
+}
+
+[data-aos="animate__bounceInLeft"][data-aos-delay="50"].aos-animate { animation-delay: 50ms; }
+[data-aos="animate__bounceInLeft"][data-aos-delay="100"].aos-animate { animation-delay: 100ms; }
+[data-aos="animate__bounceInLeft"][data-aos-delay="150"].aos-animate { animation-delay: 150ms; }
+[data-aos="animate__bounceInLeft"][data-aos-delay="200"].aos-animate { animation-delay: 200ms; }
+[data-aos="animate__bounceInLeft"][data-aos-delay="250"].aos-animate { animation-delay: 250ms; }
+[data-aos="animate__bounceInLeft"][data-aos-delay="300"].aos-animate { animation-delay: 300ms; }
+[data-aos="animate__bounceInLeft"][data-aos-delay="350"].aos-animate { animation-delay: 350ms; }
+[data-aos="animate__bounceInLeft"][data-aos-delay="400"].aos-animate { animation-delay: 400ms; }
+
 
 	
