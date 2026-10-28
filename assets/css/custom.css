@@ -67,7 +67,7 @@
 }
 
 .banner-bg-attach-agency .hero-title {
-  font-size: clamp(28px, 3.8vw, 48px);
+  font-size: 44px;
   font-weight: 600;
   line-height: 1.25;
   color: #111111;
@@ -244,8 +244,7 @@ body.home-three-page .khil-blog-grid {
 .khil-brand-strip {
   padding: 30px 0 34px;
   background: #ffffff;
-  /* border-top: 1px solid #E7E1DA;
-  border-bottom: 1px solid #E7E1DA; */
+
 }
 
 .khil-brand-strip h2 {
@@ -283,8 +282,8 @@ body.home-three-page .khil-blog-grid {
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  gap: clamp(24px, 4vw, 58px);
-  padding-right: clamp(24px, 4vw, 58px);
+  gap: 3.8vw;
+  padding-right: 3.8vw;
 }
 
 @keyframes khilBrandMarquee {
@@ -382,308 +381,6 @@ body.home-three-page .rts-btn {
   .khil-brand-marquee-group[aria-hidden="true"] {
     display: none;
   }
-}
-
-/* ==========================================================================
-   VISION & CORE PRINCIPLES SECTION
-   ========================================================================== */
-
-.rts-vision-principles-area {
-    width: 100%;
-    padding: 45px 0 20px;
-    background: #f5f7fa;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Container matching header container width (1320px) */
-.rts-vision-principles-area .container,
-.rts-vision-principles-area .container-fluid {
-    max-width: 1320px !important;
-    width: 100%;
-    margin: 0 auto !important;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Card */
-.khil-vision-card {
-    height: 100%;
-    min-height: auto;
-    padding: 24px 28px;
-    background: #ffffff;
-    border: 1px solid #e4e9ef;
-    border-radius: 14px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.khil-vision-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 35px rgba(20, 40, 70, 0.08);
-}
-
-/* Card Header */
-.vision-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 14px;
-}
-
-.vision-card-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    border-radius: 50px;
-    background: #edf3f8;
-    color: #183b56;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.vision-card-badge i {
-    font-size: 13px;
-}
-
-.vision-card-num {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #8a98a7;
-}
-
-/* Title */
-.vision-card-title {
-    margin: 0 0 8px;
-    color: #16344a;
-    font-size: 44px;
-    line-height: 1.25;
-    font-weight: 700;
-}
-
-/* Description */
-.vision-card-text {
-    margin: 0;
-    color: #5e6b78;
-    font-size: 20px;
-    line-height: 1.6;
-    max-width: 100%;
-}
-
-/* Principles List */
-.vision-principles-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.vision-principles-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 5px;
-    color: #5e6b78;
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.vision-principles-list li i {
-    flex-shrink: 0;
-    margin-top: 4px;
-    color: #21835b;
-    font-size: 15px;
-}
-
-/* Tablet */
-@media (max-width: 991px) {
-    .rts-vision-principles-area {
-        padding: 35px 0;
-    }
-
-    .khil-vision-card {
-        min-height: auto;
-        padding: 20px 22px;
-    }
-
-    .vision-card-header {
-        margin-bottom: 12px;
-    }
-
-    .vision-card-title {
-        font-size: 20px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 575px) {
-    .rts-vision-principles-area {
-        padding: 28px 0;
-    }
-
-    .rts-vision-principles-area .container,
-    .rts-vision-principles-area .container-fluid {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    .khil-vision-card {
-        min-height: auto;
-        padding: 18px 16px;
-        border-radius: 12px;
-    }
-
-    .vision-card-header {
-        margin-bottom: 10px;
-    }
-
-    .vision-card-badge {
-        padding: 5px 10px;
-        font-size: 11px;
-        gap: 6px;
-    }
-
-    .vision-card-num {
-        font-size: 12px;
-    }
-
-    .vision-card-title {
-        font-size: 19px;
-        margin-bottom: 6px;
-    }
-
-    .vision-card-text {
-        font-size: 13.5px;
-        line-height: 1.55;
-    }
-
-    .vision-principles-list {
-        gap: 8px;
-    }
-
-    .vision-principles-list li {
-        font-size: 13px;
-        gap: 8px;
-    }
-}
-
-/* ==========================================================================
-   CORPORATE PHILOSOPHY SECTION - PERFECTLY ALIGNED
-   ========================================================================== */
-
-.corporate-philosophy-section {
-    width: 100%;
-    background: #f5f7fa;
-    padding: 0 0 50px;
-    position: relative;
-}
-
-.corporate-philosophy-section .container-fluid,
-.corporate-philosophy-section .container {
-    max-width: 1320px !important;
-    width: 100%;
-    margin: 0 auto !important;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.corporate-philosophy-box {
-    background: #ffffff;
-    border: 1px solid #e4e9ef;
-    border-radius: 14px;
-    padding: 26px 28px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.corporate-philosophy-box:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 35px rgba(20, 40, 70, 0.08);
-}
-
-.corporate-philosophy-box .section-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 12px;
-}
-
-.corporate-philosophy-box .section-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    border-radius: 50px;
-    background: #edf3f8;
-    color: #183b56;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.4px;
-}
-
-.corporate-philosophy-box .section-title,
-.corporate-philosophy-section h1.section-title,
-.corporate-philosophy-section h2.section-title {
-    margin: 0;
-    color: #16344a;
-    font-size: 24px;
-    line-height: 1.25;
-    font-weight: 700;
-}
-
-.corporate-philosophy-box .philosophy-text,
-.corporate-philosophy-section .philosophy-text {
-    margin: 0;
-    color: #5e6b78;
-    font-size: 15px;
-    line-height: 1.75;
-}
-
-@media (max-width: 991px) {
-    .corporate-philosophy-box {
-        padding: 20px 22px;
-    }
-
-    .corporate-philosophy-box .section-title,
-    .corporate-philosophy-section h1.section-title,
-    .corporate-philosophy-section h2.section-title {
-        font-size: 21px;
-    }
-
-    .corporate-philosophy-box .philosophy-text,
-    .corporate-philosophy-section .philosophy-text {
-        font-size: 14.5px;
-        line-height: 1.65;
-    }
-}
-
-@media (max-width: 575px) {
-    .corporate-philosophy-section {
-        padding: 0 0 35px;
-    }
-
-    .corporate-philosophy-box {
-        padding: 18px 16px;
-        border-radius: 12px;
-    }
-
-    .corporate-philosophy-box .section-title,
-    .corporate-philosophy-section h1.section-title,
-    .corporate-philosophy-section h2.section-title {
-        font-size: 19px;
-    }
-
-    .corporate-philosophy-box .philosophy-text,
-    .corporate-philosophy-section .philosophy-text {
-        font-size: 13.5px;
-        line-height: 1.6;
-    }
 }
 
 /* ==========================================================================
@@ -803,7 +500,7 @@ body.home-three-page .rts-btn {
 }
 
 .legacy-main-title {
-  font-size: clamp(2.3rem, 3.8vw, 3.6rem);
+  font-size: 3.2rem;
   font-weight: 700;
   color: #252525;
   letter-spacing: -0.04em;
@@ -904,7 +601,7 @@ body.home-three-page .rts-btn {
 }
 
 .khil-who-we-are-content .title {
-  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-size: 2.8rem;
   font-weight: 700;
   color: #252525;
   margin-bottom: 24px;
@@ -1045,11 +742,6 @@ body.home-three-page .rts-btn {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
-  /*background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
-  filter: blur(50px);
-  -webkit-filter: blur(50px);
-  will-change: transform, opacity;
-  mix-blend-mode: screen;*/
 }
 
 /* Center Large Dominant Orb */
@@ -1303,8 +995,8 @@ body.home-three-page .rts-btn {
 
 .khil-shared-footer .khil-footer-grid {
     display: grid;
-    grid-template-columns: 230px 230px 230px 230px 230px 230px;
-    gap: 36px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 32px;
     padding-bottom: 50px;
 }
 
@@ -1482,7 +1174,7 @@ body.home-three-page .rts-btn {
   color: #ffffff !important;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1400px) {
   .khil-shared-footer .khil-footer-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 36px 28px;
@@ -1532,16 +1224,6 @@ body.home-three-page .rts-btn {
     align-items: flex-start !important;
     gap: 12px;
   }
-}
-
-.khil-bento-desc {
-  width: 489px;
-  max-width: 100%;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.65;
-  color: #64748b;
-  margin: 0 0 32px;
 }
 
 /* Bento Hotel Card with Right-Side Brand Logo */
@@ -1667,7 +1349,7 @@ body.home-three-page .rts-btn {
 
 .khil-founders-title {
   font-family: var(--font-primary, 'Familjen Grotesk', sans-serif);
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-size: 2.5rem;
   font-weight: 700;
   color: #252525;
   letter-spacing: -0.01em;
@@ -1676,7 +1358,7 @@ body.home-three-page .rts-btn {
 }
 
 .khil-founders-subtitle {
-  font-size: clamp(0.92rem, 1.4vw, 1.05rem);
+  font-size: 1rem;
   color: #555555;
   line-height: 1.6;
   margin: 0 auto;
@@ -2482,7 +2164,7 @@ body.demo-cybersecurity {
     }
 
     .blog-title {
-      font-size: clamp(25px, 2.05vw, 34px);
+      font-size: 32px;
       line-height: 1.19;
       letter-spacing: -1.3px;
       font-weight: 600;
@@ -2603,6 +2285,50 @@ body.demo-cybersecurity {
 
       .read-more {
         font-size: 16px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .blog-section {
+        padding: 2vh 3vw;
+      }
+      .blog-title {
+        font-size: 20px;
+        line-height: 1.25;
+      }
+      .category {
+        font-size: 12px;
+        padding: 6px 12px;
+        min-width: 75px;
+        top: 10px;
+        right: 10px;
+      }
+      .blog-meta {
+        font-size: 12px;
+        margin-top: 16px;
+        margin-bottom: 10px;
+        gap: 8px;
+      }
+      .blog-footer {
+        margin-top: 20px;
+        padding-top: 14px;
+      }
+      .read-more {
+        font-size: 14px;
+      }
+      .khil-brand-wordmark {
+        flex: 0 0 110px;
+        width: 110px;
+        min-width: 110px;
+        min-height: 44px;
+      }
+      .khil-brand-wordmark img {
+        max-width: 100px;
+        height: 44px;
+      }
+      .khil-brand-strip h2 {
+        font-size: 17px;
+        margin-bottom: 14px;
       }
     }
 	.post-card .post-content h3:hover a {

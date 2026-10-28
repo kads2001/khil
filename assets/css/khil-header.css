@@ -302,16 +302,33 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .nav-area ul.khil-nav {
-    gap: 16px !important;
+    gap: 14px !important;
+  }
+  .header-right-group {
+    gap: 12px !important;
   }
   .header-right-group .nav-area ul.khil-nav {
-    gap: 15px !important;
+    gap: 12px !important;
   }
   .nav-area ul.khil-nav>li.main-nav>a {
-    font-size: 14.5px !important;
+    font-size: 14px !important;
   }
   .khil-header-container {
-    padding: 0 20px !important;
+    padding: 0 16px !important;
+  }
+  .header-action-buttons {
+    gap: 8px !important;
+  }
+  .header-action-buttons .replica-button {
+    width: 140px !important;
+    height: 42px !important;
+    font-size: 12px !important;
+    padding: 0 18px !important;
+  }
+  .header-action-buttons .btn-employer-login {
+    padding: 0 12px !important;
+    font-size: 13px !important;
+    height: 40px !important;
   }
 }
 
@@ -1250,34 +1267,34 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
     min-width: auto !important;
     flex-shrink: 0 !important;
   }
-}
 
-.header-action-buttons .btn-employer-login,
-.header-action-buttons .btn-book-now,
-.header-wrapper-main .header-action-buttons .btn-employer-login,
-.header-wrapper-main .header-action-buttons .btn-book-now,
-.header-one .btn-employer-login,
-.header-one .btn-book-now {
-  width: 200px !important;
-  min-width: 200px !important;
-  max-width: 200px !important;
-  height: 50px !important;
-  min-height: 50px !important;
-  max-height: 52px !important;
-  padding: 0 16px !important;
-  border-radius: 999px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-  box-sizing: border-box !important;
-  font-family: var(--font-primary) !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  white-space: nowrap !important;
-  text-align: center !important;
-  letter-spacing: 0.8px !important;
-  flex-shrink: 0 !important;
+  .header-action-buttons .btn-employer-login,
+  .header-action-buttons .btn-book-now,
+  .header-wrapper-main .header-action-buttons .btn-employer-login,
+  .header-wrapper-main .header-action-buttons .btn-book-now,
+  .header-one .btn-employer-login,
+  .header-one .btn-book-now {
+    width: 200px !important;
+    min-width: 200px !important;
+    max-width: 200px !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    max-height: 52px !important;
+    padding: 0 16px !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+    font-family: var(--font-primary) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    letter-spacing: 0.8px !important;
+    flex-shrink: 0 !important;
+  }
 }
 
 /* ==========================================================================
@@ -1286,7 +1303,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 .btn-employer-login,
 .header-action-buttons .btn-employer-login,
 .btn-employer-login.khil-btn-outline {
-  display: inline-flex !important;
+  display: inline-flex;
   align-items: center !important;
   justify-content: center !important;
   gap: 8px !important;
@@ -1459,7 +1476,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    min-height: 66px !important;
+    min-height: 70px !important;
   }
 
   .header-right-group {
@@ -1480,8 +1497,23 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
     flex-shrink: 0 !important;
   }
 
+  .logo-area a {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .header-one .logo-area img,
   .logo-area img {
-    max-height: 42px !important;
+    max-height: 52px !important;
+    max-width: 200px !important;
+    height: auto !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: block !important;
   }
 
   .header-action-buttons {
@@ -1495,13 +1527,27 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
     display: block !important;
   }
 
-  .btn-employer-login {
+  /* Completely remove Employer Login from header on mobile & tablet — shifted into burger */
+  header.header-one .header-wrapper-main .header-action-buttons .btn-employer-login,
+  header.header-one .header-action-buttons .btn-employer-login,
+  header.header-one .header-action-buttons .khil-btn-outline,
+  header.header-one .btn-employer-login,
+  .header-wrapper-main .header-action-buttons .btn-employer-login,
+  .header-wrapper-main .header-action-buttons .khil-btn-outline,
+  .header-one .header-action-buttons .btn-employer-login,
+  .header-one .header-action-buttons .khil-btn-outline,
+  .header-one .btn-employer-login,
+  .header-action-buttons .btn-employer-login,
+  .header-action-buttons .khil-btn-outline,
+  .header-action-buttons a.btn-employer-login {
     display: none !important;
   }
 
-  .btn-book-now {
-    padding: 7px 14px !important;
-    font-size: 12.5px !important;
+  .header-action-buttons .replica-button {
+    width: 140px !important;
+    height: 42px !important;
+    padding: 0 16px !important;
+    font-size: 12px !important;
   }
 
   .khil-header-container {
@@ -1509,33 +1555,117 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
   }
 }
 
-@media only screen and (max-width: 575px) {
-  .logo-area img {
-    max-height: 38px;
-  }
-
-  .btn-book-now {
-    padding: 6px 11px !important;
-    font-size: 11.5px !important;
-    gap: 5px !important;
-  }
-
-  .btn-book-now i {
-    width: 18px !important;
-    height: 18px !important;
-    font-size: 11px !important;
+@media only screen and (max-width: 767px) {
+  /* In mobile header: ONLY show logo and hamburger icon. All action buttons live inside burger drawer (#side-bar) */
+  header.header-one .header-wrapper-main .header-action-buttons a,
+  header.header-one .header-action-buttons a,
+  header.header-one .header-action-buttons .btn-employer-login,
+  header.header-one .header-action-buttons .replica-button,
+  header.header-one .header-action-buttons .btn-book-now,
+  header.header-one .header-action-buttons .khil-btn-outline,
+  .header-wrapper-main .header-action-buttons a,
+  .header-wrapper-main .header-action-buttons .btn-employer-login,
+  .header-wrapper-main .header-action-buttons .replica-button,
+  .header-wrapper-main .header-action-buttons .btn-book-now,
+  .header-action-buttons a,
+  .header-action-buttons .btn-employer-login,
+  .header-action-buttons .replica-button,
+  .header-action-buttons .btn-book-now,
+  .header-action-buttons .khil-btn-outline {
+    display: none !important;
   }
 
   .header-action-buttons {
-    gap: 6px !important;
+    gap: 0 !important;
+    margin-left: auto !important;
   }
 
-  .btn-book-now span {
-    display: inline;
+  .menu-btn-toggle.khil-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .khil-header-container {
+    padding: 0 16px !important;
   }
 
   .header-wrapper-main {
-    min-height: 62px;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 68px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .logo-area {
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .logo-area a {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  /* Increased Logo in Mobile */
+  .header-one .logo-area img,
+  .logo-area img {
+    max-height: 56px !important;
+    max-width: 220px !important;
+    height: auto !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .header-right-group {
+    flex-shrink: 0 !important;
+    margin-left: auto !important;
+  }
+
+  .header-action-buttons {
+    gap: 0 !important;
+    margin: 0 !important;
+  }
+
+  .menu-btn-toggle.khil-toggle {
+    width: 38px !important;
+    height: 38px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .khil-header-container {
+    padding: 0 10px !important;
+  }
+
+  .header-wrapper-main {
+    min-height: 60px !important;
+  }
+
+  /* Scaled logo for very small mobile (320px) */
+  .header-one .logo-area img,
+  .logo-area img {
+    max-height: 48px !important;
+    max-width: 180px !important;
+  }
+
+  .menu-btn-toggle.khil-toggle {
+    width: 34px !important;
+    height: 34px !important;
   }
 }
 
@@ -1550,20 +1680,61 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
   overflow-y: auto;
 }
 
+#side-bar .khil-mobile-actions,
+.side-bar .khil-mobile-actions,
 .khil-mobile-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 20px 0 10px;
-  padding: 0 20px;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  margin: 18px 0 14px !important;
+  padding: 0 20px !important;
 }
 
+#side-bar .khil-mobile-actions .btn-book-now,
+#side-bar .khil-mobile-actions .btn-employer-login,
+.side-bar .khil-mobile-actions .btn-book-now,
+.side-bar .khil-mobile-actions .btn-employer-login,
 .khil-mobile-actions .btn-book-now,
 .khil-mobile-actions .btn-employer-login {
   display: flex !important;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  min-height: 46px !important;
+  border-radius: 999px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  padding: 0 18px !important;
+  box-sizing: border-box !important;
+}
+
+#side-bar .khil-mobile-actions .btn-book-now,
+.side-bar .khil-mobile-actions .btn-book-now,
+.khil-mobile-actions .btn-book-now {
+  background: linear-gradient(274.79deg, #06014B -141.06%, #A00AA8 8.92%, #140253 106.13%) !important;
+  color: #ffffff !important;
+}
+
+#side-bar .khil-mobile-actions .btn-book-now *,
+.side-bar .khil-mobile-actions .btn-book-now *,
+.khil-mobile-actions .btn-book-now * {
+  color: #ffffff !important;
+}
+
+#side-bar .khil-mobile-actions .btn-employer-login,
+.side-bar .khil-mobile-actions .btn-employer-login,
+.khil-mobile-actions .btn-employer-login {
+  background: transparent !important;
+  border: 1.5px solid #111111 !important;
+  color: #111111 !important;
+}
+
+#side-bar .khil-mobile-actions .btn-employer-login *,
+.side-bar .khil-mobile-actions .btn-employer-login *,
+.khil-mobile-actions .btn-employer-login * {
+  color: #111111 !important;
 }
 
 #mobile-menu-active {
@@ -1651,15 +1822,6 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
   overflow: hidden !important;
 }
 
-/* .khil-property-hero-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--khil-primary) 0%, var(--khil-gold) 50%, var(--khil-primary) 100%);
-} */
 
 .khil-property-hero-card .pre-badge {
   display: inline-flex;
@@ -1950,15 +2112,6 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
   color: #252525;
 }
 
-/* .khil-flip-card-back::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--khil-primary) 0%, var(--khil-gold) 50%, var(--khil-primary) 100%);
-} */
 
 .back-top-meta {
   display: flex;
@@ -2246,11 +2399,6 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 .khil-about-showcase-section {
   position: relative;
   background-color: #ffffff;
-  /* background-image: 
-    linear-gradient(to right, #f1f3f7 1px, transparent 1px),
-    linear-gradient(to bottom, #f1f3f7 1px, transparent 1px); */
-  background-size: 42px 42px;
-  background-position: center top;
   padding: 60px 0 70px;
   overflow: hidden;
   width: 100%;
@@ -2682,7 +2830,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 }
 
 .khil-bento-title {
-  font-size: clamp(34px, 4.2vw, 54px);
+  font-size: 52px;
     font-weight: 600;
     line-height: 1.15;
     letter-spacing: -0.03em;
@@ -2692,8 +2840,8 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 }
 
 .khil-bento-desc {
-  width: 489px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 489px;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.65;
@@ -2749,20 +2897,6 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
   overflow: hidden;
 }
 
-/* Bottom solid cerulean accent bar matching reference image 1:1 */
-/* .khil-bento-hotel-card::after {
-  content: '';
-  position: absolute;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  height: 16px;
-  background: #7d007d;
-  border-bottom-left-radius: 28px;
-  border-bottom-right-radius: 28px;
-  transition: all 0.3s ease;
-  z-index: 3;
-} */
 
 .khil-bento-hotel-card:hover {
   transform: translateY(-8px);
@@ -2779,7 +2913,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 .bento-card-visual-stage {
   position: relative;
   width: 100%;
-  background: #7d007d;
+ 
   padding: 0px;
   margin-bottom: 22px;
   box-sizing: border-box;
@@ -2986,7 +3120,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 
 @media only screen and (max-width: 575px) {
   .khil-hotels-bento-section {
-    padding: 60px 0 65px;
+    padding: 6vh 0 6.5vh;
   }
   .khil-bento-title {
     font-size: 28px;
@@ -3001,19 +3135,89 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
     margin: 0 auto 28px;
   }
   .bento-visual-media {
-    height: 185px;
+    width: 100%;
+    height: 48vw;
+    min-height: 170px;
+    max-height: 220px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
   }
   .khil-bento-hotel-card {
-    padding: 18px 18px 20px;
+    padding: 0;
     border-radius: 22px;
-  }
-  .khil-bento-hotel-card::after {
-    border-bottom-left-radius: 22px;
-    border-bottom-right-radius: 22px;
-    height: 14px;
+    overflow: hidden;
   }
   .bento-card-visual-stage {
-    padding: 10px;
+    padding: 0;
+    margin-bottom: 18px;
+  }
+  .bento-card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 18px 20px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .khil-header-container {
+    padding: 0 6px !important;
+  }
+  .header-one .logo-area img,
+  .logo-area img {
+    max-height: 38px !important;
+    max-width: 140px !important;
+  }
+  .header-action-buttons {
+    gap: 0 !important;
+  }
+  .menu-btn-toggle.khil-toggle {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  .khil-hotels-bento-section {
+    padding: 5vh 0;
+  }
+  .khil-bento-title {
+    font-size: 24px;
+  }
+  .khil-bento-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .khil-bento-btn-primary {
+    padding: 10px 22px;
+    font-size: 13px;
+  }
+  .bento-visual-media {
+    height: 155px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+  .khil-bento-hotel-card {
+    padding: 0;
+    border-radius: 18px;
+  }
+  .bento-card-content {
+    padding: 0 14px 16px;
+  }
+  .khil-about-showcase-section {
+    padding: 4.5vh 0;
+  }
+  .khil-about-stat-side .stat-number {
+    font-size: 28px;
+  }
+  .khil-about-stat-side .stat-label {
+    font-size: 11px;
+  }
+  .khil-about-stat-side {
+    gap: 20px;
+  }
+  .khil-gallery-card {
+    width: 245px;
+    height: 330px;
+    padding: 0 6px;
   }
 }
 
@@ -3060,7 +3264,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 }
 
 .khil-blog-title {
-  font-size: clamp(30px, 3.4vw, 42px);
+  font-size: 40px;
   font-weight: 600;
   letter-spacing: -0.035em;
   color: #0f172a;
@@ -3291,7 +3495,7 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 }
 
 .khil-gallery-title {
-     font-size: clamp(34px, 4.2vw, 54px);
+     font-size: 52px;
     font-weight: 600;
     line-height: 1.15;
     letter-spacing: -0.03em;
@@ -3388,12 +3592,13 @@ body.home-three-page .header-one.header-relative:not(.sticky) .menu-btn-toggle s
 
 /* Gallery Carousel Viewport (Full Bleed) */
 .khil-gallery-viewport {
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  left: 0;
+  right: 0;
+  margin-left: 0;
+  margin-right: 0;
   overflow: hidden;
   padding: 24px 0 36px;
   cursor: grab;
@@ -3624,6 +3829,12 @@ h3.khil-blog-card-heading,
   .pre-badge,
   .pre-title {
     font-size: 11.5px !important;
+  }
+
+  .home-three-page .khil-bento-pill {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important;
   }
 }
 

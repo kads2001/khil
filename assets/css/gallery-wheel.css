@@ -61,7 +61,9 @@ body.wheel-page {
   position: relative;
   width: 100%;
   max-width: 100%;
-  height: clamp(620px, 92vh, 880px);
+  height: 88vh;
+  min-height: 620px;
+  max-height: 880px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -84,7 +86,7 @@ body.wheel-page {
   left: 3vw;
   bottom: -4vw;
   font-family: 'Familjen Grotesk', sans-serif !important;
-  font-size: clamp(140px, 22vw, 340px);
+  font-size: 18vw;
   font-weight: 400;
   
   line-height: 0.8;
@@ -104,7 +106,7 @@ body.wheel-page {
   max-width: min(460px, 34vw);
   flex-shrink: 0;
   padding: 10px 0;
-  margin: 0 0 0 clamp(48px, 4.5vw, 75px) !important;
+  margin: 0 0 0 4.2vw !important;
   text-align: left !important;
 }
 
@@ -163,7 +165,7 @@ body.wheel-page {
 .wheel-banner-content p.disc,
 .wheel-banner-stage .rts-banner-content-three p.disc {
   font-family: 'Familjen Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-  font-size: clamp(14px, 1.05vw, 16px) !important;
+  font-size: 15px !important;
   line-height: 1.6 !important;
   color: #555555 !important;
   max-width: 410px !important;
@@ -386,7 +388,7 @@ body.wheel-page {
 }
 
 .wheel-next-title {
-  font-size: clamp(34px, 4vw, 52px);
+  font-size: 46px;
   font-weight: 800;
   letter-spacing: -0.025em;
   margin: 0 0 16px 0;
@@ -403,6 +405,19 @@ body.wheel-page {
 /* ==========================================================================
    Responsive Adaptations
    ========================================================================== */
+@media (max-width: 1536px) {
+  :root {
+    --wheel-radius: 260px;
+    --card-width: 138px;
+    --card-height: 170px;
+  }
+  .wheel-banner-stage {
+    height: 88vh;
+    padding-left: 3vw !important;
+    padding-right: 3vw !important;
+  }
+}
+
 @media (max-width: 1400px) {
   :root {
     --wheel-radius: 250px;
@@ -411,43 +426,47 @@ body.wheel-page {
     --card-radius: 16px;
   }
   .wheel-banner-stage {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    height: 87vh;
+    min-height: 590px;
+    padding-left: 3vw !important;
+    padding-right: 3vw !important;
   }
   .wheel-orbit-wrapper {
-    left: 66%;
+    left: 65%;
   }
   .wheel-banner-content,
   .wheel-banner-stage .rts-banner-content-three {
-    max-width: min(390px, 32vw) !important;
+    max-width: 32vw !important;
   }
 }
 
 @media (max-width: 1199px) {
   :root {
-    --wheel-radius: 225px;
-    --card-width: 118px;
-    --card-height: 146px;
+    --wheel-radius: 215px;
+    --card-width: 114px;
+    --card-height: 142px;
     --card-radius: 14px;
   }
   .wheel-banner-stage {
-    padding-top: 85px;
-    padding-bottom: 30px;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    height: 85vh;
+    min-height: 560px;
+    padding-top: 10vh;
+    padding-bottom: 3vh;
+    padding-left: 3vw !important;
+    padding-right: 3vw !important;
   }
   .wheel-orbit-wrapper {
-    left: 68%;
+    left: 67%;
   }
   .wheel-banner-content,
   .wheel-banner-stage .rts-banner-content-three {
-    max-width: 340px !important;
+    max-width: 34vw !important;
   }
   .wheel-banner-heading,
   .wheel-banner-content h1,
   .wheel-banner-stage .rts-banner-content-three h1 {
-    font-size: 32px !important;
-    line-height: 48px !important;
+    font-size: 34px !important;
+    line-height: 42px !important;
   }
 }
 
@@ -456,15 +475,15 @@ body.wheel-page {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 100px 20px 30px !important;
+    padding: 12vh 4vw 4vh !important;
     height: auto;
-    min-height: 100vh;
+    min-height: 80vh;
   }
   .wheel-banner-content,
   .wheel-banner-stage .rts-banner-content-three {
     max-width: 100% !important;
     text-align: center !important;
-    padding: 0 0 24px 0;
+    padding: 0 0 20px 0;
     margin: 0 auto !important;
   }
   .wheel-banner-content .khil-hero-eyebrow-tag,
@@ -484,17 +503,18 @@ body.wheel-page {
   .wheel-banner-content p.disc,
   .wheel-banner-stage .rts-banner-content-three p.disc {
     margin: 0 auto 20px !important;
+    max-width: 80vw !important;
   }
   .wheel-orbit-wrapper {
     position: relative;
     left: auto;
     top: auto;
-    margin: 160px auto 40px;
+    margin: 140px auto 35px;
   }
   :root {
-    --wheel-radius: 170px;
-    --card-width: 90px;
-    --card-height: 112px;
+    --wheel-radius: 165px;
+    --card-width: 88px;
+    --card-height: 110px;
     --card-radius: 12px;
   }
   .wheel-rating-badge {
@@ -504,21 +524,48 @@ body.wheel-page {
 
 @media (max-width: 480px) {
   :root {
-    --wheel-radius: 138px;
-    --card-width: 74px;
-    --card-height: 92px;
+    --wheel-radius: 125px;
+    --card-width: 68px;
+    --card-height: 85px;
     --card-radius: 10px;
   }
   .wheel-banner-heading,
   .wheel-banner-content h1,
   .wheel-banner-stage .rts-banner-content-three h1 {
-    font-size: 30px !important;
+    font-size: 28px !important;
+    line-height: 33px !important;
   }
   .wheel-banner-stage {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding: 10vh 4vw 3vh !important;
   }
   .wheel-orbit-wrapper {
-    margin: 130px auto 30px;
+    margin: 110px auto 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --wheel-radius: 98px;
+    --card-width: 54px;
+    --card-height: 68px;
+    --card-radius: 8px;
+  }
+  .wheel-banner-heading,
+  .wheel-banner-content h1,
+  .wheel-banner-stage .rts-banner-content-three h1 {
+    font-size: 23px !important;
+    line-height: 28px !important;
+  }
+  .wheel-banner-stage {
+    padding: 9vh 3vw 2vh !important;
+  }
+  .wheel-orbit-wrapper {
+    margin: 85px auto 20px;
+  }
+  .wheel-banner-content p.disc,
+  .wheel-banner-stage .rts-banner-content-three p.disc {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 16px !important;
   }
 }

@@ -13,7 +13,6 @@
   width: 100%;
   height: 750px;
   background-color: #030d06;
-  /*background-image: url('../img/inner-banner-bg.jpeg');*/
   background-image: url('https://khil.com/new/assets/images/breadcrumbs.webp');
   background-size: cover;
   background-position: center center;
@@ -25,21 +24,6 @@
   justify-content: center;
   box-sizing: border-box;
 }
-
-/* Subtle Vignette & Ambient Radial Glow Overlay */
-/* .khil-inner-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(3, 13, 6, 0.22) 0%,
-    rgba(2, 9, 4, 0.65) 75%,
-    rgba(1, 5, 2, 0.88) 100%
-  );
-} */
 
 /* Top & Bottom Edge Blends */
 .khil-inner-banner::after {
@@ -86,28 +70,6 @@
 .khil-inner-banner-title .title-line {
   display: block;
 }
-
-/* Gradient 1: Pink to Purple gradient (matching "Analytics" in reference) */
-/* .khil-inner-banner-title .gradient-purple,
-.khil-inner-banner-title .gradient-pink {
-  background: linear-gradient(135deg, #f43f8e 0%, #e879f9 45%, #a855f7 75%, #818cf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
-  font-weight: 800;
-} */
-
-/* Gradient 2: Indigo to Electric Blue to Cyan (matching "Fuel Your" in reference) */
-/* .khil-inner-banner-title .gradient-blue,
-.khil-inner-banner-title .gradient-cyan {
-  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 45%, #38bdf8 80%, #2dd4bf 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
-  font-weight: 800;
-} */
 
 /* Subtitle / Description matching reference */
 .khil-inner-banner-desc {
