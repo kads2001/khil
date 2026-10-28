@@ -125,6 +125,39 @@
         [data-aos="animate__bounceInLeft"][data-aos-delay="350"].aos-animate { animation-delay: 350ms; }
         [data-aos="animate__bounceInLeft"][data-aos-delay="400"].aos-animate { animation-delay: 400ms; }
 
+        /* Animate.css fadeInDown Scroll Trigger with AOS - Slow & Smooth Luxury Pacing */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, -45px, 0);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        [data-aos="animate__fadeInDown"]:not(.aos-animate) {
+            opacity: 0 !important;
+            animation: none !important;
+        }
+        [data-aos="animate__fadeInDown"].aos-animate {
+            opacity: 1 !important;
+            animation-name: fadeInDown !important;
+            animation-duration: 1.4s !important;
+            animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
+            animation-fill-mode: both !important;
+            will-change: transform, opacity;
+        }
+        [data-aos="animate__fadeInDown"][data-aos-delay="50"].aos-animate { animation-delay: 50ms; }
+        [data-aos="animate__fadeInDown"][data-aos-delay="100"].aos-animate { animation-delay: 100ms; }
+        [data-aos="animate__fadeInDown"][data-aos-delay="150"].aos-animate { animation-delay: 150ms; }
+        [data-aos="animate__fadeInDown"][data-aos-delay="200"].aos-animate { animation-delay: 200ms; }
+        [data-aos="animate__fadeInDown"][data-aos-delay="250"].aos-animate { animation-delay: 250ms; }
+        [data-aos="animate__fadeInDown"][data-aos-delay="300"].aos-animate { animation-delay: 300ms; }
+        [data-aos="animate__fadeInDown"][data-aos-delay="350"].aos-animate { animation-delay: 350ms; }
+        [data-aos="animate__fadeInDown"][data-aos-delay="400"].aos-animate { animation-delay: 400ms; }
+
         @media (max-width: 1199px) {
             .wheel-banner-section .wheel-banner-content h1,
             .wheel-banner-section .wheel-banner-content h1 *,
@@ -446,7 +479,7 @@
                         <i class="fa-solid fa-crown"></i>
                         <span>About Kamat Hotels</span>
                     </div>
-                    <h2 class="khil-about-headline animate__animated animate__bounceInLeft" id="khil-about-title" data-aos="animate__bounceInLeft" data-aos-delay="150">
+                    <h2 class="khil-about-headline animate__animated animate__fadeInDown" id="khil-about-title" data-aos="animate__fadeInDown" data-aos-delay="150">
                         Empowering conscious luxury<br class="d-none d-md-inline"> &amp; <span class="khil-hero-01-text-gradient">timeless Indian heritage</span><br
                             class="d-none d-md-inline"> wherever journeys take you
                     </h2>

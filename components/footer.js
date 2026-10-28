@@ -99,23 +99,14 @@
 
           <!-- Column 5: Investors & Press Room -->
           <nav class="khil-footer-column" aria-label="Investors and Press Room">
-            <h3 class="khil-footer-heading">Investors</h3>
-            <ul>
-              <li><a href="investors.html">View Reports</a></li>
-              <li><a href="annual-reports.html">Annual Reports</a></li>
-              <li><a href="investor-contact.html">Investor Contact</a></li>
-              <li><a href="investor-notices.html">Investor Notices</a></li>
-              <li><a href="disclosures-under-Regulation-46-of-the-LODR.html">Disclosures under Reg 46</a></li>
-              <li><a href="unclaimed-shares-dividend.html">Unclaimed Shares &amp; Dividend</a></li>
-              <li><a href="https://khil.com/investors/quarterly-results/quarterly-results.html" target="_blank" rel="noopener noreferrer">Quarterly Results</a></li>
-              <li><a href="https://khil.com/investors/investors/corporate-governance-reports.html" target="_blank" rel="noopener noreferrer">Corporate Governance Reports</a></li>
-              <li><a href="https://khil.com/investors/investors/shareholding-pattern.html" target="_blank" rel="noopener noreferrer">Shareholding Pattern</a></li>
-            </ul>
-            <h4 class="khil-footer-subheading">Press Room</h4>
-            <ul>
+            <h3 class="khil-footer-heading">Press Room</h3>
+
+             <ul>
               <li><a href="media.html">Awards</a></li>
               <li><a href="media.html">Media</a></li>
             </ul>
+           
+           
           </nav>
 
         </div>
