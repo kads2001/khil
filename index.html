@@ -32,7 +32,7 @@
     <link rel="stylesheet preload" href="assets/css/khil-header.css" as="style">
     <link rel="stylesheet preload" href="assets/css/custom.css" as="style">
     <link rel="stylesheet" href="assets/css/home-banner.css">
-    <link rel="stylesheet" href="assets/css/gallery-wheel.css">
+    <link rel="stylesheet" href="assets/css/khil-banner-slideshow.css">
     <link rel="stylesheet" href="assets/css/khil-gallery.css">
     <style>
         :root {
@@ -349,15 +349,36 @@
     <script src="components/header.js"></script>
 
     <!-- ==========================================================================
-         HERO BANNER: Scroll-Driven Circular Orbit Gallery
+         HERO BANNER: Smooth Luxury Background Slideshow
          ========================================================================== -->
-    <section class="wheel-banner-section" id="wheelBanner" aria-label="Hero Showcase">
+    <section class="wheel-banner-section khil-hero-slideshow-section" id="wheelBanner" aria-label="Hero Showcase">
+        
+        <!-- Full-Bleed Background Slideshow (Zero zoom effect, pure smooth transition) -->
+        <div class="khil-hero-bg-slideshow" id="heroBgSlideshow">
+            <div class="khil-hero-bg-track" id="heroBgTrack">
+                <div class="khil-hero-bg-slide active">
+                    <img src="assets/img/Banners/1.jpg" alt="Kamat Hotels - Eco-Conscious Sanctuary" loading="eager">
+                </div>
+                <div class="khil-hero-bg-slide">
+                    <img src="assets/img/Banners/2.jpg" alt="Kamat Hotels - Mountain View Retreat" loading="lazy">
+                </div>
+                <div class="khil-hero-bg-slide">
+                    <img src="assets/img/Banners/3.jpg" alt="Kamat Hotels - Luxury Hospitality Reception" loading="lazy">
+                </div>
+                <div class="khil-hero-bg-slide">
+                    <img src="assets/img/Banners/4.jpg" alt="Kamat Hotels - Fort JadhavGADH Royal Heritage" loading="lazy">
+                </div>
+            </div>
+            <!-- Elegant Luxury Scrim Overlay (ensures 100% crisp contrast for left content) -->
+            <div class="khil-hero-bg-overlay" aria-hidden="true"></div>
+        </div>
+
         <div class="wheel-banner-stage">
             
             <!-- Giant Subtle Background Watermark -->
             <div class="wheel-banner-watermark" aria-hidden="true">KHIL</div>
 
-            <!-- Left Banner Content -->
+            <!-- Left Banner Content (NO CONTENT CHANGE) -->
             <div class="wheel-banner-content rts-banner-content-three">
                 <h3 class="khil-hero-eyebrow-tag" data-aos="fade-up" data-aos-delay="100">
                     Asia's Pioneering Ecotel Chain
@@ -369,9 +390,7 @@
                     Asia's Pioneering Hospitality Chain of Environmentally Sensitive 5-Star Hotels.
                 </p>
                 <div class="button-group" data-aos="fade-up" data-aos-delay="400">
-                    <!--<a href="index.html#brands" class="khil-hero-btn primary khil-btn-outline">Explore Our
-                        Brands <i class="fa-regular fa-arrow-right"></i></a>-->
-						<a class="replica-button" href="#" aria-label="Button">
+					<a class="replica-button" href="#" aria-label="Button">
 					  <span class="button-label">Our
                         Brands</span>
 
@@ -391,63 +410,23 @@
 						</svg>
 					  </span>
 					</a>
-                    <!-- <a href="https://bookings.orchidhotel.com/?propertyId=246&amp;chainId=3685" target="_blank" class="khil-hero-btn secondary"><i class="fa-regular fa-calendar-check"></i> Book Direct &amp; Save</a> -->
                 </div>
             </div>
 
-            <!-- Right Orbit Assembly -->
-            <div class="wheel-orbit-wrapper">
-                <!-- Orbit Dashed Guide Ring -->
-                <div class="gallery-wheel-orbit-ring" aria-hidden="true"></div>
-
-                <!-- Revolving Wheel Container -->
-                <div class="gallery-circle-wheel" id="galleryWheel">
-                    
-                    <!-- 01: Top (12:00) -->
-                    <div class="gallery-image-card slot-01">
-                        <img src="assets/img/orchid_hotel1.jpg" alt="Creative Project 1" class="gallery-image" loading="lazy">
-                    </div>
-
-                    <!-- 02: Top-Right (1:30) -->
-                    <div class="gallery-image-card slot-02">
-                        <img src="assets/img/jadhavfort.jpg" alt="Creative Project 2" class="gallery-image" loading="lazy">
-                    </div>
-
-                    <!-- 03: Right (3:00) -->
-                    <div class="gallery-image-card slot-03">
-                        <img src="assets/img/mahadodhilogo1.jpg" alt="Creative Project 3" class="gallery-image" loading="lazy">
-                    </div>
-
-                    <!-- 04: Bottom-Right (4:30) -->
-                    <div class="gallery-image-card slot-04">
-                        <img src="assets/img/lotus1.jpg" alt="Creative Project 4" class="gallery-image" loading="lazy">
-                    </div>
-
-                    <!-- 05: Bottom (6:00) -->
-                    <div class="gallery-image-card slot-05">
-                        <img src="assets/img/toyam1.jpg" alt="Creative Project 5" class="gallery-image" loading="lazy">
-                    </div>
-
-                    <!-- 06: Bottom-Left (7:30) -->
-                    <div class="gallery-image-card slot-06">
-                        <img src="assets/img/orchid_hotel1.jpg" alt="Creative Project 6" class="gallery-image" loading="lazy">
-                    </div>
-
-                    <!-- 07: Left (9:00) -->
-                    <div class="gallery-image-card slot-07">
-                        <img src="assets/img/jadhavfort.jpg" alt="Creative Project 7" class="gallery-image" loading="lazy">
-                    </div>
-
-                    <!-- 08: Top-Left (10:30) -->
-                    <div class="gallery-image-card slot-08">
-                        <img src="assets/img/mahadodhilogo1.jpg" alt="Creative Project 8" class="gallery-image" loading="lazy">
-                    </div>
-
+            <!-- Right Corner 2 Arrow Navigation Controls -->
+            <div class="khil-banner-nav-corner" id="heroBannerNav" aria-label="Hero Banner Navigation">
+                <button type="button" class="khil-banner-nav-btn prev" id="heroBannerPrevBtn" aria-label="Previous Slide">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div class="khil-banner-nav-counter">
+                    <span class="khil-banner-nav-current" id="heroBannerCurrent">01</span>
+                    <span class="khil-banner-nav-divider">/</span>
+                    <span class="khil-banner-nav-total">04</span>
                 </div>
+                <button type="button" class="khil-banner-nav-btn next" id="heroBannerNextBtn" aria-label="Next Slide">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
-
-            <!-- Far Right Vertical Rating Badge (matching reference) -->
-           
 
         </div>
     </section>
@@ -1497,7 +1476,7 @@
 
     <script defer src="assets/js/khil-gallery.js"></script>
     <script defer src="assets/js/plugins/lenis.min.js"></script>
-    <script defer src="assets/js/gallery-wheel.js"></script>
+    <script defer src="assets/js/khil-banner-slideshow.js"></script>
 </body>
 
 </html>
