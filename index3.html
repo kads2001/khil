@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="assets/css/plugins/aos.css">
     <link rel="stylesheet preload" href="assets/css/plugins/odometer.css" as="style">
     <link rel="stylesheet preload" href="assets/css/vendor/bootstrap.min.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 
     <link rel="stylesheet preload" href="assets/css/style.css" as="style">
@@ -77,53 +76,6 @@
             line-height: 54px !important;
             letter-spacing: -0.01em !important;
         }
-
-        /* Animate.css bounceInLeft Scroll Trigger with AOS - Slow & Smooth Luxury Pacing */
-        @keyframes bounceInLeft {
-            0% {
-                opacity: 0;
-                transform: translate3d(-120px, 0, 0);
-            }
-            60% {
-                opacity: 1;
-                transform: translate3d(16px, 0, 0);
-            }
-            75% {
-                transform: translate3d(-6px, 0, 0);
-            }
-            90% {
-                transform: translate3d(2px, 0, 0);
-            }
-            100% {
-                opacity: 1;
-                transform: translate3d(0, 0, 0);
-            }
-        }
-
-        :root {
-            --animate-duration: 1.4s;
-        }
-
-        [data-aos="animate__bounceInLeft"]:not(.aos-animate) {
-            opacity: 0 !important;
-            animation: none !important;
-        }
-        [data-aos="animate__bounceInLeft"].aos-animate {
-            opacity: 1 !important;
-            animation-name: bounceInLeft !important;
-            animation-duration: 1.4s !important;
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1) !important;
-            animation-fill-mode: both !important;
-            will-change: transform, opacity;
-        }
-        [data-aos="animate__bounceInLeft"][data-aos-delay="50"].aos-animate { animation-delay: 50ms; }
-        [data-aos="animate__bounceInLeft"][data-aos-delay="100"].aos-animate { animation-delay: 100ms; }
-        [data-aos="animate__bounceInLeft"][data-aos-delay="150"].aos-animate { animation-delay: 150ms; }
-        [data-aos="animate__bounceInLeft"][data-aos-delay="200"].aos-animate { animation-delay: 200ms; }
-        [data-aos="animate__bounceInLeft"][data-aos-delay="250"].aos-animate { animation-delay: 250ms; }
-        [data-aos="animate__bounceInLeft"][data-aos-delay="300"].aos-animate { animation-delay: 300ms; }
-        [data-aos="animate__bounceInLeft"][data-aos-delay="350"].aos-animate { animation-delay: 350ms; }
-        [data-aos="animate__bounceInLeft"][data-aos-delay="400"].aos-animate { animation-delay: 400ms; }
 
         @media (max-width: 1199px) {
             .wheel-banner-section .wheel-banner-content h1,
@@ -328,7 +280,7 @@
                 <h3 class="khil-hero-eyebrow-tag" data-aos="fade-up" data-aos-delay="100">
                     Asia's Pioneering Ecotel Chain
                 </h3>
-                <h1 class="rts-text-anime-style-1 animate__animated animate__bounceInLeft" data-aos="animate__bounceInLeft" data-aos-delay="200"><span class="hero-heading-line"><span>Kamat </span><span
+                <h1 class="rts-text-anime-style-1" data-aos="fade-up" data-aos-delay="200"><span class="hero-heading-line"><span>Kamat </span><span
                             class="hero-heading-accent">Hotels</span></span><span
                         class="hero-heading-line">(India) Ltd.</span></h1>
                 <p class="disc" data-aos="fade-up" data-aos-delay="300">
@@ -446,7 +398,7 @@
                         <i class="fa-solid fa-crown"></i>
                         <span>About Kamat Hotels</span>
                     </div>
-                    <h2 class="khil-about-headline animate__animated animate__bounceInLeft" id="khil-about-title" data-aos="animate__bounceInLeft" data-aos-delay="150">
+                    <h2 class="khil-about-headline" id="khil-about-title" data-aos="fade-up" data-aos-delay="150">
                         Empowering conscious luxury<br class="d-none d-md-inline"> &amp; <span class="khil-hero-01-text-gradient">timeless Indian heritage</span><br
                             class="d-none d-md-inline"> wherever journeys take you
                     </h2>
@@ -593,7 +545,7 @@
                     <i class="fa-solid fa-crown"></i>
                     <span>Our Founders</span>
                 </div>
-                <h2 class="khil-founders-title animate__animated animate__bounceInLeft" id="founders-title" data-aos="animate__bounceInLeft" data-aos-delay="150">
+                <h2 class="khil-founders-title" id="founders-title" data-aos="fade-up" data-aos-delay="150">
                     The Leadership Behind KHIL
                 </h2>
                 <p class="khil-founders-subtitle" data-aos="fade-up" data-aos-delay="250">
@@ -662,7 +614,7 @@
                         <span>Our Brands</span>
                     </div>
 
-                    <h2 class="khil-bento-title animate__animated animate__bounceInLeft" id="our-hotels-title" data-aos="animate__bounceInLeft" data-aos-delay="150">
+                    <h2 class="khil-bento-title" id="our-hotels-title" data-aos="fade-up" data-aos-delay="150">
                         Come explore <br><span class="khil-hero-01-text-gradient">our brands</span>
                     </h2>
                     <p class="khil-bento-desc" data-aos="fade-up" data-aos-delay="250">
@@ -885,7 +837,7 @@
         <div class="container">
             <div class="ira-banner-content">
                 <img class="ira-banner-logo" src="assets/img/ira.png" alt="IRA by Orchid Hotels" data-aos="fade-up" data-aos-delay="50">
-                <div class="hero-title animate__animated animate__bounceInLeft" data-aos="animate__bounceInLeft" data-aos-delay="150">Comfortable Stay, for your <span class="khil-hero-01-text-gradient">Business Tour</span></div>
+                <div class="hero-title" data-aos="fade-up" data-aos-delay="150">Comfortable Stay, for your <span class="khil-hero-01-text-gradient">Business Tour</span></div>
                 <div class="hero-desc" data-aos="fade-up" data-aos-delay="250">
                     <p class="hero-intro">
                         <strong>Introducing, IRA by Orchid Hotels</strong><br>
@@ -947,7 +899,7 @@
             </div>
             <!-- Header Area -->
             <div class="khil-gallery-header">
-                <h2 class="khil-gallery-title animate__animated animate__bounceInLeft" id="gallery-title" data-aos="animate__bounceInLeft" data-aos-delay="150">
+                <h2 class="khil-gallery-title" id="gallery-title" data-aos="fade-up" data-aos-delay="150">
                     Hospitality to elevate your<br><span class="khil-hero-01-text-gradient">journey forward</span>
                 </h2>
                 <div class="khil-gallery-header-right" data-aos="fade-up" data-aos-delay="250">
@@ -1117,7 +1069,7 @@
                         <span>Latest News &amp; Updates</span>
                     </div>
 
-                    <h2 class="khil-blog-title animate__animated animate__bounceInLeft" id="blog-news-title" data-aos="animate__bounceInLeft" data-aos-delay="200">Our latest <br><span class="khil-hero-01-text-gradient">events & news</span></h2>
+                    <h2 class="khil-blog-title" id="blog-news-title" data-aos="lightSpeedInLeft" data-aos-duration="1000" data-aos-delay="200">Our latest <br><span class="khil-hero-01-text-gradient">events & news</span></h2>
                     <p class="khil-blog-desc" data-aos="fade-up" data-aos-delay="250">Did you know?
                         Kamat Hotels India has recentely announced a new hotel management, leasing arm, Ira by Orchid
                         Hotels that is opening at multiple locations.</p>
@@ -1266,7 +1218,7 @@
                         <span>Latest News &amp; Updates</span>
                     </div>
 
-                    <h2 class="khil-blog-title animate__animated animate__bounceInLeft" id="blog-news-title" data-aos="animate__bounceInLeft" data-aos-delay="150">Our latest <br><span class="khil-hero-01-text-gradient">events & news</span></h2>
+                    <h2 class="khil-blog-title" id="blog-news-title" data-aos="fade-up" data-aos-delay="150">Our latest <br><span class="khil-hero-01-text-gradient">events & news</span></h2>
                     <p class="khil-blog-desc" data-aos="fade-up" data-aos-delay="250">Did you know?
                         Kamat Hotels India has recentely announced a new hotel management, leasing arm, Ira by Orchid
                         Hotels that is opening at multiple locations.</p>
