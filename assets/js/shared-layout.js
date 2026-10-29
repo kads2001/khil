@@ -24,6 +24,7 @@
       document.body.classList.add('loaded');
     };
     document.body.appendChild(mainScript);
+    initializeStickyHeader();
   } else {
     initializeStandaloneMenu();
     initializeStickyHeader();

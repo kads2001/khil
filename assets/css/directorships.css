@@ -40,7 +40,7 @@
 }
 
 body.directorships-page {
-  background-color: var(--khil-bg);
+  background-color: #fff;
   color: var(--khil-ink);
   font-family: var(--khil-font-sans);
   line-height: 1.5;

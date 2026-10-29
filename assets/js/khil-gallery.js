@@ -174,11 +174,11 @@
         hookLenis();
         setTimeout(hookLenis, 300);
 
-        // 4. Mathematical 3D Curved Horizon Transforms (Applied to .gallery-card-inner)
+        // 4. Smooth Focus Transforms (Center Hero Card Magnification & Undistorted Geometry)
         function update3DTransforms() {
             const vpCenter = viewportWidth * 0.5;
-            // Radius controls the curve spread across the visible viewport (~3 cards each side)
-            const radius = cardStep * 3.1;
+            // Radius controls the smooth expansion zone around the viewport center (~2.8 cards)
+            const radius = Math.max(cardStep * 2.8, viewportWidth * 0.38);
 
             for (let i = 0; i < totalCards; i++) {
                 const card = allCards[i];
@@ -188,35 +188,53 @@
                 // Center of card relative to viewport left edge
                 const cardCenter = trackPaddingLeft + (i * cardStep) + (cardWidth * 0.5) + currentX;
                 const distFromCenter = cardCenter - vpCenter;
-                const norm = distFromCenter / (radius || 1);
+                const absDist = Math.abs(distFromCenter);
+                const norm = absDist / (radius || 1);
 
-                // Normalization clamped to bounds
-                const clampedNorm = Math.max(-1.4, Math.min(1.4, norm));
-                const absNorm = Math.abs(clampedNorm);
+                // Normalization clamped to bounds [0, 1]
+                const clampedNorm = Math.min(1.0, norm);
 
-                // Inward tilt: left cards face inward right (+deg), right cards face inward left (-deg)
-                const rotY = -clampedNorm * 24; // 24 degrees inward tilt matching reference
+                // Smooth Hann cosine window: 1.0 at center, 0.0 at edge of radius
+                const intensity = 0.5 + 0.5 * Math.cos(clampedNorm * Math.PI);
 
-                // Perspective depth: outer cards curve closer to camera
-                const transZ = Math.pow(absNorm, 1.45) * 135;
+                // Visual hierarchy: Hero center is ~1.08, side cards gracefully scale down to ~0.72
+                // Pure scale preserving 100% of the image's original rectangular card shape (no trapezoid tilt)
+                const scale = 0.72 + intensity * 0.36;
 
-                // Visual hierarchy: Center card is smaller (0.78), outer cards progressively larger (up to ~1.38)
-                const scale = 0.78 + Math.pow(absNorm, 1.55) * 0.58;
+                // Stacking layer: center card always on top, outer cards layer cleanly behind
+                const zIndex = Math.round(intensity * 30) + 1;
 
-                // Layering: outer cards layer gracefully above inner cards
-                const zIndex = Math.round(absNorm * 30) + 1;
+                // Edge fade: Cards approaching left and right viewport borders smoothly taper opacity
+                // This eliminates any harsh cut-off edges at the screen borders
+                const screenDist = absDist / (viewportWidth * 0.5);
+                const edgeOverflow = Math.max(0, screenDist - 0.78);
+                const opacity = Math.max(0, Math.min(1, 1 - edgeOverflow * 2.6));
 
-                inner.style.transform = `translate3d(0, 0, ${transZ.toFixed(2)}px) rotateY(${rotY.toFixed(2)}deg) scale(${scale.toFixed(3)})`;
+                // Apply pure 2D scale with hardware acceleration - keeping cards completely in shape!
+                inner.style.transform = `scale(${scale.toFixed(4)})`;
+                inner.style.opacity = opacity.toFixed(2);
                 card.style.zIndex = zIndex;
+
+                if (intensity > 0.85) {
+                    card.classList.add('is-center');
+                } else {
+                    card.classList.remove('is-center');
+                }
             }
         }
 
         // 5. Ultra-Smooth Frame-Rate Independent Animation Loop
         let lastFrameTime = performance.now();
+        const autoSpeed = 0.45; // Smooth ambient glide for luxury showcase
 
         function render(now) {
             const dt = Math.min((now - lastFrameTime) / 1000, 0.08);
             lastFrameTime = now;
+
+            // Gentle continuous ambient drift when user is not dragging or hovering
+            if (!isDragging && !isHovered) {
+                targetX -= autoSpeed * (dt * 60);
+            }
 
             // Frame-rate independent exponential smoothing (Lenis-grade liquid glide)
             const decay = isDragging ? 18 : 8.5;
@@ -238,7 +256,7 @@
             // Apply translation to track
             track.style.transform = `translate3d(${currentX.toFixed(2)}px, 0, 0)`;
 
-            // Update 3D cylindrical concave transforms on all cards
+            // Update smooth focus transforms on all cards
             update3DTransforms();
 
             requestAnimationFrame(render);
@@ -246,10 +264,11 @@
 
         requestAnimationFrame(render);
 
-        // 6. User Interactions: Hover, Drag, Wheel, Navigation Buttons
+        // 6. User Interactions: Hover, Drag, Wheel, Navigation Buttons, Click-to-Center
+        let hasMoved = false;
 
-        viewport.addEventListener('mouseenter', () => { isHovered = true; }, { passive: true });
-        viewport.addEventListener('mouseleave', () => {
+        section.addEventListener('mouseenter', () => { isHovered = true; }, { passive: true });
+        section.addEventListener('mouseleave', () => {
             isHovered = false;
             if (isDragging) {
                 isDragging = false;
@@ -262,6 +281,7 @@
         viewport.addEventListener('mousedown', (e) => {
             if (e.button !== 0) return;
             isDragging = true;
+            hasMoved = false;
             viewport.classList.add('is-dragging');
             startX = e.pageX;
             lastDragX = e.pageX;
@@ -272,6 +292,9 @@
 
         window.addEventListener('mousemove', (e) => {
             if (!isDragging) return;
+            if (Math.abs(e.pageX - startX) > 6) {
+                hasMoved = true;
+            }
             const now = performance.now();
             const dt = Math.max((now - lastDragTime) / 1000, 0.001);
             const deltaX = e.pageX - lastDragX;
@@ -295,6 +318,7 @@
         viewport.addEventListener('touchstart', (e) => {
             if (e.touches.length !== 1) return;
             isDragging = true;
+            hasMoved = false;
             startX = e.touches[0].pageX;
             lastDragX = startX;
             dragOriginX = targetX;
@@ -304,6 +328,9 @@
 
         viewport.addEventListener('touchmove', (e) => {
             if (!isDragging || e.touches.length !== 1) return;
+            if (Math.abs(e.touches[0].pageX - startX) > 6) {
+                hasMoved = true;
+            }
             const now = performance.now();
             const dt = Math.max((now - lastDragTime) / 1000, 0.001);
             const touchX = e.touches[0].pageX;
@@ -322,6 +349,19 @@
                 targetX += dragVelocity * 9;
             }
         }, { passive: true });
+
+        // Click any card to smoothly glide it to center
+        allCards.forEach((card, index) => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', (e) => {
+                if (hasMoved) return;
+                const cardCenter = trackPaddingLeft + (index * cardStep) + (cardWidth * 0.5) + currentX;
+                const distFromCenter = cardCenter - (viewportWidth * 0.5);
+                if (Math.abs(distFromCenter) > 20) {
+                    targetX -= distFromCenter;
+                }
+            });
+        });
 
         // Mouse Wheel over Viewport: smooth horizontal gallery panning
         viewport.addEventListener('wheel', (e) => {

@@ -30,18 +30,21 @@
 /* ==========================================================================
    HEADER CONTAINER & POSITIONING (Solid White Background across all sections)
    ========================================================================== */
+header.header-one,
 .header-one.header-relative,
+header.header--sticky,
 body.radious-4 .header-one.header-relative,
-body.home-three-page .header-one.header-relative {
+body.home-three-page .header-one.header-relative,
+body.brands-page .header-one.header-relative {
   background: #ffffff !important;
   border: none !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
   transform: none !important;
   transition: all 0.3s ease;
-  z-index: 990;
+  z-index: 1100 !important;
   max-width: 100% !important;
   width: 100% !important;
   margin: 0 !important;
@@ -128,8 +131,13 @@ body.home-three-page .header-one.header-relative .menu-btn-toggle svg rect {
   fill: #252525 !important;
 }
 
-.header--sticky.sticky {
-  position: fixed !important;
+header.header--sticky.sticky,
+header.header-one.sticky,
+.header-one.header-relative.sticky,
+body.radious-4 .header-one.header-relative.sticky,
+body.home-three-page .header-one.header-relative.sticky,
+body.brands-page .header-one.header-relative.sticky {
+  position: sticky !important;
   top: 0 !important;
   left: 0 !important;
   transform: none !important;
@@ -140,9 +148,8 @@ body.home-three-page .header-one.header-relative .menu-btn-toggle svg rect {
   border-radius: 0 !important;
   border: none !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-  
-  z-index: 1100 !important;
-  animation: khilStickySlideDown 0.35s ease-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  z-index: 1200 !important;
 }
 
 @keyframes khilStickySlideDown {
@@ -156,10 +163,11 @@ body.home-three-page .header-one.header-relative .menu-btn-toggle svg rect {
 }
 
 .khil-header-container {
-  max-width: 100%;
+  max-width: 1620px;
   width: 100%;
   margin: 0 auto;
-  padding: 20px 36px;
+  padding: 10px 36px;
+  box-sizing: border-box;
 }
 
 .header-wrapper-main {
@@ -178,7 +186,7 @@ body.home-three-page .header-one.header-relative .menu-btn-toggle svg rect {
     gap: 0 !important;
     position: relative !important;
     min-height: 64px !important;
-    max-width: 1720px !important;
+    max-width: 100% !important;
     margin: 0 auto !important;
   }
 }
@@ -332,7 +340,7 @@ body.home-three-page .header-one.header-relative .menu-btn-toggle svg rect {
     font-size: 15.5px !important;
   }
   .khil-header-container {
-    padding: 20px 36px !important;
+    padding: 10px 36px !important;
   }
 }
 
@@ -2389,14 +2397,17 @@ body.home-three-page .header-one.header-relative .menu-btn-toggle svg rect {
   position: relative;
   background-color: #ffffff;
   padding: 60px 0 70px;
+  padding-bottom: 0px;
   overflow: hidden;
   width: 100%;
 }
 
 .khil-about-container {
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1620px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 36px;
+  box-sizing: border-box;
 }
 
 /* 3-Column Top Grid: Left Flank | Center Content | Right Flank */
@@ -2765,9 +2776,11 @@ body.home-three-page .header-one.header-relative .menu-btn-toggle svg rect {
 }
 
 .khil-hotels-bento-container {
-  max-width: 1600px;
+  width: 100%;
+  max-width: 1620px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 36px;
+  box-sizing: border-box;
 }
 
 /* 2-Column Bento Grid: Row 1 (Header + Card 1), Row 2 (Card 2 + Card 3), Row 3 (Card 4 + Card 5) */

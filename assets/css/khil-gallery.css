@@ -144,8 +144,8 @@
     overflow: hidden !important;
     padding-top: 30px;
     padding-bottom: 45px;
-    perspective: 1100px;
-    -webkit-perspective: 1100px;
+    perspective: 1200px;
+    -webkit-perspective: 1200px;
     perspective-origin: 50% 50%;
     -webkit-perspective-origin: 50% 50%;
     cursor: grab;
@@ -154,6 +154,8 @@
     touch-action: pan-y;
     opacity: 1 !important;
     visibility: visible !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
 }
 
 .khil-gallery-section .khil-gallery-viewport.is-dragging {
@@ -168,7 +170,7 @@
     -webkit-transform-style: preserve-3d;
     will-change: transform;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
     padding-left: 30px;
     padding-right: 30px;
     opacity: 1 !important;
@@ -184,8 +186,8 @@
     display: flex !important;
     align-items: center;
     justify-content: center;
-    width: 240px;
-    height: 350px;
+    width: 250px;
+    height: 360px;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     will-change: transform;
@@ -201,14 +203,18 @@
     border-radius: 22px;
     overflow: hidden !important;
     background-color: #EDE8E1;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.13), 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.04);
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transform-origin: center center;
-    will-change: transform;
-    opacity: 1 !important;
+    will-change: transform, opacity;
+    opacity: 1;
     visibility: visible !important;
-    transition: box-shadow 0.35s ease;
+    transition: box-shadow 0.35s ease, opacity 0.3s ease;
+}
+
+.khil-gallery-section .khil-gallery-card.is-center .gallery-card-inner {
+    box-shadow: 0 26px 56px rgba(0, 0, 0, 0.22), 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 .khil-gallery-section .khil-gallery-card:hover .gallery-card-inner {
@@ -276,7 +282,7 @@
         border-radius: 26px;
     }
     .khil-gallery-section .khil-gallery-track {
-        gap: 14px;
+        gap: 24px;
     }
 }
 
@@ -295,14 +301,14 @@
         min-height: 510px;
     }
     .khil-gallery-section .khil-gallery-card {
-        width: 240px;
-        height: 350px;
+        width: 250px;
+        height: 360px;
     }
     .khil-gallery-section .gallery-card-inner {
         border-radius: 22px;
     }
     .khil-gallery-section .khil-gallery-track {
-        gap: 12px;
+        gap: 20px;
     }
 }
 
@@ -324,14 +330,14 @@
         min-height: 470px;
     }
     .khil-gallery-section .khil-gallery-card {
-        width: 220px;
-        height: 320px;
+        width: 230px;
+        height: 335px;
     }
     .khil-gallery-section .gallery-card-inner {
         border-radius: 20px;
     }
     .khil-gallery-section .khil-gallery-track {
-        gap: 10px;
+        gap: 18px;
     }
 }
 
@@ -362,14 +368,14 @@
         min-height: 440px;
     }
     .khil-gallery-section .khil-gallery-card {
-        width: 205px;
-        height: 300px;
+        width: 215px;
+        height: 315px;
     }
     .khil-gallery-section .gallery-card-inner {
         border-radius: 18px;
     }
     .khil-gallery-section .khil-gallery-track {
-        gap: 10px;
+        gap: 16px;
     }
 }
 
@@ -400,14 +406,14 @@
         min-height: 410px;
     }
     .khil-gallery-section .khil-gallery-card {
-        width: 190px;
-        height: 280px;
+        width: 200px;
+        height: 295px;
     }
     .khil-gallery-section .gallery-card-inner {
         border-radius: 18px;
     }
     .khil-gallery-section .khil-gallery-track {
-        gap: 8px;
+        gap: 14px;
     }
 }
 
@@ -447,14 +453,14 @@
         min-height: 370px;
     }
     .khil-gallery-section .khil-gallery-card {
-        width: 170px;
-        height: 250px;
+        width: 180px;
+        height: 265px;
     }
     .khil-gallery-section .gallery-card-inner {
         border-radius: 16px;
     }
     .khil-gallery-section .khil-gallery-track {
-        gap: 8px;
+        gap: 12px;
     }
 }
 

@@ -38,7 +38,7 @@
 }
 
 body.committees-page {
-  background-color: var(--khil-bg);
+  background-color: white;
   color: var(--khil-ink);
   font-family: var(--khil-font-sans);
   line-height: 1.6;

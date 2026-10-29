@@ -24,7 +24,7 @@
   background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 100%;
   height: auto;
   display: flex;
   align-items: center;
@@ -50,6 +50,11 @@
   position: relative;
   z-index: 2;
   width: 100%;
+  max-width: 1620px !important;
+  margin: 0 auto !important;
+  padding-left: 36px !important;
+  padding-right: 36px !important;
+  box-sizing: border-box !important;
 }
 
 .banner-bg-attach-agency .ira-banner-content {
@@ -264,7 +269,7 @@ body.home-three-page .khil-blog-grid {
 .khil-brand-strip-list {
   overflow: hidden;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1125px;
   margin: 0 auto;
 }
 
@@ -388,7 +393,7 @@ body.home-three-page .rts-btn {
    ========================================================================== */
 .khil-legacy-hero-section {
   padding: 80px 0 75px;
-  background: #F7F4F0;
+  background: #fff;
   border-bottom: 1px solid rgba(231, 225, 218, 0.9);
 }
 
@@ -711,12 +716,14 @@ body.home-three-page .rts-btn {
 }
 
 .khil-shared-footer .container {
-  max-width: 1653px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 100%;
+  max-width: 1620px !important;
+  margin: 0 auto !important;
+  padding-left: 36px !important;
+  padding-right: 36px !important;
   position: relative !important;
   z-index: 2 !important;
+  box-sizing: border-box !important;
 }
 
 /* ==========================================================================
@@ -2074,11 +2081,12 @@ body.demo-cybersecurity {
 	/*BLOG CSS*/
 	.blog-section {
       width: 100%;
+      max-width: 1620px;
       margin: 0 auto;
-      padding-top: 23px;
-      padding-bottom: 23px;
-      padding-left: max(36px, calc((100vw - 1720px) / 2));
-      padding-right: max(36px, calc((100vw - 1720px) / 2));
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: 36px;
+      padding-right: 36px;
       box-sizing: border-box;
     }
 
@@ -2437,6 +2445,59 @@ body.demo-cybersecurity {
 [data-aos="animate__fadeInDown"][data-aos-delay="350"].aos-animate { animation-delay: 350ms; }
 [data-aos="animate__fadeInDown"][data-aos-delay="400"].aos-animate { animation-delay: 400ms; }
 
+/* ==========================================================================
+   UNIFIED GLOBAL CONTAINER SYSTEM (Consistent Max-Width & Side Alignment)
+   Enforces identical 1620px max-width & side padding across all sections:
+   - Header, Hero Banner, About Showcase, Brand Strip, Hotels Bento,
+     IRA Banner, Gallery Header, Blog/News Section, Shared Footer
+   ========================================================================== */
+.khil-header-container,
+.khil-hero-slideshow-section .wheel-banner-stage,
+.khil-about-container,
+.khil-brand-strip .container,
+.khil-brand-strip .khil-about-container,
+.khil-hotels-bento-container,
+.banner-bg-attach-agency .container,
+.khil-gallery-section .khil-gallery-container,
+.blog-section,
+.khil-shared-footer .container {
+  width: 100% !important;
+  max-width: 1620px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 36px !important;
+  padding-right: 36px !important;
+  box-sizing: border-box !important;
+}
 
+@media only screen and (max-width: 1100px) {
+  .khil-header-container,
+  .khil-hero-slideshow-section .wheel-banner-stage,
+  .khil-about-container,
+  .khil-brand-strip .container,
+  .khil-brand-strip .khil-about-container,
+  .khil-hotels-bento-container,
+  .banner-bg-attach-agency .container,
+  .khil-gallery-section .khil-gallery-container,
+  .blog-section,
+  .khil-shared-footer .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
 
-	
+@media only screen and (max-width: 575px) {
+  .khil-header-container,
+  .khil-hero-slideshow-section .wheel-banner-stage,
+  .khil-about-container,
+  .khil-brand-strip .container,
+  .khil-brand-strip .khil-about-container,
+  .khil-hotels-bento-container,
+  .banner-bg-attach-agency .container,
+  .khil-gallery-section .khil-gallery-container,
+  .blog-section,
+  .khil-shared-footer .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
