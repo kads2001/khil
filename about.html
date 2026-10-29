@@ -26,6 +26,7 @@
     <link rel="stylesheet preload" href="assets/css/style.css" as="style">
     <link rel="stylesheet preload" href="assets/css/khil-header.css" as="style">
     <link rel="stylesheet" href="assets/css/custom.css?v=5">
+    <link rel="stylesheet" href="assets/css/about.css">
 
     <link rel="stylesheet" href="assets/css/inner-banner.css">
 </head>
@@ -49,24 +50,60 @@
             </div>
         </div>
     </section>
-    <div class="khil-about-stats-horizontal" data-aos="fade-up" data-aos-delay="200">
-                <div class="khil-about-stat-col stat-item" data-aos="fade" data-aos-delay="100">
-                    <span class="stat-number">0<span class="stat-counter" data-count="7">0</span></span>
-                    <span class="stat-label">Brands</span>
+    
+    <!-- ==========================================================================
+         KHIL ACHIEVEMENTS / RUNNING NUMBERS (4-Card Tall Boxed Grid Matching Reference)
+         ========================================================================== -->
+    <section class="khil-achievement-section" id="achievements" aria-label="Our Achievements">
+        <div class="container">
+            <div class="khil-achievement-wrapper">
+                <div class="achievement-header text-center" data-aos="fade-up">
+                    <h2 class="achievement-title">Achievement</h2>
+                    <p class="achievement-desc">
+                        With over six decades of pioneering hospitality, we continue to set industry benchmarks in eco-luxury, timeless heritage, and exceptional guest experiences.
+                    </p>
                 </div>
-                <div class="khil-about-stat-col stat-item" data-aos="fade" data-aos-delay="150">
-                    <span class="stat-number"><span class="stat-counter" data-count="150">0</span><span class="stat-plus">+</span></span>
-                    <span class="stat-label">Awards won</span>
-                </div>
-                <div class="khil-about-stat-col stat-item" data-aos="fade" data-aos-delay="200">
-                    <span class="stat-number"><span class="stat-counter" data-count="95">0</span><span class="stat-plus">+</span></span>
-                    <span class="stat-label">Years of Legacy</span>
-                </div>
-                <div class="khil-about-stat-col stat-item" data-aos="fade" data-aos-delay="250">
-                    <span class="stat-number"><span class="stat-counter" data-count="2200" data-format="comma">0</span><span class="stat-plus">+</span></span>
-                    <span class="stat-label">Luxury Rooms</span>
+                <div class="achievement-grid" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Card 1: Brands -->
+                    <div class="achievement-card">
+                        <div class="achievement-number">
+                            0<span class="stat-counter" data-count="7">0</span>
+                        </div>
+                        <p class="achievement-label">Brands</p>
+                    </div>
+
+                    <!-- Card 2: Awards won -->
+                    <div class="achievement-card">
+                        <div class="achievement-number">
+                            <span class="stat-counter" data-count="150">0</span><span class="achievement-plus">+</span>
+                        </div>
+                        <p class="achievement-label">Awards won</p>
+                    </div>
+
+                    <!-- Card 3: Years of Legacy -->
+                    <div class="achievement-card">
+                        <div class="achievement-number">
+                            <span class="stat-counter" data-count="95">0</span><span class="achievement-plus">+</span>
+                        </div>
+                        <p class="achievement-label">Years of Legacy</p>
+                    </div>
+
+                    <!-- Card 4: Luxury Rooms -->
+                    <div class="achievement-card">
+                        <div class="achievement-number">
+                            <span class="stat-counter" data-count="2200" data-format="comma">0</span><span class="achievement-plus">+</span>
+                        </div>
+                        <p class="achievement-label">Luxury Rooms</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         KHIL BRANDS SHOWCASE (Curated Staggered Logo Cards)
+         ========================================================================== -->
+
 
     <!-- Our Founder's Legacy Section -->
     <section class="khil-legacy-hero-section">
@@ -133,58 +170,41 @@
           
         </div>
     </section>
-
-    <!-- ==========================================================================
-         KHIL BRAND LOGOS STRIP (Continuous side-scrolling marquee matching home page)
-         ========================================================================== -->
-    <section class="khil-brand-strip" id="brands" aria-label="Our hotel brands" data-aos="fade-up" data-aos-delay="100">
-        <div class="container-fluid khil-about-container">
-            <div class="khil-brand-strip-list">
-                <div class="khil-brand-marquee-track">
-                    <div class="khil-brand-marquee-group">
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/orchidlogo.webp" alt="The Orchid Hotels" loading="lazy">
+    <section class="client" id="brands" aria-label="Our hotel brands">
+        <div class="container">
+            <div class="client-wrapper">
+                <div class="div-6 slidein" data-aos="fade-up">
+                    <h2 class="h1 client-title">Our Brands</h2>
+                    <div class="text-large client-description">
+                        A distinguished portfolio of hospitality brands embodying timeless heritage, eco-luxury, and heartfelt service across India.
+                    </div>
+                </div>
+                <div class="client-main" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Row 1: 3 Logos Centered -->
+                    <div class="client-logo-box">
+                        <div class="client-logo">
+                            <img src="assets/img/logos/orchidlogo.webp" loading="lazy" alt="The Orchid Hotels" class="client-logo-image">
                         </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/jadhavgadlogo.webp" alt="Fort JadhavGADH" loading="lazy">
+                        <div class="client-logo">
+                            <img src="assets/img/logos/jadhavgadlogo.webp" loading="lazy" alt="Fort JadhavGADH" class="client-logo-image">
                         </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/mahadodhilogo.webp" alt="Mahodadhi Palace" loading="lazy">
-                        </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/lotuslogo.webp" alt="Lotus Eco Resort" loading="lazy">
-                        </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/iralogo.webp" alt="IRA by Orchid Hotels" loading="lazy">
-                        </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/toyamblack.webp" alt="Toyam Retreat" loading="lazy">
-                        </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/passaros-logo.webp" alt="Passaros" loading="lazy">
+                        <div class="client-logo">
+                            <img src="assets/img/logos/mahadodhilogo.webp" loading="lazy" alt="Mahodadhi Palace" class="client-logo-image">
                         </div>
                     </div>
-                    <div class="khil-brand-marquee-group" aria-hidden="true">
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/orchidlogo.webp" alt="" loading="lazy">
+                    <!-- Row 2: 4 Logos Centered -->
+                    <div class="client-logo-box">
+                        <div class="client-logo">
+                            <img src="assets/img/logos/lotuslogo.webp" loading="lazy" alt="Lotus Eco Resort" class="client-logo-image">
                         </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/jadhavgadlogo.webp" alt="" loading="lazy">
+                        <div class="client-logo">
+                            <img src="assets/img/logos/iralogo.webp" loading="lazy" alt="IRA by Orchid Hotels" class="client-logo-image">
                         </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/mahadodhilogo.webp" alt="" loading="lazy">
+                        <div class="client-logo">
+                            <img src="assets/img/logos/toyamblack.webp" loading="lazy" alt="Toyam Retreat" class="client-logo-image">
                         </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/lotuslogo.webp" alt="" loading="lazy">
-                        </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/iralogo.webp" alt="" loading="lazy">
-                        </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/toyamblack.webp" alt="" loading="lazy">
-                        </div>
-                        <div class="khil-brand-wordmark">
-                            <img src="assets/img/logos/passaros-logo.webp" alt="" loading="lazy">
+                        <div class="client-logo">
+                            <img src="assets/img/logos/passaros-logo.webp" loading="lazy" alt="Passaros" class="client-logo-image">
                         </div>
                     </div>
                 </div>
@@ -194,132 +214,79 @@
 
     <!-- Who We Are Section -->
     <div class="khil-who-we-are-area rts-section-gap bg_light" id="who-we-are">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="khil-who-we-are-header text-center" data-aos="fade-up">
-                <span class="pre">About Us</span>
-                <h2 class="title rts-text-anime-style-1">Who We Are</h2>
-            </div>
-
-            <!-- Two Images Side by Side -->
-            <div class="khil-leaders-side-by-side" data-aos="fade-up" data-aos-delay="100">
-                <!-- Dr. Vithal Venkatesh Kamat -->
-                <div class="leader-photo-card">
-                    <div class="leader-photo-box">
-                        <img src="assets/images/about/founder2.png" alt="Dr Vithal Venkatesh Kamat" class="leader-img">
+        <div class="container khil-who-we-are-container">
+            <div class="khil-who-we-are-split-layout">
+                <!-- Left Column: Header + Story Content -->
+                <div class="khil-who-we-are-col-left" data-aos="fade-up">
+                    <div class="khil-who-we-are-header">
+                        <span class="pre">About Us</span>
+                        <h2 class="title rts-text-anime-style-1">Who We Are</h2>
                     </div>
-                    <div class="leader-photo-caption">
-                        <h4>Dr. Vithal Venkatesh Kamat</h4>
-                        <p class="leader-role">Executive Chairman &amp; Chief Mentor</p>
-                    </div>
-                </div>
-
-                <!-- Mr. Vishal Kamat -->
-                <div class="leader-photo-card">
-                    <div class="leader-photo-box">
-                        <img src="assets/images/about/founder1.png" alt="Mr Vishal Kamat" class="leader-img">
-                    </div>
-                    <div class="leader-photo-caption">
-                        <h4>Mr. Vishal Kamat</h4>
-                        <p class="leader-role">Executive Director</p>
+                    <div class="khil-who-we-are-content text-content-below">
+                        <div class="disc">
+                            <p>
+                                <strong>Kamat Hotels (India) Limited</strong> was incorporated on 21st March, 1995 in the State of Maharashtra by Late Mr. Venkatesh Krishna Kamat and his associates with the main object of setting up and running of hotels and related business.
+                            </p>
+                            <p>
+                                The Group is headed by <strong>Dr Vithal Venkatesh Kamat</strong> who has been spearheading the Kamat Group growth. Now he is the Chief Mentor to the next generation, <strong>Mr Vishal Kamat</strong> and the host of Professional team members who work under his guidance and experience.
+                            </p>
+                            <p>
+                                KHIL’s most globally recognized brand is <strong>THE ORCHID</strong>, An Ecotel Hotel, Asia’s first chain of a 5-star, environment-sensitive hotel which has won over 95 National &amp; International awards. The Orchid is in Mumbai, Pune and many more location.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Content Below Images -->
-            <div class="khil-who-we-are-content text-content-below" data-aos="fade-up" data-aos-delay="200">
-                <div class="disc">
-                    <p>
-                        <strong>Kamat Hotels (India) Limited</strong> was incorporated on 21st March, 1995 in the State of Maharashtra by Late Mr. Venkatesh Krishna Kamat and his associates with the main object of setting up and running of hotels and related business.
-                    </p>
-                    <p>
-                        The Group is headed by <strong>Dr Vithal Venkatesh Kamat</strong> who has been spearheading the Kamat Group growth. Now he is the Chief Mentor to the next generation, <strong>Mr Vishal Kamat</strong> and the host of Professional team members who work under his guidance and experience.
-                    </p>
-                    <p>
-                        KHIL’s most globally recognized brand is <strong>THE ORCHID</strong>, An Ecotel Hotel, Asia’s first chain of a 5-star, environment-sensitive hotel which has won over 95 National &amp; International awards. The Orchid is in Mumbai, Pune and many more location.
-                    </p>
+                <!-- Right Column: Two Images Side by Side -->
+                <div class="khil-who-we-are-col-right" data-aos="fade-up" data-aos-delay="100">
+                    <div class="khil-leaders-side-by-side">
+                        <!-- Dr. Vithal Venkatesh Kamat -->
+                        <div class="leader-photo-card">
+                            <div class="leader-photo-box">
+                                <img src="assets/images/about/founder2.png" alt="Dr Vithal Venkatesh Kamat" class="leader-img">
+                            </div>
+                            <div class="leader-photo-caption">
+                                <h4>Dr. Vithal Venkatesh Kamat</h4>
+                                <p class="leader-role">Executive Chairman &amp; Chief Mentor</p>
+                            </div>
+                        </div>
+
+                        <!-- Mr. Vishal Kamat -->
+                        <div class="leader-photo-card">
+                            <div class="leader-photo-box">
+                                <img src="assets/images/about/founder1.png" alt="Mr Vishal Kamat" class="leader-img">
+                            </div>
+                            <div class="leader-photo-caption">
+                                <h4>Mr. Vishal Kamat</h4>
+                                <p class="leader-role">Executive Director</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Who We Are Section End -->
 
-    <style>
-    /* Critical sticky overrides to bypass global overflow clipping in style.css */
-    html {
-        overflow-x: clip !important;
-        overflow-y: visible !important;
-    }
-    body.demo-cybersecurity {
-        overflow-x: clip !important;
-        overflow-y: visible !important;
-    }
-    .our-process {
-        position: relative !important;
-        background-color: #ffffff;
-        padding: 0 !important;
-        overflow: visible !important;
-    }
-    @media (min-width: 992px) {
-        .our-process-pin-track {
-            position: relative !important;
-            height: 260vh !important;
-            overflow: visible !important;
-        }
-        .our-process-sticky-stage {
-            position: -webkit-sticky !important;
-            position: sticky !important;
-            top: 75px !important;
-            height: calc(84vh - 75px) !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: center !important;
-            overflow: visible !important;
-            padding: 30px 0 !important;
-            box-sizing: border-box !important;
-            z-index: 5 !important;
-        }
-        .single-our-process-wrap {
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-            transform-style: preserve-3d;
-            will-change: transform;
-            opacity: 1 !important;
-        }
-    }
-    @media (max-width: 991px) {
-        .our-process-pin-track {
-            height: auto !important;
-        }
-        .our-process-sticky-stage {
-            position: static !important;
-            height: auto !important;
-            padding: 60px 0 80px !important;
-        }
-        .single-our-process-wrap {
-            transform: none !important;
-            opacity: 1 !important;
-        }
-    }
-    </style>
 
     <!-- ==========================================================================
          OUR PROCESS / FOUNDATION (Vision, Principles & Philosophy)
          ========================================================================== -->
-    <section class="our-process our-process-pin-track" id="ourProcessTrack">
-        <div class="our-process-sticky-stage">
-            <div class="container">
-                <div class="section-title-wrap">
-                    <div class="subtitle-wrapper">
-                        <div class="subtitle-wrap">
-                            <span class="subtitle-text">OUR FOUNDATION</span>
-                        </div>
+    <section class="our-process" id="ourProcess">
+        <div class="container our-process-container">
+            <div class="our-process-layout">
+                <!-- Left Column: Title & Subtitle -->
+                <div class="our-process-heading-col">
+                    <div class="subtitle-wrap">
+                        <span class="subtitle-text">OUR FOUNDATION</span>
                     </div>
-                    <h2 class="section-title"><span class="section-title-color">OUR GUIDING</span> PRINCIPLES</h2>
+                    <h2 class="section-title"><span class="section-title-color">OUR GUIDING</span><br>PRINCIPLES</h2>
                 </div>
+
+                <!-- Right Column: 2 Cards Side-by-Side (Static, no effect) -->
                 <div class="our-process-wrap">
                     <!-- 01: Our Vision -->
-                    <div class="single-our-process-wrap _1st">
+                    <div class="single-our-process-wrap">
                         <div class="our-process-card">
                             <div class="our-process-number-wrap">
                                 <div class="our-process-number">01</div>
@@ -328,12 +295,11 @@
                                 <h3 class="our-process-title">Our Vision</h3>
                                 <p class="our-process-details">To make Kamat Hotels (India) Limited, the country’s leading Hospitality Company.</p>
                             </div>
-                            <div class="our-process-hover-shape"></div>
                         </div>
                     </div>
 
                     <!-- 02: Our Core Principles -->
-                    <div class="single-our-process-wrap _2nd">
+                    <div class="single-our-process-wrap">
                         <div class="our-process-card">
                             <div class="our-process-number-wrap">
                                 <div class="our-process-number">02</div>
@@ -342,7 +308,6 @@
                                 <h3 class="our-process-title">Our Core Principles</h3>
                                 <p class="our-process-details">Our quality, health and safety standards will be second to none. Environmental awareness and care for the world in which we live will be part of our business' philosophy.</p>
                             </div>
-                            <div class="our-process-hover-shape"></div>
                         </div>
                     </div>
 
@@ -351,243 +316,138 @@
         </div>
     </section>
 
-    <script>
-    (function initProcessStickySequentialScroll() {
-        const track = document.getElementById('ourProcessTrack');
-        const wrap = document.querySelector('.our-process-wrap');
+    <section class="blog-section blog-pin-track" id="blogPinTrack">
+        <div class="blog-sticky-stage">
+            <!-- Section Header -->
+            <div class="khil-blog-header">
+                <div class="khil-blog-header-left">
 
-        if (!track || !wrap) return;
+                    <div class="khil-blog-pill" data-aos="fade-up" data-aos-delay="50">
+                        <i class="fa-solid fa-crown"></i>
+                        <span>Latest News &amp; Updates</span>
+                    </div>
 
-        const card1 = wrap.querySelector('._1st');
-        const card2 = wrap.querySelector('._2nd');
-
-        if (!card1 || !card2) return;
-
-        let targetProgress = 0;
-        let currentProgress = -1;
-        let animationFrame = null;
-
-        // Smooth S-curve easing without sudden takeoff jerks
-        function easeInOutCubic(t) {
-            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-        }
-
-        function updateProgress() {
-            if (window.innerWidth < 992) {
-                if (animationFrame) {
-                    cancelAnimationFrame(animationFrame);
-                    animationFrame = null;
-                }
-                card1.style.transform = 'none';
-                card1.style.opacity = '1';
-                card2.style.transform = 'none';
-                card2.style.opacity = '1';
-                return;
-            }
-
-            const rect = track.getBoundingClientRect();
-            const stickyTop = 75;
-            const scrollDistance = track.offsetHeight - window.innerHeight;
-
-            if (scrollDistance <= 0) return;
-
-            const currentScroll = stickyTop - rect.top;
-            targetProgress = Math.max(0, Math.min(1, currentScroll / scrollDistance));
-
-            if (animationFrame === null) {
-                animationFrame = requestAnimationFrame(render);
-            }
-        }
-
-        function render() {
-            if (window.innerWidth < 992) {
-                animationFrame = null;
-                return;
-            }
-
-            if (currentProgress < 0) {
-                currentProgress = targetProgress;
-            } else {
-                // Silky smooth dampening factor for 60-144Hz displays
-                currentProgress += (targetProgress - currentProgress) * 0.085;
-                if (Math.abs(targetProgress - currentProgress) < 0.0002) {
-                    currentProgress = targetProgress;
-                }
-            }
-
-            const p = currentProgress;
-
-            // Sequential timeline with generous travel & pauses:
-            // Phase 1 [0.03, 0.44]: Card 1 arrives completely to top
-            // Hold 1  [0.44, 0.56]: Card 1 fully settled at top, Card 2 resting
-            // Phase 2 [0.56, 0.94]: Card 2 arrives completely to top
-            // Hold 2  [0.94, 1.00]: Both cards resting in place, pin unpins
-            const p1 = Math.max(0, Math.min(1, (p - 0.03) / 0.41));
-            const p2 = Math.max(0, Math.min(1, (p - 0.56) / 0.38));
-
-            const e1 = easeInOutCubic(p1);
-            const e2 = easeInOutCubic(p2);
-
-            const y1 = (1 - e1) * 150;
-            const y2 = (1 - e2) * 180;
-
-            const scale1 = 0.96 + 0.04 * e1;
-            const scale2 = 0.96 + 0.04 * e2;
-
-            card1.style.transform = `translate3d(0, ${y1.toFixed(2)}px, 0) scale(${scale1.toFixed(4)})`;
-            card1.style.opacity = '1';
-
-            card2.style.transform = `translate3d(0, ${y2.toFixed(2)}px, 0) scale(${scale2.toFixed(4)})`;
-            card2.style.opacity = '1';
-
-            if (Math.abs(targetProgress - currentProgress) > 0.0002) {
-                animationFrame = requestAnimationFrame(render);
-            } else {
-                animationFrame = null;
-            }
-        }
-
-        window.addEventListener('scroll', updateProgress, { passive: true });
-        window.addEventListener('resize', updateProgress);
-
-        updateProgress();
-        setTimeout(updateProgress, 100);
-    })();
-    </script>
-
-   
-
-
-    <section class="blog-section">
-        <!-- Section Header -->
-        <div class="khil-blog-header">
-            <div class="khil-blog-header-left">
-
-                <div class="khil-blog-pill" data-aos="fade-up" data-aos-delay="50">
-                    <i class="fa-solid fa-crown"></i>
-                    <span>Latest News &amp; Updates</span>
+                    <h2 class="khil-blog-title animate__animated animate__bounceInLeft" id="blog-news-title"
+                        data-aos="animate__bounceInLeft" data-aos-delay="200">Our latest <br><span
+                            class="khil-hero-01-text-gradient">events & news</span></h2>
+                    <p class="khil-blog-desc" data-aos="fade-up" data-aos-delay="250">Did you know?
+                        Kamat Hotels India has recentely announced a new hotel management, leasing arm, Ira by Orchid
+                        Hotels that is opening at multiple locations.</p>
                 </div>
+                <div class="khil-blog-header-right" data-aos="fade-up" data-aos-delay="300">
+                    <!--<a href="media.html" class="khil-blog-view-all">
+                            <span>View All Newsroom</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>-->
+                    <a class="replica-button" href="media.html" aria-label="Button">
+                        <span class="button-label">View All</span>
 
-                <h2 class="khil-blog-title animate__animated animate__bounceInLeft" id="blog-news-title"
-                    data-aos="animate__bounceInLeft" data-aos-delay="200">Our latest <br><span
-                        class="khil-hero-01-text-gradient">events & news</span></h2>
-                <p class="khil-blog-desc" data-aos="fade-up" data-aos-delay="250">Did you know?
-                    Kamat Hotels India has recentely announced a new hotel management, leasing arm, Ira by Orchid
-                    Hotels that is opening at multiple locations.</p>
+                        <span class="button-arrow" aria-hidden="true">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
             </div>
-            <div class="khil-blog-header-right" data-aos="fade-up" data-aos-delay="300">
-                <!--<a href="media.html" class="khil-blog-view-all">
-                        <span>View All Newsroom</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>-->
-                <a class="replica-button" href="media.html" aria-label="Button">
-                    <span class="button-label">View All</span>
+            <div class="blog-grid">
 
-                    <span class="button-arrow" aria-hidden="true">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </span>
-                </a>
+                <!-- Blog 1 -->
+                <article class="blog-card blog-card-anim _1st">
+                    <div class="blog-image">
+                        <img src="assets/images/blogs/image copy 6.png" alt="" />
+                        <span class="category">Event</span>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-author">The Orchid Pune</span>
+                            <span class="meta-divider"></span>
+                            <time class="blog-date" datetime="2026-01-01">
+                                01.01.2026
+                            </time>
+                        </div>
+
+                        <h2 class="blog-title">
+                            <a href="#">Maharashtra CM Devendra Fadnavis Does Ram Navami Pooja at The Orchid Hotel, Pune</a>
+                        </h2>
+
+                        <div class="blog-footer">
+                            <a href="#" class="read-more">
+                                Read More
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7 17 17 7M7 7h10v10" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog 2 -->
+                <article class="blog-card blog-card-anim _2nd">
+                    <div class="blog-image">
+                        <img src="assets/images/blogs/image copy 7.png" alt="" />
+                        <span class="category">News</span>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-author">The Orchid</span>
+                            <span class="meta-divider"></span>
+                            <time class="blog-date" datetime="2026-01-01">
+                                01.01.2026
+                            </time>
+                        </div>
+
+                        <h2 class="blog-title">
+                            <a href="#">Launch of Nifty Tourism Index puts India’s hotel industry in the spotlight</a>
+                        </h2>
+
+                        <div class="blog-footer">
+                            <a href="#" class="read-more">
+                                Read More
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7 17 17 7M7 7h10v10" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog 3 -->
+                <article class="blog-card blog-card-anim _3rd">
+                    <div class="blog-image">
+                        <img src="assets/images/blogs/image copy 3.png" alt="" />
+                        <span class="category">News</span>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-author">The Orchid Trademark</span>
+                            <span class="meta-divider"></span>
+                            <time class="blog-date" datetime="2026-01-01">
+                                01.01.2026
+                            </time>
+                        </div>
+
+                        <h2 class="blog-title">
+                            <a href="#">Delhi High Court Directs OTAs to Remove 22 Listings in 'The Orchid' Trademark
+                                Case</a>
+                        </h2>
+
+                        <div class="blog-footer">
+                            <a href="#" class="read-more">
+                                Read More
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7 17 17 7M7 7h10v10" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
             </div>
-        </div>
-        <div class="blog-grid">
-
-            <!-- Blog 1 -->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="assets/images/blogs/image copy 6.png" alt="" />
-                    <span class="category">Event</span>
-                </div>
-
-                <div class="blog-content">
-                    <div class="blog-meta">
-                        <span class="blog-author">The Orchid Pune</span>
-                        <span class="meta-divider"></span>
-                        <time class="blog-date" datetime="2026-01-01">
-                            01.01.2026
-                        </time>
-                    </div>
-
-                    <h2 class="blog-title">
-                        <a href="#">Maharashtra CM Devendra Fadnavis Does Ram Navami Pooja at The Orchid Hotel, Pune</a>
-                    </h2>
-
-                    <div class="blog-footer">
-                        <a href="#" class="read-more">
-                            Read More
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M7 17 17 7M7 7h10v10" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Blog 2 -->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="assets/images/blogs/image copy 7.png" alt="" />
-                    <span class="category">News</span>
-                </div>
-
-                <div class="blog-content">
-                    <div class="blog-meta">
-                        <span class="blog-author">The Orchid</span>
-                        <span class="meta-divider"></span>
-                        <time class="blog-date" datetime="2026-01-01">
-                            01.01.2026
-                        </time>
-                    </div>
-
-                    <h2 class="blog-title">
-                        <a href="#">Launch of Nifty Tourism Index puts India’s hotel industry in the spotlight</a>
-                    </h2>
-
-                    <div class="blog-footer">
-                        <a href="#" class="read-more">
-                            Read More
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M7 17 17 7M7 7h10v10" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Blog 3 -->
-            <article class="blog-card">
-                <div class="blog-image">
-                    <img src="assets/images/blogs/image copy 3.png" alt="" />
-                    <span class="category">News</span>
-                </div>
-
-                <div class="blog-content">
-                    <div class="blog-meta">
-                        <span class="blog-author">The Orchid Trademark</span>
-                        <span class="meta-divider"></span>
-                        <time class="blog-date" datetime="2026-01-01">
-                            01.01.2026
-                        </time>
-                    </div>
-
-                    <h2 class="blog-title">
-                        <a href="#">Delhi High Court Directs OTAs to Remove 22 Listings in 'The Orchid' Trademark
-                            Case</a>
-                    </h2>
-
-                    <div class="blog-footer">
-                        <a href="#" class="read-more">
-                            Read More
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M7 17 17 7M7 7h10v10" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </article>
-
         </div>
     </section>
 
@@ -695,7 +555,9 @@
     <script defer src="assets/js/vendor/bootstrap.min.js"></script>
     <script defer src="assets/js/plugins/odometer.js"></script>
     <script defer src="assets/js/plugins/swiper.js"></script>
+    <script defer src="assets/js/plugins/lenis.min.js"></script>
     <script defer src="assets/js/shared-layout.js" data-main="true"></script>
+    <script defer src="assets/js/blog-scroll-anim.js"></script>
 </body>
 
 </html>

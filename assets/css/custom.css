@@ -246,6 +246,8 @@ body.home-three-page .khil-blog-grid {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+/* Note: About Us Brands Showcase (.client) moved to assets/css/about.css */
+
 .khil-brand-strip {
   padding: 30px 0 34px;
   background: #ffffff;
@@ -388,545 +390,7 @@ body.home-three-page .rts-btn {
   }
 }
 
-/* ==========================================================================
-   Founder's Legacy Section (about.html)
-   ========================================================================== */
-.khil-legacy-hero-section {
-  padding: 80px 0 75px;
-  background: #fff;
-  border-bottom: 1px solid rgba(231, 225, 218, 0.9);
-}
-
-.khil-legacy-sticky-col {
-  position: sticky;
-  top: 90px;
-}
-
-.khil-legacy-photo-card {
-  background: #ffffff;
-  border-radius: 20px;
-
-  border: 1px solid rgba(184, 155, 105, 0.35);
-
-  position: relative;
-}
-
-.legacy-photo-frame {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-  border: 4px solid #ffffff;
-
-  background: #252525;
-}
-
-.legacy-photo-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.khil-legacy-photo-card:hover .legacy-photo-img {
-  transform: scale(1.02);
-}
-
-.legacy-photo-seal {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: #8F202B;
-  color: #ffffff;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
- 
-}
-
-.legacy-photo-caption {
-  padding-top: 18px;
-  text-align: center;
-}
-
-.legacy-photo-caption h4 {
-  font-size: 19px;
-  font-weight: 700;
-  color: #252525;
-  margin: 0 0 4px;
-}
-
-.legacy-photo-caption .founder-role {
-  font-size: 13px;
-  color: #6B6560;
-  margin: 0 0 14px;
-  font-weight: 500;
-}
-
-.legacy-badge-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-}
-
-.legacy-pill {
-  font-size: 11px;
-  font-weight: 600;
-  color: #8F202B;
-  background: rgba(143, 32, 43, 0.08);
-  border: 1px solid rgba(143, 32, 43, 0.18);
-  padding: 4px 10px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.khil-legacy-content {
-  padding-left: 10px;
-}
-
-.legacy-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #8F202B;
-  background: rgba(184, 155, 105, 0.18);
-  padding: 6px 16px;
-  border-radius: 999px;
-  margin-bottom: 16px;
-}
-
-.legacy-main-title {
-    font-size: 7.2rem;
-    font-weight: 700;
-    color: #252525;
-    letter-spacing: -0.04em;
-    line-height: 1.1;
-    margin: 0 0 24px;
-    white-space: nowrap;
-}
-
-.legacy-quote-box {
-  background: linear-gradient(135deg, #ffffff 0%, #FAF8F5 100%);
-  border: 1px solid rgba(184, 155, 105, 0.35);
-  border-left: 5px solid #8F202B;
-  border-radius: 4px 18px 18px 4px;
-  padding: 24px 28px;
-  margin-top: 24px;
-  margin-bottom: 0;
-  box-shadow: 0 8px 26px rgba(37, 37, 37, 0.05);
-  position: relative;
-  overflow: hidden;
-}
-
-.legacy-quote-box.legacy-quote-fullwidth {
-  margin-top: 36px;
-  margin-bottom: 10px;
-  padding: 10px 15px;
-  border: none;
-  background: transparent;
-  box-shadow: none;
-  text-align: center;
-}
-
-.legacy-quote-box.legacy-quote-fullwidth .quote-icon {
-  color: #8F202B;
-  font-size: 26px;
-  opacity: 0.9;
-  margin-bottom: 12px;
-  display: inline-block;
-}
-
-.legacy-quote-box.legacy-quote-fullwidth .quote-text {
-  font-size: 23px;
-  font-weight: 500;
-  font-style: italic;
-  color: #1a1a1a;
-  line-height: 1.6;
-  max-width: 960px;
-  margin: 0 auto;
-  letter-spacing: -0.01em;
-}
-
-.legacy-quote-box::after {
-  content: '”';
-  position: absolute;
-  right: 14px;
-  bottom: -28px;
-  font-family: Georgia, serif;
-  font-size: 110px;
-  color: rgba(143, 32, 43, 0.06);
-  pointer-events: none;
-  line-height: 1;
-}
-
-.legacy-quote-box.legacy-quote-fullwidth::after {
-  display: none;
-}
-
-.legacy-quote-box .quote-icon {
-  color: #8F202B;
-  font-size: 22px;
-  opacity: 0.85;
-  margin-bottom: 12px;
-  display: block;
-}
-
-.legacy-quote-box .quote-text {
-  font-size: 20px;
-  font-weight: 600;
-  font-style: italic;
-  color: #1f1f1f;
-  line-height: 1.5;
-  margin: 0;
-  letter-spacing: -0.01em;
-}
-
-@media (max-width: 767px) {
-  .legacy-quote-box.legacy-quote-fullwidth {
-    padding: 10px 0;
-    margin-top: 20px;
-  }
-  .legacy-quote-box.legacy-quote-fullwidth .quote-text {
-    font-size: 18px;
-    line-height: 1.5;
-  }
-}
-
-.legacy-body-narrative p {
-  font-size: 16.5px;
-  line-height: 1.2;
-  color: #4a4540;
-  margin-bottom: 20px;
-}
-
-.legacy-body-narrative strong {
-  color: #252525;
-  font-weight: 600;
-}
-
-.legacy-conclusion-highlight {
-  border: 1px solid rgba(184, 155, 105, 0.4);
-  border-radius: 12px;
-  padding: 22px 26px;
-  margin-top: 28px;
-  background: linear-gradient(135deg, #ffffff 0%, #FAF7F2 100%);
- 
-}
-
-.legacy-conclusion-highlight p {
-  font-size: 16px;
-  font-weight: 600;
-  color: #8F202B;
-  line-height: 1.2;
-  margin: 0;
-}
-
-@media (max-width: 991px) {
-  .khil-legacy-hero-section {
-    padding: 50px 0;
-  }
-  .khil-legacy-photo-card {
-    position: static;
-    max-width: 480px;
-    margin: 0 auto 30px;
-  }
-  .khil-legacy-content {
-    padding-left: 0;
-  }
-}
-
-/* ==========================================================================
-   Who We Are - Overlapping Leadership Photos Layout
-   ========================================================================== */
-.khil-who-we-are-area {
-  padding: 80px 0;
-  background: #ffffff;
-}
-
-.khil-who-we-are-content {
-  max-width: 580px;
-}
-
-.khil-who-we-are-content .pre {
-  color: #8F202B;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 13px;
-  display: inline-block;
-  margin-bottom: 12px;
-}
-
-.khil-who-we-are-content .title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #252525;
-  margin-bottom: 24px;
-  line-height: 1.15;
-}
-
-.khil-who-we-are-content .disc p {
-  font-size: 15.5px;
-  line-height: 1.8;
-  color: #4a4540;
-  margin-bottom: 18px;
-}
-
-.khil-who-we-are-content .disc p strong {
-  color: #252525;
-  font-weight: 600;
-}
-
-.khil-who-we-are-header {
-  margin-bottom: 40px;
-}
-
-.khil-who-we-are-header .pre {
-  color: #8F202B;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 13px;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.khil-who-we-are-header .title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #252525;
-  margin-bottom: 0;
-  line-height: 1.15;
-}
-
-/* Side by side leadership photos */
-.khil-leaders-side-by-side {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  gap: 32px;
-  max-width: 900px;
-  margin: 0 auto 45px;
-}
-
-.khil-leaders-side-by-side .leader-photo-card {
-  flex: 1;
-  max-width: 420px;
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 14px;
-  border: 1px solid rgba(231, 225, 218, 0.9);
-  box-shadow: 0 10px 30px rgba(37, 37, 37, 0.05);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.khil-leaders-side-by-side .leader-photo-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 40px rgba(37, 37, 37, 0.1);
-}
-
-.khil-leaders-side-by-side .leader-photo-box {
-  position: relative;
-  width: 100%;
-  height: 380px;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #f4efe9;
-}
-
-.khil-leaders-side-by-side .leader-photo-box .leader-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.khil-leaders-side-by-side .leader-photo-card:hover .leader-img {
-  transform: scale(1.03);
-}
-
-.khil-leaders-side-by-side .leader-photo-caption {
-  padding: 16px 8px 8px;
-  text-align: center;
-}
-
-.khil-leaders-side-by-side .leader-photo-caption h4 {
-  font-size: 19px;
-  font-weight: 700;
-  color: #252525;
-  margin: 0 0 4px;
-}
-
-.khil-leaders-side-by-side .leader-photo-caption .leader-role {
-  font-size: 13.5px;
-  color: #8F202B;
-  font-weight: 600;
-  margin: 0;
-  letter-spacing: 0.02em;
-}
-
-/* Centered content below */
-.khil-who-we-are-content.text-content-below {
-  max-width: 880px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.khil-who-we-are-content.text-content-below .disc p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #4a4540;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 767px) {
-  .khil-who-we-are-header .title {
-    font-size: 2.2rem;
-  }
-  .khil-leaders-side-by-side {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    margin-bottom: 35px;
-  }
-  .khil-leaders-side-by-side .leader-photo-card {
-    width: 100%;
-    max-width: 360px;
-  }
-  .khil-leaders-side-by-side .leader-photo-box {
-    height: 320px;
-  }
-}
-
-/* ==========================================================================
-   KHIL About Us - 1-Line Horizontal Key Metrics Strip
-   ========================================================================== */
-.khil-about-stats-horizontal {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 28px 0 10px;
-  margin-top: 25px;
-  position: relative;
-}
-
-.khil-about-stats-horizontal .khil-about-stat-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex: 1 1 0;
-  padding: 0 16px;
-  position: relative;
-}
-
-.khil-about-stats-horizontal .khil-about-stat-col:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 15%;
-  height: 70%;
-  width: 1px;
-  background: linear-gradient(180deg, rgba(184, 155, 105, 0.1) 0%, rgba(184, 155, 105, 0.35) 50%, rgba(184, 155, 105, 0.1) 100%);
-}
-
-.khil-about-stats-horizontal .stat-number {
-  font-size: 48px;
-  font-weight: 700;
-  color: #1a1a1a;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  font-family: inherit;
-  display: inline-flex;
-  align-items: baseline;
-  justify-content: center;
-}
-
-.khil-about-stats-horizontal .stat-number .stat-counter,
-.khil-about-stats-horizontal .stat-number .odometer {
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  color: inherit !important;
-  line-height: inherit !important;
-  letter-spacing: inherit !important;
-  display: inline-block !important;
-  vertical-align: baseline !important;
-  transform: none !important;
-}
-
-.khil-about-stats-horizontal .stat-number .stat-plus {
-  color: #8F202B;
-  font-size: 0.9em;
-  font-weight: 700;
-  margin-left: 3px;
-}
-
-.khil-about-stats-horizontal .stat-label {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: #64748b;
-  margin-top: 8px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-@media (max-width: 991px) {
-  .khil-about-stats-horizontal {
-    padding: 28px 16px;
-    margin-top: 40px;
-  }
-  .khil-about-stats-horizontal .stat-number {
-    font-size: 38px;
-  }
-  .khil-about-stats-horizontal .stat-label {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 767px) {
-  .khil-about-stats-horizontal {
-    flex-wrap: wrap;
-    padding: 24px 12px;
-    border-radius: 14px;
-    row-gap: 24px;
-  }
-  .khil-about-stats-horizontal .khil-about-stat-col {
-    flex: 0 0 50%;
-    padding: 8px 6px;
-  }
-  .khil-about-stats-horizontal .khil-about-stat-col:not(:last-child)::after {
-    display: none;
-  }
-  .khil-about-stats-horizontal .stat-number {
-    font-size: 32px;
-  }
-  .khil-about-stats-horizontal .stat-label {
-    font-size: 11.5px;
-  }
-}
+/* Note: About Us sections (Founder Legacy, Who We Are, Achievements) moved to assets/css/about.css */
 
 
 /* --------------------------------------------------------------------------
@@ -1977,241 +1441,7 @@ body.home-three-page .header-one .nav-area ul.khil-nav > li.has-dropdown:hover >
   color: #ff060a !important;
 }
 
-/* ==========================================================================
-   OUR PROCESS / FOUNDATION SECTION (Vision, Principles & Philosophy)
-   ========================================================================== */
-html {
-  overflow-x: clip !important;
-  overflow-y: visible !important;
-}
-
-body.demo-cybersecurity {
-  overflow-x: clip !important;
-  overflow-y: visible !important;
-}
-
-.our-process {
-  position: relative;
-  background-color: #ffffff;
-  padding: 0;
-  overflow: visible !important;
-}
-
-.our-process .section-title-wrap {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.our-process .subtitle-wrap {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-}
-
-.our-process .subtitle-text {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #7d007d;
-  background: rgba(125, 0, 125, 0.08);
-  border: 1px solid rgba(125, 0, 125, 0.18);
-  padding: 6px 20px;
-  border-radius: 50px;
-}
-
-.our-process .section-title {
-  font-size: 42px;
-  font-weight: 700;
-  color: #111111;
-  letter-spacing: -0.01em;
-  margin: 0;
-}
-
-.our-process .section-title-color {
-  color: #7d007d;
-}
-
-.our-process-wrap {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 960px;
-  margin: 0 auto;
-  gap: 36px;
-  align-items: stretch;
-  position: relative;
-}
-
-.single-our-process-wrap {
-  position: relative;
-  display: flex;
-  will-change: transform;
-  opacity: 1 !important;
-}
-
-.our-process-card {
-  position: relative;
-  width: 100%;
-  min-height: 480px;
-  background: #F4F4F6;
-  border-radius: 18px;
-  padding: 44px 34px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  box-sizing: border-box;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
-  z-index: 1;
-}
-
-.our-process-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(125, 0, 125, 0.14) !important;
-}
-
-.our-process-number-wrap {
-  position: relative;
-  z-index: 2;
-  transition: transform 0.35s ease;
-}
-
-.our-process-number {
-  font-size: 68px;
-  font-weight: 800;
-  line-height: 1;
-  color: #111111;
-  letter-spacing: -0.03em;
-  font-family: 'Familjen Grotesk', sans-serif;
-  transition: color 0.35s ease;
-}
-
-.our-process-contant {
-  position: relative;
-  z-index: 2;
-  margin-top: auto;
-  transition: transform 0.35s ease;
-}
-
-.our-process-title {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.25;
-  color: #111111;
-  margin: 0 0 14px 0;
-  transition: color 0.35s ease;
-}
-
-.our-process-details {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #555555;
-  margin: 0;
-  transition: color 0.35s ease;
-}
-
-/* Hover Expanding Shape */
-.our-process-hover-shape {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #7d007d 0%, #3e0040 100%);
-  transform: translate(-50%, -50%);
-  transition: width 0.55s cubic-bezier(0.16, 1, 0.3, 1), height 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.our-process-card:hover .our-process-hover-shape {
-  width: 260%;
-  height: 260%;
-}
-
-.our-process-card:hover .our-process-number,
-.our-process-card:hover .our-process-title,
-.our-process-card:hover .our-process-details {
-  color: #ffffff !important;
-}
-
-.our-process-card:hover .our-process-number-wrap,
-.our-process-card:hover .our-process-contant {
-  transform: translate3d(0, -4px, 0);
-}
-
-/* Pinned Stage and Track (Sequential Parallax) */
-@media (min-width: 992px) {
-  .our-process-pin-track {
-    position: relative !important;
-    height: 260vh !important;
-    background-color: #ffffff !important;
-    padding: 0 !important;
-    overflow: visible !important;
-  }
-  .our-process-sticky-stage {
-    position: -webkit-sticky !important;
-    position: sticky !important;
-    top: 75px !important;
-    height: calc(84vh - 75px) !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    overflow: visible !important;
-    padding: 30px 0 !important;
-    box-sizing: border-box !important;
-    z-index: 5 !important;
-  }
-  .single-our-process-wrap {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transform-style: preserve-3d;
-    will-change: transform;
-    opacity: 1 !important;
-  }
-  .our-process-card {
-    min-height: 440px;
-  }
-}
-
-/* Responsive */
-@media (max-width: 991px) {
-  .our-process-pin-track {
-    height: auto !important;
-  }
-  .our-process-sticky-stage {
-    position: static !important;
-    height: auto !important;
-  }
-  .our-process {
-    padding: 60px 0 80px;
-  }
-  .our-process-wrap {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .our-process-card {
-    min-height: auto;
-    padding: 32px 24px;
-    gap: 32px;
-  }
-  .our-process .section-title {
-    font-size: 32px;
-  }
-  .our-process-number {
-    font-size: 52px;
-  }
-  .our-process-title {
-    font-size: 24px;
-  }
-  .single-our-process-wrap {
-    transform: none !important;
-    opacity: 1 !important;
-  }
-}
+/* Note: Our Process / Foundation Section moved to assets/css/about.css */
 
 .khil-hero-01-text-gradient {
     -webkit-text-fill-color: transparent;
@@ -2577,6 +1807,78 @@ body.demo-cybersecurity {
         margin-bottom: 14px;
       }
     }
+
+/* ==========================================================================
+   BLOGS SECTION - PIN-TRACK & SEQUENTIAL STICKY SCROLL ANIMATION
+   (Replicated from "OUR FOUNDATION" scroll animation architecture)
+   ========================================================================== */
+html {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+
+body {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+
+@media (min-width: 992px) {
+  .blog-section.blog-pin-track {
+    position: relative !important;
+    height: 280vh !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    overflow: visible !important;
+  }
+
+  .blog-sticky-stage {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 75px !important;
+    min-height: calc(100vh - 75px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    padding: 24px 0 34px !important;
+    box-sizing: border-box !important;
+    z-index: 5 !important;
+    width: 100% !important;
+  }
+
+  .blog-card.blog-card-anim {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    will-change: transform;
+    opacity: 1 !important;
+  }
+}
+
+@media (min-width: 992px) and (max-height: 850px) {
+  .blog-sticky-stage {
+    top: 60px !important;
+    padding: 10px 0 20px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .blog-section.blog-pin-track {
+    height: auto !important;
+  }
+
+  .blog-sticky-stage {
+    position: static !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+
+  .blog-card.blog-card-anim {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
 	.post-card .post-content h3:hover a {
     color: #030303;
     background-size: 100% calc(100% - 2px);
