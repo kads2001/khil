@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Dedicated CSR Stylesheet with Cache Busting -->
-    <link rel="stylesheet" href="assets/css/csr.css?v=5.1">
+    <link rel="stylesheet" href="assets/css/csr.css?v=7.8">
+    <link rel="stylesheet" href="assets/css/khil-gallery.css">
     <link rel="stylesheet" href="assets/css/inner-banner.css">
 </head>
 <body class="radious-4 demo-default csr-page">
@@ -121,7 +122,7 @@
 
     <!-- CSR Initiatives Area Start -->
     <div class="rts-csr-area rts-section-gap">
-        <div class="csr-container csr-stack-container-rel">
+        <div class="csr-container">
             <div class="title-center-wrapper">
                 <span class="csr-eyebrow"><i class="fa-solid fa-hands-holding-heart"></i> Our Association</span>
                 <h1 class="title mt--0">Corporate Social Responsibility</h1>
@@ -133,40 +134,51 @@
                 </p>
             </div>
 
-            <div class="csr-stack-stage mt--40">
-                <!-- Dynamic Logo Beside Stack Section -->
-                <div class="csr-dynamic-logo-container" id="csrDynamicLogoContainer">
-                    <div class="csr-dynamic-logo-card">
-                        <img
-                            id="csrDynamicLogoImg"
-                            class="csr-dynamic-logo-img"
-                            src="assets/images/csr/logo4.png"
-                            alt="Active Organization Logo"
-                        >
-                    </div>
-                </div>
-
-                <div class="csr-sticky-wrapper-main">
-                    <!-- Card 1: Jankibai Shikshan Sanstha -->
-                    <div class="csr-card csr-card-wrapper card-step-1">
+            <div class="csr-cards-list mt--40">
+                <!-- Card 1: Jankibai Shikshan Sanstha -->
+                <div class="csr-card csr-card-wrapper card-step-1">
                     <div class="csr-card-inner inner one">
-                        <div class="csr-card-content left-content">
-                            <h3 class="csr-card-title title">Jankibai Shikshan Sanstha</h3>
-                            <p class="csr-card-disc disc">Jankibai Shikshan Sanstha's Vikas Vidyalaya is a renowned special education institution located in Dadar (West), Mumbai, dedicated to educating and empowering hearing-impaired (Divyang) children. Founded in the 1960s, it provides tailored academic, vocational, and extracurricular support to help its students thrive.</p>
-                            <ul class="csr-highlights-list">
-                                <li><i class="fa-solid fa-check"></i>Special Education for Hearing-Impaired (Divyang) Children</li>
-                                <li><i class="fa-solid fa-check"></i>Tailored Academic, Vocational &amp; Extracurricular Support</li>
-                                <li><i class="fa-solid fa-check"></i>Founded in the 1960s &bull; Dadar (West), Mumbai</li>
-                            </ul>
-                           
-                            <div class="csr-btn-group">
-                                <a href="https://www.facebook.com/share/1Fz1PWpEfT/" target="_blank" rel="noopener noreferrer" class="csr-btn-read-more">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Read More
-                                </a>
+                        <div class="csr-card-image image-area csr-slider-box" id="jankibaiSlider">
+                            <div class="csr-slider-track">
+                                <img src="assets/img/Social-work/Jankibai Shikshan Sanstha/1.png" alt="Jankibai Shikshan Sanstha 1" class="csr-slide-img active">
+                                <img src="assets/img/Social-work/Jankibai Shikshan Sanstha/2.png" alt="Jankibai Shikshan Sanstha 2" class="csr-slide-img">
+                                <img src="assets/img/Social-work/Jankibai Shikshan Sanstha/3.png" alt="Jankibai Shikshan Sanstha 3" class="csr-slide-img">
+                                <img src="assets/img/Social-work/Jankibai Shikshan Sanstha/4.png" alt="Jankibai Shikshan Sanstha 4" class="csr-slide-img">
+                                <img src="assets/img/Social-work/Jankibai Shikshan Sanstha/5.png" alt="Jankibai Shikshan Sanstha 5" class="csr-slide-img">
+                            </div>
+                            <button type="button" class="csr-slider-nav csr-slider-prev" aria-label="Previous Slide">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button type="button" class="csr-slider-nav csr-slider-next" aria-label="Next Slide">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <div class="csr-slider-dots">
+                                <span class="csr-slider-dot active" data-index="0"></span>
+                                <span class="csr-slider-dot" data-index="1"></span>
+                                <span class="csr-slider-dot" data-index="2"></span>
+                                <span class="csr-slider-dot" data-index="3"></span>
+                                <span class="csr-slider-dot" data-index="4"></span>
                             </div>
                         </div>
-                        <div class="csr-card-image image-area">
-                            <img src="assets/images/project/13.webp" width="563" alt="Jankibai Shikshan Sanstha">
+                        <div class="csr-card-content left-content">
+                            <div class="csr-card-header-row">
+                                <h3 class="csr-card-title title">Jankibai Shikshan Sanstha</h3>
+                                <div class="csr-card-brand-logo">
+                                    <img src="assets/images/csr/logo4.png" alt="Jankibai Shikshan Sanstha Logo">
+                                </div>
+                            </div>
+                            <p class="csr-card-disc disc">Jankibai Shikshan Sanstha's Vikas Vidyalaya is a renowned special education institution located in Dadar (West), Mumbai, dedicated to educating and empowering hearing-impaired (Divyang) children. Founded in the 1960s, it provides tailored academic, vocational, and extracurricular support to help its students thrive.</p>
+                           
+                            <div class="csr-btn-group">
+                                <a class="replica-button replica-button-lgr replica-btn-outline" href="https://www.facebook.com/share/1Fz1PWpEfT/" target="_blank" rel="noopener noreferrer" aria-label="Read More">
+                                    <span class="button-label">Read More</span>
+                                    <span class="button-arrow" aria-hidden="true">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -175,26 +187,55 @@
                 <!-- Card 2: ASHAKIRAN FOUNDATION -->
                 <div class="csr-card csr-card-wrapper card-step-2">
                     <div class="csr-card-inner inner two">
-                        <div class="csr-card-content left-content">
-                            <h3 class="csr-card-title title">ASHAKIRAN FOUNDATION</h3>
-                            <p class="csr-card-disc disc">ASHA KIRAN FOUNDATION is the Ray of Hope for orphan, underprivileged and neglected children. It was established in 2008 by a young, dynamic and dedicated social worker Shri Pratap Kumar Pradhan with a view to &ldquo;Save the girl child and stop female foeticide&rdquo;.</p>
-                            <ul class="csr-highlights-list">
-                                <li><i class="fa-solid fa-check"></i>Ray of Hope for Orphan &amp; Underprivileged Children</li>
-                                <li><i class="fa-solid fa-check"></i>Mission: Save the Girl Child &amp; Stop Female Foeticide</li>
-                                <li><i class="fa-solid fa-check"></i>Established in 2008 by Shri Pratap Kumar Pradhan</li>
-                            </ul>
-                           
-                            <div class="csr-btn-group">
-                                <a href="https://ashakiranfoundation.org/donation/" target="_blank" rel="noopener noreferrer" class="csr-btn-donate">
-                                    <i class="fa-solid fa-heart"></i> Donate Now
-                                </a>
-                                <a href="https://ashakiranfoundation.org/" target="_blank" rel="noopener noreferrer" class="csr-btn-read-more">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Read More
-                                </a>
+                        <div class="csr-card-image image-area csr-slider-box" id="ashakiranSlider">
+                            <div class="csr-slider-track">
+                                <img src="assets/img/Social-work/ASHAKIRAN FOUNDATION/1.png" alt="ASHAKIRAN FOUNDATION 1" class="csr-slide-img active">
+                                <img src="assets/img/Social-work/ASHAKIRAN FOUNDATION/2.png" alt="ASHAKIRAN FOUNDATION 2" class="csr-slide-img">
+                                <img src="assets/img/Social-work/ASHAKIRAN FOUNDATION/3.png" alt="ASHAKIRAN FOUNDATION 3" class="csr-slide-img">
+                                <img src="assets/img/Social-work/ASHAKIRAN FOUNDATION/4.png" alt="ASHAKIRAN FOUNDATION 4" class="csr-slide-img">
+                                <img src="assets/img/Social-work/ASHAKIRAN FOUNDATION/5.png" alt="ASHAKIRAN FOUNDATION 5" class="csr-slide-img">
+                            </div>
+                            <button type="button" class="csr-slider-nav csr-slider-prev" aria-label="Previous Slide">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button type="button" class="csr-slider-nav csr-slider-next" aria-label="Next Slide">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <div class="csr-slider-dots">
+                                <span class="csr-slider-dot active" data-index="0"></span>
+                                <span class="csr-slider-dot" data-index="1"></span>
+                                <span class="csr-slider-dot" data-index="2"></span>
+                                <span class="csr-slider-dot" data-index="3"></span>
+                                <span class="csr-slider-dot" data-index="4"></span>
                             </div>
                         </div>
-                        <div class="csr-card-image image-area">
-                            <img src="assets/images/career/02.webp" width="563" alt="ASHAKIRAN FOUNDATION">
+                        <div class="csr-card-content left-content">
+                            <div class="csr-card-header-row">
+                                <h3 class="csr-card-title title">ASHAKIRAN FOUNDATION</h3>
+                                <div class="csr-card-brand-logo">
+                                    <img src="assets/images/csr/logo1.png" alt="ASHAKIRAN FOUNDATION Logo">
+                                </div>
+                            </div>
+                            <p class="csr-card-disc disc">ASHA KIRAN FOUNDATION is the Ray of Hope for orphan, underprivileged and neglected children. It was established in 2008 by a young, dynamic and dedicated social worker Shri Pratap Kumar Pradhan with a view to &ldquo;Save the girl child and stop female foeticide&rdquo;.</p>
+                           
+                            <div class="csr-btn-group">
+                                <a class="replica-button replica-button-lgr replica-btn-filled" href="https://ashakiranfoundation.org/donation/" target="_blank" rel="noopener noreferrer" aria-label="Donate Now">
+                                    <span class="button-label">Donate Now</span>
+                                    <span class="button-arrow" aria-hidden="true">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a class="replica-button replica-button-lgr replica-btn-outline" href="https://ashakiranfoundation.org/" target="_blank" rel="noopener noreferrer" aria-label="Read More">
+                                    <span class="button-label">Read More</span>
+                                    <span class="button-arrow" aria-hidden="true">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -203,26 +244,57 @@
                 <!-- Card 3: ANATH BALAKASHRAM -->
                 <div class="csr-card csr-card-wrapper card-step-3">
                     <div class="csr-card-inner inner three">
-                        <div class="csr-card-content left-content">
-                            <h3 class="csr-card-title title">ANATH BALAKASHRAM</h3>
-                            <p class="csr-card-disc disc">Our organization is therefore working since last more than 26 years for these poor, orphan kids who are neglected by their own blood. We take good care of these kids who are being thrown on the roads or even in the garbage. Who actually require their mother&rsquo;s warmth, love and her milk. Look at their destiny where they have been landed! This home is a new hope for all these people who have a constitutional right to live their life as per their choice, the right which has been deprived to them by their own people.</p>
-                            <ul class="csr-highlights-list">
-                                <li><i class="fa-solid fa-check"></i>Over 26 Years of Dedicated Service for Orphan Kids</li>
-                                <li><i class="fa-solid fa-check"></i>Shelter, Protection &amp; Loving Care for Abandoned Children</li>
-                                <li><i class="fa-solid fa-check"></i>Restoring Dignity &amp; Constitutional Right to Life</li>
-                            </ul>
-                           
-                            <div class="csr-btn-group">
-                                <a href="https://anathbalkashramorphanage.org/campaigns/donation/donate/" target="_blank" rel="noopener noreferrer" class="csr-btn-donate">
-                                    <i class="fa-solid fa-heart"></i> Donate Now
-                                </a>
-                                <a href="https://anathbalkashramorphanage.org/" target="_blank" rel="noopener noreferrer" class="csr-btn-read-more">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Read More
-                                </a>
+                        <div class="csr-card-image image-area csr-slider-box" id="anathSlider">
+                            <div class="csr-slider-track">
+                                <img src="assets/img/Social-work/ANATH BALAKASHRAM/1.png" alt="ANATH BALAKASHRAM 1" class="csr-slide-img active">
+                                <img src="assets/img/Social-work/ANATH BALAKASHRAM/2.png" alt="ANATH BALAKASHRAM 2" class="csr-slide-img">
+                                <img src="assets/img/Social-work/ANATH BALAKASHRAM/3.png" alt="ANATH BALAKASHRAM 3" class="csr-slide-img">
+                                <img src="assets/img/Social-work/ANATH BALAKASHRAM/4.png" alt="ANATH BALAKASHRAM 4" class="csr-slide-img">
+                                <img src="assets/img/Social-work/ANATH BALAKASHRAM/5.png" alt="ANATH BALAKASHRAM 5" class="csr-slide-img">
+                                <img src="assets/img/Social-work/ANATH BALAKASHRAM/6.png" alt="ANATH BALAKASHRAM 6" class="csr-slide-img">
+                            </div>
+                            <button type="button" class="csr-slider-nav csr-slider-prev" aria-label="Previous Slide">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button type="button" class="csr-slider-nav csr-slider-next" aria-label="Next Slide">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <div class="csr-slider-dots">
+                                <span class="csr-slider-dot active" data-index="0"></span>
+                                <span class="csr-slider-dot" data-index="1"></span>
+                                <span class="csr-slider-dot" data-index="2"></span>
+                                <span class="csr-slider-dot" data-index="3"></span>
+                                <span class="csr-slider-dot" data-index="4"></span>
+                                <span class="csr-slider-dot" data-index="5"></span>
                             </div>
                         </div>
-                        <div class="csr-card-image image-area">
-                            <img src="assets/images/about/16.webp" width="563" alt="ANATH BALAKASHRAM">
+                        <div class="csr-card-content left-content">
+                            <div class="csr-card-header-row">
+                                <h3 class="csr-card-title title">ANATH BALAKASHRAM</h3>
+                                <div class="csr-card-brand-logo">
+                                    <img src="assets/images/csr/logo2.png" alt="ANATH BALAKASHRAM Logo">
+                                </div>
+                            </div>
+                            <p class="csr-card-disc disc">Our organization is therefore working since last more than 26 years for these poor, orphan kids who are neglected by their own blood. We take good care of these kids who are being thrown on the roads or even in the garbage. Who actually require their mother&rsquo;s warmth, love and her milk. Look at their destiny where they have been landed! This home is a new hope for all these people who have a constitutional right to live their life as per their choice, the right which has been deprived to them by their own people.</p>
+                           
+                            <div class="csr-btn-group">
+                                <a class="replica-button replica-button-lgr replica-btn-filled" href="https://anathbalkashramorphanage.org/campaigns/donation/donate/" target="_blank" rel="noopener noreferrer" aria-label="Donate Now">
+                                    <span class="button-label">Donate Now</span>
+                                    <span class="button-arrow" aria-hidden="true">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a class="replica-button replica-button-lgr replica-btn-outline" href="https://anathbalkashramorphanage.org/" target="_blank" rel="noopener noreferrer" aria-label="Read More">
+                                    <span class="button-label">Read More</span>
+                                    <span class="button-arrow" aria-hidden="true">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -231,38 +303,373 @@
                 <!-- Card 4: Mathoshree Ambubai Residential School for Blind Girls -->
                 <div class="csr-card csr-card-wrapper card-step-4">
                     <div class="csr-card-inner inner four">
-                        <div class="csr-card-content left-content">
-                            <h3 class="csr-card-title title">Mathoshree Ambubai Residential School for Blind Girls</h3>
-                            <p class="csr-card-disc disc">A safe, nurturing space where visually impaired girls are empowered through quality education, life skills, and confidence-building. Here, we focus not just on learning, but on creating independent, self-reliant futures. With vocational training, personal development, and care rooted in dignity and respect, we&rsquo;re helping every girl grow into her full potential.</p>
-                            <ul class="csr-highlights-list">
-                                <li><i class="fa-solid fa-check"></i>Safe, Nurturing Residential Space for Blind Girls</li>
-                                <li><i class="fa-solid fa-check"></i>Quality Education, Vocational Training &amp; Life Skills</li>
-                                <li><i class="fa-solid fa-check"></i>Empowering Independent, Self-Reliant Futures</li>
-                            </ul>
-                          
-                            <div class="csr-btn-group">
-                                <a href="https://ambubaischoolforblindgirls.org/donate/" target="_blank" rel="noopener noreferrer" class="csr-btn-donate">
-                                    <i class="fa-solid fa-heart"></i> Donate Now
-                                </a>
-                                <a href="https://ambubaischoolforblindgirls.org/" target="_blank" rel="noopener noreferrer" class="csr-btn-read-more">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Read More
-                                </a>
+                        <div class="csr-card-image image-area csr-slider-box" id="ambubaiSlider">
+                            <div class="csr-slider-track">
+                                <img src="assets/img/Social-work/Mathoshree Ambubai/1.png" alt="Mathoshree Ambubai 1" class="csr-slide-img active">
+                                <img src="assets/img/Social-work/Mathoshree Ambubai/2.png" alt="Mathoshree Ambubai 2" class="csr-slide-img">
+                                <img src="assets/img/Social-work/Mathoshree Ambubai/3.png" alt="Mathoshree Ambubai 3" class="csr-slide-img">
+                                <img src="assets/img/Social-work/Mathoshree Ambubai/4.png" alt="Mathoshree Ambubai 4" class="csr-slide-img">
+                                <img src="assets/img/Social-work/Mathoshree Ambubai/5.png" alt="Mathoshree Ambubai 5" class="csr-slide-img">
+                                <img src="assets/img/Social-work/Mathoshree Ambubai/6.png" alt="Mathoshree Ambubai 6" class="csr-slide-img">
+                            </div>
+                            <button type="button" class="csr-slider-nav csr-slider-prev" aria-label="Previous Slide">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button type="button" class="csr-slider-nav csr-slider-next" aria-label="Next Slide">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            <div class="csr-slider-dots">
+                                <span class="csr-slider-dot active" data-index="0"></span>
+                                <span class="csr-slider-dot" data-index="1"></span>
+                                <span class="csr-slider-dot" data-index="2"></span>
+                                <span class="csr-slider-dot" data-index="3"></span>
+                                <span class="csr-slider-dot" data-index="4"></span>
+                                <span class="csr-slider-dot" data-index="5"></span>
                             </div>
                         </div>
-                        <div class="csr-card-image image-area">
-                            <img src="assets/images/project/07.webp" width="563" alt="Mathoshree Ambubai Residential School for Blind Girls">
+                        <div class="csr-card-content left-content">
+                            <div class="csr-card-header-row">
+                                <h3 class="csr-card-title title">Mathoshree Ambubai Residential School for Blind Girls</h3>
+                                <div class="csr-card-brand-logo">
+                                    <img src="assets/images/csr/logo3.png" alt="Mathoshree Ambubai Residential School Logo">
+                                </div>
+                            </div>
+                            <p class="csr-card-disc disc">A safe, nurturing space where visually impaired girls are empowered through quality education, life skills, and confidence-building. Here, we focus not just on learning, but on creating independent, self-reliant futures. With vocational training, personal development, and care rooted in dignity and respect, we&rsquo;re helping every girl grow into her full potential.</p>
+                          
+                            <div class="csr-btn-group">
+                                <a class="replica-button replica-button-lgr replica-btn-filled" href="https://ambubaischoolforblindgirls.org/donate/" target="_blank" rel="noopener noreferrer" aria-label="Donate Now">
+                                    <span class="button-label">Donate Now</span>
+                                    <span class="button-arrow" aria-hidden="true">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a class="replica-button replica-button-lgr replica-btn-outline" href="https://ambubaischoolforblindgirls.org/" target="_blank" rel="noopener noreferrer" aria-label="Read More">
+                                    <span class="button-label">Read More</span>
+                                    <span class="button-arrow" aria-hidden="true">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- Card 4 end -->
-
-                </div>
-                <!-- Symmetrical Spacer for perfect center alignment with title -->
-                <div class="csr-stack-spacer" aria-hidden="true"></div>
             </div>
         </div>
     </div>
     <!-- CSR Initiatives Area End -->
+
+    <!-- CSR Three Green Pillars / Initiatives Row -->
+    <section class="csr-pillars-section" aria-label="KHIL Green Pillars">
+        <div class="csr-container">
+            <div class="csr-pillars-grid">
+                <!-- Pillar 1: Green Initiative -->
+                <div class="csr-pillar-card">
+                    <div class="csr-pillar-icon">
+                        <img src="assets/img/initiatives/green-initiative-icon.png" alt="Green Initiative Icon" loading="lazy">
+                    </div>
+                    <h3 class="csr-pillar-title">
+                        <a href="https://khil.com/csr.html#">Green Initiative</a>
+                    </h3>
+                    <p class="csr-pillar-desc">
+                        Our hotels are Eco-Friendly and are regarded as<br class="d-none d-md-inline"> one of the best sustainable hotels in India.
+                    </p>
+                </div>
+
+                <!-- Pillar 2: Seed Ball Initiative -->
+                <div class="csr-pillar-card">
+                    <div class="csr-pillar-icon">
+                        <img src="assets/img/initiatives/seed-ball-icon.png" alt="Seed Ball Initiative Icon" loading="lazy">
+                    </div>
+                    <h3 class="csr-pillar-title">
+                        <a href="https://khil.com/csr.html#">Seed Ball Initiative</a>
+                    </h3>
+                    <p class="csr-pillar-desc">
+                        A Seed ball is simply that - a seed inside of a ball of<br class="d-none d-md-inline"> mud and compost, mixed with some nutritious binders.
+                    </p>
+                </div>
+
+                <!-- Pillar 3: Ganpatree Initiative -->
+                <div class="csr-pillar-card">
+                    <div class="csr-pillar-icon">
+                        <img src="assets/img/initiatives/ganpatree-icon.png" alt="Ganpatree Initiative Icon" loading="lazy">
+                    </div>
+                    <h3 class="csr-pillar-title">
+                        <a href="https://khil.com/csr.html#">Ganpatree Initiative</a>
+                    </h3>
+                    <p class="csr-pillar-desc">
+                        Ganpatree had been introduced, wherein the idol is made up<br class="d-none d-md-inline"> of red soil, organic fertilizer and vegetable seeds.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSR Eco-Friendly Parallax Showcase (Kamat Hotels Green Initiative) -->
+    <section class="csr-eco-parallax-section" id="ecoFriendlySection" aria-label="We Are Eco-Friendly">
+        <!-- Parallax Background Image Container -->
+        <div class="csr-eco-parallax-bg" id="ecoParallaxBg">
+            <img src="assets/images/csr/green-initiative.jpg" alt="Kamat Hotels (India) Ltd. Green Initiative - Eco-Friendly Sustainable Hospitality" id="ecoParallaxImg" loading="eager">
+        </div>
+        
+        <!-- Left Gradient Overlay to smoothly fade into background photo -->
+        <div class="csr-eco-gradient-overlay" aria-hidden="true"></div>
+
+        <!-- Content Container -->
+        <div class="csr-container csr-eco-container">
+            <div class="csr-eco-content-card">
+                <span class="csr-eco-eyebrow">
+                    <i class="fa-solid fa-leaf" aria-hidden="true"></i> We Are Eco-Friendly
+                </span>
+                <h2 class="csr-eco-title">
+                    Kamat Hotels (India) Ltd.<br><span class="csr-eco-title-accent">Green Initiative</span>
+                </h2>
+                <p class="csr-eco-desc">
+                    The Orchid Hotel Mumbai Vile Parle is one of the crown gems of Orchid Hotels, designed with utmost care for the environment. Our hotel is the first hotel in Asia to win the Ecotel Certification and has received innumerable awards since the beginning of the operation. The Orchid &ndash; Eco-friendly Hotel in Mumbai remains one of only six hotels worldwide to maintain this certification. Our hotel is regarded as one of the best sustainable hotels in India.
+                </p>
+
+                <!-- 4 Eco Pillars Feature Icons -->
+                <div class="csr-eco-features-grid">
+                    <a href="https://khil.com/csr.html#" class="csr-eco-feature-item" aria-label="Energy Efficiency">
+                        <div class="csr-eco-feature-icon">
+                            <svg class="csr-eco-icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="24" y1="4" x2="24" y2="8" />
+                                <line x1="9.86" y1="9.86" x2="12.69" y2="12.69" />
+                                <line x1="38.14" y1="9.86" x2="35.31" y2="12.69" />
+                                <line x1="4" y1="24" x2="8" y2="24" />
+                                <line x1="44" y1="24" x2="40" y2="24" />
+                                <path d="M17 32c-3.2-3-5.5-7-5.5-11.5a12.5 12.5 0 1 1 25 0c0 4.5-2.3 8.5-5.5 11.5" />
+                                <line x1="17.5" y1="36" x2="30.5" y2="36" />
+                                <line x1="19.5" y1="40" x2="28.5" y2="40" />
+                                <path d="M21 40c0 2 1.3 3 3 3s3-1 3-3" />
+                            </svg>
+                        </div>
+                        <h4 class="csr-eco-feature-title">Energy<br>Efficiency</h4>
+                    </a>
+
+                    <a href="https://khil.com/csr.html#" class="csr-eco-feature-item" aria-label="Water Conservation">
+                        <div class="csr-eco-feature-icon">
+                            <svg class="csr-eco-icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 8 C19 8, 9 20, 9 29 A12 12 0 0 0 33 29 C33 25.5 31.5 22.5 29.5 20" />
+                                <path d="M33 13 C33 13, 27 20, 27 25 A6 6 0 0 0 39 25 C39 20, 33 13, 33 13 Z" />
+                            </svg>
+                        </div>
+                        <h4 class="csr-eco-feature-title">Water<br>Conservation</h4>
+                    </a>
+
+                    <a href="https://khil.com/csr.html#" class="csr-eco-feature-item" aria-label="Environmental Commitment">
+                        <div class="csr-eco-feature-icon">
+                            <svg class="csr-eco-icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 39 C13 39, 12 21, 28 11 C28 27, 21 38, 13 39 Z" />
+                                <path d="M13 39 C18 32, 22 23, 25 17" />
+                                <path d="M26 38 C28 32, 29 26, 39 20 C39 31, 33 37, 26 38 Z" />
+                                <path d="M27 37 C31 32, 34 27, 36 23" />
+                            </svg>
+                        </div>
+                        <h4 class="csr-eco-feature-title">Environmental<br>Commitment</h4>
+                    </a>
+
+                    <a href="https://khil.com/csr.html#" class="csr-eco-feature-item" aria-label="Community Involvement">
+                        <div class="csr-eco-feature-icon">
+                            <svg class="csr-eco-icon-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="24" cy="14" r="5.5" />
+                                <path d="M14 38 C14 31, 18 26, 24 26 C30 26, 34 31, 34 38" />
+                                <circle cx="12" cy="19" r="4" />
+                                <path d="M6 38 C6 33.5, 9 30, 13 29" />
+                                <circle cx="36" cy="19" r="4" />
+                                <path d="M35 29 C39 30, 42 33.5, 42 38" />
+                            </svg>
+                        </div>
+                        <h4 class="csr-eco-feature-title">Community<br>Involvement</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seed Ball Initiative Section (Content Left, Collage-2 Right) -->
+    <section class="csr-seedball-section" id="seedBallSection" aria-label="Seed Ball Initiative">
+        <div class="csr-container">
+            <div class="csr-seedball-layout">
+                <!-- Left Column: 3-Image Collage -->
+                <div class="csr-seedball-collage-col">
+                    <div class="seedball-collage-container">
+                        <!-- Top Row: 2 images with angled divider -->
+                        <div class="seedball-collage-top">
+                            <div class="seedball-collage-item collage-item-top-left">
+                                <img src="assets/img/Social-work/collage-2/1.png" alt="Seed Ball Activity 1" loading="lazy">
+                            </div>
+                            <div class="seedball-collage-item collage-item-top-right">
+                                <img src="assets/img/Social-work/collage-2/2.png" alt="Seed Ball Activity 2" loading="lazy">
+                            </div>
+                        </div>
+                        <!-- Bottom Row: 1 wide panoramic image -->
+                        <div class="seedball-collage-bottom">
+                            <div class="seedball-collage-item collage-item-full">
+                                <img src="assets/img/Social-work/collage-2/3.png" alt="Seed Ball Activity 3" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="csr-seedball-content-col">
+                    <span class="csr-initiatives-eyebrow">
+                        <i class="fa-solid fa-seedling" aria-hidden="true"></i> One Green Nation, One Green Family
+                    </span>
+                    <h2 class="csr-initiatives-title">
+                        Kamat Hotels (India) Ltd.<br><span class="khil-hero-01-text-gradient">Seed Ball Initiative</span>
+                    </h2>
+                    <div class="csr-initiatives-text">
+                        <p>Our sustainable hotels in India are focusing on helping reduce the costs of planting various useful indigenous plant species (mostly trees!). The ball helps protect the seed within from predators such as birds, rodents and insects and extremes of temperature until the rains arrive!</p>
+
+                        <p>The seed-balls that are easier to plant as compared to saplings are made from mud, organic compost and seeds. The advantage of the seed-balls is that they can be thrown to any land to grow, provided that the soil is not too dry or dense with other vegetation.</p>
+
+                        <p>The Orchid celebrated World Environment Week and distributed around 2500 pouches of vermicompost and basil seed packs and spread the message of the need to combat global warming and the importance of planting trees and managing solid waste. Also, interesting documentaries on wildlife were screened, and several fun eco games were organized for the kids.</p>
+                    </div>
+                    <div class="csr-btn-group" style="margin-top: 28px !important;">
+                        <a class="replica-button replica-button-lgr replica-btn-filled" href="https://www.orchidhotel.com/ecotel/seedball-plantations.html" target="_blank" rel="noopener noreferrer" aria-label="Media Coverage">
+                            <span class="button-label">Media Coverage</span>
+                            <span class="button-arrow" aria-hidden="true">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seed Ball 3-Column Feature Row -->
+            <div class="csr-seedball-qa-grid">
+                <!-- Col 1: What are seed balls? -->
+                <div class="csr-seedball-qa-card">
+                    <div>
+                        <div class="csr-seedball-qa-header">
+                            <div class="csr-seedball-qa-icon">
+                                <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="csr-seedball-qa-title">What are seed balls?</h3>
+                        </div>
+                        <p class="csr-seedball-qa-desc">
+                            A Seed ball is simply that - a seed inside of a ball of mud and compost, mixed with some nutritious binders. Once soaked, the seed ball will help retain and prolong a moist environment around the seed to encourage germination.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Col 2: How to make? -->
+                <div class="csr-seedball-qa-card">
+                    <div>
+                        <div class="csr-seedball-qa-header">
+                            <div class="csr-seedball-qa-icon">
+                                <i class="fa-solid fa-hand-holding-seedling" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="csr-seedball-qa-title">How to make?</h3>
+                        </div>
+                        <p class="csr-seedball-qa-desc">
+                            Just store the seed ball in a dry place and throw it anywhere you want the tree to grow. Yes! It's that simple. Nature will take care of the rest.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Col 3: Come Join Us (Button Column) -->
+                <div class="csr-seedball-qa-card csr-seedball-btn-card">
+                    <div class="csr-btn-group" style="margin: 0 !important;">
+                        <a class="replica-button replica-button-lgr replica-btn-filled" href="https://khil.com/csr.html#" target="_blank" rel="noopener noreferrer" aria-label="Come Join Us">
+                            <span class="button-label">Come Join Us</span>
+                            <span class="button-arrow" aria-hidden="true">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSR Eco-Friendly Parallax Showcase 2: Ganpatree Initiative -->
+    <section class="csr-eco-parallax-section" id="ganpatreeSection" aria-label="Ganpatree Initiative">
+        <!-- Parallax Background Image Container -->
+        <div class="csr-eco-parallax-bg" id="ganpatreeParallaxBg">
+            <img src="assets/images/csr/ganpatree.jpg" alt="Kamat Hotels (India) Ltd. Ganpatree Initiative - Eco-Friendly Ganesh Festival" id="ganpatreeParallaxImg" loading="lazy">
+        </div>
+        
+        <!-- Right Translucent Frosted Glass Overlay (50% Split) -->
+        <div class="csr-eco-gradient-overlay" aria-hidden="true"></div>
+
+        <!-- Content Container -->
+        <div class="csr-container csr-eco-container">
+            <div class="csr-eco-content-card">
+                <span class="csr-eco-eyebrow">
+                    <i class="fa-solid fa-seedling" aria-hidden="true"></i> Green Start to Heavenly Earth
+                </span>
+                <h2 class="csr-eco-title">
+                    Kamat Hotels (India) Ltd.<br><span class="csr-eco-title-accent">Ganpatree Initiative</span>
+                </h2>
+                <div class="csr-eco-desc">
+                    <p>Every year, millions of Ganesh idols, small, large and humongous, are drowned in rivers, lakes, and seas around the world during the Ganesh Chaturthi festival. As part of the &lsquo;Visarjan&rsquo;, these Ganesh idols make their way to the nearest water bodies where they are then casually submerged into the water. But they don&rsquo;t dissolve immediately due to the materials used while preparing these Idols. With time, the paint and other synthetic materials on the idols peel off and start floating around in the water causing pollution. Airborne contaminants from these chemicals spread far and wide, polluting everything in close vicinity.</p>
+                    <p>In order to avoid this, the concept of Ganpatree had been introduced, wherein the idol is made up of red soil, organic fertilizer and vegetable seeds. The seeds are mixed with mud to make the idol and they are also inserted into the mud pot. Organic fertilizer does not allow the seeds to dry up. On the submersion day, we don't immerse, but water It. Instead of immersing the idol into the waterbody, people can start watering the idol everyday. Due to this, the idol will start melting in the mud pot and the seed germination process will begin immediately. Ganpatree is one of the ecological approaches that The Orchid Hotel advocates and follows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KHIL Initiatives Section (5-Image Collage Left, Content Right) -->
+    <section class="csr-initiatives-section" id="khilInitiativesSection" aria-label="KHIL Initiatives">
+        <div class="csr-container">
+            <div class="csr-initiatives-layout">
+                <!-- Left Column: 5-Image Collage matching template -->
+                <div class="csr-initiatives-collage-col">
+                    <div class="khil-collage-grid">
+                        <div class="khil-collage-col-left">
+                            <div class="khil-collage-item">
+                                <img src="assets/img/Social-work/collage/1.png" alt="KHIL Environment Initiative Activity 1" loading="lazy">
+                            </div>
+                            <div class="khil-collage-item">
+                                <img src="assets/img/Social-work/collage/2.png" alt="KHIL Environment Initiative Activity 2" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="khil-collage-col-right">
+                            <div class="khil-collage-item">
+                                <img src="assets/img/Social-work/collage/3.png" alt="KHIL Environment Initiative Activity 3" loading="lazy">
+                            </div>
+                            <div class="khil-collage-item">
+                                <img src="assets/img/Social-work/collage/4.png" alt="KHIL Environment Initiative Activity 4" loading="lazy">
+                            </div>
+                            <div class="khil-collage-item">
+                                <img src="assets/img/Social-work/collage/5.jpg" alt="KHIL Ganpatree Initiative Altar Display" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content (5 Paragraphs) -->
+                <div class="csr-initiatives-content-col">
+                    <span class="csr-initiatives-eyebrow">
+                        <i class="fa-solid fa-leaf" aria-hidden="true"></i> Corporate Social Responsibility
+                    </span>
+                    <h2 class="csr-initiatives-title"><span class="khil-hero-01-text-gradient">KHIL Initiatives</span></h2>
+                    <div class="csr-initiatives-text">
+                        <p>The major initiatives taken by the Company under Corporate Social Responsibility are in the area of the environment. &lsquo;The Orchid&rsquo;, flagship hotel of the Company, has taken various initiatives for creating awareness and conservation of the environment. Among these, The Orchid has adopted and maintains gardens and traffic islands around Mumbai city for beautification purposes and improvement of the overall environment.</p>
+
+                        <p>The Orchid, along with the Municipal Corporation of Greater Mumbai, has initiated the Nirmalya Project wherein Nirmalya generated during the Ganesh festival is collected, segregated and converted into valuable vermicompost to ensure that it is not dumped. Nirmalya Project was acknowledged by granting The Golden Star- Most Admired CSR practice of the Year Award by the Stars of the Industry group.</p>
+
+                        <p>The Orchid celebrated World Environment Week and distributed around 2,500 pouches of vermicompost and basil seed packs to spread the message of the need to combat global warming and the importance of planting trees and managing solid waste, alongside wildlife documentary screenings and fun eco games for kids. Additionally, old plastic cans converted into nest boxes have been set up in the hotel lane to conserve sparrows and distributed to hotel employees and guests.</p>
+
+                        <p>The Orchid is one of the few hotels to spread environmental awareness to students of schools and colleges who are invited regularly, where they are educated about solid waste management, energy efficiency, water conservation and preservation, vermiculture, and a 4-bin segregation system. During the year under review, more than 300 students visited the hotel. Several events including poster competitions, wealth out of waste contests, quizzes, photography competitions, and interactive sessions with NGO Greenpeace were also held to increase awareness of environmental issues.</p>
+
+                        <p>Earth Hour was observed in The Orchid by switching off non-essential lights to accomplish the endeavour to mobilize action against climate change. A silent rally was conducted by Green team members before Diwali to urge the public to reduce air and noise pollution by not using firecrackers. Furthermore, as a caring corporate citizen, our Company has recruited a reasonable number of physically challenged persons, thereby providing meaningful employment opportunities to this underprivileged segment of society.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- The Indira Venkatesh Foundation Section -->
     <section class="csr-foundation-section">
@@ -309,35 +716,88 @@
         </div>
     </section>
 
-    <!-- CSR Showcase Horizontal Continuous Marquee Gallery -->
-    <section class="csr-gallery-marquee-section">
+    <!-- CSR Showcase 3D Panoramic Curved Horizon Gallery (Mathoshree Ambubai) -->
+    <section class="khil-gallery-section" id="gallery" aria-labelledby="gallery-title">
         <div class="csr-container">
+            <!-- Header Area -->
             <div class="csr-gallery-header-row">
                 <div class="csr-gallery-header-left">
                     <span class="csr-gallery-pretitle">Mathoshree Ambubai Residential School for<br> Blind Girls</span>
-                    <h2 class="csr-gallery-title">CSR Activity</h2>
+                    <h2 class="csr-gallery-title"><span class="khil-hero-01-text-gradient">CSR Activity</span></h2>
                 </div>
                 <div class="csr-gallery-header-right">
                     <p class="csr-gallery-disc">
                         A safe, nurturing space where visually impaired girls are empowered through quality education, life skills, and confidence-building. Here, we focus not just on learning, but on creating independent, self-reliant futures. With vocational training, personal development, and care rooted in dignity and respect, we&rsquo;re helping every girl grow into her full potential.
                     </p>
+                    <div class="khil-gallery-nav-arrows">
+                        <button type="button" class="gallery-nav-btn prev" id="galleryPrevBtn" aria-label="Previous image">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button type="button" class="gallery-nav-btn next" id="galleryNextBtn" aria-label="Next image">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="nl-master-gallery-hero-10">
-            <div class="nl-move-gallery-horziontal">
-                <!-- Gallery Track -->
-                <div class="nl-single-gallery-horziontal">
-                    <img src="assets/images/csr/school1.png" alt="KHIL CSR Education Initiative" loading="eager" class="nl-image-gallery-horizontal">
-                    <img src="assets/images/csr/school2.png" alt="KHIL CSR Student Care & Empowerment" loading="eager" class="nl-image-gallery-horizontal">
-                    <img src="assets/images/csr/school3.png" alt="KHIL CSR Institute Activities" loading="eager" class="nl-image-gallery-horizontal">
-                    <img src="assets/images/csr/school4.png" alt="KHIL CSR School Support" loading="eager" class="nl-image-gallery-horizontal">
-                    <img src="assets/images/csr/school5.png" alt="KHIL CSR Community Building" loading="eager" class="nl-image-gallery-horizontal">
-                    <img src="assets/images/csr/school1.png" alt="KHIL CSR Education Initiative" loading="lazy" class="nl-image-gallery-horizontal">
-                    <img src="assets/images/csr/school2.png" alt="KHIL CSR Student Care & Empowerment" loading="lazy" class="nl-image-gallery-horizontal">
-                    <img src="assets/images/csr/school3.png" alt="KHIL CSR Institute Activities" loading="lazy" class="nl-image-gallery-horizontal">
-                    <img src="assets/images/csr/school4.png" alt="KHIL CSR School Support" loading="lazy" class="nl-image-gallery-horizontal">
-                    <img src="assets/images/csr/school5.png" alt="KHIL CSR Community Building" loading="lazy" class="nl-image-gallery-horizontal">
+
+        <!-- 3D Curved Horizon Gallery Viewport (Concave Amphitheater Arc) -->
+        <div class="khil-gallery-viewport" id="galleryViewport">
+            <div class="khil-gallery-track" id="galleryTrack">
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/images/csr/school1.png" alt="Mathoshree Ambubai - School Education" loading="eager">
+                    </div>
+                </div>
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/images/csr/school2.png" alt="Mathoshree Ambubai - Student Care" loading="eager">
+                    </div>
+                </div>
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/images/csr/school3.png" alt="Mathoshree Ambubai - Vocational Training" loading="eager">
+                    </div>
+                </div>
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/images/csr/school4.png" alt="Mathoshree Ambubai - School Activities" loading="eager">
+                    </div>
+                </div>
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/images/csr/school5.png" alt="Mathoshree Ambubai - Community Building" loading="eager">
+                    </div>
+                </div>
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/img/Social-work/Mathoshree Ambubai/1.png" alt="Mathoshree Ambubai - Campus 1" loading="eager">
+                    </div>
+                </div>
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/img/Social-work/Mathoshree Ambubai/2.png" alt="Mathoshree Ambubai - Campus 2" loading="eager">
+                    </div>
+                </div>
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/img/Social-work/Mathoshree Ambubai/3.png" alt="Mathoshree Ambubai - Campus 3" loading="eager">
+                    </div>
+                </div>
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/img/Social-work/Mathoshree Ambubai/4.png" alt="Mathoshree Ambubai - Campus 4" loading="eager">
+                    </div>
+                </div>
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/img/Social-work/Mathoshree Ambubai/5.png" alt="Mathoshree Ambubai - Campus 5" loading="eager">
+                    </div>
+                </div>
+                <div class="khil-gallery-card">
+                    <div class="gallery-card-inner">
+                        <img src="assets/img/Social-work/Mathoshree Ambubai/6.png" alt="Mathoshree Ambubai - Campus 6" loading="eager">
+                    </div>
                 </div>
             </div>
         </div>
@@ -350,111 +810,91 @@
     <script defer src="assets/js/plugins/jquery.js"></script>
     <script defer src="assets/js/plugins/metismenu.js"></script>
     <script defer src="assets/js/vendor/bootstrap.min.js"></script>
+    <script defer src="assets/js/plugins/lenis.min.js"></script>
     <script defer src="assets/js/shared-layout.js" data-main="false"></script>
+    <script defer src="assets/js/khil-gallery.js?v=2.0"></script>
 
-    <!-- Card Stacking Interactive Scroll Effect (High-Performance 60/120fps rAF) -->
     <script>
+        // Automatic + Arrow Navigation Slider for CSR Cards (Reusable)
         document.addEventListener('DOMContentLoaded', function () {
-            const cards = Array.from(
-                document.querySelectorAll(
-                    '.csr-sticky-wrapper-main > .csr-card-wrapper'
-                )
-            );
-            const logoContainer = document.getElementById('csrDynamicLogoContainer');
-            const logoImg = document.getElementById('csrDynamicLogoImg');
-            if (!cards.length) return;
+            function initCsrSlider(sliderId, intervalMs = 3500) {
+                const slider = document.getElementById(sliderId);
+                if (!slider) return;
 
-            let isTicking = false;
+                const slides = slider.querySelectorAll('.csr-slide-img');
+                const dots = slider.querySelectorAll('.csr-slider-dot');
+                const prevBtn = slider.querySelector('.csr-slider-prev');
+                const nextBtn = slider.querySelector('.csr-slider-next');
+                const total = slides.length;
+                if (total === 0) return;
 
-            // Verified 1-to-1 organization mapping:
-            // Card 1: Jankibai Shikshan Sanstha -> assets/images/csr/logo4.png
-            // Card 2: ASHAKIRAN FOUNDATION -> assets/images/csr/logo1.png
-            // Card 3: ANATH BALAKASHRAM -> assets/images/csr/logo2.png
-            // Card 4: Mathoshree Ambubai -> assets/images/csr/logo3.png
-            const csrLogos = [
-                'assets/images/csr/logo4.png',
-                'assets/images/csr/logo1.png',
-                'assets/images/csr/logo2.png',
-                'assets/images/csr/logo3.png'
-            ];
+                let current = 0;
+                let timer = null;
 
-            let activeLogoIndex = -1;
+                function showSlide(index) {
+                    current = (index + total) % total;
+                    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+                    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+                }
 
-            function updateCardStack() {
-                const isMobile = window.innerWidth <= 991;
-                if (isMobile) {
-                    if (logoContainer) {
-                        logoContainer.style.opacity = '1';
+                function nextSlide() {
+                    showSlide(current + 1);
+                }
+
+                function prevSlide() {
+                    showSlide(current - 1);
+                }
+
+                function startAutoPlay() {
+                    stopAutoPlay();
+                    timer = setInterval(nextSlide, intervalMs);
+                }
+
+                function stopAutoPlay() {
+                    if (timer) {
+                        clearInterval(timer);
+                        timer = null;
                     }
-                    cards.forEach(card => {
-                        const inner = card.querySelector('.csr-card-inner, .inner');
-                        if (inner) {
-                            inner.style.transform = '';
-                            inner.style.filter = '';
-                        }
+                }
+
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        nextSlide();
+                        startAutoPlay();
                     });
-                    // On mobile, sync logo based on which card is in view
-                    let mobileActiveIndex = 0;
-                    cards.forEach((card, index) => {
-                        const rect = card.getBoundingClientRect();
-                        if (rect.top <= window.innerHeight * 0.45) {
-                            mobileActiveIndex = index;
-                        }
+                }
+
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        prevSlide();
+                        startAutoPlay();
                     });
-                    if (logoImg && csrLogos[mobileActiveIndex] && mobileActiveIndex !== activeLogoIndex) {
-                        activeLogoIndex = mobileActiveIndex;
-                        logoImg.src = csrLogos[mobileActiveIndex];
-                    }
-                    isTicking = false;
-                    return;
                 }
 
-                const stickyDockTop = 320;
-                let activeIndex = 0;
+                dots.forEach(dot => {
+                    dot.addEventListener('click', function () {
+                        const idx = parseInt(this.getAttribute('data-index'), 10);
+                        showSlide(idx);
+                        startAutoPlay();
+                    });
+                });
 
-                // Pick the highest card index that has reached or passed the sticky dock
-                for (let i = cards.length - 1; i >= 0; i--) {
-                    const rect = cards[i].getBoundingClientRect();
-                    if (rect.top <= stickyDockTop + 20) {
-                        activeIndex = i;
-                        break;
-                    }
-                }
+                slider.addEventListener('mouseenter', stopAutoPlay);
+                slider.addEventListener('mouseleave', startAutoPlay);
 
-                // Stack visibility boundaries
-                const firstCardRect = cards[0].getBoundingClientRect();
-                const lastCardRect = cards[cards.length - 1].getBoundingClientRect();
-                const isStackActive = firstCardRect.top <= (window.innerHeight * 0.75) && lastCardRect.bottom >= (stickyDockTop - 40);
-
-                // Update Dynamic Logo Image beside cards
-                if (logoContainer && logoImg) {
-                    if (!isStackActive) {
-                        logoContainer.style.opacity = '0';
-                    } else {
-                        logoContainer.style.opacity = '1';
-                        const targetLogo = csrLogos[activeIndex];
-                        if (targetLogo) {
-                            if (activeIndex !== activeLogoIndex) {
-                                activeLogoIndex = activeIndex;
-                                logoImg.classList.add('csr-logo-fade');
-                                setTimeout(() => {
-                                    logoImg.src = targetLogo;
-                                    logoImg.classList.remove('csr-logo-fade');
-                                    logoImg.style.opacity = '1';
-                                }, 150);
-                            }
-                        } else {
-                            activeLogoIndex = activeIndex;
-                            logoImg.classList.add('csr-logo-fade');
-                            logoImg.style.opacity = '0';
-                        }
-                    }
-                }
-
-                isTicking = false;
+                startAutoPlay();
             }
 
-            // Sticky Navigation Header (matching Home page behavior)
+            initCsrSlider('jankibaiSlider', 3500);
+            initCsrSlider('ashakiranSlider', 3500);
+            initCsrSlider('anathSlider', 3500);
+            initCsrSlider('ambubaiSlider', 3500);
+        });
+
+        // Sticky Navigation Header (matching Home page behavior)
+        document.addEventListener('DOMContentLoaded', function () {
             const stickyHeaderEl = document.querySelector('.header--sticky');
             function updateStickyHeader() {
                 if (!stickyHeaderEl) return;
@@ -465,21 +905,8 @@
                     stickyHeaderEl.classList.remove('sticky');
                 }
             }
-
-            function requestUpdate() {
-                updateStickyHeader();
-                if (!isTicking) {
-                    window.requestAnimationFrame(updateCardStack);
-                    isTicking = true;
-                }
-            }
-
-            window.addEventListener('scroll', requestUpdate, { passive: true });
-            window.addEventListener('resize', requestUpdate);
-
-            // Initial sync
+            window.addEventListener('scroll', updateStickyHeader, { passive: true });
             updateStickyHeader();
-            updateCardStack();
         });
 
         // Up-to-down Image Reveal on Scroll (Dual Trigger: IntersectionObserver + Scroll Fallback)
@@ -518,6 +945,82 @@
             } else {
                 checkImageReveal();
             }
+        })();
+
+        // 1. Initialize Lenis Smooth Scrolling across CSR Page
+        let lenisInstance = null;
+        function initLenis() {
+            if (typeof Lenis !== 'undefined' && !window.lenis) {
+                try {
+                    lenisInstance = new Lenis({
+                        duration: 1.2,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        orientation: 'vertical',
+                        gestureOrientation: 'vertical',
+                        smoothWheel: true,
+                        smoothTouch: false
+                    });
+
+                    function raf(time) {
+                        lenisInstance.raf(time);
+                        requestAnimationFrame(raf);
+                    }
+                    requestAnimationFrame(raf);
+                    window.lenis = lenisInstance;
+                    if (typeof window.bindLenisParallax === 'function') {
+                        window.bindLenisParallax();
+                    }
+                } catch (e) {
+                    console.warn('Lenis initialization skipped:', e);
+                }
+            }
+        }
+        initLenis();
+        document.addEventListener('DOMContentLoaded', initLenis);
+        window.addEventListener('load', initLenis);
+
+        // 2. Best-in-Class True Lenis Direct Parallax for Eco-Friendly Sections
+        (function () {
+            const items = [
+                { section: document.getElementById('ecoFriendlySection'), img: document.getElementById('ecoParallaxImg'), flip: true },
+                { section: document.getElementById('ganpatreeSection'), img: document.getElementById('ganpatreeParallaxImg'), flip: true }
+            ];
+
+            let ticking = false;
+            function updateParallax() {
+                ticking = false;
+                const winHeight = window.innerHeight || document.documentElement.clientHeight;
+                items.forEach((item) => {
+                    if (!item.section || !item.img) return;
+                    const rect = item.section.getBoundingClientRect();
+                    if (rect.bottom >= -50 && rect.top <= winHeight + 50) {
+                        const totalDistance = winHeight + rect.height;
+                        const progress = (winHeight - rect.top) / totalDistance;
+                        // Moves slightly slower than page scroll: direct Lenis sync, range +-65px within 15% (90px) overflow buffer
+                        const y = (progress - 0.5) * 130;
+                        const prefix = item.flip ? 'scaleX(-1) ' : '';
+                        item.img.style.transform = `${prefix}translate3d(0, ${y.toFixed(2)}px, 0)`;
+                    }
+                });
+            }
+
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateParallax);
+                    ticking = true;
+                }
+            }
+
+            window.bindLenisParallax = function () {
+                if (window.lenis && typeof window.lenis.on === 'function') {
+                    window.lenis.on('scroll', requestTick);
+                }
+            };
+
+            window.bindLenisParallax();
+            window.addEventListener('scroll', requestTick, { passive: true });
+            window.addEventListener('resize', requestTick, { passive: true });
+            requestTick();
         })();
     </script>
 </body>

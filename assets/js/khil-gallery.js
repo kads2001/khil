@@ -114,7 +114,6 @@
         let currentX = centerBaseX;
         let targetX = currentX;
         let isDragging = false;
-        let isHovered = false;
         let startX = 0;
         let dragOriginX = 0;
         let dragVelocity = 0;
@@ -231,8 +230,8 @@
             const dt = Math.min((now - lastFrameTime) / 1000, 0.08);
             lastFrameTime = now;
 
-            // Gentle continuous ambient drift when user is not dragging or hovering
-            if (!isDragging && !isHovered) {
+            // Gentle continuous ambient drift when user is not dragging (unpaused on mouse over)
+            if (!isDragging) {
                 targetX -= autoSpeed * (dt * 60);
             }
 
@@ -264,12 +263,10 @@
 
         requestAnimationFrame(render);
 
-        // 6. User Interactions: Hover, Drag, Wheel, Navigation Buttons, Click-to-Center
+        // 6. User Interactions: Drag, Navigation Buttons, Click-to-Center (Mouse over pause removed)
         let hasMoved = false;
 
-        section.addEventListener('mouseenter', () => { isHovered = true; }, { passive: true });
         section.addEventListener('mouseleave', () => {
-            isHovered = false;
             if (isDragging) {
                 isDragging = false;
                 viewport.classList.remove('is-dragging');
@@ -362,15 +359,6 @@
                 }
             });
         });
-
-        // Mouse Wheel over Viewport: smooth horizontal gallery panning
-        viewport.addEventListener('wheel', (e) => {
-            const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-            if (Math.abs(delta) > 2) {
-                targetX -= delta * 0.9;
-                e.preventDefault();
-            }
-        }, { passive: false });
 
         // Prev & Next Buttons
         if (prevBtn) {

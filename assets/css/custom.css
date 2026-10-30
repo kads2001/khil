@@ -1512,9 +1512,9 @@ body.home-three-page .header-one .nav-area ul.khil-nav > li.has-dropdown:hover >
 
     .replica-button:hover,
     .replica-button:focus-visible {
-      background: #5b5be9;
-      border-color: #5b5be9;
-      color: #fff;
+      background: linear-gradient(to right, #4b134f, #c94b4b) !important;
+      border-color: #c94b4b !important;
+      color: #fff !important;
     }
 
     .replica-button:hover .button-arrow,

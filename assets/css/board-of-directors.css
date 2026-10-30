@@ -284,11 +284,17 @@ body.board-directors-page ::selection {
 
 .bod-section-heading {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   border-bottom: 1px solid var(--khil-border);
-  padding-bottom: 16px;
-  margin-bottom: 36px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.bod-section-heading > div {
+  text-align: center;
 }
 
 .bod-section-eyebrow {
@@ -298,16 +304,18 @@ body.board-directors-page ::selection {
   color: var(--khil-plum);
   font-weight: 700;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  text-align: center;
 }
 
 .bod-section-title {
   font-family: var(--khil-font-serif);
-  font-size: clamp(26px, 3.2vw, 36px);
+  font-size: clamp(26px, 3.2vw, 52px);
   font-weight: 700;
   color: var(--khil-ink);
   margin: 0;
   letter-spacing: -0.5px;
+  text-align: center;
 }
 
 .bod-section-tag {
@@ -332,61 +340,60 @@ body.board-directors-page ::selection {
 }
 
 /* --------------------------------------------------------------------------
-   4. BOARD MEMBERS DIRECTORY (IMAGE + DEEP MAROON CARD STRUCTURE)
-   Matches exact reference structure:
-   [ Rounded Photo ]  [ Deep Maroon Rounded Card with Name, Headline, Bio, View More Button ]
+   4. BOARD MEMBERS DIRECTORY (4 IN 1 ROW - VERTICALLY STACKED)
+   Photo on top, Name, Designation, and Bio text below
    -------------------------------------------------------------------------- */
 .bod-directors-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px 22px;
   margin-bottom: 56px;
 }
 
 @media (max-width: 1200px) {
   .bod-directors-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .bod-directors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bod-directors-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 20px;
   }
 }
 
 .bod-member-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eef0f4;
+  transition: transform 0.3s ease;
   box-sizing: border-box;
+  height: 100%;
 }
 
-.bod-member-photo-wrap,
-.bod-member-info {
-  box-sizing: border-box;
+.bod-member-card:hover {
+  transform: translateY(-4px);
 }
 
-@media (max-width: 768px) {
-  .bod-member-card {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-}
-
-/* Left: Photo (50% card width, 523px height / 440:523 aspect ratio) */
 .bod-member-photo-wrap {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 523px;
-  aspect-ratio: 440 / 523;
+  aspect-ratio: 4 / 5;
   background: #ede6dd;
-}
-
-@media (max-width: 768px) {
-  .bod-member-photo-wrap {
-    width: 100%;
-    max-width: 440px;
-    height: auto;
-    aspect-ratio: 440 / 523;
-  }
+  box-sizing: border-box;
 }
 
 .bod-member-photo {
@@ -399,64 +406,46 @@ body.board-directors-page ::selection {
 }
 
 .bod-member-card:hover .bod-member-photo {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
-/* Right: Content Card (523px height matched to image box) */
 .bod-member-info {
   background-color: #ffffff;
   color: #000000;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-grow: 1;
   width: 100%;
-  height: 523px;
-  padding: 34px 30px 28px;
-  border: 1px solid var(--khil-border);
-  transition: transform 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .bod-member-info {
-    height: auto;
-    min-height: auto;
-    padding: 24px 20px;
-  }
-}
-
-.bod-member-card:hover .bod-member-info {
-  transform: translateY(-2px);
-}
-
-.bod-member-header {
-  margin-bottom: 6px;
+  padding: 20px 18px 24px;
+  box-sizing: border-box;
 }
 
 .bod-member-top-name {
-  font-size: 14px;
-  font-weight: 600;
-  color: #000000;
-  letter-spacing: 0.2px;
-  margin: 0 0 8px 0;
+  font-size: 19px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.3;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.2px;
   font-family: var(--khil-font-sans);
 }
 
 .bod-member-headline {
-  font-size: clamp(20px, 1.45vw, 23px);
-  font-weight: 700;
-  color: #000000;
-  line-height: 1.28;
-  margin: 0 0 12px 0;
-  letter-spacing: -0.3px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #8b099b;
+  line-height: 1.35;
+  margin: 0 0 10px 0;
+  letter-spacing: 0;
   font-family: var(--khil-font-sans);
 }
 
 .bod-member-bio {
-  font-size: 13.5px;
-  line-height: 1.62;
-  color: rgba(0, 0, 0, 0.88);
-  margin: 0 0 16px 0;
-  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #000000;
+  margin: 0;
+  font-weight: 200;
   font-family: var(--khil-font-sans);
   flex-grow: 1;
 }
